@@ -4,7 +4,7 @@
 
 ## 目前階段
 
-「階段 4 — Git 與 GitHub」已完成，正等待開始「階段 5 — Preview 部署」。尚未建立 R2 或部署 Cloudflare。
+「階段 5 — Preview 部署」已開始，Preview 契約已核准，正在準備本機 manifests 與產生工具。尚未建立 R2 或部署 Cloudflare。
 
 GitHub：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 

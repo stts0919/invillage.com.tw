@@ -22,16 +22,21 @@ invillage.com.tw/
 │   ├── web/                               [近期] Cloudflare Pages 前端
 │   │   ├── public/
 │   │   │   ├── index.html
-│   │   │   ├── about/
-│   │   │   ├── spaces/
-│   │   │   ├── plan/
-│   │   │   ├── contact/
+│   │   │   ├── about.html
+│   │   │   ├── spaces.html
+│   │   │   ├── plan.html
+│   │   │   ├── contact.html
+│   │   │   ├── style.html
+│   │   │   ├── utilities.html
+│   │   │   ├── 404.html
+│   │   │   ├── robots.txt
 │   │   │   ├── css/
 │   │   │   ├── js/
 │   │   │   └── assets/
 │   │   │       ├── brand/
 │   │   │       ├── fonts/
-│   │   │       └── icons/
+│   │   │       ├── icons/
+│   │   │       └── vendor/
 │   │   └── README.md
 │   │
 │   └── api/                               [後續] Cloudflare Worker API

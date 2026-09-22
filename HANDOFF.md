@@ -6,11 +6,12 @@
 
 ## 目前階段
 
-「階段 4 — Git 與 GitHub」已完成，正等待使用者指示開始「階段 5 — Preview 部署」。
+「階段 5 — Preview 部署」已開始，Preview 契約與 ADR-0004 已核准；本機 manifests／builder／verifier 已通過 dry-run，等待 MiniMax 完成 P5-M1。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
 - 首個 commit：`d4d034ac1dd44efd4ca1685220da2e8526481257`
+- 階段 4 文件 commit：`1a211fb1f29b668e67bd37dcc1b6384c6189b8ba`
 - Webflow 正式站仍在線上；尚未建立 Cloudflare Pages、R2、Worker 或 D1。
 - 本機檔案仍是 source of truth；`imports/webflow/` 是不可變遷移來源。
 
@@ -24,6 +25,8 @@
 - [協作角色](./docs/collaboration/agent-roles.md)
 - [Webflow 匯入盤點](./docs/migration/webflow-inventory.md)
 - [資產輕量化流程](./docs/migration/asset-pipeline.md)
+- [Preview 發布契約](./docs/operations/preview-release.md)
+- [Preview Launch Checklist](./docs/operations/preview-launch-checklist.md)
 - [里程碑紀錄索引](./docs/records/README.md)
 - [階段 4 紀錄](./docs/records/phase-04-git-github.md)
 
@@ -39,6 +42,8 @@
 | Placement | Pages 16／R2 123／Archive 72 |
 | Optimization | 139／139 assets；428 outputs；420／420 lossy metrics 通過 |
 | Delivery manifests | Pages 16；R2 427 items／123 assets；遠端寫入未授權 |
+| Preview local contract | Pages runtime 24 items；R2 Preview 427 items；builder／verifier dry-run 通過 |
+| Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
 | Production mutation | 無 |
 
 來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
@@ -55,7 +60,7 @@
 
 | 角色 | 本階段責任 |
 |---|---|
-| 使用者 | 決定是否開始階段 5，核准外部資源、費用與 Production 異動 |
+| 使用者 | 核准外部資源、費用與 Production 異動 |
 | Codex | 主管：定義架構與驗收、拆解工作包、審核 MiniMax 產物、修正主線問題 |
 | MiniMax Code | 執行使用者指派的本機工作包，提供檔案、命令、證據與剩餘風險 |
 | Codex 子代理 | 只做獨立、明確、可驗證的審查；固定 GPT-5.6 Luna／`max` |
@@ -64,7 +69,40 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 
 ## 階段 5 工作包
 
-狀態：`Ready`，尚未開始。使用者說「開始階段 5」後才執行。
+狀態：`Git Delivery`。`P5-M1`、`P5-M2` 已通過主管驗收；使用者已授權 Git 與 Preview Cloudflare 異動，費用與憑證 gates 仍適用。
+
+| 工作包 | 負責 | 狀態 |
+|---|---|---|
+| P5-C1 | Codex | Complete：2 generic SVG＋24-item Pages runtime manifest |
+| P5-C2 | Codex | Complete：occurrence schema、R2 Preview manifest、builder／verifier dry-run 通過 |
+| P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
+| P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
+| P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
+| P5-C3 | Codex | In progress：Git delivery 與 Cloudflare credential／cost preflight |
+
+### Active assignment — P5-M3
+
+負責：MiniMax Code
+
+開始條件：Codex 已 push `codex/phase-5-preview`。Repo 修改：禁止。
+
+目標：以 branch `HEAD` 為 immutable candidate，獨立檢查公開 Git tree。
+
+任務：
+
+1. 回報 branch、`HEAD`、tracking divergence 與 clean／dirty 狀態。
+2. 統計 tracked files、總 bytes、最大 10 檔。
+3. 確認 `imports/webflow/assets/images/`、`imports/webflow/assets/fonts/`、`assets/optimized/` 沒有 tracked files。
+4. 只對 tracked tree 執行高信心 credential、`.env*`、本機絕對路徑與 symlink scan。
+5. 執行所有新 JSON parse、Ruby syntax、Markdown local-link checks。
+6. 確認 Cloudflare remote authorization flags 仍為 `false`。
+
+驗收：
+
+- 所有檢查以 branch `HEAD` 執行，不把工作區未提交內容當作證據。
+- 若發現 secret、tracked 原始 binary、local path 或 symlink，立即停止並回報。
+- 不修改檔案，不 stage／commit／push，不連網、不連 Cloudflare。
+- 回報命令、exit code、finding、未驗證範圍；代理結論仍需 Codex readback。
 
 ### Codex 主管先行
 
@@ -72,16 +110,19 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 2. 定義被忽略 binary 的供應方式：Pages 必要資產納入部署輸出；內容圖片由 Preview R2 或可驗證還原流程提供。
 3. 定義 Pages asset 與 Preview R2 URL mapping；Preview 與 Production 必須隔離。
 4. 定義 Cloudflare Pages、R2、Git integration、rollback 與驗收證據。
-5. 將核准規格拆成不重疊的 MiniMax 工作包。
+5. 建立 2 個 generic SVG 與 6 個字型的 runtime manifest 契約。
+6. 建立 runtime map schema、builder、form fail-closed transform 與 verifier。
+7. 將核准規格拆成不重疊的 MiniMax 工作包。
 
 ### MiniMax 本機執行
 
-1. 依 Codex 核准規格把 Webflow 靜態頁整合進 `apps/web/`；不得修改 `imports/webflow/`。
-2. 保留 frozen copy、路由與互動，不自行重寫文案或重新設計。
-3. 依 `assets/manifests/pages-assets-live.json` 處理 16 個 Pages asset；不得把整批原圖或 optimized corpus 納入 Git。
-4. 依核准 mapping 改寫本機資產路徑；Preview R2 URL 未提供前不得編造 URL 或上傳。
-5. 建立或執行內部連結、資產路徑、主要響應式尺寸與 404 的 focused checks。
-6. 只更新既有索引、核對表與紀錄，不建立平行計畫文件。
+1. 依 Codex 核准 schema 核對 139 asset IDs、HTML／CSS／JSON-LD occurrences 與 variant metadata；不自行決定 placement、R2 URL 或 allowlist。
+2. 使用 Codex 提供的 script 產生 `apps/web/public/`；不得手動修改 `imports/webflow/`。
+3. 保留 frozen copy、路由與互動，不自行重寫文案或重新設計。
+4. 核對 24 個 Pages runtime assets；不得把整批原圖或 optimized corpus 納入 Git。
+5. Preview R2 URL 未提供前不得編造 URL、產生最終部署檔或上傳。
+6. 執行內部連結、資產路徑、主要響應式尺寸與 404 的 focused checks。
+7. 只更新既有索引、核對表與紀錄，不建立平行計畫文件。
 
 ### MiniMax 回報格式
 
@@ -93,17 +134,15 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 
 ## 階段 5 驗收
 
-- `apps/web` 可由乾淨 checkout，加上核准的 Preview R2 或可驗證資產還原流程，提供完整靜態站。
+- 乾淨 checkout 加上核准的 Preview R2 可直接部署完整靜態站；完整再生成仍需被忽略的已驗證輸入。
 - HTML／CSS／JavaScript、路由、404、字型與必要資產可用。
 - Preview R2 與 Production 隔離，無正式網域變更。
 - 取得可重現的 branch／PR Preview URL、deploy evidence 與 rollback 路徑。
 - Codex 完成獨立 diff、路徑、功能與遠端 readback；代理回報不能替代此驗收。
 
-## 硬門檻
+## 目前授權與硬門檻
 
-使用者另行明確授權前：
-
-- 不建立或修改 Cloudflare Pages、R2、Worker、D1、DNS 或 Production binding。
-- 不 deploy、不上傳 R2、不發布或取消發布 Webflow。
-- 不購買方案、不產生新費用。
-- 不更動 frozen copy、不覆寫或刪除原始圖片。
+- 已授權：本階段的 Git branch、stage、commit、push，以及 Preview Pages／R2 異動；每一步仍需通過 source、credential、費用與 readback gate。
+- 未授權：Production R2／Pages／Worker／D1、DNS、custom domain、Webflow publish／unpublish。
+- 若 account readback 顯示可能產生任何新費用，停止並逐次詢問；不得購買或升級方案。
+- 不更動 frozen copy，不覆寫或刪除原始圖片，不擴大 token 權限。

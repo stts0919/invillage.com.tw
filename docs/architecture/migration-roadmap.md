@@ -49,9 +49,11 @@
 
 ## 階段 5 — Preview 部署
 
-- 建立 Pages Git integration。
-- 建立 Preview R2 bucket。
-- 取得 branch／PR Preview URL。
+- [x] 核准 [Preview 發布契約](../operations/preview-release.md)，並建立 ADR-0004。
+- [ ] 建立可部署的 `apps/web/public/` 與 focused checks。
+- [ ] 建立 Preview R2 bucket 並驗證 runtime assets。
+- [ ] 建立 Pages Git integration。
+- [ ] 取得 branch／PR Preview URL。
 
 驗收：符合 [系統總覽](./system-overview.md) 的環境隔離，沒有正式網域變更。
 

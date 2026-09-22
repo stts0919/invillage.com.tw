@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-22T03:38:37Z",
+  "copyAuthorized": true,
+  "remoteMutationAuthorized": false,
+  "sources": {
+    "pagesAssets": "assets/manifests/pages-assets-live.json",
+    "webflowAssets": "imports/webflow/manifests/webflow-assets.json",
+    "siteImport": "imports/webflow/manifests/site-import.json"
+  },
+  "summary": {
+    "itemCount": 24,
+    "imageItemCount": 16,
+    "genericItemCount": 2,
+    "fontItemCount": 6,
+    "totalBytes": 24852679
+  },
+  "items": [
+    {
+      "kind": "brand",
+      "assetId": "65074195be972cb5422550d7",
+      "name": "logomark2.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65074195be972cb5422550d7_logomark2.png",
+      "localPath": "assets/optimized/65074195be972cb5422550d7/65074195be972cb5422550d7-lossless.png",
+      "targetPath": "apps/web/public/assets/brand/65074195be972cb5422550d7.png",
+      "contentType": "image/png",
+      "bytes": 101484,
+      "sha256": "2b2e5ce83c138150e973b2a0be1504ebbd98aacd390eacf863d0c83021939cd5"
+    },
+    {
+      "kind": "brand",
+      "assetId": "650741963cc37e5fe08d25bf",
+      "name": "Logo1.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/650741963cc37e5fe08d25bf_Logo1.png",
+      "localPath": "assets/optimized/650741963cc37e5fe08d25bf/650741963cc37e5fe08d25bf-lossless.png",
+      "targetPath": "apps/web/public/assets/brand/650741963cc37e5fe08d25bf.png",
+      "contentType": "image/png",
+      "bytes": 27523,
+      "sha256": "35289ea8c8a054903a3a02e6c36e46793a72b7a71bf32cbb9691d271c4ad27db"
+    },
+    {
+      "kind": "font",
+      "assetId": "650743512a4b20c9d1e5f0d1",
+      "name": "HarmonyOS_Sans_TC_Medium.ttf",
+      "sourceUrl": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/650743512a4b20c9d1e5f0d1_HarmonyOS_Sans_TC_Medium.ttf",
+      "localPath": "imports/webflow/assets/fonts/650743512a4b20c9d1e5f0d1.ttf",
+      "targetPath": "apps/web/public/assets/fonts/650743512a4b20c9d1e5f0d1.ttf",
+      "contentType": "font/ttf",
+      "bytes": 4112712,
+      "sha256": "ef094d04ee84d6c3711204eaf053d00a38a0de60f4ca35ee909aed80bd8baeb9"
+    },
+    {
+      "kind": "font",
+      "assetId": "650743512c25db9b7cf5fb00",
+      "name": "HarmonyOS_Sans_TC_Black.ttf",
+      "sourceUrl": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/650743512c25db9b7cf5fb00_HarmonyOS_Sans_TC_Black.ttf",
+      "localPath": "imports/webflow/assets/fonts/650743512c25db9b7cf5fb00.ttf",
+      "targetPath": "apps/web/public/assets/fonts/650743512c25db9b7cf5fb00.ttf",
+      "contentType": "font/ttf",
+      "bytes": 4052064,
+      "sha256": "7d9a922077812a1b6ad39116e80ac283219d27ddafcc1da245e7679a2463c621"
+    },
+    {
+      "kind": "font",
+      "assetId": "6507435188240a4443b3a8b7",
+      "name": "HarmonyOS_Sans_TC_Light.ttf",
+      "sourceUrl": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/6507435188240a4443b3a8b7_HarmonyOS_Sans_TC_Light.ttf",
+      "localPath": "imports/webflow/assets/fonts/6507435188240a4443b3a8b7.ttf",
+      "targetPath": "apps/web/public/assets/fonts/6507435188240a4443b3a8b7.ttf",
+      "contentType": "font/ttf",
+      "bytes": 4157996,
+      "sha256": "9b3501b7b5ad676852efc81a2833ca2293f708f54c8028d4d3267e9e4c3d06d7"
+    },
+    {
+      "kind": "font",
+      "assetId": "650743518f4a66cd457f63c9",
+      "name": "HarmonyOS_Sans_TC_Bold.ttf",
+      "sourceUrl": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/650743518f4a66cd457f63c9_HarmonyOS_Sans_TC_Bold.ttf",
+      "localPath": "imports/webflow/assets/fonts/650743518f4a66cd457f63c9.ttf",
+      "targetPath": "apps/web/public/assets/fonts/650743518f4a66cd457f63c9.ttf",
+      "contentType": "font/ttf",
+      "bytes": 4064528,
+      "sha256": "6382485ee421f54d87d0cdbd63e7028b5b1a2988fbdc7a6a6d233158c511994e"
+    },
+    {
+      "kind": "font",
+      "assetId": "65074351d8e1badc0c794a44",
+      "name": "HarmonyOS_Sans_TC_Thin.ttf",
+      "sourceUrl": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/65074351d8e1badc0c794a44_HarmonyOS_Sans_TC_Thin.ttf",
+      "localPath": "imports/webflow/assets/fonts/65074351d8e1badc0c794a44.ttf",
+      "targetPath": "apps/web/public/assets/fonts/65074351d8e1badc0c794a44.ttf",
+      "contentType": "font/ttf",
+      "bytes": 4164648,
+      "sha256": "97e61257b9e7700ca160b06d67ce769187c63b48eb34aa0b7bb0b18028d3f3a5"
+    },
+    {
+      "kind": "font",
+      "assetId": "650743525c7e04100a5379c4",
+      "name": "HarmonyOS_Sans_TC_Regular.ttf",
+      "sourceUrl": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/650743525c7e04100a5379c4_HarmonyOS_Sans_TC_Regular.ttf",
+      "localPath": "imports/webflow/assets/fonts/650743525c7e04100a5379c4.ttf",
+      "targetPath": "apps/web/public/assets/fonts/650743525c7e04100a5379c4.ttf",
+      "contentType": "font/ttf",
+      "bytes": 4119636,
+      "sha256": "b63084477c1b5cd0db3b88fdba581ae0f05c947445f47d03810f1189544cd5a0"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65053272246b11c3f5e02ede",
+      "name": "macbook-air-text.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65053272246b11c3f5e02ede_macbook-air-text.svg",
+      "localPath": "imports/webflow/assets/images/65053272246b11c3f5e02ede.svg",
+      "targetPath": "apps/web/public/assets/icons/65053272246b11c3f5e02ede.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 2778,
+      "sha256": "77c7a5c8ab10255b7cb2718fbc04218f616054f5b4084367e208d763620bab53"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65075a2ad8f5700d0f111203",
+      "name": "anchor.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65075a2ad8f5700d0f111203_anchor.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111203.svg",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111203.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 340,
+      "sha256": "09aba48651edf437840315a2c8da04e18904fd9d65099f64c2b973a6d4f370fd"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65075a2ad8f5700d0f111204",
+      "name": "wifi.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65075a2ad8f5700d0f111204_wifi.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111204.svg",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111204.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 396,
+      "sha256": "c3b0f30674132b3d9105f071bfbe3cb8336ab0927dfc0649ed93886ed75c38ba"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65075a2ad8f5700d0f111205",
+      "name": "codepen.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65075a2ad8f5700d0f111205_codepen.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111205.svg",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111205.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 481,
+      "sha256": "a8ab1908ff7239ab7f45759e9134ff7fa4b19fdc30a8e73e3ed17d476cdbafde"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65075a2ad8f5700d0f111206",
+      "name": "video.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65075a2ad8f5700d0f111206_video.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111206.svg",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111206.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 324,
+      "sha256": "895ecc5329108e9415e61bc9688c4976c6bdeef9bd5a1aaa6ab5bc8d67b89af4"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65075a2ad8f5700d0f111207",
+      "name": "share-2.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65075a2ad8f5700d0f111207_share-2.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111207.svg",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111207.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 440,
+      "sha256": "fce9939734c8c85f7a60a3bbb0c39473792447bbbfd7755def89228f23ea8884"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65075a2ad8f5700d0f111208",
+      "name": "aperture.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65075a2ad8f5700d0f111208_aperture.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111208.svg",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111208.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 563,
+      "sha256": "9ac0024e5d8cb217b96e7ed5de256516e34a922d25eb5fe14fb24c6d35dbf0e4"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65077f78218531423204127d",
+      "name": "plus.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65077f78218531423204127d_plus.svg",
+      "localPath": "imports/webflow/assets/images/65077f78218531423204127d.svg",
+      "targetPath": "apps/web/public/assets/icons/65077f78218531423204127d.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 304,
+      "sha256": "bbdd3b2aa207053acc46a5a180b94498ee770796be9980191ef8fa8f8b7552f5"
+    },
+    {
+      "kind": "icon",
+      "assetId": "6507a733352adcbf572e1eba",
+      "name": "32x32.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/6507a733352adcbf572e1eba_32x32.png",
+      "localPath": "assets/optimized/6507a733352adcbf572e1eba/6507a733352adcbf572e1eba-lossless.png",
+      "targetPath": "apps/web/public/assets/icons/6507a733352adcbf572e1eba.png",
+      "contentType": "image/png",
+      "bytes": 582,
+      "sha256": "6f31cb00a4d14890918e86973492a8cc41b6b50073212ce51b98654eef5a00c5"
+    },
+    {
+      "kind": "icon",
+      "assetId": "6507a7849d60b1182e050e99",
+      "name": "256.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/6507a7849d60b1182e050e99_256.png",
+      "localPath": "assets/optimized/6507a7849d60b1182e050e99/6507a7849d60b1182e050e99-lossless.png",
+      "targetPath": "apps/web/public/assets/icons/6507a7849d60b1182e050e99.png",
+      "contentType": "image/png",
+      "bytes": 7492,
+      "sha256": "dd3f33653e16d9fe11f9b70c8ea06a0d18f49d5362f763cefd4f312d004918d5"
+    },
+    {
+      "kind": "icon",
+      "assetId": "6510a0e202d67e0ab8c779dd",
+      "name": "check-circle.svg",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/6510a0e202d67e0ab8c779dd_check-circle.svg",
+      "localPath": "imports/webflow/assets/images/6510a0e202d67e0ab8c779dd.svg",
+      "targetPath": "apps/web/public/assets/icons/6510a0e202d67e0ab8c779dd.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 321,
+      "sha256": "5fdf192755bf9a447afecea74b06c18dc07ff343559c6e3dafe372b7d41752eb"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65133573edd089379a1540e0",
+      "name": "group.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65133573edd089379a1540e0_group.png",
+      "localPath": "assets/optimized/65133573edd089379a1540e0/65133573edd089379a1540e0-lossless.png",
+      "targetPath": "apps/web/public/assets/icons/65133573edd089379a1540e0.png",
+      "contentType": "image/png",
+      "bytes": 12341,
+      "sha256": "d70a706e4d275a169fa3b5cd7fdb3500a8320190f0eeb6dce7e4045864e0139d"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65171836d0b145049cbfba47",
+      "name": "clock.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65171836d0b145049cbfba47_clock.png",
+      "localPath": "assets/optimized/65171836d0b145049cbfba47/65171836d0b145049cbfba47-lossless.png",
+      "targetPath": "apps/web/public/assets/icons/65171836d0b145049cbfba47.png",
+      "contentType": "image/png",
+      "bytes": 9810,
+      "sha256": "ee2c64ba144dd68ab15eb1d40bc29c36f7fc12d91fc6de3ee717ec2a9b64b13c"
+    },
+    {
+      "kind": "icon",
+      "assetId": "65171de5de6d5f9f9d43d9eb",
+      "name": "checked.png",
+      "sourceUrl": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/65171de5de6d5f9f9d43d9eb_checked.png",
+      "localPath": "assets/optimized/65171de5de6d5f9f9d43d9eb/65171de5de6d5f9f9d43d9eb-lossless.png",
+      "targetPath": "apps/web/public/assets/icons/65171de5de6d5f9f9d43d9eb.png",
+      "contentType": "image/png",
+      "bytes": 13878,
+      "sha256": "e2953b2fd4d977d9a1b3938cab40edf28b7929fde5377a136c99131d6af4a28d"
+    },
+    {
+      "kind": "vendor",
+      "name": "page-not-found",
+      "sourceUrl": "https://cdn.prod.website-files.com/static/page-not-found.211a85e40c.svg",
+      "localPath": "imports/webflow/assets/static/page-not-found.211a85e40c.svg",
+      "targetPath": "apps/web/public/assets/vendor/page-not-found.211a85e40c.svg",
+      "assetId": null,
+      "contentType": "image/svg+xml",
+      "bytes": 754,
+      "sha256": "58afd37317e5adb23a1e2b5006169e2350cdbc8948ee7998250fce897f3fb699"
+    },
+    {
+      "kind": "vendor",
+      "name": "youtube-placeholder",
+      "sourceUrl": "https://d3e54v103j8qbb.cloudfront.net/static/youtube-placeholder.2b05e7d68d.svg",
+      "localPath": "imports/webflow/assets/static/youtube-placeholder.2b05e7d68d.svg",
+      "targetPath": "apps/web/public/assets/vendor/youtube-placeholder.2b05e7d68d.svg",
+      "assetId": null,
+      "contentType": "image/svg+xml",
+      "bytes": 1284,
+      "sha256": "57a95589363c285e57f425f20f8533af5c8e505dcd7102399805e36919f6714f"
+    }
+  ]
+}
