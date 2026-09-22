@@ -17,4 +17,8 @@
 
 `migration/build_runtime_occurrences.rb` 以相同來源重建 occurrence inventory；若代理產物無法通過 verifier，主管可用它重建後再驗收。
 
+`deployment/upload_r2_preview.mjs` 預設只驗證 427 個本機檔案、SHA-256、headers 與 Preview URL；遠端模式還要求 `--apply`、明確 commit SHA、明確且吻合的 account ID、乾淨 tracked tree、Keychain runtime token 與 `INVILLAGE_R2_PREVIEW_WRITE=authorized`。它固定只寫入 `invillage-media-preview`。
+
+`verification/verify_r2_preview.mjs` 要求乾淨且吻合的 source commit，先讀回 target bucket 的 exact `r2.dev` origin，再以 R2 API 核對完整 key／bytes／storage class／HTTP metadata，最後從該 origin 下載全部物件核對 bytes 與 SHA-256；不保存下載副本。
+
 一次性 command 不建立成 script；同一問題重複出現且解法穩定時才收錄。

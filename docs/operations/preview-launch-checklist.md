@@ -34,7 +34,7 @@ status: active
 | P5-G3 | Git 與 Preview Cloudflare 異動授權 | 使用者 | Complete |
 | P5-G3b | Project-local Wrangler v4 dependency | Codex | Complete：4.136.1 exact，audit 0 |
 | P5-G4 | Preview token／account／plan／name readback | Codex | Complete：R2 Paid active；Dashboard、REST API、Wrangler 一致；兩個 target names 可用 |
-| P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Ready：依既有授權執行，先建 Standard bucket 再逐項 readback |
+| P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | In progress：Standard bucket／public URL complete；427 upload 與 full readback pending |
 | P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Blocked by G5 |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
 | P5-G8 | Preview technical Go／No-Go | 使用者 | Blocked by G7 |
@@ -51,7 +51,7 @@ status: active
 | Independent dry-run | MiniMax＋Codex | G2 | Complete | 主管 fresh rerun：deterministic、0 failures、repo delta 0 |
 | Wrangler v4 local dev dependency | Codex | G3b | Complete | Exact `4.136.1`；private package；audit 0 vulnerabilities |
 | Git branch／commit／push／merge | Codex | G3／G6 | Authorized | 大改使用 `codex/phase-5-preview` |
-| Final `apps/web/public/` | Codex | G5 | Blocked | 需要實際 `r2.dev` base URL |
+| Final `apps/web/public/` | Codex | G5 | Complete | 46 files／25,529,724 bytes；8 HTML／1 CSS／12 JS／24 Pages assets；actual `r2.dev` mapping |
 
 ## QA & Testing
 
@@ -59,7 +59,7 @@ status: active
 |---|---|---|---|---|
 | Import checksum | Codex | G1 | Complete | 8 HTML、1 CSS、12 JS、211 images、6 fonts；0 failures |
 | Build determinism | Codex＋MiniMax | G2 | Complete | relative path＋SHA-256 清單完全一致 |
-| Static verifier | Codex＋MiniMax | G2 | Complete | 8／1／12／24／362／123；0 failures |
+| Static verifier | Codex＋MiniMax | G2／G5 | Complete | actual Preview origin：8／1／12／24／362／123；0 failures；46-file deterministic tree |
 | Local browser smoke | Codex | G6 | Pending | routes、assets、console、form guard |
 | Remote route matrix | Codex | G7 | Pending | 8 routes、robots 200、unknown 404 |
 | Responsive QA | Codex | G7 | Pending | 1440×900、768×1024、390×844 |
@@ -191,6 +191,7 @@ status: active
 | R2 subscription／entitlement | Codex | Complete | R2 Paid active；先前 `10042` 為短暫同步延遲，後續 REST API／Wrangler 均回 200 |
 | Project／bucket 名稱可用性 | Codex | Complete | Pages 與 R2 target names 均未占用 |
 | Account 當月 R2 用量 | Codex | Complete | 0 B、3 Class A、0 Class B、billable `$0.00`；G5 完成後重新讀回 |
+| Preview R2 object upload／readback | Codex | In progress | upload tool dry-run 427／427；source commit 後 upload，再核對 metadata 與全部 SHA-256 |
 | Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |
 
 ## Official References

@@ -9,7 +9,7 @@
 
 - `manifests/runtime-occurrences.json`：1,239 筆來源 occurrence、139 個 live assets 與 124 筆 external rows；主管 verifier 已通過。
 - `manifests/pages-runtime-assets.json`：24 個 Pages deployment assets；本機複製狀態與遠端授權分開管理。
-- `manifests/r2-upload-preview.json`：427 個 Preview R2 objects 與 HTTP metadata；三個 remote state flags 預設為 `false`，目前尚未建立 bucket、開 public access 或 upload。
+- `manifests/r2-upload-preview.json`：427 個 Preview R2 objects 與 HTTP metadata；三個 authorization flags 只在使用者接受 Preview remote scope 後設為 `true`，實際遠端狀態仍以 launch checklist 與 provider readback 為準。
 
 所有轉檔必須保留原圖、透明度與 fallback，並先以小批次驗證。
 

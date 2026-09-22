@@ -21,10 +21,13 @@ CONTENT_TYPES = {
   ".webp" => "image/webp"
 }.freeze
 
-options = { base_url: nil }
+options = { base_url: nil, authorized: false }
 OptionParser.new do |parser|
   parser.on("--base-url URL", "Populate remote URLs after public r2.dev readback") do |url|
     options[:base_url] = url
+  end
+  parser.on("--authorized", "Record the accepted Preview bucket/public/upload authorization") do
+    options[:authorized] = true
   end
 end.parse!
 
@@ -91,9 +94,9 @@ manifest = {
   "sourceManifest" => "assets/manifests/r2-upload-live.json",
   "bucketName" => BUCKET_NAME,
   "publicBaseUrl" => options[:base_url],
-  "bucketCreationAuthorized" => false,
-  "publicAccessAuthorized" => false,
-  "uploadAuthorized" => false,
+  "bucketCreationAuthorized" => options[:authorized],
+  "publicAccessAuthorized" => options[:authorized],
+  "uploadAuthorized" => options[:authorized],
   "summary" => summary,
   "items" => items
 }

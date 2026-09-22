@@ -7,7 +7,7 @@
 | 階段 | 5 — Preview 部署 |
 | 架構負責 | Codex |
 | 決策者 | 使用者 |
-| 遠端異動 | Preview 已授權、尚未執行；credential、R2 entitlement、費用與名稱 gate 已通過 |
+| 遠端異動 | Preview 已授權；R2 bucket 與 public `r2.dev` 已建立，object upload 與 Pages 尚未執行 |
 
 ## 目標
 
@@ -201,7 +201,7 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 4. Codex 獨立審核 schema、mapping 與 scripts。
 5. Codex 先做 Cloudflare read-only account／plan／name preflight，再把四類外部異動列成一份明確授權清單。
 6. 使用者核准建立 Preview bucket、啟用 public `r2.dev`、上傳 427 objects、建立 Pages Git integration 與 Preview deployment。（授權已完成；credential、entitlement、費用與名稱 gate 已通過，遠端尚未執行）
-7. Codex 建立 bucket 並讀回 public base URL，才用該 URL 產生最終 `apps/web/public/`。
+7. Codex 建立 bucket 並讀回 public base URL，才用該 URL 產生最終 `apps/web/public/`。（已完成並由 static verifier 通過）
 8. Codex 上傳 R2、核對 keys／bytes／headers／decode，再建立 Pages Preview。
 9. Codex 完成 route、network、desktop／mobile、互動、console 與 404 驗收。
 10. 階段 5 完成後，進入階段 6 視覺一致性門檻。
@@ -236,12 +236,12 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 4. Contact form 依 fail-closed 契約處理。
 5. Pages project 使用 `invillage-com-tw`；R2 bucket 使用 `invillage-media-preview`。
 
-## 已授權但尚未執行
+## Preview 遠端執行狀態
 
-1. 建立 Preview R2 bucket。
-2. 啟用 public `r2.dev`。
-3. 上傳 427 objects。
-4. 建立 Pages Git integration 與 Preview deployment。
+1. Complete：建立 Preview R2 bucket；readback 為 Standard／APAC／default。
+2. Complete：啟用 public `r2.dev` 並讀回相同 origin。
+3. Pending：上傳與完整核對 427 objects。
+4. Pending：建立 Pages Git integration 與 Preview deployment。
 
 Credential、account、R2 Paid entitlement、費用與名稱 gate 已通過；Pages project 與 R2 bucket target names 均可用。先前 R2 API 的 `10042 / NotEntitled` 是短暫同步延遲，後續 Dashboard、REST API 與 Wrangler 已一致通過。Source、artifact 與每個遠端 readback gate 仍須逐項通過。任何新費用、方案購買／升級、Production、DNS、custom domain 與 Webflow 異動仍未授權。
 

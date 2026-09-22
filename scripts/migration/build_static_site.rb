@@ -47,8 +47,15 @@ media_base_url = options[:media_base_url].delete_suffix("/")
 output_root = Pathname.new(options[:output_root]).expand_path(ROOT)
 forbidden_outputs = [Pathname.new("/"), ROOT, Pathname.new(Dir.home).expand_path]
 raise "unsafe output root: #{output_root}" if forbidden_outputs.include?(output_root)
-if output_root.exist? && output_root.children.any?
-  raise "output root must be absent or empty: #{output_root}"
+raise "output root must not be a symlink: #{output_root}" if output_root.symlink?
+if output_root.exist?
+  populated_entries = Dir.glob(output_root.join("**/*"), File::FNM_DOTMATCH).reject do |path|
+    %w[. ..].include?(File.basename(path)) || File.lstat(path).directory?
+  end
+  unless populated_entries.empty?
+    raise "output root must be absent or contain only empty directories: #{output_root}"
+  end
+  FileUtils.rm_rf(output_root)
 end
 output_root.mkpath
 
@@ -58,23 +65,39 @@ end
 
 def verify_source(record)
   relative_path = record.fetch("localPath")
-  absolute_path = ROOT.join(relative_path).expand_path
-  unless absolute_path.to_s.start_with?("#{ROOT}/") && absolute_path.file?
+  absolute_path = ROOT.join(relative_path).cleanpath
+  unless absolute_path.to_s.start_with?("#{ROOT}/") && absolute_path.exist?
     raise "missing or out-of-root source: #{relative_path}"
   end
+  raise "symlinked source is not allowed: #{relative_path}" if absolute_path.symlink?
 
-  bytes = absolute_path.size
-  sha256 = Digest::SHA256.file(absolute_path).hexdigest
+  real_path = absolute_path.realpath
+  unless real_path == absolute_path && real_path.to_s.start_with?("#{ROOT.realpath}/") && real_path.file?
+    raise "non-canonical or out-of-root source: #{relative_path}"
+  end
+
+  bytes = real_path.size
+  sha256 = Digest::SHA256.file(real_path).hexdigest
   raise "bytes mismatch: #{relative_path}" if record["bytes"] && bytes != record.fetch("bytes")
   raise "sha256 mismatch: #{relative_path}" if record["sha256"] && sha256 != record.fetch("sha256")
-  absolute_path
+  real_path
 end
 
-def public_path(target_path)
+def public_relative_path(target_path)
   unless target_path.start_with?(PUBLIC_PREFIX)
     raise "target is outside Pages public root: #{target_path}"
   end
-  "/#{target_path.delete_prefix(PUBLIC_PREFIX)}"
+  relative_path = Pathname.new(target_path.delete_prefix(PUBLIC_PREFIX))
+  if relative_path.absolute? || relative_path.each_filename.any? { |part| part == ".." }
+    raise "target escapes Pages public root: #{target_path}"
+  end
+  normalized = relative_path.cleanpath.to_s
+  raise "empty Pages public target: #{target_path}" if normalized == "." || normalized.empty?
+  normalized
+end
+
+def public_path(target_path)
+  "/#{public_relative_path(target_path)}"
 end
 
 def asset_id_from_url(url)
@@ -228,7 +251,11 @@ end
 
 pages_runtime.fetch("items").each do |item|
   source_path = verify_source(item)
-  destination = output_root.join(item.fetch("targetPath").delete_prefix(PUBLIC_PREFIX))
+  relative_target = public_relative_path(item.fetch("targetPath"))
+  destination = output_root.join(relative_target).cleanpath
+  unless destination.to_s.start_with?("#{output_root}/")
+    raise "destination escapes output root: #{item.fetch('targetPath')}"
+  end
   destination.dirname.mkpath
   FileUtils.cp(source_path, destination)
 end

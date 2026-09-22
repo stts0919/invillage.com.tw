@@ -6,7 +6,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始；本機交付基線已推送，Cloudflare credential、entitlement、費用與名稱 readback 已通過，準備進入 Preview R2 建立。
+「階段 5 — Preview 部署」已開始；G5 進行中：Preview R2 bucket 與公開開發網址已建立，final static artifact 與安全 upload/readback 工具已就緒，等待以乾淨 source commit 上傳 427 objects。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
@@ -42,13 +42,13 @@
 | Asset manifest | 217 筆：圖片 211＋TTF 6 |
 | Placement | Pages 16／R2 123／Archive 72 |
 | Optimization | 139／139 assets；428 outputs；420／420 lossy metrics 通過 |
-| Delivery manifests | Pages 16；R2 427 items／123 assets；manifest remote flags false、遠端寫入尚未執行 |
-| Preview local contract | Pages runtime 24 items；R2 Preview 427 items；builder／verifier dry-run 通過 |
+| Delivery manifests | Pages 16；R2 427 items／123 assets；Preview remote authorization flags true、objects 尚未上傳 |
+| Preview local contract | Final `apps/web/public/` 46 files／25,529,724 bytes；8 HTML／1 CSS／12 JS／24 Pages assets；verifier 0 failures |
 | Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
 | Cloudflare tooling | Wrangler `4.136.1` exact devDependency；private package；npm audit 0 vulnerabilities |
 | Cloudflare auth | Keychain service `invillage-cloudflare-preview` 已建立；`wrangler whoami` 通過且 account match；未輸出 token |
 | Cloudflare names | Pages `invillage-com-tw`、R2 `invillage-media-preview` 均未占用 |
-| Cloudflare R2 | R2 Paid active；Dashboard、REST API、Wrangler readback 通過；0 buckets、0 B、當期 billable usage `$0.00`；遠端異動 0 |
+| Cloudflare R2 | `invillage-media-preview` 已建立：Standard／APAC／default；public origin `https://pub-a73a77b87d504498bad6ae568754e572.r2.dev` 已啟用；objects 尚未上傳 |
 | Production mutation | 無 |
 
 來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
@@ -83,7 +83,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | In progress：G4 通過；準備執行已授權的 G5 Preview R2 建立與 readback |
+| P5-C3 | Codex | In progress：bucket／public URL／final artifact complete；upload 與 full remote readback pending |
 
 ### Active assignment — P5-M3
 
