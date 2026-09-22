@@ -35,7 +35,7 @@ status: active
 | P5-G3b | Project-local Wrangler v4 dependency | Codex | Complete：4.136.1 exact，audit 0 |
 | P5-G4 | Preview token／account／plan／name readback | Codex | Complete：R2 Paid active；Dashboard、REST API、Wrangler 一致；兩個 target names 可用 |
 | P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Complete：427 objects／113,523,148 bytes；metadata、headers、公開 bytes、SHA-256 0 failures |
-| P5-G6 | Final static artifact、local browser QA、Git merge | Codex | In progress：local QA pass；contact submit 待 action-time confirmation；尚未 merge |
+| P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Partial complete：artifact／local QA complete；PR／merge pending |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
 | P5-G8 | Preview technical Go／No-Go | 使用者 | Blocked by G7 |
 
@@ -60,10 +60,10 @@ status: active
 | Import checksum | Codex | G1 | Complete | 8 HTML、1 CSS、12 JS、211 images、6 fonts；0 failures |
 | Build determinism | Codex＋MiniMax | G2 | Complete | relative path＋SHA-256 清單完全一致 |
 | Static verifier | Codex＋MiniMax | G2／G5 | Complete | actual Preview origin：8／1／12／24／362／123；0 failures；46-file deterministic tree |
-| Local browser smoke | Codex | G6 | Partial pass | Pages emulator：12-route status matrix、8-page render、assets、console 皆通過；form submit 待確認 |
+| Local browser smoke | Codex | G6 | Complete | Pages emulator：12-route status matrix、8-page render、assets、console 與 synthetic form submit 均通過 |
 | Remote route matrix | Codex | G7 | Pending | 8 routes、robots 200、unknown 404 |
 | Responsive QA | Codex | G6／G7 | Local partial pass | Desktop 與 390×844 mobile 無水平 overflow、可見圖片 0 broken；tablet 與 remote 待 G7 |
-| Interaction QA | Codex | G6／G7 | Local partial pass | nav、mobile menu、tabs、slider、FAQ 通過；Maps／YouTube render，form submit 待確認；remote 待 G7 |
+| Interaction QA | Codex | G6／G7 | Local pass | nav、mobile menu、tabs、slider、FAQ、Maps／YouTube render；form fail-closed 且 Webflow form request 0；remote 待 G7 |
 | Network allowlist | Codex | G6／G7 | Local pass | 8 pages observed assets：forbidden Webflow CDN／form API = 0；remote 再驗 |
 | Owner UAT | 使用者 | G8 | Pending | Preview 可進入階段 6 parity |
 

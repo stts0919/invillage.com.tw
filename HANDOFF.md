@@ -6,7 +6,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始；G5 已完成：Preview R2 427 objects 與 final static artifact 全部通過 readback。G6 本機 QA 進行中；只剩 contact form 實際 submit 需 browser action-time confirmation，之後才進 Git merge 與 Pages Git integration。
+「階段 5 — Preview 部署」已開始；G5 與 G6 本機 QA 已完成：Preview R2 427 objects、final static artifact、routes、responsive、interactions、network、console 與 contact form fail-closed 全部通過。下一步是 PR／merge，之後建立 Pages Git integration。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
@@ -84,7 +84,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | In progress：G5 complete；G6 local routes／desktop／mobile／nav／tabs／slider／FAQ／network／console pass；form submit pending confirmation |
+| P5-C3 | Codex | In progress：G5 complete；G6 local QA complete，synthetic form submit 顯示 failure、success 隱藏、URL 不變、Webflow form request 0；PR／merge pending |
 
 ### Active assignment — P5-M3
 
