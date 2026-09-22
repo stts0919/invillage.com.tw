@@ -4,7 +4,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已完成至 G7；Preview R2、Pages Git integration、unique branch Preview 與遠端 smoke 均通過，現在等待 G8 使用者 Go／No-Go。正式網域、DNS 與 Webflow 正式站未變更。
+「階段 6 — 一致性門檻」已開始。Webflow／Preview 的 8 routes × 3 viewports 技術比對 P0／P1 為 0，現在等待使用者完成 owner visual review。正式網域、DNS 與 Webflow 正式站未變更。
 
 技術 Preview：<https://a66628b4.invillage-com-tw.pages.dev>
 
@@ -17,6 +17,7 @@ GitHub：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.t
 - [文件索引](./docs/README.md)
 - [架構索引](./docs/architecture/README.md)
 - [遷移路線圖](./docs/architecture/migration-roadmap.md)
+- [一致性核對表](./docs/migration/parity-checklist.md)
 - [協作角色](./docs/collaboration/agent-roles.md)
 
 ## 主要目錄

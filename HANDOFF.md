@@ -6,7 +6,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已完成至 G7；G8 `Ready`，等待使用者對技術 Preview 做 Go／No-Go。Pages Git integration、隔離 Preview deployment 與遠端 route／asset／responsive／interaction／network／console smoke 全部通過。
+「階段 5 — Preview 部署」已由使用者核准 G8 Go並封存。「階段 6 — 一致性門檻」進行中；8 routes × 3 viewports 技術 parity P0／P1 0，等待使用者 owner visual review。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
@@ -30,10 +30,12 @@
 - [協作角色](./docs/collaboration/agent-roles.md)
 - [Webflow 匯入盤點](./docs/migration/webflow-inventory.md)
 - [資產輕量化流程](./docs/migration/asset-pipeline.md)
+- [Webflow／Preview 一致性核對表](./docs/migration/parity-checklist.md)
 - [Preview 發布契約](./docs/operations/preview-release.md)
 - [Preview Launch Checklist](./docs/operations/preview-launch-checklist.md)
 - [里程碑紀錄索引](./docs/records/README.md)
 - [階段 4 紀錄](./docs/records/phase-04-git-github.md)
+- [階段 5 紀錄](./docs/records/phase-05-preview-deployment.md)
 
 ## 已驗證現況
 
@@ -55,6 +57,7 @@
 | Cloudflare R2 | `invillage-media-preview`：Standard／APAC／default；public origin 已啟用；427 objects／113,523,148 bytes，metadata＋公開 bytes＋SHA-256 0 failures |
 | Cloudflare Pages | Git source `stts0919/invillage.com.tw`；root `apps/web`；output `public`；空 build command；production auto off；Preview include `codex/*` |
 | Pages deployments | Technical main：`f5cfdffe`／success；unique Preview：`a66628b4`／success，`https://a66628b4.invillage-com-tw.pages.dev`；production auto 關閉後的 main push 僅產生 skipped／idle／404 record，未部署 |
+| Phase 6 parity | Live Webflow 8／8 SHA match；24／24 matched viewport pairs 的 copy／DOM／links／font／geometry pass；median screenshot SSIM 0.996186；P0／P1 0 |
 | 正式環境異動 | 無正式網域、DNS、custom domain、Webflow publish／unpublish 或 Production R2／Worker／D1 異動 |
 
 `apps/web/public/` 已形成可自管部署版本；HTML／CSS 不再依賴禁止的 Webflow CDN，內容圖片由已驗證的 Preview R2 提供。
@@ -78,32 +81,24 @@
 
 MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管驗收。
 
-## 階段 5 工作包
+## 階段 6 工作包
 
-狀態：`G8 Ready`。G1–G7 已通過；等待使用者決定是否進入階段 6 視覺一致性門檻。
+狀態：`Technical pass / Owner review pending`。詳細 evidence 與差異白名單只維護在 [parity checklist](./docs/migration/parity-checklist.md)。
 
 | 工作包 | 負責 | 狀態 |
 |---|---|---|
-| P5-C1 | Codex | Complete：2 generic SVG＋24-item Pages runtime manifest |
-| P5-C2 | Codex | Complete：occurrence schema、R2 Preview manifest、builder／verifier dry-run 通過 |
-| P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
-| P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
-| P5-M3 | MiniMax | Optional／non-blocking：主管＋Luna Max 已完成 fresh public-tree／secret／ignore audit，P0／P1 0 |
-| P5-C3 | Codex | Complete：G5–G7、PR／merge、Pages Git integration、unique Preview 與 remote smoke 全部通過 |
+| P6-C1 | Codex | Complete：live checksum、route baseline、24 matched viewport DOM／geometry／screenshot、interaction comparison |
+| P6-A1 | Luna Max | Complete：intentional-delta contract audit，P0／P1 0 |
+| P6-A2 | Luna Max | Complete：static generator-equivalence／DOM diff audit，P0／P1 0 |
+| P6-M1 | MiniMax | Assigned：獨立本機／唯讀 parity evidence review；不連網、不改檔 |
+| P6-U1 | 使用者 | Pending：檢視 unique Preview 與 checklist，決定 Phase 6 Go／No-Go |
 
-### 下一步 — G8 Owner Go／No-Go
+### Active assignment — P6-M1
 
-1. 使用者開啟 unique Preview，確認是否接受進入階段 6 視覺一致性門檻。
-2. 若 Go：Codex 先定義 Webflow／Preview 比對矩陣，再拆成不重疊的 MiniMax 本機／唯讀工作包。
-3. 若 No-Go：保留 immutable Preview 與 R2 keys，記錄可重現差異後回到對應 gate 修正。
-
-## 階段 5 驗收
-
-- 乾淨 checkout 加上核准的 Preview R2 可直接部署完整靜態站；完整再生成仍需被忽略的已驗證輸入。
-- HTML／CSS／JavaScript、路由、404、字型與必要資產可用。
-- Preview R2 與 Production 隔離，無正式網域變更。
-- 取得可重現的 branch／PR Preview URL、deploy evidence 與 rollback 路徑。
-- Codex 完成獨立 diff、路徑、功能與遠端 readback；代理回報不能替代此驗收。
+1. 讀 `docs/migration/parity-checklist.md`、source HTML／CSS／JS 與 `apps/web/public/`。
+2. 唯讀重跑 visible copy、section／element counts、links、font-face、script ordering、24 Pages assets checksums。
+3. 只回報 P0／P1 finding；若無，回報 `no blocking findings` 與可重現命令。
+4. 禁止 network／browser／Cloudflare、檔案修改與 Git mutation。
 
 ## 目前授權與硬門檻
 

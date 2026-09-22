@@ -55,13 +55,15 @@
 - [x] 建立 Pages Git integration。
 - [x] 取得 branch／PR Preview URL。
 
-驗收：G1–G7 已符合 [系統總覽](./system-overview.md) 的環境隔離，沒有正式網域變更；G8 等待使用者 Go／No-Go。
+驗收：G1–G8 Complete；符合 [系統總覽](./system-overview.md) 的環境隔離，沒有正式網域變更。
 
 ## 階段 6 — 一致性門檻
 
-- 比對 Webflow 與 Preview 的 desktop／mobile。
-- 驗證路由、連結、圖片、字型、表單狀態、console 與 404。
-- 未達一致前，不開始重新設計。
+- [x] 比對 Webflow 與 Preview 的 desktop／tablet／mobile。
+- [x] 驗證路由、連結、圖片、字型、表單狀態、console 與 404。
+- [x] 建立差異白名單與 [parity checklist](../migration/parity-checklist.md)。
+- [ ] 使用者完成 owner visual review。
+- [ ] Owner Go 前不開始重新設計。
 
 驗收：使用者確認 Preview 可取代原站外觀與既有可用功能。
 

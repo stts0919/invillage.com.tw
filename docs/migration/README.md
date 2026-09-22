@@ -7,7 +7,4 @@
 - [資產輕量化流程](./asset-pipeline.md)
 - [資產輕量化樣本報告](./asset-sample-report.md)
 - [資產輕量化全量報告](./asset-live-report.md)
-
-後續階段建立：
-
-- `parity-checklist.md`：階段 6。
+- [Webflow／Preview 一致性核對表](./parity-checklist.md)

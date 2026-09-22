@@ -2,7 +2,7 @@
 artifact: launch-checklist
 version: "1.0"
 created: 2026-09-22
-status: active
+status: complete
 ---
 
 # Preview Launch Checklist
@@ -12,7 +12,7 @@ status: active
 | 欄位 | 內容 |
 |---|---|
 | 交付 | Webflow 自管靜態站的 Cloudflare branch Preview |
-| 日期 | 未設定；依 gate 完成事件推進 |
+| 日期 | 2026-09-22 |
 | 類型 | 公開 Preview，無正式網域 |
 | Launch owner | Codex |
 | Go／No-Go | 使用者 |
@@ -37,7 +37,7 @@ status: active
 | P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Complete：427 objects／113,523,148 bytes；metadata、headers、公開 bytes、SHA-256 0 failures |
 | P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Complete：PR #1 clean；fast-forward merge；remote `main`=`de578cf` |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Complete：project config readback、unique Preview `a66628b4`、remote smoke 全部通過 |
-| P5-G8 | Preview technical Go／No-Go | 使用者 | Ready：等待使用者確認是否進入階段 6 parity |
+| P5-G8 | Preview technical Go／No-Go | 使用者 | Complete：G8 Go，進入階段 6 parity |
 
 ## Engineering Readiness
 
@@ -67,7 +67,7 @@ status: active
 | Responsive QA | Codex | G6／G7 | Complete | 1440×900、768×1024、390×844：無 overflow；settled visible images 0 broken |
 | Interaction QA | Codex | G6／G7 | Complete | Remote nav、tabs、slider、FAQ 通過；local form fail-closed／Webflow request 0；remote guard present |
 | Network allowlist | Codex | G6／G7 | Complete | Unique Preview 8 pages observed assets：forbidden Webflow CDN／form API = 0；console issues 0 |
-| Owner UAT | 使用者 | G8 | Pending | Preview 可進入階段 6 parity |
+| Owner UAT | 使用者 | G8 | Complete | 使用者核准 G8 Go；Phase 6 final visual acceptance 另見 parity checklist |
 
 ## Design & UX
 

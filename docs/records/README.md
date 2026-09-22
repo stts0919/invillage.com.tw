@@ -6,3 +6,4 @@
 - [階段 2：Webflow 匯入](./phase-02-webflow-import.md)
 - [階段 3：資產輕量化](./phase-03-asset-optimization.md)
 - [階段 4：Git 與 GitHub](./phase-04-git-github.md)
+- [階段 5：Preview 部署](./phase-05-preview-deployment.md)
