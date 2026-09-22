@@ -241,7 +241,7 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 1. Complete：建立 Preview R2 bucket；readback 為 Standard／APAC／default。
 2. Complete：啟用 public `r2.dev` 並讀回相同 origin。
 3. Complete：上傳與完整核對 427 objects；API metadata 與公開 bytes／SHA-256 均 0 failures。
-4. Pending：建立 Pages Git integration 與 Preview deployment。
+4. Blocked：建立 Pages Git integration 與 Preview deployment；既有 GitHub App installation scope 超出本次單一 repo 授權，尚未選 repo 或建立 project。
 
 Credential、account、R2 Paid entitlement、費用與名稱 gate 已通過；Pages project 與 R2 bucket target names 均可用。先前 R2 API 的 `10042 / NotEntitled` 是短暫同步延遲，後續 Dashboard、REST API 與 Wrangler 已一致通過。Source、artifact 與每個遠端 readback gate 仍須逐項通過。任何新費用、方案購買／升級、Production、DNS、custom domain 與 Webflow 異動仍未授權。
 

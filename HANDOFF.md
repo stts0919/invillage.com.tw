@@ -6,7 +6,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始；G5 與 G6 本機 QA 已完成：Preview R2 427 objects、final static artifact、routes、responsive、interactions、network、console 與 contact form fail-closed 全部通過。下一步是 PR／merge，之後建立 Pages Git integration。
+「階段 5 — Preview 部署」已開始；G5、G6 與 fast-forward merge 已完成，`main` 現為 `de578cf`。G7 停在 Pages GitHub App scope gate：既有 installation 可見多個 repositories，超出「僅存取 invillage.com.tw」授權；尚未選 repo、建立 Pages project 或部署。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
@@ -14,7 +14,8 @@
 - 階段 4 文件 commit：`1a211fb1f29b668e67bd37dcc1b6384c6189b8ba`
 - Phase 5 local baseline commit：`e083f47b54d8cdfb4491a9fcf6645646e8df1f5c`
 - Phase 5 R2／static candidate commit：`9b39cbe8e04074f28955a07ca03512d3555b72fe`
-- Webflow 正式站仍在線上；尚未建立 Cloudflare Pages、R2、Worker 或 D1。
+- Phase 5 merged main：`de578cf738466bf5b3fd82fd2f084b7c63e67c73`；[PR #1](https://github.com/stts0919/invillage.com.tw/pull/1)
+- Webflow 正式站仍在線上；Preview R2 已建立，Cloudflare Pages／Worker／D1 尚未建立。
 - 本機檔案仍是 source of truth；`imports/webflow/` 是不可變遷移來源。
 
 ## 文件入口
@@ -84,7 +85,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | In progress：G5 complete；G6 local QA complete，synthetic form submit 顯示 failure、success 隱藏、URL 不變、Webflow form request 0；PR／merge pending |
+| P5-C3 | Codex | Blocked at G7：G5／G6／PR／fast-forward merge complete；現有 Cloudflare Pages GitHub App scope 超出單一 repo 授權，已停止 |
 
 ### Active assignment — P5-M3
 

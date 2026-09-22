@@ -35,8 +35,8 @@ status: active
 | P5-G3b | Project-local Wrangler v4 dependency | Codex | Complete：4.136.1 exact，audit 0 |
 | P5-G4 | Preview token／account／plan／name readback | Codex | Complete：R2 Paid active；Dashboard、REST API、Wrangler 一致；兩個 target names 可用 |
 | P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Complete：427 objects／113,523,148 bytes；metadata、headers、公開 bytes、SHA-256 0 failures |
-| P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Partial complete：artifact／local QA complete；PR／merge pending |
-| P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
+| P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Complete：PR #1 clean；fast-forward merge；remote `main`=`de578cf` |
+| P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked：既有 GitHub App installation 可見多個 repos，超出單一 repo 授權；Pages project 0 |
 | P5-G8 | Preview technical Go／No-Go | 使用者 | Blocked by G7 |
 
 ## Engineering Readiness
@@ -193,6 +193,7 @@ status: active
 | Account 當月 R2 用量 | Codex | Complete with lag note | G4 顯示 billable `$0.00`；G5 object list 為 113,523,148 bytes，account metrics 尚未即時更新；仍遠低於 free tier |
 | Preview R2 object upload／readback | Codex | Complete | source `9b39cbe`；427／427 upload；427／427 metadata 與公開 SHA-256，0 failures |
 | Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |
+| Pages GitHub App repository scope | 使用者＋Codex | Blocked | 現有 installation 已可見多個 repos；需核准沿用既有 scope，或由使用者另行調整且確認不影響其他專案 |
 
 ## Official References
 
