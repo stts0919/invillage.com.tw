@@ -5,3 +5,4 @@
 - [階段 1：Repo 骨架](./phase-01-repository-skeleton.md)
 - [階段 2：Webflow 匯入](./phase-02-webflow-import.md)
 - [階段 3：資產輕量化](./phase-03-asset-optimization.md)
+- [階段 4：Git 與 GitHub](./phase-04-git-github.md)

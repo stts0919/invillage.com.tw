@@ -41,11 +41,11 @@
 
 ## 階段 4 — Git 與 GitHub
 
-- 建立 `.gitignore`，排除原始與生成二進位。
-- 初始化 Git，建立 GitHub repo。
-- 由使用者執行首個 commit／push。
+- [x] 建立 `.gitignore`，排除原始與生成二進位。
+- [x] 初始化 `main`，建立 public GitHub repo。
+- [x] 完成首個 commit／push，並核對本機與遠端 SHA。
 
-驗收：repo 不含 secret、大型原圖或無法重建的暫存產物。
+驗收：public repo 不含 secret、大型原圖或無法重建的暫存產物；default branch 為 `main`，本機與遠端 SHA 一致。
 
 ## 階段 5 — Preview 部署
 
@@ -91,15 +91,18 @@
 - 再加入 Resend、LINE、Messenger 與金流。
 - 每個整合建立安全、webhook、idempotency 與資料保存決策。
 
+## 已確認決策
+
+1. 使用 `apps/web`；第一個後端功能開始時才建立 `apps/api`。
+2. P0 採靜態 HTML、CSS 與 JavaScript。
+3. 小型必要資產放 Pages，內容照片放 R2。
+4. Webflow 遷移來源放 `imports/webflow`。
+5. 原始與 generated binary 留在本機工作目錄，由 `.gitignore` 排除。
+
 ## 待使用者決定
 
-1. 是否接受 `apps/web` 與 `apps/api`。
-2. 是否接受靜態 HTML 先行。
-3. 是否接受小型必要資產在 Pages、內容照片在 R2。
-4. 是否接受 `imports/webflow`。
-5. 原始 binary 留在 repo 的 gitignored 目錄，或移到 repo 外。
-6. Candidate 是否只使用 `pages.dev`。
-7. Production media domain 是否預留 `media.invillage.com.tw`。
+1. Candidate 是否只使用 `pages.dev`。
+2. Production media domain 是否預留 `media.invillage.com.tw`。
 
 ## 階段 1 核准門檻（已通過）
 

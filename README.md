@@ -4,7 +4,9 @@
 
 ## 目前階段
 
-「階段 3 — 資產輕量化」已完成，正等待開始「階段 4 — Git 與 GitHub」。尚未初始化 Git、建立 R2 或部署 Cloudflare。
+「階段 4 — Git 與 GitHub」已完成，正等待開始「階段 5 — Preview 部署」。尚未建立 R2 或部署 Cloudflare。
+
+GitHub：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 
 ## 入口
 
