@@ -7,7 +7,7 @@
 | 階段 | 5 — Preview 部署 |
 | 架構負責 | Codex |
 | 決策者 | 使用者 |
-| 遠端異動 | Preview 已授權、尚未執行；credential gate 通過，R2 subscription／費用 gate 待通過 |
+| 遠端異動 | Preview 已授權、尚未執行；credential、R2 entitlement、費用與名稱 gate 已通過 |
 
 ## 目標
 
@@ -200,7 +200,7 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 3. MiniMax 執行核准的本機 inventory／manifest 機械檢查並回報證據。
 4. Codex 獨立審核 schema、mapping 與 scripts。
 5. Codex 先做 Cloudflare read-only account／plan／name preflight，再把四類外部異動列成一份明確授權清單。
-6. 使用者核准建立 Preview bucket、啟用 public `r2.dev`、上傳 427 objects、建立 Pages Git integration 與 Preview deployment。（授權已完成；遠端尚未執行，仍受 subscription／費用 gate 約束）
+6. 使用者核准建立 Preview bucket、啟用 public `r2.dev`、上傳 427 objects、建立 Pages Git integration 與 Preview deployment。（授權已完成；credential、entitlement、費用與名稱 gate 已通過，遠端尚未執行）
 7. Codex 建立 bucket 並讀回 public base URL，才用該 URL 產生最終 `apps/web/public/`。
 8. Codex 上傳 R2、核對 keys／bytes／headers／decode，再建立 Pages Preview。
 9. Codex 完成 route、network、desktop／mobile、互動、console 與 404 驗收。
@@ -243,7 +243,7 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 3. 上傳 427 objects。
 4. 建立 Pages Git integration 與 Preview deployment。
 
-Credential 與 account gate 已通過；Pages project name 已確認可用。R2 API 目前回傳 `10042 / NotEntitled`，因此 bucket name、用量、建立與上傳仍停在 subscription gate。Source、artifact、name 與 readback gate 必須逐項通過。任何新費用、方案購買／升級、Production、DNS、custom domain 與 Webflow 異動仍未授權。
+Credential、account、R2 Paid entitlement、費用與名稱 gate 已通過；Pages project 與 R2 bucket target names 均可用。先前 R2 API 的 `10042 / NotEntitled` 是短暫同步延遲，後續 Dashboard、REST API 與 Wrangler 已一致通過。Source、artifact 與每個遠端 readback gate 仍須逐項通過。任何新費用、方案購買／升級、Production、DNS、custom domain 與 Webflow 異動仍未授權。
 
 ## 官方參考
 

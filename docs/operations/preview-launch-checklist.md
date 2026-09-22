@@ -33,8 +33,8 @@ status: active
 | P5-G2 | MiniMax 隔離 dry-run 與 determinism evidence | MiniMax＋Codex | Complete |
 | P5-G3 | Git 與 Preview Cloudflare 異動授權 | 使用者 | Complete |
 | P5-G3b | Project-local Wrangler v4 dependency | Codex | Complete：4.136.1 exact，audit 0 |
-| P5-G4 | Preview token／account／plan／name readback | Codex | Partial：Keychain／token／account／Pages name 通過；R2 API `10042 / NotEntitled` |
-| P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Blocked：需先明確核准 R2 subscription checkout |
+| P5-G4 | Preview token／account／plan／name readback | Codex | Complete：R2 Paid active；Dashboard、REST API、Wrangler 一致；兩個 target names 可用 |
+| P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Ready：依既有授權執行，先建 Standard bucket 再逐項 readback |
 | P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Blocked by G5 |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
 | P5-G8 | Preview technical Go／No-Go | 使用者 | Blocked by G7 |
@@ -113,7 +113,8 @@ status: active
 
 - 本批資料約 0.114 GB、427 個 writes；低於官方每月 10 GB Standard storage 與 100 萬 Class A free tier。
 - Pages 不使用 Functions，static asset requests 免費且不限量。
-- 上述只代表增量估算；目前帳號尚未啟用 R2，因此無法讀回 R2 當月既有用量。啟用 subscription 屬新的 checkout，必須由使用者逐次明確核准；若畫面顯示非零費用或方案升級，立即停止。
+- R2 Paid 已 active；Dashboard 顯示目前 0 buckets、0 B storage、3 次 Class A、0 次 Class B、當期 billable usage `$0.00`。REST API 與 Wrangler 均讀回 0 buckets。
+- 本批仍使用 Standard storage；預估加入 0.114 GB 與 427 次 writes 後仍低於 free tier。若任何 readback 顯示非零新增費用或需要方案變更，立即停止。
 
 ## Analytics & Monitoring
 
@@ -187,9 +188,9 @@ status: active
 | Issue | Owner | 狀態 | 影響 |
 |---|---|---|---|
 | Preview token 與 account readback | Codex | Complete | Keychain injection、`wrangler whoami`、account match 均通過；token 未輸出 |
-| R2 subscription 尚未啟用 | 使用者＋Codex | Blocked：需明確授權 checkout | R2 API `10042 / NotEntitled`；不得自動購買或接受方案 |
-| Project／bucket 名稱可用性 | Codex | Pages name available；R2 pending entitlement | R2 啟用後先 list，再決定是否建立 |
-| Account 當月 R2 用量未知 | Codex | Blocked by entitlement | 啟用後先讀回；若可能產生費用則停止 |
+| R2 subscription／entitlement | Codex | Complete | R2 Paid active；先前 `10042` 為短暫同步延遲，後續 REST API／Wrangler 均回 200 |
+| Project／bucket 名稱可用性 | Codex | Complete | Pages 與 R2 target names 均未占用 |
+| Account 當月 R2 用量 | Codex | Complete | 0 B、3 Class A、0 Class B、billable `$0.00`；G5 完成後重新讀回 |
 | Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |
 
 ## Official References

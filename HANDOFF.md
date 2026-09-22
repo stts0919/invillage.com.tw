@@ -6,7 +6,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始；本機交付基線已推送，Cloudflare Preview token 驗證通過，現在停在 R2 subscription gate。
+「階段 5 — Preview 部署」已開始；本機交付基線已推送，Cloudflare credential、entitlement、費用與名稱 readback 已通過，準備進入 Preview R2 建立。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
@@ -47,8 +47,8 @@
 | Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
 | Cloudflare tooling | Wrangler `4.136.1` exact devDependency；private package；npm audit 0 vulnerabilities |
 | Cloudflare auth | Keychain service `invillage-cloudflare-preview` 已建立；`wrangler whoami` 通過且 account match；未輸出 token |
-| Cloudflare names | Pages `invillage-com-tw` 可用；R2 name 尚無法檢查，因帳號未啟用 R2 |
-| Cloudflare R2 | API readback 回傳 `10042 / NotEntitled`；需先由使用者核准 R2 subscription checkout；遠端異動 0 |
+| Cloudflare names | Pages `invillage-com-tw`、R2 `invillage-media-preview` 均未占用 |
+| Cloudflare R2 | R2 Paid active；Dashboard、REST API、Wrangler readback 通過；0 buckets、0 B、當期 billable usage `$0.00`；遠端異動 0 |
 | Production mutation | 無 |
 
 來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
@@ -83,7 +83,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | Blocked：token／account 驗證已通過；等待 R2 subscription 明確授權 |
+| P5-C3 | Codex | In progress：G4 通過；準備執行已授權的 G5 Preview R2 建立與 readback |
 
 ### Active assignment — P5-M3
 
@@ -148,7 +148,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 ## 目前授權與硬門檻
 
 - 已授權：本階段的 Git branch、stage、commit、push，以及 Preview Pages／R2 異動；每一步仍需通過 source、credential、費用與 readback gate。
-- 尚待逐次授權：啟用 Cloudflare R2 subscription。這是新的訂閱／checkout，即使預估落在 free tier 也不得由 Codex 自動接受。
+- R2 Paid 已經 active，不需要 checkout；不得重複訂閱、升級方案或變更付款設定。
 - 未授權：Production R2／Pages／Worker／D1、DNS、custom domain、Webflow publish／unpublish。
 - 若 account readback 顯示可能產生任何新費用，停止並逐次詢問；不得購買或升級方案。
 - 不更動 frozen copy，不覆寫或刪除原始圖片，不擴大 token 權限。
