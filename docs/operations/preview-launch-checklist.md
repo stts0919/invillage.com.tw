@@ -32,8 +32,8 @@ status: active
 | P5-G1 | 架構、ADR、manifests、builder、verifier | Codex | Complete |
 | P5-G2 | MiniMax 隔離 dry-run 與 determinism evidence | MiniMax＋Codex | Complete |
 | P5-G3 | Git 與 Preview Cloudflare 異動授權 | 使用者 | Complete |
-| P5-G3b | Project-local Wrangler v4 dependency 授權 | 使用者 | Pending |
-| P5-G4 | Preview token／account／plan／name readback | Codex | Blocked：指定 Keychain entry 缺失，G3b 未核准 |
+| P5-G3b | Project-local Wrangler v4 dependency | Codex | Complete：4.136.1 exact，audit 0 |
+| P5-G4 | Preview token／account／plan／name readback | Codex | Token summary ready；等待 final create／Keychain input |
 | P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Blocked by G4 |
 | P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Blocked by G5 |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
@@ -49,7 +49,7 @@ status: active
 | Occurrence inventory | Codex | G1 | Complete | 1,239／1,239；139 assets；0 failures |
 | Static builder／verifier | Codex | G1 | Complete | 兩次 deterministic dry-run；0 failures |
 | Independent dry-run | MiniMax＋Codex | G2 | Complete | 主管 fresh rerun：deterministic、0 failures、repo delta 0 |
-| Wrangler v4 local dev dependency | Codex | G3b | Pending approval | 目前未安裝；不得使用浮動 `npx wrangler` |
+| Wrangler v4 local dev dependency | Codex | G3b | Complete | Exact `4.136.1`；private package；audit 0 vulnerabilities |
 | Git branch／commit／push／merge | Codex | G3／G6 | Authorized | 大改使用 `codex/phase-5-preview` |
 | Final `apps/web/public/` | Codex | G5 | Blocked | 需要實際 `r2.dev` base URL |
 
@@ -186,8 +186,8 @@ status: active
 
 | Issue | Owner | 狀態 | 影響 |
 |---|---|---|---|
-| Wrangler 未安裝／未鎖版 | 使用者＋Codex | Pending G3 | Blocker |
-| Keychain service `invillage-cloudflare-preview` 缺失 | 使用者＋Codex | Confirmed blocker | 無 credential 不得連 Cloudflare |
+| Create Token 尚未 action-time confirmed | 使用者＋Codex | Ready | Persistent access gate |
+| Keychain service `invillage-cloudflare-preview` 缺失 | 使用者＋Codex | Confirmed blocker | Token 建立後以 secure prompt 儲存 |
 | Project／bucket 名稱可用性未知 | Codex | Pending G4 | Blocker |
 | Account 當月 R2 用量未知 | Codex | Pending G4 | Cost gate |
 | Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |

@@ -45,7 +45,8 @@
 | Delivery manifests | Pages 16；R2 427 items／123 assets；遠端寫入未授權 |
 | Preview local contract | Pages runtime 24 items；R2 Preview 427 items；builder／verifier dry-run 通過 |
 | Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
-| Cloudflare auth | Keychain service `invillage-cloudflare-preview` 缺失；Wrangler 尚未安裝；遠端異動 0 |
+| Cloudflare tooling | Wrangler `4.136.1` exact devDependency；private package；npm audit 0 vulnerabilities |
+| Cloudflare auth | Token summary ready；Keychain service `invillage-cloudflare-preview` 尚未建立；遠端異動 0 |
 | Production mutation | 無 |
 
 來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
@@ -80,7 +81,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | Blocked：Keychain entry 缺失；Wrangler devDependency 尚未授權 |
+| P5-C3 | Codex | Blocked：等待 Create Token action-time confirmation 與 Keychain secure input |
 
 ### Active assignment — P5-M3
 
