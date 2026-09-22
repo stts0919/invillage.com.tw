@@ -6,12 +6,13 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始，Preview 契約與 ADR-0004 已核准；本機 manifests／builder／verifier 已通過 dry-run，等待 MiniMax 完成 P5-M1。
+「階段 5 — Preview 部署」已開始；本機交付基線已推送，現在停在 Cloudflare credential gate。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
 - 首個 commit：`d4d034ac1dd44efd4ca1685220da2e8526481257`
 - 階段 4 文件 commit：`1a211fb1f29b668e67bd37dcc1b6384c6189b8ba`
+- Phase 5 local baseline commit：`e083f47b54d8cdfb4491a9fcf6645646e8df1f5c`
 - Webflow 正式站仍在線上；尚未建立 Cloudflare Pages、R2、Worker 或 D1。
 - 本機檔案仍是 source of truth；`imports/webflow/` 是不可變遷移來源。
 
@@ -44,6 +45,7 @@
 | Delivery manifests | Pages 16；R2 427 items／123 assets；遠端寫入未授權 |
 | Preview local contract | Pages runtime 24 items；R2 Preview 427 items；builder／verifier dry-run 通過 |
 | Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
+| Cloudflare auth | Keychain service `invillage-cloudflare-preview` 缺失；Wrangler 尚未安裝；遠端異動 0 |
 | Production mutation | 無 |
 
 來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
@@ -78,7 +80,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | In progress：Git delivery 與 Cloudflare credential／cost preflight |
+| P5-C3 | Codex | Blocked：Keychain entry 缺失；Wrangler devDependency 尚未授權 |
 
 ### Active assignment — P5-M3
 

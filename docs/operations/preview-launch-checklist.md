@@ -33,7 +33,7 @@ status: active
 | P5-G2 | MiniMax 隔離 dry-run 與 determinism evidence | MiniMax＋Codex | Complete |
 | P5-G3 | Git 與 Preview Cloudflare 異動授權 | 使用者 | Complete |
 | P5-G3b | Project-local Wrangler v4 dependency 授權 | 使用者 | Pending |
-| P5-G4 | Preview token／account／plan／name readback | Codex | Blocked by G3b／credential |
+| P5-G4 | Preview token／account／plan／name readback | Codex | Blocked：指定 Keychain entry 缺失，G3b 未核准 |
 | P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Blocked by G4 |
 | P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Blocked by G5 |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
@@ -187,7 +187,7 @@ status: active
 | Issue | Owner | 狀態 | 影響 |
 |---|---|---|---|
 | Wrangler 未安裝／未鎖版 | 使用者＋Codex | Pending G3 | Blocker |
-| Preview token／account ID 尚未驗證 | 使用者＋Codex | Pending G3 | Blocker |
+| Keychain service `invillage-cloudflare-preview` 缺失 | 使用者＋Codex | Confirmed blocker | 無 credential 不得連 Cloudflare |
 | Project／bucket 名稱可用性未知 | Codex | Pending G4 | Blocker |
 | Account 當月 R2 用量未知 | Codex | Pending G4 | Cost gate |
 | Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |
