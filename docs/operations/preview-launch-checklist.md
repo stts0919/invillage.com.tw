@@ -34,8 +34,8 @@ status: active
 | P5-G3 | Git 與 Preview Cloudflare 異動授權 | 使用者 | Complete |
 | P5-G3b | Project-local Wrangler v4 dependency | Codex | Complete：4.136.1 exact，audit 0 |
 | P5-G4 | Preview token／account／plan／name readback | Codex | Complete：R2 Paid active；Dashboard、REST API、Wrangler 一致；兩個 target names 可用 |
-| P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | In progress：Standard bucket／public URL complete；427 upload 與 full readback pending |
-| P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Blocked by G5 |
+| P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Complete：427 objects／113,523,148 bytes；metadata、headers、公開 bytes、SHA-256 0 failures |
+| P5-G6 | Final static artifact、local browser QA、Git merge | Codex | In progress：local QA pass；contact submit 待 action-time confirmation；尚未 merge |
 | P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked by G6 |
 | P5-G8 | Preview technical Go／No-Go | 使用者 | Blocked by G7 |
 
@@ -60,11 +60,11 @@ status: active
 | Import checksum | Codex | G1 | Complete | 8 HTML、1 CSS、12 JS、211 images、6 fonts；0 failures |
 | Build determinism | Codex＋MiniMax | G2 | Complete | relative path＋SHA-256 清單完全一致 |
 | Static verifier | Codex＋MiniMax | G2／G5 | Complete | actual Preview origin：8／1／12／24／362／123；0 failures；46-file deterministic tree |
-| Local browser smoke | Codex | G6 | Pending | routes、assets、console、form guard |
+| Local browser smoke | Codex | G6 | Partial pass | Pages emulator：12-route status matrix、8-page render、assets、console 皆通過；form submit 待確認 |
 | Remote route matrix | Codex | G7 | Pending | 8 routes、robots 200、unknown 404 |
-| Responsive QA | Codex | G7 | Pending | 1440×900、768×1024、390×844 |
-| Interaction QA | Codex | G7 | Pending | nav、sliders、tabs、FAQ、Maps、YouTube、Messenger |
-| Network allowlist | Codex | G7 | Pending | forbidden Webflow CDN／form API requests = 0 |
+| Responsive QA | Codex | G6／G7 | Local partial pass | Desktop 與 390×844 mobile 無水平 overflow、可見圖片 0 broken；tablet 與 remote 待 G7 |
+| Interaction QA | Codex | G6／G7 | Local partial pass | nav、mobile menu、tabs、slider、FAQ 通過；Maps／YouTube render，form submit 待確認；remote 待 G7 |
+| Network allowlist | Codex | G6／G7 | Local pass | 8 pages observed assets：forbidden Webflow CDN／form API = 0；remote 再驗 |
 | Owner UAT | 使用者 | G8 | Pending | Preview 可進入階段 6 parity |
 
 ## Design & UX
@@ -190,8 +190,8 @@ status: active
 | Preview token 與 account readback | Codex | Complete | Keychain injection、`wrangler whoami`、account match 均通過；token 未輸出 |
 | R2 subscription／entitlement | Codex | Complete | R2 Paid active；先前 `10042` 為短暫同步延遲，後續 REST API／Wrangler 均回 200 |
 | Project／bucket 名稱可用性 | Codex | Complete | Pages 與 R2 target names 均未占用 |
-| Account 當月 R2 用量 | Codex | Complete | 0 B、3 Class A、0 Class B、billable `$0.00`；G5 完成後重新讀回 |
-| Preview R2 object upload／readback | Codex | In progress | upload tool dry-run 427／427；source commit 後 upload，再核對 metadata 與全部 SHA-256 |
+| Account 當月 R2 用量 | Codex | Complete with lag note | G4 顯示 billable `$0.00`；G5 object list 為 113,523,148 bytes，account metrics 尚未即時更新；仍遠低於 free tier |
+| Preview R2 object upload／readback | Codex | Complete | source `9b39cbe`；427／427 upload；427／427 metadata 與公開 SHA-256，0 failures |
 | Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |
 
 ## Official References

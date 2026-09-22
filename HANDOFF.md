@@ -6,13 +6,14 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始；G5 進行中：Preview R2 bucket 與公開開發網址已建立，final static artifact 與安全 upload/readback 工具已就緒，等待以乾淨 source commit 上傳 427 objects。
+「階段 5 — Preview 部署」已開始；G5 已完成：Preview R2 427 objects 與 final static artifact 全部通過 readback。G6 本機 QA 進行中；只剩 contact form 實際 submit 需 browser action-time confirmation，之後才進 Git merge 與 Pages Git integration。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
 - 首個 commit：`d4d034ac1dd44efd4ca1685220da2e8526481257`
 - 階段 4 文件 commit：`1a211fb1f29b668e67bd37dcc1b6384c6189b8ba`
 - Phase 5 local baseline commit：`e083f47b54d8cdfb4491a9fcf6645646e8df1f5c`
+- Phase 5 R2／static candidate commit：`9b39cbe8e04074f28955a07ca03512d3555b72fe`
 - Webflow 正式站仍在線上；尚未建立 Cloudflare Pages、R2、Worker 或 D1。
 - 本機檔案仍是 source of truth；`imports/webflow/` 是不可變遷移來源。
 
@@ -42,13 +43,13 @@
 | Asset manifest | 217 筆：圖片 211＋TTF 6 |
 | Placement | Pages 16／R2 123／Archive 72 |
 | Optimization | 139／139 assets；428 outputs；420／420 lossy metrics 通過 |
-| Delivery manifests | Pages 16；R2 427 items／123 assets；Preview remote authorization flags true、objects 尚未上傳 |
+| Delivery manifests | Pages 16；R2 427 items／123 assets；Preview remote authorization flags true、427 objects 已上傳 |
 | Preview local contract | Final `apps/web/public/` 46 files／25,529,724 bytes；8 HTML／1 CSS／12 JS／24 Pages assets；verifier 0 failures |
 | Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
 | Cloudflare tooling | Wrangler `4.136.1` exact devDependency；private package；npm audit 0 vulnerabilities |
 | Cloudflare auth | Keychain service `invillage-cloudflare-preview` 已建立；`wrangler whoami` 通過且 account match；未輸出 token |
 | Cloudflare names | Pages `invillage-com-tw`、R2 `invillage-media-preview` 均未占用 |
-| Cloudflare R2 | `invillage-media-preview` 已建立：Standard／APAC／default；public origin `https://pub-a73a77b87d504498bad6ae568754e572.r2.dev` 已啟用；objects 尚未上傳 |
+| Cloudflare R2 | `invillage-media-preview`：Standard／APAC／default；public origin 已啟用；427 objects／113,523,148 bytes，metadata＋公開 bytes＋SHA-256 0 failures |
 | Production mutation | 無 |
 
 來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
@@ -83,7 +84,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
 | P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | In progress：bucket／public URL／final artifact complete；upload 與 full remote readback pending |
+| P5-C3 | Codex | In progress：G5 complete；G6 local routes／desktop／mobile／nav／tabs／slider／FAQ／network／console pass；form submit pending confirmation |
 
 ### Active assignment — P5-M3
 
