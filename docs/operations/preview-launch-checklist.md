@@ -53,7 +53,7 @@ status: active
 | Git branch／commit／push／merge | Codex | G3／G6 | Complete | PR #1；fast-forward merge；public tree audit P0／P1 0 |
 | Final `apps/web/public/` | Codex | G5 | Complete | 46 files／25,529,724 bytes；8 HTML／1 CSS／12 JS／24 Pages assets；actual `r2.dev` mapping |
 | Pages Git integration | Codex | G7 | Complete | GitHub `stts0919/invillage.com.tw`；main；root `apps/web`；output `public`；build command blank |
-| Pages branch controls | Codex | G7 | Complete | production auto=false；preview setting=custom；include `codex/*`；exclude empty |
+| Pages branch controls | Codex | G7 | Complete | production auto=false；preview custom `codex/*`；後續 main push readback 為 `is_skipped=true`、all stages idle、URL 404 |
 
 ## QA & Testing
 

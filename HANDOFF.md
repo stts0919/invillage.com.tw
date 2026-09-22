@@ -54,7 +54,7 @@
 | Cloudflare names | Pages `invillage-com-tw`、R2 `invillage-media-preview` 已建立且隔離於 Preview scope |
 | Cloudflare R2 | `invillage-media-preview`：Standard／APAC／default；public origin 已啟用；427 objects／113,523,148 bytes，metadata＋公開 bytes＋SHA-256 0 failures |
 | Cloudflare Pages | Git source `stts0919/invillage.com.tw`；root `apps/web`；output `public`；空 build command；production auto off；Preview include `codex/*` |
-| Pages deployments | Technical main：`f5cfdffe`／success；unique Preview：`a66628b4`／success，`https://a66628b4.invillage-com-tw.pages.dev` |
+| Pages deployments | Technical main：`f5cfdffe`／success；unique Preview：`a66628b4`／success，`https://a66628b4.invillage-com-tw.pages.dev`；production auto 關閉後的 main push 僅產生 skipped／idle／404 record，未部署 |
 | 正式環境異動 | 無正式網域、DNS、custom domain、Webflow publish／unpublish 或 Production R2／Worker／D1 異動 |
 
 `apps/web/public/` 已形成可自管部署版本；HTML／CSS 不再依賴禁止的 Webflow CDN，內容圖片由已驗證的 Preview R2 提供。
