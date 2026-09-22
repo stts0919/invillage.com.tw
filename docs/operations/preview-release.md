@@ -7,7 +7,7 @@
 | 階段 | 5 — Preview 部署 |
 | 架構負責 | Codex |
 | 決策者 | 使用者 |
-| 遠端異動 | Preview 已授權；R2 bucket、public `r2.dev`、427 objects 已完成並驗證；Pages 尚未執行 |
+| 遠端異動 | Preview 已授權；R2 bucket／public `r2.dev`／427 objects 與 Pages Git integration／unique Preview 已完成並驗證 |
 
 ## 目標
 
@@ -200,9 +200,9 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 3. MiniMax 執行核准的本機 inventory／manifest 機械檢查並回報證據。
 4. Codex 獨立審核 schema、mapping 與 scripts。
 5. Codex 先做 Cloudflare read-only account／plan／name preflight，再把四類外部異動列成一份明確授權清單。
-6. 使用者核准建立 Preview bucket、啟用 public `r2.dev`、上傳 427 objects、建立 Pages Git integration 與 Preview deployment。（授權已完成；credential、entitlement、費用與名稱 gate 已通過，遠端尚未執行）
+6. 使用者核准建立 Preview bucket、啟用 public `r2.dev`、上傳 427 objects、建立 Pages Git integration 與 Preview deployment。（授權與執行均已完成；credential、entitlement、費用、名稱與 readback gates 通過）
 7. Codex 建立 bucket 並讀回 public base URL，才用該 URL 產生最終 `apps/web/public/`。（已完成並由 static verifier 通過）
-8. Codex 上傳 R2、核對 keys／bytes／headers／decode，再建立 Pages Preview。（R2 complete：427／427，0 failures；Pages pending）
+8. Codex 上傳 R2、核對 keys／bytes／headers／decode，再建立 Pages Preview。（Complete：R2 427／427、Pages technical main＋unique Preview、remote smoke 0 failures）
 9. Codex 完成 route、network、desktop／mobile、互動、console 與 404 驗收。
 10. 階段 5 完成後，進入階段 6 視覺一致性門檻。
 
@@ -241,7 +241,7 @@ Preview 驗收使用同 repo 非 `main` branch 的 unique hash URL；branch alia
 1. Complete：建立 Preview R2 bucket；readback 為 Standard／APAC／default。
 2. Complete：啟用 public `r2.dev` 並讀回相同 origin。
 3. Complete：上傳與完整核對 427 objects；API metadata 與公開 bytes／SHA-256 均 0 failures。
-4. Blocked：建立 Pages Git integration 與 Preview deployment；既有 GitHub App installation scope 超出本次單一 repo 授權，尚未選 repo 或建立 project。
+4. Complete：Pages Git integration 只選 `stts0919/invillage.com.tw`；technical main deployment `f5cfdffe`、unique Preview `a66628b4` 均 success；production auto disabled、Preview branches 僅 `codex/*`。
 
 Credential、account、R2 Paid entitlement、費用與名稱 gate 已通過；Pages project 與 R2 bucket target names 均可用。先前 R2 API 的 `10042 / NotEntitled` 是短暫同步延遲，後續 Dashboard、REST API 與 Wrangler 已一致通過。Source、artifact 與每個遠端 readback gate 仍須逐項通過。任何新費用、方案購買／升級、Production、DNS、custom domain 與 Webflow 異動仍未授權。
 

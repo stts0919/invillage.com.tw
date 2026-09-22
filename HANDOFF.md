@@ -6,7 +6,7 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始；G5、G6 與 fast-forward merge 已完成，`main` 現為 `de578cf`。G7 停在 Pages GitHub App scope gate：既有 installation 可見多個 repositories，超出「僅存取 invillage.com.tw」授權；尚未選 repo、建立 Pages project 或部署。
+「階段 5 — Preview 部署」已完成至 G7；G8 `Ready`，等待使用者對技術 Preview 做 Go／No-Go。Pages Git integration、隔離 Preview deployment 與遠端 route／asset／responsive／interaction／network／console smoke 全部通過。
 
 - Public repo：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 - Default branch：`main`
@@ -15,7 +15,9 @@
 - Phase 5 local baseline commit：`e083f47b54d8cdfb4491a9fcf6645646e8df1f5c`
 - Phase 5 R2／static candidate commit：`9b39cbe8e04074f28955a07ca03512d3555b72fe`
 - Phase 5 merged main：`de578cf738466bf5b3fd82fd2f084b7c63e67c73`；[PR #1](https://github.com/stts0919/invillage.com.tw/pull/1)
-- Webflow 正式站仍在線上；Preview R2 已建立，Cloudflare Pages／Worker／D1 尚未建立。
+- Pages technical deployment source：`1e1758cdc405bb3be9baae1beba8f8ad5747dfe1`
+- Pages unique Preview source：`c0fca01ae0cb35f6b3f630d1fc769ea579c23d8b`
+- Webflow 正式站仍在線上；Preview R2／Pages 已建立，Worker／D1、DNS、custom domain 均未建立或變更。
 - 本機檔案仍是 source of truth；`imports/webflow/` 是不可變遷移來源。
 
 ## 文件入口
@@ -49,11 +51,13 @@
 | Runtime occurrences | 1,239／1,239；139 assets；124 external rows；主管 verifier 0 failures |
 | Cloudflare tooling | Wrangler `4.136.1` exact devDependency；private package；npm audit 0 vulnerabilities |
 | Cloudflare auth | Keychain service `invillage-cloudflare-preview` 已建立；`wrangler whoami` 通過且 account match；未輸出 token |
-| Cloudflare names | Pages `invillage-com-tw`、R2 `invillage-media-preview` 均未占用 |
+| Cloudflare names | Pages `invillage-com-tw`、R2 `invillage-media-preview` 已建立且隔離於 Preview scope |
 | Cloudflare R2 | `invillage-media-preview`：Standard／APAC／default；public origin 已啟用；427 objects／113,523,148 bytes，metadata＋公開 bytes＋SHA-256 0 failures |
-| Production mutation | 無 |
+| Cloudflare Pages | Git source `stts0919/invillage.com.tw`；root `apps/web`；output `public`；空 build command；production auto off；Preview include `codex/*` |
+| Pages deployments | Technical main：`f5cfdffe`／success；unique Preview：`a66628b4`／success，`https://a66628b4.invillage-com-tw.pages.dev` |
+| 正式環境異動 | 無正式網域、DNS、custom domain、Webflow publish／unpublish 或 Production R2／Worker／D1 異動 |
 
-來源 HTML／CSS 仍含 Webflow URL，`apps/web/` 尚未形成可自管部署版本。
+`apps/web/public/` 已形成可自管部署版本；HTML／CSS 不再依賴禁止的 Webflow CDN，內容圖片由已驗證的 Preview R2 提供。
 
 ## 已確認方向
 
@@ -76,7 +80,7 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 
 ## 階段 5 工作包
 
-狀態：`Git Delivery`。`P5-M1`、`P5-M2` 已通過主管驗收；使用者已授權 Git 與 Preview Cloudflare 異動，費用與憑證 gates 仍適用。
+狀態：`G8 Ready`。G1–G7 已通過；等待使用者決定是否進入階段 6 視覺一致性門檻。
 
 | 工作包 | 負責 | 狀態 |
 |---|---|---|
@@ -84,60 +88,14 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 | P5-C2 | Codex | Complete：occurrence schema、R2 Preview manifest、builder／verifier dry-run 通過 |
 | P5-M1 | MiniMax＋Codex | Complete with supervisor correction：代理產物未過 schema；主管重建後 1,239／1,239 occurrences、0 failures |
 | P5-M2 | MiniMax＋Codex | Complete：雙 build deterministic、verifier 0 failures、forbidden hits 0、form guard 1 |
-| P5-M3 | MiniMax | Assigned after branch push：唯讀 public-tree／secret／ignore audit |
-| P5-C3 | Codex | Blocked at G7：G5／G6／PR／fast-forward merge complete；現有 Cloudflare Pages GitHub App scope 超出單一 repo 授權，已停止 |
+| P5-M3 | MiniMax | Optional／non-blocking：主管＋Luna Max 已完成 fresh public-tree／secret／ignore audit，P0／P1 0 |
+| P5-C3 | Codex | Complete：G5–G7、PR／merge、Pages Git integration、unique Preview 與 remote smoke 全部通過 |
 
-### Active assignment — P5-M3
+### 下一步 — G8 Owner Go／No-Go
 
-負責：MiniMax Code
-
-開始條件：Codex 已 push `codex/phase-5-preview`。Repo 修改：禁止。
-
-目標：以 branch `HEAD` 為 immutable candidate，獨立檢查公開 Git tree。
-
-任務：
-
-1. 回報 branch、`HEAD`、tracking divergence 與 clean／dirty 狀態。
-2. 統計 tracked files、總 bytes、最大 10 檔。
-3. 確認 `imports/webflow/assets/images/`、`imports/webflow/assets/fonts/`、`assets/optimized/` 沒有 tracked files。
-4. 只對 tracked tree 執行高信心 credential、`.env*`、本機絕對路徑與 symlink scan。
-5. 執行所有新 JSON parse、Ruby syntax、Markdown local-link checks。
-6. 確認 Cloudflare remote authorization flags 仍為 `false`。
-
-驗收：
-
-- 所有檢查以 branch `HEAD` 執行，不把工作區未提交內容當作證據。
-- 若發現 secret、tracked 原始 binary、local path 或 symlink，立即停止並回報。
-- 不修改檔案，不 stage／commit／push，不連網、不連 Cloudflare。
-- 回報命令、exit code、finding、未驗證範圍；代理結論仍需 Codex readback。
-
-### Codex 主管先行
-
-1. 定義 `apps/web` 的靜態輸出、路由與 404 契約。
-2. 定義被忽略 binary 的供應方式：Pages 必要資產納入部署輸出；內容圖片由 Preview R2 或可驗證還原流程提供。
-3. 定義 Pages asset 與 Preview R2 URL mapping；Preview 與 Production 必須隔離。
-4. 定義 Cloudflare Pages、R2、Git integration、rollback 與驗收證據。
-5. 建立 2 個 generic SVG 與 6 個字型的 runtime manifest 契約。
-6. 建立 runtime map schema、builder、form fail-closed transform 與 verifier。
-7. 將核准規格拆成不重疊的 MiniMax 工作包。
-
-### MiniMax 本機執行
-
-1. 依 Codex 核准 schema 核對 139 asset IDs、HTML／CSS／JSON-LD occurrences 與 variant metadata；不自行決定 placement、R2 URL 或 allowlist。
-2. 使用 Codex 提供的 script 產生 `apps/web/public/`；不得手動修改 `imports/webflow/`。
-3. 保留 frozen copy、路由與互動，不自行重寫文案或重新設計。
-4. 核對 24 個 Pages runtime assets；不得把整批原圖或 optimized corpus 納入 Git。
-5. Preview R2 URL 未提供前不得編造 URL、產生最終部署檔或上傳。
-6. 執行內部連結、資產路徑、主要響應式尺寸與 404 的 focused checks。
-7. 只更新既有索引、核對表與紀錄，不建立平行計畫文件。
-
-### MiniMax 回報格式
-
-- 修改的檔案。
-- 執行的命令。
-- 通過與失敗的驗證證據。
-- 尚未驗證的範圍與剩餘風險。
-- 禁止自行 stage、commit、push、deploy、操作 Cloudflare／DNS 或變更 Webflow。
+1. 使用者開啟 unique Preview，確認是否接受進入階段 6 視覺一致性門檻。
+2. 若 Go：Codex 先定義 Webflow／Preview 比對矩陣，再拆成不重疊的 MiniMax 本機／唯讀工作包。
+3. 若 No-Go：保留 immutable Preview 與 R2 keys，記錄可重現差異後回到對應 gate 修正。
 
 ## 階段 5 驗收
 

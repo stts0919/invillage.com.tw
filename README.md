@@ -4,7 +4,9 @@
 
 ## 目前階段
 
-「階段 5 — Preview 部署」已開始，Preview 契約已核准，正在準備本機 manifests 與產生工具。尚未建立 R2 或部署 Cloudflare。
+「階段 5 — Preview 部署」已完成至 G7；Preview R2、Pages Git integration、unique branch Preview 與遠端 smoke 均通過，現在等待 G8 使用者 Go／No-Go。正式網域、DNS 與 Webflow 正式站未變更。
+
+技術 Preview：<https://a66628b4.invillage-com-tw.pages.dev>
 
 GitHub：[stts0919/invillage.com.tw](https://github.com/stts0919/invillage.com.tw)
 

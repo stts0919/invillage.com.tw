@@ -50,12 +50,12 @@
 ## 階段 5 — Preview 部署
 
 - [x] 核准 [Preview 發布契約](../operations/preview-release.md)，並建立 ADR-0004。
-- [ ] 建立可部署的 `apps/web/public/` 與 focused checks。
-- [ ] 建立 Preview R2 bucket 並驗證 runtime assets。
-- [ ] 建立 Pages Git integration。
-- [ ] 取得 branch／PR Preview URL。
+- [x] 建立可部署的 `apps/web/public/` 與 focused checks。
+- [x] 建立 Preview R2 bucket 並驗證 runtime assets。
+- [x] 建立 Pages Git integration。
+- [x] 取得 branch／PR Preview URL。
 
-驗收：符合 [系統總覽](./system-overview.md) 的環境隔離，沒有正式網域變更。
+驗收：G1–G7 已符合 [系統總覽](./system-overview.md) 的環境隔離，沒有正式網域變更；G8 等待使用者 Go／No-Go。
 
 ## 階段 6 — 一致性門檻
 

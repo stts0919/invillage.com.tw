@@ -36,8 +36,8 @@ status: active
 | P5-G4 | Preview token／account／plan／name readback | Codex | Complete：R2 Paid active；Dashboard、REST API、Wrangler 一致；兩個 target names 可用 |
 | P5-G5 | Preview R2 建立、public URL、427 objects readback | Codex | Complete：427 objects／113,523,148 bytes；metadata、headers、公開 bytes、SHA-256 0 failures |
 | P5-G6 | Final static artifact、local browser QA、Git merge | Codex | Complete：PR #1 clean；fast-forward merge；remote `main`=`de578cf` |
-| P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Blocked：既有 GitHub App installation 可見多個 repos，超出單一 repo 授權；Pages project 0 |
-| P5-G8 | Preview technical Go／No-Go | 使用者 | Blocked by G7 |
+| P5-G7 | Pages Git integration、branch Preview、remote smoke | Codex＋使用者 | Complete：project config readback、unique Preview `a66628b4`、remote smoke 全部通過 |
+| P5-G8 | Preview technical Go／No-Go | 使用者 | Ready：等待使用者確認是否進入階段 6 parity |
 
 ## Engineering Readiness
 
@@ -45,13 +45,15 @@ status: active
 |---|---|---|---|---|
 | Preview contract／ADR accepted | 使用者 | G1 | Complete | `preview-release.md`、ADR-0004 |
 | 24-item Pages runtime manifest | Codex | G1 | Complete | 24,852,679 bytes |
-| 427-item R2 Preview manifest | Codex | G1 | Complete | 113,523,148 bytes；remote flags false |
+| 427-item R2 Preview manifest | Codex | G1 | Complete | 113,523,148 bytes；remote authorization flags true；remote readback 0 failures |
 | Occurrence inventory | Codex | G1 | Complete | 1,239／1,239；139 assets；0 failures |
 | Static builder／verifier | Codex | G1 | Complete | 兩次 deterministic dry-run；0 failures |
 | Independent dry-run | MiniMax＋Codex | G2 | Complete | 主管 fresh rerun：deterministic、0 failures、repo delta 0 |
 | Wrangler v4 local dev dependency | Codex | G3b | Complete | Exact `4.136.1`；private package；audit 0 vulnerabilities |
-| Git branch／commit／push／merge | Codex | G3／G6 | Authorized | 大改使用 `codex/phase-5-preview` |
+| Git branch／commit／push／merge | Codex | G3／G6 | Complete | PR #1；fast-forward merge；public tree audit P0／P1 0 |
 | Final `apps/web/public/` | Codex | G5 | Complete | 46 files／25,529,724 bytes；8 HTML／1 CSS／12 JS／24 Pages assets；actual `r2.dev` mapping |
+| Pages Git integration | Codex | G7 | Complete | GitHub `stts0919/invillage.com.tw`；main；root `apps/web`；output `public`；build command blank |
+| Pages branch controls | Codex | G7 | Complete | production auto=false；preview setting=custom；include `codex/*`；exclude empty |
 
 ## QA & Testing
 
@@ -61,19 +63,19 @@ status: active
 | Build determinism | Codex＋MiniMax | G2 | Complete | relative path＋SHA-256 清單完全一致 |
 | Static verifier | Codex＋MiniMax | G2／G5 | Complete | actual Preview origin：8／1／12／24／362／123；0 failures；46-file deterministic tree |
 | Local browser smoke | Codex | G6 | Complete | Pages emulator：12-route status matrix、8-page render、assets、console 與 synthetic form submit 均通過 |
-| Remote route matrix | Codex | G7 | Pending | 8 routes、robots 200、unknown 404 |
-| Responsive QA | Codex | G6／G7 | Local partial pass | Desktop 與 390×844 mobile 無水平 overflow、可見圖片 0 broken；tablet 與 remote 待 G7 |
-| Interaction QA | Codex | G6／G7 | Local pass | nav、mobile menu、tabs、slider、FAQ、Maps／YouTube render；form fail-closed 且 Webflow form request 0；remote 待 G7 |
-| Network allowlist | Codex | G6／G7 | Local pass | 8 pages observed assets：forbidden Webflow CDN／form API = 0；remote 再驗 |
+| Remote route matrix | Codex | G7 | Complete | `/`、7 named routes、robots 200；`/about/` 308；unknown／sitemap 404；Preview 200 routes帶 noindex |
+| Responsive QA | Codex | G6／G7 | Complete | 1440×900、768×1024、390×844：無 overflow；settled visible images 0 broken |
+| Interaction QA | Codex | G6／G7 | Complete | Remote nav、tabs、slider、FAQ 通過；local form fail-closed／Webflow request 0；remote guard present |
+| Network allowlist | Codex | G6／G7 | Complete | Unique Preview 8 pages observed assets：forbidden Webflow CDN／form API = 0；console issues 0 |
 | Owner UAT | 使用者 | G8 | Pending | Preview 可進入階段 6 parity |
 
 ## Design & UX
 
 | 項目 | Owner | Due | 狀態 | 限制 |
 |---|---|---|---|---|
-| Frozen copy unchanged | Codex | G6 | Pending | 不重寫使用者／Webflow 可見文案 |
-| Existing layout preserved | Codex | G7 | Pending | parity 優先，不重新設計 |
-| Contact form fail closed | Codex | G6 | Script ready | 不送資料、不顯示假成功 |
+| Frozen copy unchanged | Codex | G6 | Complete | 8 pages visible-copy comparison：0 mismatches |
+| Existing layout preserved | Codex | G7 | Technical pass | Desktop／tablet／mobile rendered；owner visual parity remains G8／Phase 6 |
+| Contact form fail closed | Codex | G6 | Complete | synthetic submit：failure visible、success hidden、URL unchanged、Webflow request 0 |
 | Accessibility debt | 使用者＋Codex | Phase 9 | Deferred | 現有空 `alt` 與 iframe title 不在本輪擴寫 |
 
 ## Marketing & Communications
@@ -88,9 +90,9 @@ status: active
 
 | 項目 | Owner | Due | 狀態 |
 |---|---|---|---|
-| Public Preview 不含 secret／私人資料 | Codex | G7 | Pending readback |
-| Existing public contact copy unchanged | Codex | G6 | Pending diff check |
-| Third-party embeds retained per accepted allowlist | Codex | G7 | Pending network QA |
+| Public Preview 不含 secret／私人資料 | Codex | G7 | Complete：tracked-tree exact token／credential／local-path scans 0 |
+| Existing public contact copy unchanged | Codex | G6 | Complete：visible-copy comparison 0 mismatches |
+| Third-party embeds retained per accepted allowlist | Codex | G7 | Complete：observed external hosts match accepted parity allowlist |
 | Terms／Privacy placeholder links | 使用者 | Phase 9 | Existing debt；不阻塞 parity |
 
 ## Operations & Infrastructure
@@ -113,8 +115,8 @@ status: active
 
 - 本批資料約 0.114 GB、427 個 writes；低於官方每月 10 GB Standard storage 與 100 萬 Class A free tier。
 - Pages 不使用 Functions，static asset requests 免費且不限量。
-- R2 Paid 已 active；Dashboard 顯示目前 0 buckets、0 B storage、3 次 Class A、0 次 Class B、當期 billable usage `$0.00`。REST API 與 Wrangler 均讀回 0 buckets。
-- 本批仍使用 Standard storage；預估加入 0.114 GB 與 427 次 writes 後仍低於 free tier。若任何 readback 顯示非零新增費用或需要方案變更，立即停止。
+- R2 Paid 已 active；G4 初始 billable usage `$0.00`，G5 實際 object list 為 113,523,148 bytes／427 objects；仍低於 free tier。
+- Pages 為純 static assets、無 Functions、無 custom domain；建立與部署畫面沒有方案升級或費用提示。
 
 ## Analytics & Monitoring
 
@@ -136,17 +138,17 @@ status: active
 
 ### Must Have
 
-- [ ] P5-M2 主管 readback 通過。
-- [ ] Git tree 無 secret、大型原始圖片或未核准檔案。
-- [ ] Cloudflare account、plan、names、token scope 與費用 preflight 通過。
-- [ ] Preview R2 427 keys／bytes／headers readback 通過。
-- [ ] Final static verifier 0 failures。
-- [ ] Unique Pages Preview route／asset／network／console smoke 通過。
-- [ ] Production R2、DNS、custom domain、Webflow 均未變更。
+- [x] P5-M2 主管 readback 通過。
+- [x] Git tree 無 secret、大型原始圖片或未核准檔案。
+- [x] Cloudflare account、plan、names、token scope 與費用 preflight 通過。
+- [x] Preview R2 427 keys／bytes／headers readback 通過。
+- [x] Final static verifier 0 failures。
+- [x] Unique Pages Preview route／asset／network／console smoke 通過。
+- [x] Production R2、DNS、custom domain、Webflow 均未變更。
 
 ### Should Have
 
-- [ ] Desktop／tablet／mobile screenshots 齊全。
+- [x] Desktop／tablet／mobile screenshots 齊全。
 - [ ] 前一個 immutable Preview URL 可供比較。
 
 ### Nice to Have
@@ -192,8 +194,9 @@ status: active
 | Project／bucket 名稱可用性 | Codex | Complete | Pages 與 R2 target names 均未占用 |
 | Account 當月 R2 用量 | Codex | Complete with lag note | G4 顯示 billable `$0.00`；G5 object list 為 113,523,148 bytes，account metrics 尚未即時更新；仍遠低於 free tier |
 | Preview R2 object upload／readback | Codex | Complete | source `9b39cbe`；427／427 upload；427／427 metadata 與公開 SHA-256，0 failures |
-| Public branch tree 尚未獨立 audit | MiniMax | Assigned P5-M3 | Git evidence gate |
-| Pages GitHub App repository scope | 使用者＋Codex | Blocked | 現有 installation 已可見多個 repos；需核准沿用既有 scope，或由使用者另行調整且確認不影響其他專案 |
+| Public branch tree audit | Codex＋Luna Max | Complete | immutable diff 74 files；secret／local path／symlink／binary scope；P0／P1 0 |
+| Pages GitHub App repository scope | 使用者＋Codex | Complete | 使用者核准沿用既有 installation；本次只選 `stts0919/invillage.com.tw`，未修改其他 repo |
+| Pages project／deployment | Codex | Complete | project `invillage-com-tw`；technical main `f5cfdffe`；unique Preview `a66628b4`／success |
 
 ## Official References
 
