@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-21T15:52:14Z",
+  "site": {
+    "id": "65009115380adfba3ebe2328",
+    "workspaceId": "65008a0e82cfc8261347401d",
+    "displayName": "紅河隱園",
+    "shortName": "invillage",
+    "timeZone": "Asia/Taipei",
+    "createdOn": "2023-09-12T16:25:57.144Z",
+    "lastUpdated": "2026-09-21T11:52:29.895Z",
+    "lastPublished": "2026-01-23T17:09:14.639Z",
+    "fullSiteCompiledAt": "2026-01-23T17:09:14.639Z",
+    "customDomains": [
+      "www.invillage.com.tw",
+      "invillage.com.tw"
+    ],
+    "primaryLocale": {
+      "id": "670e1ac7cf3482d9248cf45a",
+      "displayName": "Chinese (Taiwan)",
+      "tag": "zh-TW"
+    },
+    "secondaryLocales": [],
+    "dataCollectionEnabled": false,
+    "googleTagIds": []
+  },
+  "cmsCollections": []
+}

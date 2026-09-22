@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "batch": "001",
+  "purpose": "Representative quality gate before full optimization",
+  "approvedForRemoteUpload": false,
+  "images": [
+    {
+      "id": "650758aa0b7a501a1da902bf",
+      "reason": "Largest live JPEG; 6240x4160 downscale, foliage and architecture detail"
+    },
+    {
+      "id": "651eb3b38ed930fbe78fd97a",
+      "reason": "Live 1920x1280 yuv422 JPEG; no-upscale and chroma check"
+    },
+    {
+      "id": "651ec63ce1dde357d047f53a",
+      "reason": "Live 1920x1280 yuv444 JPEG; chroma-loss quality gate"
+    },
+    {
+      "id": "6973aa8ddda60d8a2e57b1b4",
+      "reason": "Large opaque PNG with text and fine edges"
+    },
+    {
+      "id": "65074195be972cb5422550d7",
+      "reason": "Transparent live brand PNG"
+    },
+    {
+      "id": "65133573edd089379a1540e0",
+      "reason": "Transparent live icon PNG"
+    },
+    {
+      "id": "65053272246b11c3f5e02ede",
+      "reason": "Live SVG preserve path"
+    },
+    {
+      "id": "65375daf30602c1e52f15e03",
+      "reason": "Only live WebP; preserve fallback and optional AVIF"
+    }
+  ]
+}

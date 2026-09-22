@@ -1,0 +1,791 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T22:23:15Z",
+  "sourceRoot": "imports/webflow/assets/images",
+  "outputRoot": "assets/optimized",
+  "classificationManifest": "assets/manifests/asset-classification.json",
+  "outputPrefix": "sample",
+  "selection": {
+    "mode": "manifest",
+    "manifest": "assets/manifests/optimization-batch-001.json",
+    "limit": 8,
+    "ids": [
+      "650758aa0b7a501a1da902bf",
+      "651eb3b38ed930fbe78fd97a",
+      "651ec63ce1dde357d047f53a",
+      "6973aa8ddda60d8a2e57b1b4",
+      "65074195be972cb5422550d7",
+      "65133573edd089379a1540e0",
+      "65053272246b11c3f5e02ede",
+      "65375daf30602c1e52f15e03"
+    ]
+  },
+  "summary": {
+    "selected": 8,
+    "succeeded": 8,
+    "failed": 0,
+    "sourceBytes": 11826136,
+    "outputBytes": 9605561
+  },
+  "images": [
+    {
+      "id": "650758aa0b7a501a1da902bf",
+      "bytes": 3987518,
+      "dimensions": {
+        "width": 6240,
+        "height": 4160
+      },
+      "sha256": "a9a635697513690a5de76d6fb03075c4d661a30c09cfd42e41f1ea13c5da29a4",
+      "placement": "r2",
+      "category": "content",
+      "target": "media/content/",
+      "strategy": "responsive-avif+jpeg-fallback",
+      "errors": [
+
+      ],
+      "skipped": [
+
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/650758aa0b7a501a1da902bf.jpg",
+        "bytes": 3987518,
+        "dimensions": {
+          "width": 6240,
+          "height": 4160
+        },
+        "sha256": "a9a635697513690a5de76d6fb03075c4d661a30c09cfd42e41f1ea13c5da29a4",
+        "strategy": "responsive-avif+jpeg-fallback",
+        "errors": [
+
+        ],
+        "codec": "mjpeg",
+        "pixelFormat": "yuvj420p",
+        "colorRange": "pc",
+        "colorSpace": "bt470bg",
+        "colorTransfer": null,
+        "colorPrimaries": null
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w640.avif",
+          "bytes": 106946,
+          "dimensions": {
+            "width": 640,
+            "height": 426
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "18df994d1ec3cecd7592fdf23fbac387ce907a883f80ac1f3aee5c55431cf010",
+          "strategy": "avif libsvtav1 preset9 crf24 yuv420p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/650758aa0b7a501a1da902bf-18df994d1ec3.avif"
+        },
+        {
+          "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1280.avif",
+          "bytes": 429283,
+          "dimensions": {
+            "width": 1280,
+            "height": 854
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "0e9603648f22703d69b04ca311403a7bd64704c8a99b2abfb120d580a41b0b50",
+          "strategy": "avif libsvtav1 preset9 crf24 yuv420p width=1280",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/650758aa0b7a501a1da902bf-0e9603648f22.avif"
+        },
+        {
+          "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1920.avif",
+          "bytes": 961827,
+          "dimensions": {
+            "width": 1920,
+            "height": 1280
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "3c32daceab87325a0f3b9b2c7b4ad401b994ac49232aa6ed8241ae38ff191653",
+          "strategy": "avif libsvtav1 preset9 crf24 yuv420p width=1920",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/650758aa0b7a501a1da902bf-3c32daceab87.avif"
+        },
+        {
+          "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w640.jpg",
+          "bytes": 112593,
+          "dimensions": {
+            "width": 640,
+            "height": 426
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "76f6b8d52f8f15c7ac9e4fe0582b05525a83b4db108dc6a5d578ee3c419c9176",
+          "strategy": "mjpeg q:v1 yuvj420p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/650758aa0b7a501a1da902bf-76f6b8d52f8f.jpg"
+        },
+        {
+          "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1280.jpg",
+          "bytes": 449381,
+          "dimensions": {
+            "width": 1280,
+            "height": 854
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "10d82b82df1b2820f945604717acdf9aed7e8aa717bbe90b58bdbc02db783afe",
+          "strategy": "mjpeg q:v1 yuvj420p width=1280",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/650758aa0b7a501a1da902bf-10d82b82df1b.jpg"
+        },
+        {
+          "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1920.jpg",
+          "bytes": 997665,
+          "dimensions": {
+            "width": 1920,
+            "height": 1280
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "3d33e4d3b3f164ead24b447c04bc0df5a1f89d44be9e617805b0e929ea7b9903",
+          "strategy": "mjpeg q:v1 yuvj420p width=1920",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/650758aa0b7a501a1da902bf-3d33e4d3b3f1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "651eb3b38ed930fbe78fd97a",
+      "bytes": 2500207,
+      "dimensions": {
+        "width": 1920,
+        "height": 1280
+      },
+      "sha256": "18af9f634f4a051596c1fac0496f418a6e4f8fb0a4cdcc69f8b70f42475cc753",
+      "placement": "r2",
+      "category": "content",
+      "target": "media/content/",
+      "strategy": "responsive-avif+jpeg-fallback",
+      "errors": [
+
+      ],
+      "skipped": [
+        {
+          "format": "avif",
+          "width": 640,
+          "reason": "source-422-chroma-quality-risk"
+        },
+        {
+          "format": "avif",
+          "width": 1280,
+          "reason": "source-422-chroma-quality-risk"
+        },
+        {
+          "format": "avif",
+          "width": 1920,
+          "reason": "source-422-chroma-quality-risk"
+        }
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/651eb3b38ed930fbe78fd97a.jpg",
+        "bytes": 2500207,
+        "dimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "sha256": "18af9f634f4a051596c1fac0496f418a6e4f8fb0a4cdcc69f8b70f42475cc753",
+        "strategy": "responsive-avif+jpeg-fallback",
+        "errors": [
+
+        ],
+        "codec": "mjpeg",
+        "pixelFormat": "yuvj422p",
+        "colorRange": "pc",
+        "colorSpace": "bt470bg",
+        "colorTransfer": null,
+        "colorPrimaries": null
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w640.jpg",
+          "bytes": 172319,
+          "dimensions": {
+            "width": 640,
+            "height": 426
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj422p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "28acfcb3e0e3f8a95c866839135ad697489841230a8190276b2c89ff5249dd31",
+          "strategy": "mjpeg q:v1 yuvj422p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651eb3b38ed930fbe78fd97a-28acfcb3e0e3.jpg"
+        },
+        {
+          "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1280.jpg",
+          "bytes": 673317,
+          "dimensions": {
+            "width": 1280,
+            "height": 854
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj422p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "18a85afbc3455651ad224e8bd07499ee5bfd751cf72664ad15ab4dbac2e154f9",
+          "strategy": "mjpeg q:v1 yuvj422p width=1280",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651eb3b38ed930fbe78fd97a-18a85afbc345.jpg"
+        },
+        {
+          "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1920.jpg",
+          "bytes": 1539799,
+          "dimensions": {
+            "width": 1920,
+            "height": 1280
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj422p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "0215ebbe898dd36d1dcf39b80dab103046311f8d9430ee3a6cd9523164f88bfe",
+          "strategy": "mjpeg q:v1 yuvj422p width=1920",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651eb3b38ed930fbe78fd97a-0215ebbe898d.jpg"
+        }
+      ]
+    },
+    {
+      "id": "651ec63ce1dde357d047f53a",
+      "bytes": 2080838,
+      "dimensions": {
+        "width": 1920,
+        "height": 1280
+      },
+      "sha256": "5b9ce1de13a4d8fdebb84152fd0d5592154c3094702797de2f004da25008c3e1",
+      "placement": "r2",
+      "category": "content",
+      "target": "media/content/",
+      "strategy": "responsive-avif+jpeg-fallback",
+      "errors": [
+
+      ],
+      "skipped": [
+        {
+          "format": "avif",
+          "width": 1280,
+          "reason": "source-444-chroma-quality-risk"
+        },
+        {
+          "format": "avif",
+          "width": 1920,
+          "reason": "source-444-chroma-quality-risk"
+        }
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/651ec63ce1dde357d047f53a.jpg",
+        "bytes": 2080838,
+        "dimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "sha256": "5b9ce1de13a4d8fdebb84152fd0d5592154c3094702797de2f004da25008c3e1",
+        "strategy": "responsive-avif+jpeg-fallback",
+        "errors": [
+
+        ],
+        "codec": "mjpeg",
+        "pixelFormat": "yuvj444p",
+        "colorRange": "pc",
+        "colorSpace": "bt470bg",
+        "colorTransfer": null,
+        "colorPrimaries": null
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-w640.avif",
+          "bytes": 48914,
+          "dimensions": {
+            "width": 640,
+            "height": 426
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "9d7dc423a242613c02671441c90989866b64ce0a962425e97326e0330b27e292",
+          "strategy": "avif libsvtav1 preset9 crf28 yuv420p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-9d7dc423a242.avif"
+        },
+        {
+          "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w640.jpg",
+          "bytes": 92243,
+          "dimensions": {
+            "width": 640,
+            "height": 426
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj444p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "650332a9958f3f9098219914d38f9b7d2f17000a62046563669f5609898aa482",
+          "strategy": "mjpeg q:v1 yuvj444p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg"
+        },
+        {
+          "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1280.jpg",
+          "bytes": 326853,
+          "dimensions": {
+            "width": 1280,
+            "height": 854
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj444p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "544435fac7da8f02c8b55f4bab88fa6108ebf6c8ab04d3d6ddff608e83adc735",
+          "strategy": "mjpeg q:v1 yuvj444p width=1280",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-544435fac7da.jpg"
+        },
+        {
+          "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1920.jpg",
+          "bytes": 735722,
+          "dimensions": {
+            "width": 1920,
+            "height": 1280
+          },
+          "codec": "mjpeg",
+          "pixelFormat": "yuvj444p",
+          "colorRange": "pc",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "4c55cc829e43efb99983971c515060c0e621a2f9da39ab019177c152bad6ffa5",
+          "strategy": "mjpeg q:v1 yuvj444p width=1920",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg"
+        }
+      ]
+    },
+    {
+      "id": "6973aa8ddda60d8a2e57b1b4",
+      "bytes": 3094958,
+      "dimensions": {
+        "width": 1838,
+        "height": 1198
+      },
+      "sha256": "28c09701f0eccde9d85b032515369d1404ae961d1df949780b2fa1a5c0c74593",
+      "placement": "r2",
+      "category": "content",
+      "target": "media/content/",
+      "strategy": "responsive-avif+lossless-png",
+      "errors": [
+
+      ],
+      "skipped": [
+
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/6973aa8ddda60d8a2e57b1b4.png",
+        "bytes": 3094958,
+        "dimensions": {
+          "width": 1838,
+          "height": 1198
+        },
+        "sha256": "28c09701f0eccde9d85b032515369d1404ae961d1df949780b2fa1a5c0c74593",
+        "strategy": "responsive-avif+lossless-png",
+        "errors": [
+
+        ],
+        "codec": "png",
+        "pixelFormat": "rgba",
+        "colorRange": "pc",
+        "colorSpace": "gbr",
+        "colorTransfer": null,
+        "colorPrimaries": null,
+        "frameChecksum": "c560426a063be6b6a7ee08b2d1cd4138",
+        "frameChecksumAlgorithm": "framemd5-md5"
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-lossless.png",
+          "bytes": 2487947,
+          "dimensions": {
+            "width": 1838,
+            "height": 1198
+          },
+          "codec": "png",
+          "pixelFormat": "rgba",
+          "colorRange": "pc",
+          "colorSpace": "gbr",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "3a4f450d2f7bf11da1b69ac942b424e2d0d66b3518cd27533ccc687608f9b73c",
+          "strategy": "png lossless compression_level9 pred mixed",
+          "errors": [
+
+          ],
+          "frameChecksum": "c560426a063be6b6a7ee08b2d1cd4138",
+          "frameChecksumAlgorithm": "framemd5-md5",
+          "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-3a4f450d2f7b.png"
+        },
+        {
+          "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w640.avif",
+          "bytes": 59016,
+          "dimensions": {
+            "width": 640,
+            "height": 418
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "tv",
+          "colorSpace": null,
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "def4cc56cdde5265b52f79220a0a980090c2d7bb9b14ade62179730d41d20f85",
+          "strategy": "avif libsvtav1 preset9 crf28 yuv420p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-def4cc56cdde.avif"
+        },
+        {
+          "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1280.avif",
+          "bytes": 112726,
+          "dimensions": {
+            "width": 1280,
+            "height": 834
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "tv",
+          "colorSpace": null,
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "78e8b5553995d58e42593dce967bc76224d939e6c1f7b8f260defbbc23ba7552",
+          "strategy": "avif libsvtav1 preset9 crf28 yuv420p width=1280",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-78e8b5553995.avif"
+        },
+        {
+          "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1838.avif",
+          "bytes": 158658,
+          "dimensions": {
+            "width": 1838,
+            "height": 1198
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "tv",
+          "colorSpace": null,
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "3605cec883854d82da09608e639850c0061c38024670f7a9b6a41da35c2a24a2",
+          "strategy": "avif libsvtav1 preset9 crf28 yuv420p width=1838",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-3605cec88385.avif"
+        }
+      ]
+    },
+    {
+      "id": "65074195be972cb5422550d7",
+      "bytes": 103010,
+      "dimensions": {
+        "width": 2096,
+        "height": 1546
+      },
+      "sha256": "5231f06ff0fd2d9325ac44a908d7c92525953e15fd33e73c8ee137a08cb223ea",
+      "placement": "pages",
+      "category": "brand",
+      "target": "apps/web/public/assets/brand/65074195be972cb5422550d7.png",
+      "strategy": "lossless-png",
+      "errors": [
+
+      ],
+      "skipped": [
+
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/65074195be972cb5422550d7.png",
+        "bytes": 103010,
+        "dimensions": {
+          "width": 2096,
+          "height": 1546
+        },
+        "sha256": "5231f06ff0fd2d9325ac44a908d7c92525953e15fd33e73c8ee137a08cb223ea",
+        "strategy": "lossless-png",
+        "errors": [
+
+        ],
+        "codec": "png",
+        "pixelFormat": "rgba",
+        "colorRange": "pc",
+        "colorSpace": "gbr",
+        "colorTransfer": null,
+        "colorPrimaries": null,
+        "frameChecksum": "45d2f07ece3e1f6d00721ab3b5333901",
+        "frameChecksumAlgorithm": "framemd5-md5"
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/65074195be972cb5422550d7/65074195be972cb5422550d7-lossless.png",
+          "bytes": 101484,
+          "dimensions": {
+            "width": 2096,
+            "height": 1546
+          },
+          "codec": "png",
+          "pixelFormat": "rgba",
+          "colorRange": "pc",
+          "colorSpace": "gbr",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "2b2e5ce83c138150e973b2a0be1504ebbd98aacd390eacf863d0c83021939cd5",
+          "strategy": "png lossless compression_level9 pred mixed",
+          "errors": [
+
+          ],
+          "frameChecksum": "45d2f07ece3e1f6d00721ab3b5333901",
+          "frameChecksumAlgorithm": "framemd5-md5",
+          "pagesPath": "apps/web/public/assets/brand/65074195be972cb5422550d7.png"
+        }
+      ]
+    },
+    {
+      "id": "65133573edd089379a1540e0",
+      "bytes": 13403,
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sha256": "5d054abe6991dd4195a2242e5de405d3df3499d2691b68ebd2b35a92c3afd507",
+      "placement": "pages",
+      "category": "icons",
+      "target": "apps/web/public/assets/icons/65133573edd089379a1540e0.png",
+      "strategy": "lossless-png",
+      "errors": [
+
+      ],
+      "skipped": [
+
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/65133573edd089379a1540e0.png",
+        "bytes": 13403,
+        "dimensions": {
+          "width": 512,
+          "height": 512
+        },
+        "sha256": "5d054abe6991dd4195a2242e5de405d3df3499d2691b68ebd2b35a92c3afd507",
+        "strategy": "lossless-png",
+        "errors": [
+
+        ],
+        "codec": "png",
+        "pixelFormat": "rgba",
+        "colorRange": "pc",
+        "colorSpace": "gbr",
+        "colorTransfer": null,
+        "colorPrimaries": null,
+        "frameChecksum": "aa85bc709cacfd3495d5c75a294e217a",
+        "frameChecksumAlgorithm": "framemd5-md5"
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/65133573edd089379a1540e0/65133573edd089379a1540e0-lossless.png",
+          "bytes": 12341,
+          "dimensions": {
+            "width": 512,
+            "height": 512
+          },
+          "codec": "png",
+          "pixelFormat": "rgba",
+          "colorRange": "pc",
+          "colorSpace": "gbr",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "d70a706e4d275a169fa3b5cd7fdb3500a8320190f0eeb6dce7e4045864e0139d",
+          "strategy": "png lossless compression_level9 pred mixed",
+          "errors": [
+
+          ],
+          "frameChecksum": "aa85bc709cacfd3495d5c75a294e217a",
+          "frameChecksumAlgorithm": "framemd5-md5",
+          "pagesPath": "apps/web/public/assets/icons/65133573edd089379a1540e0.png"
+        }
+      ]
+    },
+    {
+      "id": "65053272246b11c3f5e02ede",
+      "bytes": 2778,
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "sha256": "77c7a5c8ab10255b7cb2718fbc04218f616054f5b4084367e208d763620bab53",
+      "placement": "pages",
+      "category": "icons",
+      "target": "apps/web/public/assets/icons/65053272246b11c3f5e02ede.svg",
+      "strategy": "preserve-svg",
+      "errors": [
+
+      ],
+      "skipped": [
+
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/65053272246b11c3f5e02ede.svg",
+        "bytes": 2778,
+        "dimensions": {
+          "width": null,
+          "height": null
+        },
+        "sha256": "77c7a5c8ab10255b7cb2718fbc04218f616054f5b4084367e208d763620bab53",
+        "strategy": "preserve-svg",
+        "errors": [
+
+        ],
+        "pagesPath": "apps/web/public/assets/icons/65053272246b11c3f5e02ede.svg"
+      },
+      "outputs": [
+
+      ]
+    },
+    {
+      "id": "65375daf30602c1e52f15e03",
+      "bytes": 43424,
+      "dimensions": {
+        "width": 1000,
+        "height": 580
+      },
+      "sha256": "b982e97b6fb3bbf952dbdbc819e24a48b5f226ca871439f53cfc1451abf12f50",
+      "placement": "r2",
+      "category": "content",
+      "target": "media/content/",
+      "strategy": "preserve-webp+optional-avif",
+      "errors": [
+
+      ],
+      "skipped": [
+        {
+          "format": "avif",
+          "width": 1000,
+          "reason": "not-smaller-than-source"
+        }
+      ],
+      "source": {
+        "path": "imports/webflow/assets/images/65375daf30602c1e52f15e03.webp",
+        "bytes": 43424,
+        "dimensions": {
+          "width": 1000,
+          "height": 580
+        },
+        "sha256": "b982e97b6fb3bbf952dbdbc819e24a48b5f226ca871439f53cfc1451abf12f50",
+        "strategy": "preserve-webp+optional-avif",
+        "errors": [
+
+        ],
+        "codec": "webp",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt470bg",
+        "colorTransfer": null,
+        "colorPrimaries": null,
+        "r2Key": "media/content/65375daf30602c1e52f15e03-b982e97b6fb3.webp"
+      },
+      "outputs": [
+        {
+          "path": "assets/optimized/65375daf30602c1e52f15e03/65375daf30602c1e52f15e03-w640.avif",
+          "bytes": 26527,
+          "dimensions": {
+            "width": 640,
+            "height": 372
+          },
+          "codec": "av1",
+          "pixelFormat": "yuv420p",
+          "colorRange": "tv",
+          "colorSpace": "bt470bg",
+          "colorTransfer": null,
+          "colorPrimaries": null,
+          "sha256": "1ed2fd70a88091f3ba484bafd8e028143e047f67643751b41ce89c139092444a",
+          "strategy": "avif libsvtav1 preset9 crf28 yuv420p width=640",
+          "errors": [
+
+          ],
+          "r2Key": "media/content/65375daf30602c1e52f15e03-1ed2fd70a880.avif"
+        }
+      ]
+    }
+  ],
+  "errors": [
+
+  ]
+}

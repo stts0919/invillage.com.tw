@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T23:15:48Z",
+  "copyAuthorized": false,
+  "items": [
+    {
+      "assetId": "65053272246b11c3f5e02ede",
+      "targetPath": "apps/web/public/assets/icons/65053272246b11c3f5e02ede.svg",
+      "localPath": "imports/webflow/assets/images/65053272246b11c3f5e02ede.svg",
+      "bytes": 2778,
+      "sha256": "77c7a5c8ab10255b7cb2718fbc04218f616054f5b4084367e208d763620bab53"
+    },
+    {
+      "assetId": "65074195be972cb5422550d7",
+      "targetPath": "apps/web/public/assets/brand/65074195be972cb5422550d7.png",
+      "localPath": "assets/optimized/65074195be972cb5422550d7/65074195be972cb5422550d7-lossless.png",
+      "bytes": 101484,
+      "sha256": "2b2e5ce83c138150e973b2a0be1504ebbd98aacd390eacf863d0c83021939cd5"
+    },
+    {
+      "assetId": "650741963cc37e5fe08d25bf",
+      "targetPath": "apps/web/public/assets/brand/650741963cc37e5fe08d25bf.png",
+      "localPath": "assets/optimized/650741963cc37e5fe08d25bf/650741963cc37e5fe08d25bf-lossless.png",
+      "bytes": 27523,
+      "sha256": "35289ea8c8a054903a3a02e6c36e46793a72b7a71bf32cbb9691d271c4ad27db"
+    },
+    {
+      "assetId": "65075a2ad8f5700d0f111203",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111203.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111203.svg",
+      "bytes": 340,
+      "sha256": "09aba48651edf437840315a2c8da04e18904fd9d65099f64c2b973a6d4f370fd"
+    },
+    {
+      "assetId": "65075a2ad8f5700d0f111204",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111204.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111204.svg",
+      "bytes": 396,
+      "sha256": "c3b0f30674132b3d9105f071bfbe3cb8336ab0927dfc0649ed93886ed75c38ba"
+    },
+    {
+      "assetId": "65075a2ad8f5700d0f111205",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111205.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111205.svg",
+      "bytes": 481,
+      "sha256": "a8ab1908ff7239ab7f45759e9134ff7fa4b19fdc30a8e73e3ed17d476cdbafde"
+    },
+    {
+      "assetId": "65075a2ad8f5700d0f111206",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111206.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111206.svg",
+      "bytes": 324,
+      "sha256": "895ecc5329108e9415e61bc9688c4976c6bdeef9bd5a1aaa6ab5bc8d67b89af4"
+    },
+    {
+      "assetId": "65075a2ad8f5700d0f111207",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111207.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111207.svg",
+      "bytes": 440,
+      "sha256": "fce9939734c8c85f7a60a3bbb0c39473792447bbbfd7755def89228f23ea8884"
+    },
+    {
+      "assetId": "65075a2ad8f5700d0f111208",
+      "targetPath": "apps/web/public/assets/icons/65075a2ad8f5700d0f111208.svg",
+      "localPath": "imports/webflow/assets/images/65075a2ad8f5700d0f111208.svg",
+      "bytes": 563,
+      "sha256": "9ac0024e5d8cb217b96e7ed5de256516e34a922d25eb5fe14fb24c6d35dbf0e4"
+    },
+    {
+      "assetId": "65077f78218531423204127d",
+      "targetPath": "apps/web/public/assets/icons/65077f78218531423204127d.svg",
+      "localPath": "imports/webflow/assets/images/65077f78218531423204127d.svg",
+      "bytes": 304,
+      "sha256": "bbdd3b2aa207053acc46a5a180b94498ee770796be9980191ef8fa8f8b7552f5"
+    },
+    {
+      "assetId": "6507a733352adcbf572e1eba",
+      "targetPath": "apps/web/public/assets/icons/6507a733352adcbf572e1eba.png",
+      "localPath": "assets/optimized/6507a733352adcbf572e1eba/6507a733352adcbf572e1eba-lossless.png",
+      "bytes": 582,
+      "sha256": "6f31cb00a4d14890918e86973492a8cc41b6b50073212ce51b98654eef5a00c5"
+    },
+    {
+      "assetId": "6507a7849d60b1182e050e99",
+      "targetPath": "apps/web/public/assets/icons/6507a7849d60b1182e050e99.png",
+      "localPath": "assets/optimized/6507a7849d60b1182e050e99/6507a7849d60b1182e050e99-lossless.png",
+      "bytes": 7492,
+      "sha256": "dd3f33653e16d9fe11f9b70c8ea06a0d18f49d5362f763cefd4f312d004918d5"
+    },
+    {
+      "assetId": "6510a0e202d67e0ab8c779dd",
+      "targetPath": "apps/web/public/assets/icons/6510a0e202d67e0ab8c779dd.svg",
+      "localPath": "imports/webflow/assets/images/6510a0e202d67e0ab8c779dd.svg",
+      "bytes": 321,
+      "sha256": "5fdf192755bf9a447afecea74b06c18dc07ff343559c6e3dafe372b7d41752eb"
+    },
+    {
+      "assetId": "65133573edd089379a1540e0",
+      "targetPath": "apps/web/public/assets/icons/65133573edd089379a1540e0.png",
+      "localPath": "assets/optimized/65133573edd089379a1540e0/65133573edd089379a1540e0-lossless.png",
+      "bytes": 12341,
+      "sha256": "d70a706e4d275a169fa3b5cd7fdb3500a8320190f0eeb6dce7e4045864e0139d"
+    },
+    {
+      "assetId": "65171836d0b145049cbfba47",
+      "targetPath": "apps/web/public/assets/icons/65171836d0b145049cbfba47.png",
+      "localPath": "assets/optimized/65171836d0b145049cbfba47/65171836d0b145049cbfba47-lossless.png",
+      "bytes": 9810,
+      "sha256": "ee2c64ba144dd68ab15eb1d40bc29c36f7fc12d91fc6de3ee717ec2a9b64b13c"
+    },
+    {
+      "assetId": "65171de5de6d5f9f9d43d9eb",
+      "targetPath": "apps/web/public/assets/icons/65171de5de6d5f9f9d43d9eb.png",
+      "localPath": "assets/optimized/65171de5de6d5f9f9d43d9eb/65171de5de6d5f9f9d43d9eb-lossless.png",
+      "bytes": 13878,
+      "sha256": "e2953b2fd4d977d9a1b3938cab40edf28b7929fde5377a136c99131d6af4a28d"
+    }
+  ]
+}

@@ -1,0 +1,2962 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T23:42:17Z",
+  "thresholds": {
+    "ssim": 0.98,
+    "psnrDb": 35.0
+  },
+  "summary": {
+    "selectedImages": 139,
+    "verifiedOutputs": 428,
+    "lossyMetrics": 420,
+    "lossyOutputs": 420,
+    "qualityPasses": 420,
+    "failures": 0,
+    "manualVisualReviewRequired": false
+  },
+  "metrics": [
+    {
+      "assetId": "6507481a777554d0c90461fb",
+      "path": "assets/optimized/6507481a777554d0c90461fb/6507481a777554d0c90461fb-fallback-w640.jpg",
+      "ssim": 0.985172,
+      "psnr": 42.460642,
+      "pass": true
+    },
+    {
+      "assetId": "6507481a777554d0c90461fb",
+      "path": "assets/optimized/6507481a777554d0c90461fb/6507481a777554d0c90461fb-fallback-w1280.jpg",
+      "ssim": 0.987393,
+      "psnr": 42.846406,
+      "pass": true
+    },
+    {
+      "assetId": "6507481a777554d0c90461fb",
+      "path": "assets/optimized/6507481a777554d0c90461fb/6507481a777554d0c90461fb-fallback-w1920.jpg",
+      "ssim": 0.989472,
+      "psnr": 43.361654,
+      "pass": true
+    },
+    {
+      "assetId": "65074840205fffe0425b9981",
+      "path": "assets/optimized/65074840205fffe0425b9981/65074840205fffe0425b9981-w640.avif",
+      "ssim": 0.986985,
+      "psnr": 45.185132,
+      "pass": true
+    },
+    {
+      "assetId": "65074840205fffe0425b9981",
+      "path": "assets/optimized/65074840205fffe0425b9981/65074840205fffe0425b9981-w1280.avif",
+      "ssim": 0.986241,
+      "psnr": 45.382461,
+      "pass": true
+    },
+    {
+      "assetId": "65074840205fffe0425b9981",
+      "path": "assets/optimized/65074840205fffe0425b9981/65074840205fffe0425b9981-w1478.avif",
+      "ssim": 0.98757,
+      "psnr": 45.825238,
+      "pass": true
+    },
+    {
+      "assetId": "65074840205fffe0425b9981",
+      "path": "assets/optimized/65074840205fffe0425b9981/65074840205fffe0425b9981-fallback-w640.jpg",
+      "ssim": 0.987426,
+      "psnr": 43.711729,
+      "pass": true
+    },
+    {
+      "assetId": "65074840205fffe0425b9981",
+      "path": "assets/optimized/65074840205fffe0425b9981/65074840205fffe0425b9981-fallback-w1280.jpg",
+      "ssim": 0.987674,
+      "psnr": 44.6698,
+      "pass": true
+    },
+    {
+      "assetId": "6507484e8898be5169a851c0",
+      "path": "assets/optimized/6507484e8898be5169a851c0/6507484e8898be5169a851c0-w640.avif",
+      "ssim": 0.990592,
+      "psnr": 45.710891,
+      "pass": true
+    },
+    {
+      "assetId": "6507484e8898be5169a851c0",
+      "path": "assets/optimized/6507484e8898be5169a851c0/6507484e8898be5169a851c0-w1280.avif",
+      "ssim": 0.990054,
+      "psnr": 46.093484,
+      "pass": true
+    },
+    {
+      "assetId": "6507484e8898be5169a851c0",
+      "path": "assets/optimized/6507484e8898be5169a851c0/6507484e8898be5169a851c0-w1920.avif",
+      "ssim": 0.988993,
+      "psnr": 46.126099,
+      "pass": true
+    },
+    {
+      "assetId": "6507484e8898be5169a851c0",
+      "path": "assets/optimized/6507484e8898be5169a851c0/6507484e8898be5169a851c0-fallback-w640.jpg",
+      "ssim": 0.989604,
+      "psnr": 44.135922,
+      "pass": true
+    },
+    {
+      "assetId": "6507484e8898be5169a851c0",
+      "path": "assets/optimized/6507484e8898be5169a851c0/6507484e8898be5169a851c0-fallback-w1280.jpg",
+      "ssim": 0.98938,
+      "psnr": 44.753637,
+      "pass": true
+    },
+    {
+      "assetId": "6507484e8898be5169a851c0",
+      "path": "assets/optimized/6507484e8898be5169a851c0/6507484e8898be5169a851c0-fallback-w1920.jpg",
+      "ssim": 0.989093,
+      "psnr": 45.246507,
+      "pass": true
+    },
+    {
+      "assetId": "6507485038e536d93698e54a",
+      "path": "assets/optimized/6507485038e536d93698e54a/6507485038e536d93698e54a-w640.avif",
+      "ssim": 0.989275,
+      "psnr": 45.535375,
+      "pass": true
+    },
+    {
+      "assetId": "6507485038e536d93698e54a",
+      "path": "assets/optimized/6507485038e536d93698e54a/6507485038e536d93698e54a-w1280.avif",
+      "ssim": 0.989649,
+      "psnr": 45.762946,
+      "pass": true
+    },
+    {
+      "assetId": "6507485038e536d93698e54a",
+      "path": "assets/optimized/6507485038e536d93698e54a/6507485038e536d93698e54a-w1920.avif",
+      "ssim": 0.989618,
+      "psnr": 45.7938,
+      "pass": true
+    },
+    {
+      "assetId": "6507485038e536d93698e54a",
+      "path": "assets/optimized/6507485038e536d93698e54a/6507485038e536d93698e54a-fallback-w640.jpg",
+      "ssim": 0.986906,
+      "psnr": 43.821888,
+      "pass": true
+    },
+    {
+      "assetId": "6507485038e536d93698e54a",
+      "path": "assets/optimized/6507485038e536d93698e54a/6507485038e536d93698e54a-fallback-w1280.jpg",
+      "ssim": 0.987207,
+      "psnr": 43.907431,
+      "pass": true
+    },
+    {
+      "assetId": "6507485038e536d93698e54a",
+      "path": "assets/optimized/6507485038e536d93698e54a/6507485038e536d93698e54a-fallback-w1920.jpg",
+      "ssim": 0.987919,
+      "psnr": 44.089422,
+      "pass": true
+    },
+    {
+      "assetId": "6507486b777554d0c904a2b9",
+      "path": "assets/optimized/6507486b777554d0c904a2b9/6507486b777554d0c904a2b9-w640.avif",
+      "ssim": 0.988771,
+      "psnr": 45.606264,
+      "pass": true
+    },
+    {
+      "assetId": "6507486b777554d0c904a2b9",
+      "path": "assets/optimized/6507486b777554d0c904a2b9/6507486b777554d0c904a2b9-w1280.avif",
+      "ssim": 0.986956,
+      "psnr": 45.780827,
+      "pass": true
+    },
+    {
+      "assetId": "6507486b777554d0c904a2b9",
+      "path": "assets/optimized/6507486b777554d0c904a2b9/6507486b777554d0c904a2b9-w1920.avif",
+      "ssim": 0.986491,
+      "psnr": 45.831337,
+      "pass": true
+    },
+    {
+      "assetId": "6507486b777554d0c904a2b9",
+      "path": "assets/optimized/6507486b777554d0c904a2b9/6507486b777554d0c904a2b9-fallback-w640.jpg",
+      "ssim": 0.98843,
+      "psnr": 44.534719,
+      "pass": true
+    },
+    {
+      "assetId": "6507486b777554d0c904a2b9",
+      "path": "assets/optimized/6507486b777554d0c904a2b9/6507486b777554d0c904a2b9-fallback-w1280.jpg",
+      "ssim": 0.986414,
+      "psnr": 44.756647,
+      "pass": true
+    },
+    {
+      "assetId": "6507486b777554d0c904a2b9",
+      "path": "assets/optimized/6507486b777554d0c904a2b9/6507486b777554d0c904a2b9-fallback-w1920.jpg",
+      "ssim": 0.98597,
+      "psnr": 44.777336,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8e61226bfdc7944fd6",
+      "path": "assets/optimized/65074e8e61226bfdc7944fd6/65074e8e61226bfdc7944fd6-w640.avif",
+      "ssim": 0.9895,
+      "psnr": 45.416479,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8e61226bfdc7944fd6",
+      "path": "assets/optimized/65074e8e61226bfdc7944fd6/65074e8e61226bfdc7944fd6-w1280.avif",
+      "ssim": 0.989604,
+      "psnr": 45.898023,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8e61226bfdc7944fd6",
+      "path": "assets/optimized/65074e8e61226bfdc7944fd6/65074e8e61226bfdc7944fd6-w1920.avif",
+      "ssim": 0.989219,
+      "psnr": 46.075418,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8e61226bfdc7944fd6",
+      "path": "assets/optimized/65074e8e61226bfdc7944fd6/65074e8e61226bfdc7944fd6-fallback-w640.jpg",
+      "ssim": 0.98761,
+      "psnr": 43.664035,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8e61226bfdc7944fd6",
+      "path": "assets/optimized/65074e8e61226bfdc7944fd6/65074e8e61226bfdc7944fd6-fallback-w1280.jpg",
+      "ssim": 0.988249,
+      "psnr": 44.258928,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8e61226bfdc7944fd6",
+      "path": "assets/optimized/65074e8e61226bfdc7944fd6/65074e8e61226bfdc7944fd6-fallback-w1920.jpg",
+      "ssim": 0.988651,
+      "psnr": 44.746038,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8ed5c29f4a9417e6c2",
+      "path": "assets/optimized/65074e8ed5c29f4a9417e6c2/65074e8ed5c29f4a9417e6c2-w640.avif",
+      "ssim": 0.987419,
+      "psnr": 43.417555,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8ed5c29f4a9417e6c2",
+      "path": "assets/optimized/65074e8ed5c29f4a9417e6c2/65074e8ed5c29f4a9417e6c2-w1280.avif",
+      "ssim": 0.988072,
+      "psnr": 43.741762,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8ed5c29f4a9417e6c2",
+      "path": "assets/optimized/65074e8ed5c29f4a9417e6c2/65074e8ed5c29f4a9417e6c2-w1920.avif",
+      "ssim": 0.988097,
+      "psnr": 43.967924,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8ed5c29f4a9417e6c2",
+      "path": "assets/optimized/65074e8ed5c29f4a9417e6c2/65074e8ed5c29f4a9417e6c2-fallback-w640.jpg",
+      "ssim": 0.986211,
+      "psnr": 41.372441,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8ed5c29f4a9417e6c2",
+      "path": "assets/optimized/65074e8ed5c29f4a9417e6c2/65074e8ed5c29f4a9417e6c2-fallback-w1280.jpg",
+      "ssim": 0.987835,
+      "psnr": 42.078322,
+      "pass": true
+    },
+    {
+      "assetId": "65074e8ed5c29f4a9417e6c2",
+      "path": "assets/optimized/65074e8ed5c29f4a9417e6c2/65074e8ed5c29f4a9417e6c2-fallback-w1920.jpg",
+      "ssim": 0.98856,
+      "psnr": 42.647515,
+      "pass": true
+    },
+    {
+      "assetId": "650758a90e467150165a2d0d",
+      "path": "assets/optimized/650758a90e467150165a2d0d/650758a90e467150165a2d0d-w640.avif",
+      "ssim": 0.988064,
+      "psnr": 44.909647,
+      "pass": true
+    },
+    {
+      "assetId": "650758a90e467150165a2d0d",
+      "path": "assets/optimized/650758a90e467150165a2d0d/650758a90e467150165a2d0d-w1280.avif",
+      "ssim": 0.986547,
+      "psnr": 45.193892,
+      "pass": true
+    },
+    {
+      "assetId": "650758a90e467150165a2d0d",
+      "path": "assets/optimized/650758a90e467150165a2d0d/650758a90e467150165a2d0d-w1920.avif",
+      "ssim": 0.985446,
+      "psnr": 45.207409,
+      "pass": true
+    },
+    {
+      "assetId": "650758a90e467150165a2d0d",
+      "path": "assets/optimized/650758a90e467150165a2d0d/650758a90e467150165a2d0d-fallback-w640.jpg",
+      "ssim": 0.986077,
+      "psnr": 43.743327,
+      "pass": true
+    },
+    {
+      "assetId": "650758a90e467150165a2d0d",
+      "path": "assets/optimized/650758a90e467150165a2d0d/650758a90e467150165a2d0d-fallback-w1280.jpg",
+      "ssim": 0.985358,
+      "psnr": 44.292005,
+      "pass": true
+    },
+    {
+      "assetId": "650758a90e467150165a2d0d",
+      "path": "assets/optimized/650758a90e467150165a2d0d/650758a90e467150165a2d0d-fallback-w1920.jpg",
+      "ssim": 0.985176,
+      "psnr": 44.568751,
+      "pass": true
+    },
+    {
+      "assetId": "650758a92a4b20c9d1f586d9",
+      "path": "assets/optimized/650758a92a4b20c9d1f586d9/650758a92a4b20c9d1f586d9-w640.avif",
+      "ssim": 0.987041,
+      "psnr": 44.713098,
+      "pass": true
+    },
+    {
+      "assetId": "650758a92a4b20c9d1f586d9",
+      "path": "assets/optimized/650758a92a4b20c9d1f586d9/650758a92a4b20c9d1f586d9-w1280.avif",
+      "ssim": 0.98469,
+      "psnr": 44.774176,
+      "pass": true
+    },
+    {
+      "assetId": "650758a92a4b20c9d1f586d9",
+      "path": "assets/optimized/650758a92a4b20c9d1f586d9/650758a92a4b20c9d1f586d9-w1920.avif",
+      "ssim": 0.982369,
+      "psnr": 44.616412,
+      "pass": true
+    },
+    {
+      "assetId": "650758a92a4b20c9d1f586d9",
+      "path": "assets/optimized/650758a92a4b20c9d1f586d9/650758a92a4b20c9d1f586d9-fallback-w640.jpg",
+      "ssim": 0.986046,
+      "psnr": 43.243969,
+      "pass": true
+    },
+    {
+      "assetId": "650758a92a4b20c9d1f586d9",
+      "path": "assets/optimized/650758a92a4b20c9d1f586d9/650758a92a4b20c9d1f586d9-fallback-w1280.jpg",
+      "ssim": 0.983992,
+      "psnr": 43.521612,
+      "pass": true
+    },
+    {
+      "assetId": "650758a92a4b20c9d1f586d9",
+      "path": "assets/optimized/650758a92a4b20c9d1f586d9/650758a92a4b20c9d1f586d9-fallback-w1920.jpg",
+      "ssim": 0.98251,
+      "psnr": 43.657157,
+      "pass": true
+    },
+    {
+      "assetId": "650758a99ef869fb79fe24fc",
+      "path": "assets/optimized/650758a99ef869fb79fe24fc/650758a99ef869fb79fe24fc-w640.avif",
+      "ssim": 0.986106,
+      "psnr": 44.284838,
+      "pass": true
+    },
+    {
+      "assetId": "650758a99ef869fb79fe24fc",
+      "path": "assets/optimized/650758a99ef869fb79fe24fc/650758a99ef869fb79fe24fc-w1280.avif",
+      "ssim": 0.98553,
+      "psnr": 44.50888,
+      "pass": true
+    },
+    {
+      "assetId": "650758a99ef869fb79fe24fc",
+      "path": "assets/optimized/650758a99ef869fb79fe24fc/650758a99ef869fb79fe24fc-w1920.avif",
+      "ssim": 0.984854,
+      "psnr": 44.549225,
+      "pass": true
+    },
+    {
+      "assetId": "650758a99ef869fb79fe24fc",
+      "path": "assets/optimized/650758a99ef869fb79fe24fc/650758a99ef869fb79fe24fc-fallback-w640.jpg",
+      "ssim": 0.985234,
+      "psnr": 42.56284,
+      "pass": true
+    },
+    {
+      "assetId": "650758a99ef869fb79fe24fc",
+      "path": "assets/optimized/650758a99ef869fb79fe24fc/650758a99ef869fb79fe24fc-fallback-w1280.jpg",
+      "ssim": 0.984887,
+      "psnr": 42.934378,
+      "pass": true
+    },
+    {
+      "assetId": "650758a99ef869fb79fe24fc",
+      "path": "assets/optimized/650758a99ef869fb79fe24fc/650758a99ef869fb79fe24fc-fallback-w1920.jpg",
+      "ssim": 0.984661,
+      "psnr": 43.143988,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w640.avif",
+      "ssim": 0.987128,
+      "psnr": 44.100408,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1280.avif",
+      "ssim": 0.988517,
+      "psnr": 44.370152,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1920.avif",
+      "ssim": 0.989321,
+      "psnr": 44.519823,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w640.jpg",
+      "ssim": 0.985571,
+      "psnr": 41.842511,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1280.jpg",
+      "ssim": 0.987612,
+      "psnr": 42.033923,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1920.jpg",
+      "ssim": 0.988852,
+      "psnr": 42.233263,
+      "pass": true
+    },
+    {
+      "assetId": "651d47da495f6472500b8787",
+      "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-w640.avif",
+      "ssim": 0.986991,
+      "psnr": 43.873925,
+      "pass": true
+    },
+    {
+      "assetId": "651d47da495f6472500b8787",
+      "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-fallback-w640.jpg",
+      "ssim": 0.990097,
+      "psnr": 45.900643,
+      "pass": true
+    },
+    {
+      "assetId": "651d47da495f6472500b8787",
+      "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-fallback-w1280.jpg",
+      "ssim": 0.99007,
+      "psnr": 46.460667,
+      "pass": true
+    },
+    {
+      "assetId": "651d47da495f6472500b8787",
+      "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-fallback-w1920.jpg",
+      "ssim": 0.987802,
+      "psnr": 46.318284,
+      "pass": true
+    },
+    {
+      "assetId": "651d47f406ef2b6efb8390da",
+      "path": "assets/optimized/651d47f406ef2b6efb8390da/651d47f406ef2b6efb8390da-w640.avif",
+      "ssim": 0.984907,
+      "psnr": 43.644982,
+      "pass": true
+    },
+    {
+      "assetId": "651d47f406ef2b6efb8390da",
+      "path": "assets/optimized/651d47f406ef2b6efb8390da/651d47f406ef2b6efb8390da-fallback-w640.jpg",
+      "ssim": 0.989452,
+      "psnr": 45.901142,
+      "pass": true
+    },
+    {
+      "assetId": "651d47f406ef2b6efb8390da",
+      "path": "assets/optimized/651d47f406ef2b6efb8390da/651d47f406ef2b6efb8390da-fallback-w1280.jpg",
+      "ssim": 0.989333,
+      "psnr": 45.949684,
+      "pass": true
+    },
+    {
+      "assetId": "651d47f406ef2b6efb8390da",
+      "path": "assets/optimized/651d47f406ef2b6efb8390da/651d47f406ef2b6efb8390da-fallback-w1920.jpg",
+      "ssim": 0.987434,
+      "psnr": 45.629524,
+      "pass": true
+    },
+    {
+      "assetId": "651d4801e2f080d80ab13b64",
+      "path": "assets/optimized/651d4801e2f080d80ab13b64/651d4801e2f080d80ab13b64-fallback-w640.jpg",
+      "ssim": 0.98831,
+      "psnr": 44.580829,
+      "pass": true
+    },
+    {
+      "assetId": "651d4801e2f080d80ab13b64",
+      "path": "assets/optimized/651d4801e2f080d80ab13b64/651d4801e2f080d80ab13b64-fallback-w1280.jpg",
+      "ssim": 0.988681,
+      "psnr": 45.01653,
+      "pass": true
+    },
+    {
+      "assetId": "651d4801e2f080d80ab13b64",
+      "path": "assets/optimized/651d4801e2f080d80ab13b64/651d4801e2f080d80ab13b64-fallback-w1920.jpg",
+      "ssim": 0.986609,
+      "psnr": 44.865037,
+      "pass": true
+    },
+    {
+      "assetId": "651d4810e2f080d80ab1495c",
+      "path": "assets/optimized/651d4810e2f080d80ab1495c/651d4810e2f080d80ab1495c-fallback-w640.jpg",
+      "ssim": 0.988113,
+      "psnr": 44.761143,
+      "pass": true
+    },
+    {
+      "assetId": "651d4810e2f080d80ab1495c",
+      "path": "assets/optimized/651d4810e2f080d80ab1495c/651d4810e2f080d80ab1495c-fallback-w1280.jpg",
+      "ssim": 0.988108,
+      "psnr": 45.277003,
+      "pass": true
+    },
+    {
+      "assetId": "651d4810e2f080d80ab1495c",
+      "path": "assets/optimized/651d4810e2f080d80ab1495c/651d4810e2f080d80ab1495c-fallback-w1920.jpg",
+      "ssim": 0.986027,
+      "psnr": 45.30484,
+      "pass": true
+    },
+    {
+      "assetId": "651d49672fcb0efaad3cb8e9",
+      "path": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w640.jpg",
+      "ssim": 0.99037,
+      "psnr": 45.232868,
+      "pass": true
+    },
+    {
+      "assetId": "651d49672fcb0efaad3cb8e9",
+      "path": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w1280.jpg",
+      "ssim": 0.989906,
+      "psnr": 46.198995,
+      "pass": true
+    },
+    {
+      "assetId": "651d49672fcb0efaad3cb8e9",
+      "path": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w1920.jpg",
+      "ssim": 0.986584,
+      "psnr": 45.854694,
+      "pass": true
+    },
+    {
+      "assetId": "651d497ac40a4303d51dfeca",
+      "path": "assets/optimized/651d497ac40a4303d51dfeca/651d497ac40a4303d51dfeca-fallback-w640.jpg",
+      "ssim": 0.991937,
+      "psnr": 46.547761,
+      "pass": true
+    },
+    {
+      "assetId": "651d497ac40a4303d51dfeca",
+      "path": "assets/optimized/651d497ac40a4303d51dfeca/651d497ac40a4303d51dfeca-fallback-w1280.jpg",
+      "ssim": 0.991021,
+      "psnr": 47.561544,
+      "pass": true
+    },
+    {
+      "assetId": "651d497ac40a4303d51dfeca",
+      "path": "assets/optimized/651d497ac40a4303d51dfeca/651d497ac40a4303d51dfeca-fallback-w1920.jpg",
+      "ssim": 0.986979,
+      "psnr": 46.816395,
+      "pass": true
+    },
+    {
+      "assetId": "651d49872fcb0efaad3ccc0d",
+      "path": "assets/optimized/651d49872fcb0efaad3ccc0d/651d49872fcb0efaad3ccc0d-fallback-w640.jpg",
+      "ssim": 0.990453,
+      "psnr": 46.87147,
+      "pass": true
+    },
+    {
+      "assetId": "651d49872fcb0efaad3ccc0d",
+      "path": "assets/optimized/651d49872fcb0efaad3ccc0d/651d49872fcb0efaad3ccc0d-fallback-w1280.jpg",
+      "ssim": 0.991297,
+      "psnr": 48.249666,
+      "pass": true
+    },
+    {
+      "assetId": "651d49872fcb0efaad3ccc0d",
+      "path": "assets/optimized/651d49872fcb0efaad3ccc0d/651d49872fcb0efaad3ccc0d-fallback-w1920.jpg",
+      "ssim": 0.989653,
+      "psnr": 48.136762,
+      "pass": true
+    },
+    {
+      "assetId": "651d49942f319ae10f76a6f5",
+      "path": "assets/optimized/651d49942f319ae10f76a6f5/651d49942f319ae10f76a6f5-fallback-w640.jpg",
+      "ssim": 0.994794,
+      "psnr": 50.342659,
+      "pass": true
+    },
+    {
+      "assetId": "651d49942f319ae10f76a6f5",
+      "path": "assets/optimized/651d49942f319ae10f76a6f5/651d49942f319ae10f76a6f5-fallback-w1280.jpg",
+      "ssim": 0.992595,
+      "psnr": 49.929043,
+      "pass": true
+    },
+    {
+      "assetId": "651d49942f319ae10f76a6f5",
+      "path": "assets/optimized/651d49942f319ae10f76a6f5/651d49942f319ae10f76a6f5-fallback-w1920.jpg",
+      "ssim": 0.987961,
+      "psnr": 48.400773,
+      "pass": true
+    },
+    {
+      "assetId": "651d49a1e49f9e440a22f14d",
+      "path": "assets/optimized/651d49a1e49f9e440a22f14d/651d49a1e49f9e440a22f14d-fallback-w640.jpg",
+      "ssim": 0.988941,
+      "psnr": 44.423156,
+      "pass": true
+    },
+    {
+      "assetId": "651d49a1e49f9e440a22f14d",
+      "path": "assets/optimized/651d49a1e49f9e440a22f14d/651d49a1e49f9e440a22f14d-fallback-w1280.jpg",
+      "ssim": 0.989626,
+      "psnr": 45.708855,
+      "pass": true
+    },
+    {
+      "assetId": "651d49a1e49f9e440a22f14d",
+      "path": "assets/optimized/651d49a1e49f9e440a22f14d/651d49a1e49f9e440a22f14d-fallback-w1920.jpg",
+      "ssim": 0.9875,
+      "psnr": 45.731292,
+      "pass": true
+    },
+    {
+      "assetId": "651d4bfa1bbdd80682ef39ef",
+      "path": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w640.jpg",
+      "ssim": 0.990512,
+      "psnr": 48.297028,
+      "pass": true
+    },
+    {
+      "assetId": "651d4bfa1bbdd80682ef39ef",
+      "path": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w1280.jpg",
+      "ssim": 0.989501,
+      "psnr": 48.810444,
+      "pass": true
+    },
+    {
+      "assetId": "651d4bfa1bbdd80682ef39ef",
+      "path": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w1920.jpg",
+      "ssim": 0.987465,
+      "psnr": 48.430091,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c0c938885e8b359e910",
+      "path": "assets/optimized/651d4c0c938885e8b359e910/651d4c0c938885e8b359e910-w640.avif",
+      "ssim": 0.987927,
+      "psnr": 46.464079,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c0c938885e8b359e910",
+      "path": "assets/optimized/651d4c0c938885e8b359e910/651d4c0c938885e8b359e910-w1920.avif",
+      "ssim": 0.986112,
+      "psnr": 46.810695,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c0c938885e8b359e910",
+      "path": "assets/optimized/651d4c0c938885e8b359e910/651d4c0c938885e8b359e910-fallback-w640.jpg",
+      "ssim": 0.986983,
+      "psnr": 45.318941,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c0c938885e8b359e910",
+      "path": "assets/optimized/651d4c0c938885e8b359e910/651d4c0c938885e8b359e910-fallback-w1920.jpg",
+      "ssim": 0.992932,
+      "psnr": 48.803339,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c2248208e7cf908adc2",
+      "path": "assets/optimized/651d4c2248208e7cf908adc2/651d4c2248208e7cf908adc2-fallback-w640.jpg",
+      "ssim": 0.992128,
+      "psnr": 48.799796,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c2248208e7cf908adc2",
+      "path": "assets/optimized/651d4c2248208e7cf908adc2/651d4c2248208e7cf908adc2-fallback-w1280.jpg",
+      "ssim": 0.990138,
+      "psnr": 48.648762,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c2248208e7cf908adc2",
+      "path": "assets/optimized/651d4c2248208e7cf908adc2/651d4c2248208e7cf908adc2-fallback-w1920.jpg",
+      "ssim": 0.988162,
+      "psnr": 48.178309,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c33b4e0a78d4b69a240",
+      "path": "assets/optimized/651d4c33b4e0a78d4b69a240/651d4c33b4e0a78d4b69a240-fallback-w640.jpg",
+      "ssim": 0.993541,
+      "psnr": 49.771548,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c33b4e0a78d4b69a240",
+      "path": "assets/optimized/651d4c33b4e0a78d4b69a240/651d4c33b4e0a78d4b69a240-fallback-w1280.jpg",
+      "ssim": 0.992666,
+      "psnr": 50.239771,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c33b4e0a78d4b69a240",
+      "path": "assets/optimized/651d4c33b4e0a78d4b69a240/651d4c33b4e0a78d4b69a240-fallback-w1920.jpg",
+      "ssim": 0.989424,
+      "psnr": 49.182332,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c4386bb82ec0e522062",
+      "path": "assets/optimized/651d4c4386bb82ec0e522062/651d4c4386bb82ec0e522062-fallback-w640.jpg",
+      "ssim": 0.988814,
+      "psnr": 46.2537,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c4386bb82ec0e522062",
+      "path": "assets/optimized/651d4c4386bb82ec0e522062/651d4c4386bb82ec0e522062-fallback-w1280.jpg",
+      "ssim": 0.98848,
+      "psnr": 47.001999,
+      "pass": true
+    },
+    {
+      "assetId": "651d4c4386bb82ec0e522062",
+      "path": "assets/optimized/651d4c4386bb82ec0e522062/651d4c4386bb82ec0e522062-fallback-w1920.jpg",
+      "ssim": 0.986671,
+      "psnr": 46.8758,
+      "pass": true
+    },
+    {
+      "assetId": "651d4ddd0ad649c56a7a62b6",
+      "path": "assets/optimized/651d4ddd0ad649c56a7a62b6/651d4ddd0ad649c56a7a62b6-fallback-w640.jpg",
+      "ssim": 0.988324,
+      "psnr": 44.498657,
+      "pass": true
+    },
+    {
+      "assetId": "651d4ddd0ad649c56a7a62b6",
+      "path": "assets/optimized/651d4ddd0ad649c56a7a62b6/651d4ddd0ad649c56a7a62b6-fallback-w1280.jpg",
+      "ssim": 0.988456,
+      "psnr": 44.982735,
+      "pass": true
+    },
+    {
+      "assetId": "651d4ddd0ad649c56a7a62b6",
+      "path": "assets/optimized/651d4ddd0ad649c56a7a62b6/651d4ddd0ad649c56a7a62b6-fallback-w1920.jpg",
+      "ssim": 0.986685,
+      "psnr": 45.01338,
+      "pass": true
+    },
+    {
+      "assetId": "651d4deade46957985133167",
+      "path": "assets/optimized/651d4deade46957985133167/651d4deade46957985133167-fallback-w640.jpg",
+      "ssim": 0.990575,
+      "psnr": 47.416133,
+      "pass": true
+    },
+    {
+      "assetId": "651d4deade46957985133167",
+      "path": "assets/optimized/651d4deade46957985133167/651d4deade46957985133167-fallback-w1280.jpg",
+      "ssim": 0.989269,
+      "psnr": 47.692355,
+      "pass": true
+    },
+    {
+      "assetId": "651d4deade46957985133167",
+      "path": "assets/optimized/651d4deade46957985133167/651d4deade46957985133167-fallback-w1920.jpg",
+      "ssim": 0.985653,
+      "psnr": 47.033143,
+      "pass": true
+    },
+    {
+      "assetId": "651d4df62e28168dab0feb4b",
+      "path": "assets/optimized/651d4df62e28168dab0feb4b/651d4df62e28168dab0feb4b-w640.avif",
+      "ssim": 0.988718,
+      "psnr": 45.800629,
+      "pass": true
+    },
+    {
+      "assetId": "651d4df62e28168dab0feb4b",
+      "path": "assets/optimized/651d4df62e28168dab0feb4b/651d4df62e28168dab0feb4b-fallback-w640.jpg",
+      "ssim": 0.992276,
+      "psnr": 47.864352,
+      "pass": true
+    },
+    {
+      "assetId": "651d4df62e28168dab0feb4b",
+      "path": "assets/optimized/651d4df62e28168dab0feb4b/651d4df62e28168dab0feb4b-fallback-w1280.jpg",
+      "ssim": 0.990687,
+      "psnr": 48.051413,
+      "pass": true
+    },
+    {
+      "assetId": "651d4df62e28168dab0feb4b",
+      "path": "assets/optimized/651d4df62e28168dab0feb4b/651d4df62e28168dab0feb4b-fallback-w1920.jpg",
+      "ssim": 0.986229,
+      "psnr": 47.059573,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e01c0afd78dd9ea6d3f",
+      "path": "assets/optimized/651d4e01c0afd78dd9ea6d3f/651d4e01c0afd78dd9ea6d3f-w640.avif",
+      "ssim": 0.990601,
+      "psnr": 46.442647,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e01c0afd78dd9ea6d3f",
+      "path": "assets/optimized/651d4e01c0afd78dd9ea6d3f/651d4e01c0afd78dd9ea6d3f-w1280.avif",
+      "ssim": 0.987626,
+      "psnr": 46.255806,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e01c0afd78dd9ea6d3f",
+      "path": "assets/optimized/651d4e01c0afd78dd9ea6d3f/651d4e01c0afd78dd9ea6d3f-w1920.avif",
+      "ssim": 0.986895,
+      "psnr": 46.545027,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e01c0afd78dd9ea6d3f",
+      "path": "assets/optimized/651d4e01c0afd78dd9ea6d3f/651d4e01c0afd78dd9ea6d3f-fallback-w640.jpg",
+      "ssim": 0.990237,
+      "psnr": 45.069952,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e01c0afd78dd9ea6d3f",
+      "path": "assets/optimized/651d4e01c0afd78dd9ea6d3f/651d4e01c0afd78dd9ea6d3f-fallback-w1280.jpg",
+      "ssim": 0.988159,
+      "psnr": 45.345227,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e01c0afd78dd9ea6d3f",
+      "path": "assets/optimized/651d4e01c0afd78dd9ea6d3f/651d4e01c0afd78dd9ea6d3f-fallback-w1920.jpg",
+      "ssim": 0.991927,
+      "psnr": 48.026549,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e1a35e1531b5b9b7c15",
+      "path": "assets/optimized/651d4e1a35e1531b5b9b7c15/651d4e1a35e1531b5b9b7c15-fallback-w640.jpg",
+      "ssim": 0.989177,
+      "psnr": 46.153869,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e1a35e1531b5b9b7c15",
+      "path": "assets/optimized/651d4e1a35e1531b5b9b7c15/651d4e1a35e1531b5b9b7c15-fallback-w1280.jpg",
+      "ssim": 0.988046,
+      "psnr": 46.619018,
+      "pass": true
+    },
+    {
+      "assetId": "651d4e1a35e1531b5b9b7c15",
+      "path": "assets/optimized/651d4e1a35e1531b5b9b7c15/651d4e1a35e1531b5b9b7c15-fallback-w1920.jpg",
+      "ssim": 0.984147,
+      "psnr": 46.059718,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f2713381ed5919289a5",
+      "path": "assets/optimized/651d4f2713381ed5919289a5/651d4f2713381ed5919289a5-fallback-w640.jpg",
+      "ssim": 0.989913,
+      "psnr": 47.620865,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f2713381ed5919289a5",
+      "path": "assets/optimized/651d4f2713381ed5919289a5/651d4f2713381ed5919289a5-fallback-w1280.jpg",
+      "ssim": 0.98836,
+      "psnr": 47.962141,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f2713381ed5919289a5",
+      "path": "assets/optimized/651d4f2713381ed5919289a5/651d4f2713381ed5919289a5-fallback-w1920.jpg",
+      "ssim": 0.984932,
+      "psnr": 47.299715,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f381991cc55044b4bf4",
+      "path": "assets/optimized/651d4f381991cc55044b4bf4/651d4f381991cc55044b4bf4-fallback-w640.jpg",
+      "ssim": 0.990912,
+      "psnr": 47.608728,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f381991cc55044b4bf4",
+      "path": "assets/optimized/651d4f381991cc55044b4bf4/651d4f381991cc55044b4bf4-fallback-w1280.jpg",
+      "ssim": 0.988385,
+      "psnr": 47.58611,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f381991cc55044b4bf4",
+      "path": "assets/optimized/651d4f381991cc55044b4bf4/651d4f381991cc55044b4bf4-fallback-w1920.jpg",
+      "ssim": 0.984355,
+      "psnr": 46.808794,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f432e28168dab10c2b0",
+      "path": "assets/optimized/651d4f432e28168dab10c2b0/651d4f432e28168dab10c2b0-fallback-w640.jpg",
+      "ssim": 0.991283,
+      "psnr": 47.501216,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f432e28168dab10c2b0",
+      "path": "assets/optimized/651d4f432e28168dab10c2b0/651d4f432e28168dab10c2b0-fallback-w1280.jpg",
+      "ssim": 0.989171,
+      "psnr": 47.331439,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f432e28168dab10c2b0",
+      "path": "assets/optimized/651d4f432e28168dab10c2b0/651d4f432e28168dab10c2b0-fallback-w1920.jpg",
+      "ssim": 0.985316,
+      "psnr": 46.602201,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f57d6765e055db10144",
+      "path": "assets/optimized/651d4f57d6765e055db10144/651d4f57d6765e055db10144-fallback-w640.jpg",
+      "ssim": 0.991716,
+      "psnr": 47.765757,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f57d6765e055db10144",
+      "path": "assets/optimized/651d4f57d6765e055db10144/651d4f57d6765e055db10144-fallback-w1280.jpg",
+      "ssim": 0.990114,
+      "psnr": 48.084818,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f57d6765e055db10144",
+      "path": "assets/optimized/651d4f57d6765e055db10144/651d4f57d6765e055db10144-fallback-w1920.jpg",
+      "ssim": 0.98696,
+      "psnr": 47.438673,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f6f5a6041010d0df333",
+      "path": "assets/optimized/651d4f6f5a6041010d0df333/651d4f6f5a6041010d0df333-w640.avif",
+      "ssim": 0.98654,
+      "psnr": 45.415161,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f6f5a6041010d0df333",
+      "path": "assets/optimized/651d4f6f5a6041010d0df333/651d4f6f5a6041010d0df333-fallback-w640.jpg",
+      "ssim": 0.991832,
+      "psnr": 48.075574,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f6f5a6041010d0df333",
+      "path": "assets/optimized/651d4f6f5a6041010d0df333/651d4f6f5a6041010d0df333-fallback-w1280.jpg",
+      "ssim": 0.989484,
+      "psnr": 47.759305,
+      "pass": true
+    },
+    {
+      "assetId": "651d4f6f5a6041010d0df333",
+      "path": "assets/optimized/651d4f6f5a6041010d0df333/651d4f6f5a6041010d0df333-fallback-w1920.jpg",
+      "ssim": 0.984085,
+      "psnr": 46.503915,
+      "pass": true
+    },
+    {
+      "assetId": "651d511d620daecc5fb514d1",
+      "path": "assets/optimized/651d511d620daecc5fb514d1/651d511d620daecc5fb514d1-fallback-w640.jpg",
+      "ssim": 0.9914,
+      "psnr": 47.449249,
+      "pass": true
+    },
+    {
+      "assetId": "651d511d620daecc5fb514d1",
+      "path": "assets/optimized/651d511d620daecc5fb514d1/651d511d620daecc5fb514d1-fallback-w1280.jpg",
+      "ssim": 0.98962,
+      "psnr": 47.749667,
+      "pass": true
+    },
+    {
+      "assetId": "651d511d620daecc5fb514d1",
+      "path": "assets/optimized/651d511d620daecc5fb514d1/651d511d620daecc5fb514d1-fallback-w1920.jpg",
+      "ssim": 0.985244,
+      "psnr": 46.91636,
+      "pass": true
+    },
+    {
+      "assetId": "651d512ef7a43f9a9f1cfc6c",
+      "path": "assets/optimized/651d512ef7a43f9a9f1cfc6c/651d512ef7a43f9a9f1cfc6c-fallback-w640.jpg",
+      "ssim": 0.991227,
+      "psnr": 47.835772,
+      "pass": true
+    },
+    {
+      "assetId": "651d512ef7a43f9a9f1cfc6c",
+      "path": "assets/optimized/651d512ef7a43f9a9f1cfc6c/651d512ef7a43f9a9f1cfc6c-fallback-w1280.jpg",
+      "ssim": 0.988399,
+      "psnr": 47.727251,
+      "pass": true
+    },
+    {
+      "assetId": "651d512ef7a43f9a9f1cfc6c",
+      "path": "assets/optimized/651d512ef7a43f9a9f1cfc6c/651d512ef7a43f9a9f1cfc6c-fallback-w1920.jpg",
+      "ssim": 0.983129,
+      "psnr": 46.685404,
+      "pass": true
+    },
+    {
+      "assetId": "651d51427afe77df4b4ce316",
+      "path": "assets/optimized/651d51427afe77df4b4ce316/651d51427afe77df4b4ce316-fallback-w640.jpg",
+      "ssim": 0.992629,
+      "psnr": 49.708831,
+      "pass": true
+    },
+    {
+      "assetId": "651d51427afe77df4b4ce316",
+      "path": "assets/optimized/651d51427afe77df4b4ce316/651d51427afe77df4b4ce316-fallback-w1280.jpg",
+      "ssim": 0.988179,
+      "psnr": 48.568141,
+      "pass": true
+    },
+    {
+      "assetId": "651d51427afe77df4b4ce316",
+      "path": "assets/optimized/651d51427afe77df4b4ce316/651d51427afe77df4b4ce316-fallback-w1920.jpg",
+      "ssim": 0.981839,
+      "psnr": 46.938962,
+      "pass": true
+    },
+    {
+      "assetId": "651d5155a76f1dd685ce971f",
+      "path": "assets/optimized/651d5155a76f1dd685ce971f/651d5155a76f1dd685ce971f-fallback-w640.jpg",
+      "ssim": 0.990402,
+      "psnr": 47.020465,
+      "pass": true
+    },
+    {
+      "assetId": "651d5155a76f1dd685ce971f",
+      "path": "assets/optimized/651d5155a76f1dd685ce971f/651d5155a76f1dd685ce971f-fallback-w1280.jpg",
+      "ssim": 0.988438,
+      "psnr": 47.12417,
+      "pass": true
+    },
+    {
+      "assetId": "651d5155a76f1dd685ce971f",
+      "path": "assets/optimized/651d5155a76f1dd685ce971f/651d5155a76f1dd685ce971f-fallback-w1920.jpg",
+      "ssim": 0.983888,
+      "psnr": 46.34526,
+      "pass": true
+    },
+    {
+      "assetId": "651d51604045f4b77de956ba",
+      "path": "assets/optimized/651d51604045f4b77de956ba/651d51604045f4b77de956ba-w640.avif",
+      "ssim": 0.990083,
+      "psnr": 44.668233,
+      "pass": true
+    },
+    {
+      "assetId": "651d51604045f4b77de956ba",
+      "path": "assets/optimized/651d51604045f4b77de956ba/651d51604045f4b77de956ba-w1280.avif",
+      "ssim": 0.989433,
+      "psnr": 45.751654,
+      "pass": true
+    },
+    {
+      "assetId": "651d51604045f4b77de956ba",
+      "path": "assets/optimized/651d51604045f4b77de956ba/651d51604045f4b77de956ba-w1478.avif",
+      "ssim": 0.989666,
+      "psnr": 46.147287,
+      "pass": true
+    },
+    {
+      "assetId": "651d51604045f4b77de956ba",
+      "path": "assets/optimized/651d51604045f4b77de956ba/651d51604045f4b77de956ba-fallback-w640.jpg",
+      "ssim": 0.990612,
+      "psnr": 44.092035,
+      "pass": true
+    },
+    {
+      "assetId": "651d51604045f4b77de956ba",
+      "path": "assets/optimized/651d51604045f4b77de956ba/651d51604045f4b77de956ba-fallback-w1280.jpg",
+      "ssim": 0.990882,
+      "psnr": 45.978298,
+      "pass": true
+    },
+    {
+      "assetId": "651d51604045f4b77de956ba",
+      "path": "assets/optimized/651d51604045f4b77de956ba/651d51604045f4b77de956ba-fallback-w1478.jpg",
+      "ssim": 0.992444,
+      "psnr": 46.98501,
+      "pass": true
+    },
+    {
+      "assetId": "651d521e104f85d6bbbdd202",
+      "path": "assets/optimized/651d521e104f85d6bbbdd202/651d521e104f85d6bbbdd202-fallback-w640.jpg",
+      "ssim": 0.985379,
+      "psnr": 44.742106,
+      "pass": true
+    },
+    {
+      "assetId": "651d521e104f85d6bbbdd202",
+      "path": "assets/optimized/651d521e104f85d6bbbdd202/651d521e104f85d6bbbdd202-fallback-w1280.jpg",
+      "ssim": 0.986188,
+      "psnr": 44.706969,
+      "pass": true
+    },
+    {
+      "assetId": "651d521e104f85d6bbbdd202",
+      "path": "assets/optimized/651d521e104f85d6bbbdd202/651d521e104f85d6bbbdd202-fallback-w1920.jpg",
+      "ssim": 0.984616,
+      "psnr": 44.527861,
+      "pass": true
+    },
+    {
+      "assetId": "651d542e12e6edc12a7f2d30",
+      "path": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w640.jpg",
+      "ssim": 0.98954,
+      "psnr": 45.555733,
+      "pass": true
+    },
+    {
+      "assetId": "651d542e12e6edc12a7f2d30",
+      "path": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w1280.jpg",
+      "ssim": 0.988798,
+      "psnr": 46.30247,
+      "pass": true
+    },
+    {
+      "assetId": "651d542e12e6edc12a7f2d30",
+      "path": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w1920.jpg",
+      "ssim": 0.985923,
+      "psnr": 46.09188,
+      "pass": true
+    },
+    {
+      "assetId": "651d543995a34d429823a00d",
+      "path": "assets/optimized/651d543995a34d429823a00d/651d543995a34d429823a00d-fallback-w640.jpg",
+      "ssim": 0.989478,
+      "psnr": 45.948537,
+      "pass": true
+    },
+    {
+      "assetId": "651d543995a34d429823a00d",
+      "path": "assets/optimized/651d543995a34d429823a00d/651d543995a34d429823a00d-fallback-w1280.jpg",
+      "ssim": 0.988403,
+      "psnr": 46.7215,
+      "pass": true
+    },
+    {
+      "assetId": "651d543995a34d429823a00d",
+      "path": "assets/optimized/651d543995a34d429823a00d/651d543995a34d429823a00d-fallback-w1920.jpg",
+      "ssim": 0.985215,
+      "psnr": 46.390777,
+      "pass": true
+    },
+    {
+      "assetId": "651d543e73ab21181203a385",
+      "path": "assets/optimized/651d543e73ab21181203a385/651d543e73ab21181203a385-fallback-w640.jpg",
+      "ssim": 0.987874,
+      "psnr": 43.297721,
+      "pass": true
+    },
+    {
+      "assetId": "651d543e73ab21181203a385",
+      "path": "assets/optimized/651d543e73ab21181203a385/651d543e73ab21181203a385-fallback-w1280.jpg",
+      "ssim": 0.988277,
+      "psnr": 43.767545,
+      "pass": true
+    },
+    {
+      "assetId": "651d543e73ab21181203a385",
+      "path": "assets/optimized/651d543e73ab21181203a385/651d543e73ab21181203a385-fallback-w1920.jpg",
+      "ssim": 0.986786,
+      "psnr": 43.840238,
+      "pass": true
+    },
+    {
+      "assetId": "651d54426155251c480832e4",
+      "path": "assets/optimized/651d54426155251c480832e4/651d54426155251c480832e4-fallback-w640.jpg",
+      "ssim": 0.988604,
+      "psnr": 45.818708,
+      "pass": true
+    },
+    {
+      "assetId": "651d54426155251c480832e4",
+      "path": "assets/optimized/651d54426155251c480832e4/651d54426155251c480832e4-fallback-w1280.jpg",
+      "ssim": 0.986763,
+      "psnr": 45.969833,
+      "pass": true
+    },
+    {
+      "assetId": "651d54426155251c480832e4",
+      "path": "assets/optimized/651d54426155251c480832e4/651d54426155251c480832e4-fallback-w1920.jpg",
+      "ssim": 0.98358,
+      "psnr": 45.627358,
+      "pass": true
+    },
+    {
+      "assetId": "651d5455fef3e7a8d069bb57",
+      "path": "assets/optimized/651d5455fef3e7a8d069bb57/651d5455fef3e7a8d069bb57-fallback-w640.jpg",
+      "ssim": 0.986251,
+      "psnr": 44.244735,
+      "pass": true
+    },
+    {
+      "assetId": "651d5455fef3e7a8d069bb57",
+      "path": "assets/optimized/651d5455fef3e7a8d069bb57/651d5455fef3e7a8d069bb57-fallback-w1280.jpg",
+      "ssim": 0.98584,
+      "psnr": 44.833493,
+      "pass": true
+    },
+    {
+      "assetId": "651d5455fef3e7a8d069bb57",
+      "path": "assets/optimized/651d5455fef3e7a8d069bb57/651d5455fef3e7a8d069bb57-fallback-w1920.jpg",
+      "ssim": 0.984041,
+      "psnr": 44.769587,
+      "pass": true
+    },
+    {
+      "assetId": "651d8816b1f9f370048245ac",
+      "path": "assets/optimized/651d8816b1f9f370048245ac/651d8816b1f9f370048245ac-fallback-w640.jpg",
+      "ssim": 0.986958,
+      "psnr": 43.620255,
+      "pass": true
+    },
+    {
+      "assetId": "651d8816b1f9f370048245ac",
+      "path": "assets/optimized/651d8816b1f9f370048245ac/651d8816b1f9f370048245ac-fallback-w1280.jpg",
+      "ssim": 0.987033,
+      "psnr": 44.05349,
+      "pass": true
+    },
+    {
+      "assetId": "651d8816b1f9f370048245ac",
+      "path": "assets/optimized/651d8816b1f9f370048245ac/651d8816b1f9f370048245ac-fallback-w1920.jpg",
+      "ssim": 0.98502,
+      "psnr": 44.057733,
+      "pass": true
+    },
+    {
+      "assetId": "651d8818085cc7f4d304fe5a",
+      "path": "assets/optimized/651d8818085cc7f4d304fe5a/651d8818085cc7f4d304fe5a-fallback-w640.jpg",
+      "ssim": 0.986753,
+      "psnr": 43.71057,
+      "pass": true
+    },
+    {
+      "assetId": "651d8818085cc7f4d304fe5a",
+      "path": "assets/optimized/651d8818085cc7f4d304fe5a/651d8818085cc7f4d304fe5a-fallback-w1280.jpg",
+      "ssim": 0.986305,
+      "psnr": 43.987187,
+      "pass": true
+    },
+    {
+      "assetId": "651d8818085cc7f4d304fe5a",
+      "path": "assets/optimized/651d8818085cc7f4d304fe5a/651d8818085cc7f4d304fe5a-fallback-w1920.jpg",
+      "ssim": 0.984285,
+      "psnr": 43.882737,
+      "pass": true
+    },
+    {
+      "assetId": "651d8820d28d65a9a558a825",
+      "path": "assets/optimized/651d8820d28d65a9a558a825/651d8820d28d65a9a558a825-fallback-w640.jpg",
+      "ssim": 0.987691,
+      "psnr": 43.455018,
+      "pass": true
+    },
+    {
+      "assetId": "651d8820d28d65a9a558a825",
+      "path": "assets/optimized/651d8820d28d65a9a558a825/651d8820d28d65a9a558a825-fallback-w1280.jpg",
+      "ssim": 0.988162,
+      "psnr": 44.034619,
+      "pass": true
+    },
+    {
+      "assetId": "651d8820d28d65a9a558a825",
+      "path": "assets/optimized/651d8820d28d65a9a558a825/651d8820d28d65a9a558a825-fallback-w1920.jpg",
+      "ssim": 0.986764,
+      "psnr": 44.172706,
+      "pass": true
+    },
+    {
+      "assetId": "651d8824f302a7a656a41bb2",
+      "path": "assets/optimized/651d8824f302a7a656a41bb2/651d8824f302a7a656a41bb2-fallback-w640.jpg",
+      "ssim": 0.987246,
+      "psnr": 43.105674,
+      "pass": true
+    },
+    {
+      "assetId": "651d8824f302a7a656a41bb2",
+      "path": "assets/optimized/651d8824f302a7a656a41bb2/651d8824f302a7a656a41bb2-fallback-w1280.jpg",
+      "ssim": 0.987872,
+      "psnr": 43.596083,
+      "pass": true
+    },
+    {
+      "assetId": "651d8824f302a7a656a41bb2",
+      "path": "assets/optimized/651d8824f302a7a656a41bb2/651d8824f302a7a656a41bb2-fallback-w1920.jpg",
+      "ssim": 0.985919,
+      "psnr": 43.64829,
+      "pass": true
+    },
+    {
+      "assetId": "651d88279bf5709de49a71d5",
+      "path": "assets/optimized/651d88279bf5709de49a71d5/651d88279bf5709de49a71d5-fallback-w640.jpg",
+      "ssim": 0.984999,
+      "psnr": 43.337286,
+      "pass": true
+    },
+    {
+      "assetId": "651d88279bf5709de49a71d5",
+      "path": "assets/optimized/651d88279bf5709de49a71d5/651d88279bf5709de49a71d5-fallback-w1280.jpg",
+      "ssim": 0.985436,
+      "psnr": 43.556454,
+      "pass": true
+    },
+    {
+      "assetId": "651d88279bf5709de49a71d5",
+      "path": "assets/optimized/651d88279bf5709de49a71d5/651d88279bf5709de49a71d5-fallback-w1920.jpg",
+      "ssim": 0.984116,
+      "psnr": 43.500073,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6081773e12e4a4362f",
+      "path": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w640.jpg",
+      "ssim": 0.98402,
+      "psnr": 42.421087,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6081773e12e4a4362f",
+      "path": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w1280.jpg",
+      "ssim": 0.985176,
+      "psnr": 42.562468,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6081773e12e4a4362f",
+      "path": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w1920.jpg",
+      "ssim": 0.985285,
+      "psnr": 42.605092,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6a75c2ceaf706556bf",
+      "path": "assets/optimized/651d8a6a75c2ceaf706556bf/651d8a6a75c2ceaf706556bf-fallback-w640.jpg",
+      "ssim": 0.984139,
+      "psnr": 42.487913,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6a75c2ceaf706556bf",
+      "path": "assets/optimized/651d8a6a75c2ceaf706556bf/651d8a6a75c2ceaf706556bf-fallback-w1280.jpg",
+      "ssim": 0.98473,
+      "psnr": 42.807842,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6a75c2ceaf706556bf",
+      "path": "assets/optimized/651d8a6a75c2ceaf706556bf/651d8a6a75c2ceaf706556bf-fallback-w1920.jpg",
+      "ssim": 0.984218,
+      "psnr": 42.93108,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6ebbbbe38b86d8b084",
+      "path": "assets/optimized/651d8a6ebbbbe38b86d8b084/651d8a6ebbbbe38b86d8b084-fallback-w640.jpg",
+      "ssim": 0.982639,
+      "psnr": 41.872318,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6ebbbbe38b86d8b084",
+      "path": "assets/optimized/651d8a6ebbbbe38b86d8b084/651d8a6ebbbbe38b86d8b084-fallback-w1280.jpg",
+      "ssim": 0.984515,
+      "psnr": 41.980523,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a6ebbbbe38b86d8b084",
+      "path": "assets/optimized/651d8a6ebbbbe38b86d8b084/651d8a6ebbbbe38b86d8b084-fallback-w1920.jpg",
+      "ssim": 0.989219,
+      "psnr": 42.22062,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a722cb8e726ddbc6cfa",
+      "path": "assets/optimized/651d8a722cb8e726ddbc6cfa/651d8a722cb8e726ddbc6cfa-fallback-w640.jpg",
+      "ssim": 0.987449,
+      "psnr": 44.8108,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a722cb8e726ddbc6cfa",
+      "path": "assets/optimized/651d8a722cb8e726ddbc6cfa/651d8a722cb8e726ddbc6cfa-fallback-w1280.jpg",
+      "ssim": 0.987404,
+      "psnr": 44.891422,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a722cb8e726ddbc6cfa",
+      "path": "assets/optimized/651d8a722cb8e726ddbc6cfa/651d8a722cb8e726ddbc6cfa-fallback-w1920.jpg",
+      "ssim": 0.985889,
+      "psnr": 44.756745,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a7691f69cac156895ee",
+      "path": "assets/optimized/651d8a7691f69cac156895ee/651d8a7691f69cac156895ee-fallback-w640.jpg",
+      "ssim": 0.980025,
+      "psnr": 42.238997,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a7691f69cac156895ee",
+      "path": "assets/optimized/651d8a7691f69cac156895ee/651d8a7691f69cac156895ee-fallback-w1280.jpg",
+      "ssim": 0.981571,
+      "psnr": 42.435126,
+      "pass": true
+    },
+    {
+      "assetId": "651d8a7691f69cac156895ee",
+      "path": "assets/optimized/651d8a7691f69cac156895ee/651d8a7691f69cac156895ee-fallback-w1920.jpg",
+      "ssim": 0.981935,
+      "psnr": 42.581439,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cc6ac4a0c60587b7b6f",
+      "path": "assets/optimized/651d9cc6ac4a0c60587b7b6f/651d9cc6ac4a0c60587b7b6f-fallback-w640.jpg",
+      "ssim": 0.992184,
+      "psnr": 47.407116,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cc6ac4a0c60587b7b6f",
+      "path": "assets/optimized/651d9cc6ac4a0c60587b7b6f/651d9cc6ac4a0c60587b7b6f-fallback-w1280.jpg",
+      "ssim": 0.992374,
+      "psnr": 48.466842,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cc6ac4a0c60587b7b6f",
+      "path": "assets/optimized/651d9cc6ac4a0c60587b7b6f/651d9cc6ac4a0c60587b7b6f-fallback-w1920.jpg",
+      "ssim": 0.990697,
+      "psnr": 48.284649,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cda76fd2422edafd01d",
+      "path": "assets/optimized/651d9cda76fd2422edafd01d/651d9cda76fd2422edafd01d-fallback-w640.jpg",
+      "ssim": 0.992233,
+      "psnr": 48.702184,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cda76fd2422edafd01d",
+      "path": "assets/optimized/651d9cda76fd2422edafd01d/651d9cda76fd2422edafd01d-fallback-w1280.jpg",
+      "ssim": 0.991772,
+      "psnr": 49.185898,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cda76fd2422edafd01d",
+      "path": "assets/optimized/651d9cda76fd2422edafd01d/651d9cda76fd2422edafd01d-fallback-w1920.jpg",
+      "ssim": 0.989714,
+      "psnr": 48.762735,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cee397716049ba3813c",
+      "path": "assets/optimized/651d9cee397716049ba3813c/651d9cee397716049ba3813c-fallback-w640.jpg",
+      "ssim": 0.988447,
+      "psnr": 47.682605,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cee397716049ba3813c",
+      "path": "assets/optimized/651d9cee397716049ba3813c/651d9cee397716049ba3813c-fallback-w1280.jpg",
+      "ssim": 0.987963,
+      "psnr": 47.630229,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cee397716049ba3813c",
+      "path": "assets/optimized/651d9cee397716049ba3813c/651d9cee397716049ba3813c-fallback-w1920.jpg",
+      "ssim": 0.985869,
+      "psnr": 47.072255,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cf80d567ad3fa668dd8",
+      "path": "assets/optimized/651d9cf80d567ad3fa668dd8/651d9cf80d567ad3fa668dd8-fallback-w640.jpg",
+      "ssim": 0.994675,
+      "psnr": 50.818448,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cf80d567ad3fa668dd8",
+      "path": "assets/optimized/651d9cf80d567ad3fa668dd8/651d9cf80d567ad3fa668dd8-fallback-w1280.jpg",
+      "ssim": 0.993026,
+      "psnr": 50.553286,
+      "pass": true
+    },
+    {
+      "assetId": "651d9cf80d567ad3fa668dd8",
+      "path": "assets/optimized/651d9cf80d567ad3fa668dd8/651d9cf80d567ad3fa668dd8-fallback-w1920.jpg",
+      "ssim": 0.990208,
+      "psnr": 49.462454,
+      "pass": true
+    },
+    {
+      "assetId": "651d9d0488f32bb8cbb67201",
+      "path": "assets/optimized/651d9d0488f32bb8cbb67201/651d9d0488f32bb8cbb67201-fallback-w640.jpg",
+      "ssim": 0.99025,
+      "psnr": 48.056645,
+      "pass": true
+    },
+    {
+      "assetId": "651d9d0488f32bb8cbb67201",
+      "path": "assets/optimized/651d9d0488f32bb8cbb67201/651d9d0488f32bb8cbb67201-fallback-w1280.jpg",
+      "ssim": 0.988653,
+      "psnr": 48.127396,
+      "pass": true
+    },
+    {
+      "assetId": "651d9d0488f32bb8cbb67201",
+      "path": "assets/optimized/651d9d0488f32bb8cbb67201/651d9d0488f32bb8cbb67201-fallback-w1920.jpg",
+      "ssim": 0.985201,
+      "psnr": 47.362429,
+      "pass": true
+    },
+    {
+      "assetId": "651eab7a97b9dc0dae85e6ca",
+      "path": "assets/optimized/651eab7a97b9dc0dae85e6ca/651eab7a97b9dc0dae85e6ca-w640.avif",
+      "ssim": 0.986597,
+      "psnr": 45.188909,
+      "pass": true
+    },
+    {
+      "assetId": "651eab7a97b9dc0dae85e6ca",
+      "path": "assets/optimized/651eab7a97b9dc0dae85e6ca/651eab7a97b9dc0dae85e6ca-fallback-w640.jpg",
+      "ssim": 0.991014,
+      "psnr": 47.477678,
+      "pass": true
+    },
+    {
+      "assetId": "651eab7a97b9dc0dae85e6ca",
+      "path": "assets/optimized/651eab7a97b9dc0dae85e6ca/651eab7a97b9dc0dae85e6ca-fallback-w1280.jpg",
+      "ssim": 0.98901,
+      "psnr": 47.40702,
+      "pass": true
+    },
+    {
+      "assetId": "651eab7a97b9dc0dae85e6ca",
+      "path": "assets/optimized/651eab7a97b9dc0dae85e6ca/651eab7a97b9dc0dae85e6ca-fallback-w1920.jpg",
+      "ssim": 0.984596,
+      "psnr": 46.489556,
+      "pass": true
+    },
+    {
+      "assetId": "651eabf40e57607bd070c328",
+      "path": "assets/optimized/651eabf40e57607bd070c328/651eabf40e57607bd070c328-fallback-w640.jpg",
+      "ssim": 0.986699,
+      "psnr": 45.663583,
+      "pass": true
+    },
+    {
+      "assetId": "651eabf40e57607bd070c328",
+      "path": "assets/optimized/651eabf40e57607bd070c328/651eabf40e57607bd070c328-fallback-w1280.jpg",
+      "ssim": 0.982555,
+      "psnr": 45.480567,
+      "pass": true
+    },
+    {
+      "assetId": "651eac12a6ed68925201e0e6",
+      "path": "assets/optimized/651eac12a6ed68925201e0e6/651eac12a6ed68925201e0e6-fallback-w640.jpg",
+      "ssim": 0.985724,
+      "psnr": 43.441161,
+      "pass": true
+    },
+    {
+      "assetId": "651eac12a6ed68925201e0e6",
+      "path": "assets/optimized/651eac12a6ed68925201e0e6/651eac12a6ed68925201e0e6-fallback-w1280.jpg",
+      "ssim": 0.98565,
+      "psnr": 43.785003,
+      "pass": true
+    },
+    {
+      "assetId": "651eac12a6ed68925201e0e6",
+      "path": "assets/optimized/651eac12a6ed68925201e0e6/651eac12a6ed68925201e0e6-fallback-w1920.jpg",
+      "ssim": 0.983655,
+      "psnr": 43.716614,
+      "pass": true
+    },
+    {
+      "assetId": "651eb06f8ac6ceb11fc8baec",
+      "path": "assets/optimized/651eb06f8ac6ceb11fc8baec/651eb06f8ac6ceb11fc8baec-w640.avif",
+      "ssim": 0.985442,
+      "psnr": 44.119042,
+      "pass": true
+    },
+    {
+      "assetId": "651eb06f8ac6ceb11fc8baec",
+      "path": "assets/optimized/651eb06f8ac6ceb11fc8baec/651eb06f8ac6ceb11fc8baec-fallback-w640.jpg",
+      "ssim": 0.989731,
+      "psnr": 46.437527,
+      "pass": true
+    },
+    {
+      "assetId": "651eb06f8ac6ceb11fc8baec",
+      "path": "assets/optimized/651eb06f8ac6ceb11fc8baec/651eb06f8ac6ceb11fc8baec-fallback-w1280.jpg",
+      "ssim": 0.987638,
+      "psnr": 46.464074,
+      "pass": true
+    },
+    {
+      "assetId": "651eb06f8ac6ceb11fc8baec",
+      "path": "assets/optimized/651eb06f8ac6ceb11fc8baec/651eb06f8ac6ceb11fc8baec-fallback-w1920.jpg",
+      "ssim": 0.98328,
+      "psnr": 45.742902,
+      "pass": true
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w640.jpg",
+      "ssim": 0.983967,
+      "psnr": 41.504233,
+      "pass": true
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1280.jpg",
+      "ssim": 0.984404,
+      "psnr": 41.714203,
+      "pass": true
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1920.jpg",
+      "ssim": 0.990117,
+      "psnr": 42.301648,
+      "pass": true
+    },
+    {
+      "assetId": "651eb5fab873a24649ff0253",
+      "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-w640.avif",
+      "ssim": 0.987033,
+      "psnr": 45.216327,
+      "pass": true
+    },
+    {
+      "assetId": "651eb5fab873a24649ff0253",
+      "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w640.jpg",
+      "ssim": 0.991276,
+      "psnr": 47.475303,
+      "pass": true
+    },
+    {
+      "assetId": "651eb5fab873a24649ff0253",
+      "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w1280.jpg",
+      "ssim": 0.989156,
+      "psnr": 47.443058,
+      "pass": true
+    },
+    {
+      "assetId": "651eb5fab873a24649ff0253",
+      "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w1920.jpg",
+      "ssim": 0.984422,
+      "psnr": 46.487577,
+      "pass": true
+    },
+    {
+      "assetId": "651eb613cd1415931deb6a3e",
+      "path": "assets/optimized/651eb613cd1415931deb6a3e/651eb613cd1415931deb6a3e-fallback-w640.jpg",
+      "ssim": 0.988043,
+      "psnr": 46.218268,
+      "pass": true
+    },
+    {
+      "assetId": "651eb613cd1415931deb6a3e",
+      "path": "assets/optimized/651eb613cd1415931deb6a3e/651eb613cd1415931deb6a3e-fallback-w1280.jpg",
+      "ssim": 0.986019,
+      "psnr": 46.295494,
+      "pass": true
+    },
+    {
+      "assetId": "651eb613cd1415931deb6a3e",
+      "path": "assets/optimized/651eb613cd1415931deb6a3e/651eb613cd1415931deb6a3e-fallback-w1920.jpg",
+      "ssim": 0.982083,
+      "psnr": 45.721864,
+      "pass": true
+    },
+    {
+      "assetId": "651eb61f50a775761feb8864",
+      "path": "assets/optimized/651eb61f50a775761feb8864/651eb61f50a775761feb8864-fallback-w640.jpg",
+      "ssim": 0.987361,
+      "psnr": 46.049873,
+      "pass": true
+    },
+    {
+      "assetId": "651eb61f50a775761feb8864",
+      "path": "assets/optimized/651eb61f50a775761feb8864/651eb61f50a775761feb8864-fallback-w1280.jpg",
+      "ssim": 0.988744,
+      "psnr": 46.861945,
+      "pass": true
+    },
+    {
+      "assetId": "651eb61f50a775761feb8864",
+      "path": "assets/optimized/651eb61f50a775761feb8864/651eb61f50a775761feb8864-fallback-w1920.jpg",
+      "ssim": 0.98801,
+      "psnr": 46.957025,
+      "pass": true
+    },
+    {
+      "assetId": "651eb62333dfb99f49f8cb6a",
+      "path": "assets/optimized/651eb62333dfb99f49f8cb6a/651eb62333dfb99f49f8cb6a-fallback-w640.jpg",
+      "ssim": 0.987492,
+      "psnr": 46.000494,
+      "pass": true
+    },
+    {
+      "assetId": "651eb62333dfb99f49f8cb6a",
+      "path": "assets/optimized/651eb62333dfb99f49f8cb6a/651eb62333dfb99f49f8cb6a-fallback-w1280.jpg",
+      "ssim": 0.988243,
+      "psnr": 46.65277,
+      "pass": true
+    },
+    {
+      "assetId": "651eb62333dfb99f49f8cb6a",
+      "path": "assets/optimized/651eb62333dfb99f49f8cb6a/651eb62333dfb99f49f8cb6a-fallback-w1920.jpg",
+      "ssim": 0.986772,
+      "psnr": 46.58228,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6cd024dac289bcccd90",
+      "path": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w640.jpg",
+      "ssim": 0.989957,
+      "psnr": 46.877255,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6cd024dac289bcccd90",
+      "path": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w1280.jpg",
+      "ssim": 0.987873,
+      "psnr": 46.780238,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6cd024dac289bcccd90",
+      "path": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w1920.jpg",
+      "ssim": 0.983986,
+      "psnr": 46.12073,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6d20896bea08df98026",
+      "path": "assets/optimized/651eb6d20896bea08df98026/651eb6d20896bea08df98026-fallback-w640.jpg",
+      "ssim": 0.990078,
+      "psnr": 45.701356,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6d20896bea08df98026",
+      "path": "assets/optimized/651eb6d20896bea08df98026/651eb6d20896bea08df98026-fallback-w1280.jpg",
+      "ssim": 0.990559,
+      "psnr": 46.93378,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6d20896bea08df98026",
+      "path": "assets/optimized/651eb6d20896bea08df98026/651eb6d20896bea08df98026-fallback-w1920.jpg",
+      "ssim": 0.988526,
+      "psnr": 46.952906,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6d8de2d662afa90f366",
+      "path": "assets/optimized/651eb6d8de2d662afa90f366/651eb6d8de2d662afa90f366-fallback-w640.jpg",
+      "ssim": 0.990697,
+      "psnr": 46.216566,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6d8de2d662afa90f366",
+      "path": "assets/optimized/651eb6d8de2d662afa90f366/651eb6d8de2d662afa90f366-fallback-w1280.jpg",
+      "ssim": 0.99117,
+      "psnr": 46.758737,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6d8de2d662afa90f366",
+      "path": "assets/optimized/651eb6d8de2d662afa90f366/651eb6d8de2d662afa90f366-fallback-w1920.jpg",
+      "ssim": 0.990083,
+      "psnr": 46.751484,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6dc17eee978a2ef4183",
+      "path": "assets/optimized/651eb6dc17eee978a2ef4183/651eb6dc17eee978a2ef4183-w640.avif",
+      "ssim": 0.989448,
+      "psnr": 47.380204,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6dc17eee978a2ef4183",
+      "path": "assets/optimized/651eb6dc17eee978a2ef4183/651eb6dc17eee978a2ef4183-fallback-w640.jpg",
+      "ssim": 0.992941,
+      "psnr": 49.685653,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6dc17eee978a2ef4183",
+      "path": "assets/optimized/651eb6dc17eee978a2ef4183/651eb6dc17eee978a2ef4183-fallback-w1280.jpg",
+      "ssim": 0.989972,
+      "psnr": 48.947913,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6dc17eee978a2ef4183",
+      "path": "assets/optimized/651eb6dc17eee978a2ef4183/651eb6dc17eee978a2ef4183-fallback-w1920.jpg",
+      "ssim": 0.984174,
+      "psnr": 47.300699,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6e19c8ab181fb83ca49",
+      "path": "assets/optimized/651eb6e19c8ab181fb83ca49/651eb6e19c8ab181fb83ca49-fallback-w640.jpg",
+      "ssim": 0.988543,
+      "psnr": 45.958465,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6e19c8ab181fb83ca49",
+      "path": "assets/optimized/651eb6e19c8ab181fb83ca49/651eb6e19c8ab181fb83ca49-fallback-w1280.jpg",
+      "ssim": 0.987823,
+      "psnr": 46.354006,
+      "pass": true
+    },
+    {
+      "assetId": "651eb6e19c8ab181fb83ca49",
+      "path": "assets/optimized/651eb6e19c8ab181fb83ca49/651eb6e19c8ab181fb83ca49-fallback-w1920.jpg",
+      "ssim": 0.986035,
+      "psnr": 46.219876,
+      "pass": true
+    },
+    {
+      "assetId": "651eb79bf3d12126fda8543b",
+      "path": "assets/optimized/651eb79bf3d12126fda8543b/651eb79bf3d12126fda8543b-fallback-w640.jpg",
+      "ssim": 0.989726,
+      "psnr": 47.295596,
+      "pass": true
+    },
+    {
+      "assetId": "651eb79bf3d12126fda8543b",
+      "path": "assets/optimized/651eb79bf3d12126fda8543b/651eb79bf3d12126fda8543b-fallback-w1280.jpg",
+      "ssim": 0.986913,
+      "psnr": 47.116012,
+      "pass": true
+    },
+    {
+      "assetId": "651eb79bf3d12126fda8543b",
+      "path": "assets/optimized/651eb79bf3d12126fda8543b/651eb79bf3d12126fda8543b-fallback-w1920.jpg",
+      "ssim": 0.982612,
+      "psnr": 46.33826,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a2bbad4c45d5d5a339",
+      "path": "assets/optimized/651eb7a2bbad4c45d5d5a339/651eb7a2bbad4c45d5d5a339-w640.avif",
+      "ssim": 0.98158,
+      "psnr": 43.489049,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a2bbad4c45d5d5a339",
+      "path": "assets/optimized/651eb7a2bbad4c45d5d5a339/651eb7a2bbad4c45d5d5a339-fallback-w640.jpg",
+      "ssim": 0.987403,
+      "psnr": 45.557229,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a2bbad4c45d5d5a339",
+      "path": "assets/optimized/651eb7a2bbad4c45d5d5a339/651eb7a2bbad4c45d5d5a339-fallback-w1280.jpg",
+      "ssim": 0.986582,
+      "psnr": 45.681453,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a2bbad4c45d5d5a339",
+      "path": "assets/optimized/651eb7a2bbad4c45d5d5a339/651eb7a2bbad4c45d5d5a339-fallback-w1920.jpg",
+      "ssim": 0.983723,
+      "psnr": 45.258987,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a70896bea08dfa0716",
+      "path": "assets/optimized/651eb7a70896bea08dfa0716/651eb7a70896bea08dfa0716-fallback-w640.jpg",
+      "ssim": 0.991806,
+      "psnr": 48.1125,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a70896bea08dfa0716",
+      "path": "assets/optimized/651eb7a70896bea08dfa0716/651eb7a70896bea08dfa0716-fallback-w1280.jpg",
+      "ssim": 0.990276,
+      "psnr": 48.483282,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7a70896bea08dfa0716",
+      "path": "assets/optimized/651eb7a70896bea08dfa0716/651eb7a70896bea08dfa0716-fallback-w1920.jpg",
+      "ssim": 0.985629,
+      "psnr": 47.347995,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7abd81d6b1ac11d3265",
+      "path": "assets/optimized/651eb7abd81d6b1ac11d3265/651eb7abd81d6b1ac11d3265-fallback-w640.jpg",
+      "ssim": 0.989915,
+      "psnr": 43.881732,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7abd81d6b1ac11d3265",
+      "path": "assets/optimized/651eb7abd81d6b1ac11d3265/651eb7abd81d6b1ac11d3265-fallback-w1280.jpg",
+      "ssim": 0.990144,
+      "psnr": 43.87996,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7abd81d6b1ac11d3265",
+      "path": "assets/optimized/651eb7abd81d6b1ac11d3265/651eb7abd81d6b1ac11d3265-fallback-w1920.jpg",
+      "ssim": 0.988939,
+      "psnr": 43.654508,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7af711697d2088893f3",
+      "path": "assets/optimized/651eb7af711697d2088893f3/651eb7af711697d2088893f3-fallback-w640.jpg",
+      "ssim": 0.989232,
+      "psnr": 47.287271,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7af711697d2088893f3",
+      "path": "assets/optimized/651eb7af711697d2088893f3/651eb7af711697d2088893f3-fallback-w1280.jpg",
+      "ssim": 0.988993,
+      "psnr": 47.384789,
+      "pass": true
+    },
+    {
+      "assetId": "651eb7af711697d2088893f3",
+      "path": "assets/optimized/651eb7af711697d2088893f3/651eb7af711697d2088893f3-fallback-w1920.jpg",
+      "ssim": 0.986499,
+      "psnr": 46.890315,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9512b96cb620230dada",
+      "path": "assets/optimized/651eb9512b96cb620230dada/651eb9512b96cb620230dada-fallback-w640.jpg",
+      "ssim": 0.989992,
+      "psnr": 47.737183,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9512b96cb620230dada",
+      "path": "assets/optimized/651eb9512b96cb620230dada/651eb9512b96cb620230dada-fallback-w1280.jpg",
+      "ssim": 0.988009,
+      "psnr": 47.854476,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9512b96cb620230dada",
+      "path": "assets/optimized/651eb9512b96cb620230dada/651eb9512b96cb620230dada-fallback-w1920.jpg",
+      "ssim": 0.983662,
+      "psnr": 46.97136,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9543eeec11ce3f9850e",
+      "path": "assets/optimized/651eb9543eeec11ce3f9850e/651eb9543eeec11ce3f9850e-fallback-w640.jpg",
+      "ssim": 0.991462,
+      "psnr": 48.045853,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9543eeec11ce3f9850e",
+      "path": "assets/optimized/651eb9543eeec11ce3f9850e/651eb9543eeec11ce3f9850e-fallback-w1280.jpg",
+      "ssim": 0.989941,
+      "psnr": 48.136976,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9543eeec11ce3f9850e",
+      "path": "assets/optimized/651eb9543eeec11ce3f9850e/651eb9543eeec11ce3f9850e-fallback-w1920.jpg",
+      "ssim": 0.986829,
+      "psnr": 47.435502,
+      "pass": true
+    },
+    {
+      "assetId": "651eb957db084aaab5b9a80e",
+      "path": "assets/optimized/651eb957db084aaab5b9a80e/651eb957db084aaab5b9a80e-fallback-w640.jpg",
+      "ssim": 0.992927,
+      "psnr": 48.542428,
+      "pass": true
+    },
+    {
+      "assetId": "651eb957db084aaab5b9a80e",
+      "path": "assets/optimized/651eb957db084aaab5b9a80e/651eb957db084aaab5b9a80e-fallback-w1280.jpg",
+      "ssim": 0.992613,
+      "psnr": 49.280735,
+      "pass": true
+    },
+    {
+      "assetId": "651eb957db084aaab5b9a80e",
+      "path": "assets/optimized/651eb957db084aaab5b9a80e/651eb957db084aaab5b9a80e-fallback-w1920.jpg",
+      "ssim": 0.990666,
+      "psnr": 48.920927,
+      "pass": true
+    },
+    {
+      "assetId": "651eb95c0a9a2f9728e7915c",
+      "path": "assets/optimized/651eb95c0a9a2f9728e7915c/651eb95c0a9a2f9728e7915c-fallback-w640.jpg",
+      "ssim": 0.991262,
+      "psnr": 47.90196,
+      "pass": true
+    },
+    {
+      "assetId": "651eb95c0a9a2f9728e7915c",
+      "path": "assets/optimized/651eb95c0a9a2f9728e7915c/651eb95c0a9a2f9728e7915c-fallback-w1280.jpg",
+      "ssim": 0.989896,
+      "psnr": 48.233364,
+      "pass": true
+    },
+    {
+      "assetId": "651eb95c0a9a2f9728e7915c",
+      "path": "assets/optimized/651eb95c0a9a2f9728e7915c/651eb95c0a9a2f9728e7915c-fallback-w1920.jpg",
+      "ssim": 0.986614,
+      "psnr": 47.573383,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9614361f2827d58894a",
+      "path": "assets/optimized/651eb9614361f2827d58894a/651eb9614361f2827d58894a-fallback-w640.jpg",
+      "ssim": 0.989064,
+      "psnr": 46.968901,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9614361f2827d58894a",
+      "path": "assets/optimized/651eb9614361f2827d58894a/651eb9614361f2827d58894a-fallback-w1280.jpg",
+      "ssim": 0.987674,
+      "psnr": 46.807553,
+      "pass": true
+    },
+    {
+      "assetId": "651eb9614361f2827d58894a",
+      "path": "assets/optimized/651eb9614361f2827d58894a/651eb9614361f2827d58894a-fallback-w1920.jpg",
+      "ssim": 0.985223,
+      "psnr": 46.305755,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3b095697eb61f64e724",
+      "path": "assets/optimized/651ec3b095697eb61f64e724/651ec3b095697eb61f64e724-fallback-w640.jpg",
+      "ssim": 0.9886,
+      "psnr": 45.248606,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3b095697eb61f64e724",
+      "path": "assets/optimized/651ec3b095697eb61f64e724/651ec3b095697eb61f64e724-fallback-w1280.jpg",
+      "ssim": 0.9879,
+      "psnr": 45.820398,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3b095697eb61f64e724",
+      "path": "assets/optimized/651ec3b095697eb61f64e724/651ec3b095697eb61f64e724-fallback-w1920.jpg",
+      "ssim": 0.985363,
+      "psnr": 45.649748,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3c2e0ed1a372a5a6d46",
+      "path": "assets/optimized/651ec3c2e0ed1a372a5a6d46/651ec3c2e0ed1a372a5a6d46-fallback-w640.jpg",
+      "ssim": 0.985755,
+      "psnr": 43.410291,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3c2e0ed1a372a5a6d46",
+      "path": "assets/optimized/651ec3c2e0ed1a372a5a6d46/651ec3c2e0ed1a372a5a6d46-fallback-w1280.jpg",
+      "ssim": 0.985782,
+      "psnr": 43.765305,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3c2e0ed1a372a5a6d46",
+      "path": "assets/optimized/651ec3c2e0ed1a372a5a6d46/651ec3c2e0ed1a372a5a6d46-fallback-w1920.jpg",
+      "ssim": 0.983866,
+      "psnr": 43.706134,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3c6f94d11e323377f70",
+      "path": "assets/optimized/651ec3c6f94d11e323377f70/651ec3c6f94d11e323377f70-fallback-w640.jpg",
+      "ssim": 0.986604,
+      "psnr": 43.430492,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3c6f94d11e323377f70",
+      "path": "assets/optimized/651ec3c6f94d11e323377f70/651ec3c6f94d11e323377f70-fallback-w1280.jpg",
+      "ssim": 0.986498,
+      "psnr": 43.882587,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3c6f94d11e323377f70",
+      "path": "assets/optimized/651ec3c6f94d11e323377f70/651ec3c6f94d11e323377f70-fallback-w1920.jpg",
+      "ssim": 0.984547,
+      "psnr": 43.886243,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3cafae331ea16eccbda",
+      "path": "assets/optimized/651ec3cafae331ea16eccbda/651ec3cafae331ea16eccbda-fallback-w640.jpg",
+      "ssim": 0.989495,
+      "psnr": 46.749747,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3cafae331ea16eccbda",
+      "path": "assets/optimized/651ec3cafae331ea16eccbda/651ec3cafae331ea16eccbda-fallback-w1280.jpg",
+      "ssim": 0.988734,
+      "psnr": 47.208677,
+      "pass": true
+    },
+    {
+      "assetId": "651ec3cafae331ea16eccbda",
+      "path": "assets/optimized/651ec3cafae331ea16eccbda/651ec3cafae331ea16eccbda-fallback-w1920.jpg",
+      "ssim": 0.985901,
+      "psnr": 46.814132,
+      "pass": true
+    },
+    {
+      "assetId": "651ec6150a7e5b8cda74133c",
+      "path": "assets/optimized/651ec6150a7e5b8cda74133c/651ec6150a7e5b8cda74133c-fallback-w640.jpg",
+      "ssim": 0.988534,
+      "psnr": 44.944053,
+      "pass": true
+    },
+    {
+      "assetId": "651ec6150a7e5b8cda74133c",
+      "path": "assets/optimized/651ec6150a7e5b8cda74133c/651ec6150a7e5b8cda74133c-fallback-w1280.jpg",
+      "ssim": 0.987635,
+      "psnr": 45.616742,
+      "pass": true
+    },
+    {
+      "assetId": "651ec6150a7e5b8cda74133c",
+      "path": "assets/optimized/651ec6150a7e5b8cda74133c/651ec6150a7e5b8cda74133c-fallback-w1920.jpg",
+      "ssim": 0.985196,
+      "psnr": 45.475743,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-w640.avif",
+      "ssim": 0.983737,
+      "psnr": 43.67616,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w640.jpg",
+      "ssim": 0.988511,
+      "psnr": 45.772999,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1280.jpg",
+      "ssim": 0.986897,
+      "psnr": 45.687125,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1920.jpg",
+      "ssim": 0.983576,
+      "psnr": 44.99876,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64617eee978a2f99d2f",
+      "path": "assets/optimized/651ec64617eee978a2f99d2f/651ec64617eee978a2f99d2f-fallback-w640.jpg",
+      "ssim": 0.989226,
+      "psnr": 47.379708,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64617eee978a2f99d2f",
+      "path": "assets/optimized/651ec64617eee978a2f99d2f/651ec64617eee978a2f99d2f-fallback-w1280.jpg",
+      "ssim": 0.986623,
+      "psnr": 47.190831,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64617eee978a2f99d2f",
+      "path": "assets/optimized/651ec64617eee978a2f99d2f/651ec64617eee978a2f99d2f-fallback-w1920.jpg",
+      "ssim": 0.982244,
+      "psnr": 46.270348,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64a3c080d14e35fa1af",
+      "path": "assets/optimized/651ec64a3c080d14e35fa1af/651ec64a3c080d14e35fa1af-w640.avif",
+      "ssim": 0.987956,
+      "psnr": 45.618542,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64a3c080d14e35fa1af",
+      "path": "assets/optimized/651ec64a3c080d14e35fa1af/651ec64a3c080d14e35fa1af-w1280.avif",
+      "ssim": 0.987111,
+      "psnr": 45.645577,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64a3c080d14e35fa1af",
+      "path": "assets/optimized/651ec64a3c080d14e35fa1af/651ec64a3c080d14e35fa1af-w1920.avif",
+      "ssim": 0.988588,
+      "psnr": 46.231721,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64a3c080d14e35fa1af",
+      "path": "assets/optimized/651ec64a3c080d14e35fa1af/651ec64a3c080d14e35fa1af-fallback-w640.jpg",
+      "ssim": 0.987818,
+      "psnr": 44.30465,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64a3c080d14e35fa1af",
+      "path": "assets/optimized/651ec64a3c080d14e35fa1af/651ec64a3c080d14e35fa1af-fallback-w1280.jpg",
+      "ssim": 0.987315,
+      "psnr": 44.540569,
+      "pass": true
+    },
+    {
+      "assetId": "651ec64a3c080d14e35fa1af",
+      "path": "assets/optimized/651ec64a3c080d14e35fa1af/651ec64a3c080d14e35fa1af-fallback-w1920.jpg",
+      "ssim": 0.992904,
+      "psnr": 47.331819,
+      "pass": true
+    },
+    {
+      "assetId": "651ec6d7132a2cfb80d4309e",
+      "path": "assets/optimized/651ec6d7132a2cfb80d4309e/651ec6d7132a2cfb80d4309e-fallback-w640.jpg",
+      "ssim": 0.984925,
+      "psnr": 44.125234,
+      "pass": true
+    },
+    {
+      "assetId": "651ec6d7132a2cfb80d4309e",
+      "path": "assets/optimized/651ec6d7132a2cfb80d4309e/651ec6d7132a2cfb80d4309e-fallback-w1280.jpg",
+      "ssim": 0.985004,
+      "psnr": 44.422263,
+      "pass": true
+    },
+    {
+      "assetId": "651ec6d7132a2cfb80d4309e",
+      "path": "assets/optimized/651ec6d7132a2cfb80d4309e/651ec6d7132a2cfb80d4309e-fallback-w1920.jpg",
+      "ssim": 0.983923,
+      "psnr": 44.399775,
+      "pass": true
+    },
+    {
+      "assetId": "651fd2d18907825f87e7fcfa",
+      "path": "assets/optimized/651fd2d18907825f87e7fcfa/651fd2d18907825f87e7fcfa-fallback-w640.jpg",
+      "ssim": 0.986266,
+      "psnr": 44.251996,
+      "pass": true
+    },
+    {
+      "assetId": "651fd2d18907825f87e7fcfa",
+      "path": "assets/optimized/651fd2d18907825f87e7fcfa/651fd2d18907825f87e7fcfa-fallback-w1280.jpg",
+      "ssim": 0.985798,
+      "psnr": 44.826513,
+      "pass": true
+    },
+    {
+      "assetId": "651fd2d18907825f87e7fcfa",
+      "path": "assets/optimized/651fd2d18907825f87e7fcfa/651fd2d18907825f87e7fcfa-fallback-w1920.jpg",
+      "ssim": 0.984018,
+      "psnr": 44.757561,
+      "pass": true
+    },
+    {
+      "assetId": "651fe39e74d682efa73fd91a",
+      "path": "assets/optimized/651fe39e74d682efa73fd91a/651fe39e74d682efa73fd91a-fallback-w640.jpg",
+      "ssim": 0.992151,
+      "psnr": 48.238283,
+      "pass": true
+    },
+    {
+      "assetId": "651fe39e74d682efa73fd91a",
+      "path": "assets/optimized/651fe39e74d682efa73fd91a/651fe39e74d682efa73fd91a-fallback-w1280.jpg",
+      "ssim": 0.991041,
+      "psnr": 48.785633,
+      "pass": true
+    },
+    {
+      "assetId": "651fe39e74d682efa73fd91a",
+      "path": "assets/optimized/651fe39e74d682efa73fd91a/651fe39e74d682efa73fd91a-fallback-w1920.jpg",
+      "ssim": 0.986956,
+      "psnr": 47.72999,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3a44e048bc45a76fa16",
+      "path": "assets/optimized/651fe3a44e048bc45a76fa16/651fe3a44e048bc45a76fa16-fallback-w640.jpg",
+      "ssim": 0.991195,
+      "psnr": 47.244693,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3a44e048bc45a76fa16",
+      "path": "assets/optimized/651fe3a44e048bc45a76fa16/651fe3a44e048bc45a76fa16-fallback-w1280.jpg",
+      "ssim": 0.986176,
+      "psnr": 46.796918,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3aa82ce85e88dee5d68",
+      "path": "assets/optimized/651fe3aa82ce85e88dee5d68/651fe3aa82ce85e88dee5d68-fallback-w640.jpg",
+      "ssim": 0.98923,
+      "psnr": 46.169528,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3aa82ce85e88dee5d68",
+      "path": "assets/optimized/651fe3aa82ce85e88dee5d68/651fe3aa82ce85e88dee5d68-fallback-w1280.jpg",
+      "ssim": 0.988084,
+      "psnr": 46.622883,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3aa82ce85e88dee5d68",
+      "path": "assets/optimized/651fe3aa82ce85e88dee5d68/651fe3aa82ce85e88dee5d68-fallback-w1920.jpg",
+      "ssim": 0.984191,
+      "psnr": 46.059837,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3cee1dde357d0f21005",
+      "path": "assets/optimized/651fe3cee1dde357d0f21005/651fe3cee1dde357d0f21005-fallback-w640.jpg",
+      "ssim": 0.989955,
+      "psnr": 43.978988,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3cee1dde357d0f21005",
+      "path": "assets/optimized/651fe3cee1dde357d0f21005/651fe3cee1dde357d0f21005-fallback-w1280.jpg",
+      "ssim": 0.990289,
+      "psnr": 44.264848,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3cee1dde357d0f21005",
+      "path": "assets/optimized/651fe3cee1dde357d0f21005/651fe3cee1dde357d0f21005-fallback-w1920.jpg",
+      "ssim": 0.988123,
+      "psnr": 44.083422,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3d24b8245afa0fa8fa8",
+      "path": "assets/optimized/651fe3d24b8245afa0fa8fa8/651fe3d24b8245afa0fa8fa8-fallback-w640.jpg",
+      "ssim": 0.990405,
+      "psnr": 47.540493,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3d24b8245afa0fa8fa8",
+      "path": "assets/optimized/651fe3d24b8245afa0fa8fa8/651fe3d24b8245afa0fa8fa8-fallback-w1280.jpg",
+      "ssim": 0.989051,
+      "psnr": 47.961423,
+      "pass": true
+    },
+    {
+      "assetId": "651fe3d24b8245afa0fa8fa8",
+      "path": "assets/optimized/651fe3d24b8245afa0fa8fa8/651fe3d24b8245afa0fa8fa8-fallback-w1920.jpg",
+      "ssim": 0.985723,
+      "psnr": 47.319438,
+      "pass": true
+    },
+    {
+      "assetId": "651fe40b9ea9c76030ae1402",
+      "path": "assets/optimized/651fe40b9ea9c76030ae1402/651fe40b9ea9c76030ae1402-fallback-w640.jpg",
+      "ssim": 0.984677,
+      "psnr": 43.816432,
+      "pass": true
+    },
+    {
+      "assetId": "651fe40b9ea9c76030ae1402",
+      "path": "assets/optimized/651fe40b9ea9c76030ae1402/651fe40b9ea9c76030ae1402-fallback-w1280.jpg",
+      "ssim": 0.984996,
+      "psnr": 44.098928,
+      "pass": true
+    },
+    {
+      "assetId": "651fe40b9ea9c76030ae1402",
+      "path": "assets/optimized/651fe40b9ea9c76030ae1402/651fe40b9ea9c76030ae1402-fallback-w1920.jpg",
+      "ssim": 0.983491,
+      "psnr": 44.101573,
+      "pass": true
+    },
+    {
+      "assetId": "651fe414c66fcc839d04d88e",
+      "path": "assets/optimized/651fe414c66fcc839d04d88e/651fe414c66fcc839d04d88e-w640.avif",
+      "ssim": 0.98521,
+      "psnr": 43.658408,
+      "pass": true
+    },
+    {
+      "assetId": "651fe414c66fcc839d04d88e",
+      "path": "assets/optimized/651fe414c66fcc839d04d88e/651fe414c66fcc839d04d88e-fallback-w640.jpg",
+      "ssim": 0.989832,
+      "psnr": 45.95986,
+      "pass": true
+    },
+    {
+      "assetId": "651fe414c66fcc839d04d88e",
+      "path": "assets/optimized/651fe414c66fcc839d04d88e/651fe414c66fcc839d04d88e-fallback-w1280.jpg",
+      "ssim": 0.989738,
+      "psnr": 46.007664,
+      "pass": true
+    },
+    {
+      "assetId": "651fe414c66fcc839d04d88e",
+      "path": "assets/optimized/651fe414c66fcc839d04d88e/651fe414c66fcc839d04d88e-fallback-w1920.jpg",
+      "ssim": 0.987835,
+      "psnr": 45.700605,
+      "pass": true
+    },
+    {
+      "assetId": "651fe41dc92d088af83782f3",
+      "path": "assets/optimized/651fe41dc92d088af83782f3/651fe41dc92d088af83782f3-fallback-w640.jpg",
+      "ssim": 0.990861,
+      "psnr": 47.529848,
+      "pass": true
+    },
+    {
+      "assetId": "651fe41dc92d088af83782f3",
+      "path": "assets/optimized/651fe41dc92d088af83782f3/651fe41dc92d088af83782f3-fallback-w1280.jpg",
+      "ssim": 0.988629,
+      "psnr": 47.59689,
+      "pass": true
+    },
+    {
+      "assetId": "651fe41dc92d088af83782f3",
+      "path": "assets/optimized/651fe41dc92d088af83782f3/651fe41dc92d088af83782f3-fallback-w1920.jpg",
+      "ssim": 0.985072,
+      "psnr": 46.915111,
+      "pass": true
+    },
+    {
+      "assetId": "651fe47c16271ffdc9e16f73",
+      "path": "assets/optimized/651fe47c16271ffdc9e16f73/651fe47c16271ffdc9e16f73-fallback-w640.jpg",
+      "ssim": 0.992033,
+      "psnr": 48.653286,
+      "pass": true
+    },
+    {
+      "assetId": "651fe47c16271ffdc9e16f73",
+      "path": "assets/optimized/651fe47c16271ffdc9e16f73/651fe47c16271ffdc9e16f73-fallback-w1280.jpg",
+      "ssim": 0.990368,
+      "psnr": 48.664666,
+      "pass": true
+    },
+    {
+      "assetId": "651fe47c16271ffdc9e16f73",
+      "path": "assets/optimized/651fe47c16271ffdc9e16f73/651fe47c16271ffdc9e16f73-fallback-w1920.jpg",
+      "ssim": 0.988672,
+      "psnr": 48.292765,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4b9cd1415931d9750c3",
+      "path": "assets/optimized/651fe4b9cd1415931d9750c3/651fe4b9cd1415931d9750c3-fallback-w640.jpg",
+      "ssim": 0.990119,
+      "psnr": 47.381417,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4b9cd1415931d9750c3",
+      "path": "assets/optimized/651fe4b9cd1415931d9750c3/651fe4b9cd1415931d9750c3-fallback-w1280.jpg",
+      "ssim": 0.987893,
+      "psnr": 47.389554,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4b9cd1415931d9750c3",
+      "path": "assets/optimized/651fe4b9cd1415931d9750c3/651fe4b9cd1415931d9750c3-fallback-w1920.jpg",
+      "ssim": 0.984204,
+      "psnr": 46.758093,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4be16271ffdc9e1a0f4",
+      "path": "assets/optimized/651fe4be16271ffdc9e1a0f4/651fe4be16271ffdc9e1a0f4-fallback-w640.jpg",
+      "ssim": 0.988611,
+      "psnr": 45.040942,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4be16271ffdc9e1a0f4",
+      "path": "assets/optimized/651fe4be16271ffdc9e1a0f4/651fe4be16271ffdc9e1a0f4-fallback-w1280.jpg",
+      "ssim": 0.988457,
+      "psnr": 45.466078,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4be16271ffdc9e1a0f4",
+      "path": "assets/optimized/651fe4be16271ffdc9e1a0f4/651fe4be16271ffdc9e1a0f4-fallback-w1920.jpg",
+      "ssim": 0.986096,
+      "psnr": 45.327409,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4c81025aaa2e6c5afb4",
+      "path": "assets/optimized/651fe4c81025aaa2e6c5afb4/651fe4c81025aaa2e6c5afb4-fallback-w640.jpg",
+      "ssim": 0.98439,
+      "psnr": 42.637708,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4c81025aaa2e6c5afb4",
+      "path": "assets/optimized/651fe4c81025aaa2e6c5afb4/651fe4c81025aaa2e6c5afb4-fallback-w1280.jpg",
+      "ssim": 0.984772,
+      "psnr": 42.70315,
+      "pass": true
+    },
+    {
+      "assetId": "651fe4c81025aaa2e6c5afb4",
+      "path": "assets/optimized/651fe4c81025aaa2e6c5afb4/651fe4c81025aaa2e6c5afb4-fallback-w1920.jpg",
+      "ssim": 0.985131,
+      "psnr": 42.785609,
+      "pass": true
+    },
+    {
+      "assetId": "651fe8fdba8ba80ec49456f2",
+      "path": "assets/optimized/651fe8fdba8ba80ec49456f2/651fe8fdba8ba80ec49456f2-fallback-w640.jpg",
+      "ssim": 0.99488,
+      "psnr": 50.117348,
+      "pass": true
+    },
+    {
+      "assetId": "651fe8fdba8ba80ec49456f2",
+      "path": "assets/optimized/651fe8fdba8ba80ec49456f2/651fe8fdba8ba80ec49456f2-fallback-w1280.jpg",
+      "ssim": 0.993477,
+      "psnr": 50.303215,
+      "pass": true
+    },
+    {
+      "assetId": "651fe8fdba8ba80ec49456f2",
+      "path": "assets/optimized/651fe8fdba8ba80ec49456f2/651fe8fdba8ba80ec49456f2-fallback-w1920.jpg",
+      "ssim": 0.989628,
+      "psnr": 48.831791,
+      "pass": true
+    },
+    {
+      "assetId": "651fe93cd6471c021a1a4011",
+      "path": "assets/optimized/651fe93cd6471c021a1a4011/651fe93cd6471c021a1a4011-fallback-w640.jpg",
+      "ssim": 0.99185,
+      "psnr": 48.413972,
+      "pass": true
+    },
+    {
+      "assetId": "651fe93cd6471c021a1a4011",
+      "path": "assets/optimized/651fe93cd6471c021a1a4011/651fe93cd6471c021a1a4011-fallback-w1280.jpg",
+      "ssim": 0.99077,
+      "psnr": 48.81254,
+      "pass": true
+    },
+    {
+      "assetId": "651fe93cd6471c021a1a4011",
+      "path": "assets/optimized/651fe93cd6471c021a1a4011/651fe93cd6471c021a1a4011-fallback-w1920.jpg",
+      "ssim": 0.986154,
+      "psnr": 47.644118,
+      "pass": true
+    },
+    {
+      "assetId": "651feae43c080d14e30a7a51",
+      "path": "assets/optimized/651feae43c080d14e30a7a51/651feae43c080d14e30a7a51-fallback-w640.jpg",
+      "ssim": 0.993473,
+      "psnr": 49.624078,
+      "pass": true
+    },
+    {
+      "assetId": "651feae43c080d14e30a7a51",
+      "path": "assets/optimized/651feae43c080d14e30a7a51/651feae43c080d14e30a7a51-fallback-w1280.jpg",
+      "ssim": 0.990713,
+      "psnr": 49.340046,
+      "pass": true
+    },
+    {
+      "assetId": "651feae43c080d14e30a7a51",
+      "path": "assets/optimized/651feae43c080d14e30a7a51/651feae43c080d14e30a7a51-fallback-w1920.jpg",
+      "ssim": 0.984531,
+      "psnr": 47.619944,
+      "pass": true
+    },
+    {
+      "assetId": "651feae8bbad4c45d58d42f5",
+      "path": "assets/optimized/651feae8bbad4c45d58d42f5/651feae8bbad4c45d58d42f5-fallback-w640.jpg",
+      "ssim": 0.988571,
+      "psnr": 45.796163,
+      "pass": true
+    },
+    {
+      "assetId": "651feae8bbad4c45d58d42f5",
+      "path": "assets/optimized/651feae8bbad4c45d58d42f5/651feae8bbad4c45d58d42f5-fallback-w1280.jpg",
+      "ssim": 0.988394,
+      "psnr": 46.535458,
+      "pass": true
+    },
+    {
+      "assetId": "651feae8bbad4c45d58d42f5",
+      "path": "assets/optimized/651feae8bbad4c45d58d42f5/651feae8bbad4c45d58d42f5-fallback-w1920.jpg",
+      "ssim": 0.98625,
+      "psnr": 46.377813,
+      "pass": true
+    },
+    {
+      "assetId": "651feaebc66fcc839d0a6fba",
+      "path": "assets/optimized/651feaebc66fcc839d0a6fba/651feaebc66fcc839d0a6fba-fallback-w640.jpg",
+      "ssim": 0.990874,
+      "psnr": 48.12291,
+      "pass": true
+    },
+    {
+      "assetId": "651feaebc66fcc839d0a6fba",
+      "path": "assets/optimized/651feaebc66fcc839d0a6fba/651feaebc66fcc839d0a6fba-fallback-w1280.jpg",
+      "ssim": 0.990469,
+      "psnr": 48.593288,
+      "pass": true
+    },
+    {
+      "assetId": "651feaebc66fcc839d0a6fba",
+      "path": "assets/optimized/651feaebc66fcc839d0a6fba/651feaebc66fcc839d0a6fba-fallback-w1920.jpg",
+      "ssim": 0.987122,
+      "psnr": 47.853429,
+      "pass": true
+    },
+    {
+      "assetId": "651feaf3b873a24649b086ba",
+      "path": "assets/optimized/651feaf3b873a24649b086ba/651feaf3b873a24649b086ba-fallback-w640.jpg",
+      "ssim": 0.991269,
+      "psnr": 47.477134,
+      "pass": true
+    },
+    {
+      "assetId": "651feaf3b873a24649b086ba",
+      "path": "assets/optimized/651feaf3b873a24649b086ba/651feaf3b873a24649b086ba-fallback-w1280.jpg",
+      "ssim": 0.989147,
+      "psnr": 47.685696,
+      "pass": true
+    },
+    {
+      "assetId": "651feaf3b873a24649b086ba",
+      "path": "assets/optimized/651feaf3b873a24649b086ba/651feaf3b873a24649b086ba-fallback-w1920.jpg",
+      "ssim": 0.984492,
+      "psnr": 46.811441,
+      "pass": true
+    },
+    {
+      "assetId": "651feaf7c66fcc839d0a7850",
+      "path": "assets/optimized/651feaf7c66fcc839d0a7850/651feaf7c66fcc839d0a7850-fallback-w640.jpg",
+      "ssim": 0.987975,
+      "psnr": 44.820222,
+      "pass": true
+    },
+    {
+      "assetId": "651feaf7c66fcc839d0a7850",
+      "path": "assets/optimized/651feaf7c66fcc839d0a7850/651feaf7c66fcc839d0a7850-fallback-w1280.jpg",
+      "ssim": 0.98715,
+      "psnr": 45.459235,
+      "pass": true
+    },
+    {
+      "assetId": "651feaf7c66fcc839d0a7850",
+      "path": "assets/optimized/651feaf7c66fcc839d0a7850/651feaf7c66fcc839d0a7850-fallback-w1920.jpg",
+      "ssim": 0.984958,
+      "psnr": 45.313901,
+      "pass": true
+    },
+    {
+      "assetId": "651feb5ef72da9db59d44bde",
+      "path": "assets/optimized/651feb5ef72da9db59d44bde/651feb5ef72da9db59d44bde-fallback-w640.jpg",
+      "ssim": 0.985111,
+      "psnr": 44.131363,
+      "pass": true
+    },
+    {
+      "assetId": "651feb5ef72da9db59d44bde",
+      "path": "assets/optimized/651feb5ef72da9db59d44bde/651feb5ef72da9db59d44bde-fallback-w1280.jpg",
+      "ssim": 0.985137,
+      "psnr": 44.419014,
+      "pass": true
+    },
+    {
+      "assetId": "651feb5ef72da9db59d44bde",
+      "path": "assets/optimized/651feb5ef72da9db59d44bde/651feb5ef72da9db59d44bde-fallback-w1920.jpg",
+      "ssim": 0.984018,
+      "psnr": 44.409639,
+      "pass": true
+    },
+    {
+      "assetId": "652d84aba5255cda52c1c900",
+      "path": "assets/optimized/652d84aba5255cda52c1c900/652d84aba5255cda52c1c900-fallback-w640.jpg",
+      "ssim": 0.983201,
+      "psnr": 43.381466,
+      "pass": true
+    },
+    {
+      "assetId": "652d84aba5255cda52c1c900",
+      "path": "assets/optimized/652d84aba5255cda52c1c900/652d84aba5255cda52c1c900-fallback-w1280.jpg",
+      "ssim": 0.984088,
+      "psnr": 43.603298,
+      "pass": true
+    },
+    {
+      "assetId": "652d84aba5255cda52c1c900",
+      "path": "assets/optimized/652d84aba5255cda52c1c900/652d84aba5255cda52c1c900-fallback-w1920.jpg",
+      "ssim": 0.98333,
+      "psnr": 43.641415,
+      "pass": true
+    },
+    {
+      "assetId": "653158f7c448a9f9e553e8ac",
+      "path": "assets/optimized/653158f7c448a9f9e553e8ac/653158f7c448a9f9e553e8ac-fallback-w640.jpg",
+      "ssim": 0.981974,
+      "psnr": 43.342316,
+      "pass": true
+    },
+    {
+      "assetId": "653158f7c448a9f9e553e8ac",
+      "path": "assets/optimized/653158f7c448a9f9e553e8ac/653158f7c448a9f9e553e8ac-fallback-w1280.jpg",
+      "ssim": 0.982728,
+      "psnr": 43.756795,
+      "pass": true
+    },
+    {
+      "assetId": "653158f7c448a9f9e553e8ac",
+      "path": "assets/optimized/653158f7c448a9f9e553e8ac/653158f7c448a9f9e553e8ac-fallback-w1920.jpg",
+      "ssim": 0.981809,
+      "psnr": 43.874317,
+      "pass": true
+    },
+    {
+      "assetId": "65375b289d7c90fe91f0fcdc",
+      "path": "assets/optimized/65375b289d7c90fe91f0fcdc/65375b289d7c90fe91f0fcdc-w640.avif",
+      "ssim": 0.99024,
+      "psnr": 43.728185,
+      "pass": true
+    },
+    {
+      "assetId": "65375b289d7c90fe91f0fcdc",
+      "path": "assets/optimized/65375b289d7c90fe91f0fcdc/65375b289d7c90fe91f0fcdc-w1280.avif",
+      "ssim": 0.989797,
+      "psnr": 44.104459,
+      "pass": true
+    },
+    {
+      "assetId": "65375b289d7c90fe91f0fcdc",
+      "path": "assets/optimized/65375b289d7c90fe91f0fcdc/65375b289d7c90fe91f0fcdc-fallback-w640.jpg",
+      "ssim": 0.98882,
+      "psnr": 41.934237,
+      "pass": true
+    },
+    {
+      "assetId": "65375b289d7c90fe91f0fcdc",
+      "path": "assets/optimized/65375b289d7c90fe91f0fcdc/65375b289d7c90fe91f0fcdc-fallback-w1280.jpg",
+      "ssim": 0.989468,
+      "psnr": 42.655115,
+      "pass": true
+    },
+    {
+      "assetId": "65375daf30602c1e52f15e03",
+      "path": "assets/optimized/65375daf30602c1e52f15e03/65375daf30602c1e52f15e03-w640.avif",
+      "ssim": 0.989185,
+      "psnr": 45.209678,
+      "pass": true
+    },
+    {
+      "assetId": "653760ae3ebdaf05410615d5",
+      "path": "assets/optimized/653760ae3ebdaf05410615d5/653760ae3ebdaf05410615d5-w640.avif",
+      "ssim": 0.982771,
+      "psnr": 43.038037,
+      "pass": true
+    },
+    {
+      "assetId": "653760ae3ebdaf05410615d5",
+      "path": "assets/optimized/653760ae3ebdaf05410615d5/653760ae3ebdaf05410615d5-fallback-w640.jpg",
+      "ssim": 0.985397,
+      "psnr": 44.655725,
+      "pass": true
+    },
+    {
+      "assetId": "653760ae3ebdaf05410615d5",
+      "path": "assets/optimized/653760ae3ebdaf05410615d5/653760ae3ebdaf05410615d5-fallback-w1178.jpg",
+      "ssim": 0.98533,
+      "psnr": 45.302716,
+      "pass": true
+    },
+    {
+      "assetId": "6537621f8d0309a7bc831c22",
+      "path": "assets/optimized/6537621f8d0309a7bc831c22/6537621f8d0309a7bc831c22-w640.avif",
+      "ssim": 0.99038,
+      "psnr": 43.466582,
+      "pass": true
+    },
+    {
+      "assetId": "6537621f8d0309a7bc831c22",
+      "path": "assets/optimized/6537621f8d0309a7bc831c22/6537621f8d0309a7bc831c22-w1280.avif",
+      "ssim": 0.988797,
+      "psnr": 44.036263,
+      "pass": true
+    },
+    {
+      "assetId": "6537621f8d0309a7bc831c22",
+      "path": "assets/optimized/6537621f8d0309a7bc831c22/6537621f8d0309a7bc831c22-w1360.avif",
+      "ssim": 0.992037,
+      "psnr": 45.247956,
+      "pass": true
+    },
+    {
+      "assetId": "6537621f8d0309a7bc831c22",
+      "path": "assets/optimized/6537621f8d0309a7bc831c22/6537621f8d0309a7bc831c22-fallback-w640.jpg",
+      "ssim": 0.989063,
+      "psnr": 41.710734,
+      "pass": true
+    },
+    {
+      "assetId": "6537639952d4eea391d3c861",
+      "path": "assets/optimized/6537639952d4eea391d3c861/6537639952d4eea391d3c861-w640.avif",
+      "ssim": 0.989191,
+      "psnr": 44.161674,
+      "pass": true
+    },
+    {
+      "assetId": "6537639952d4eea391d3c861",
+      "path": "assets/optimized/6537639952d4eea391d3c861/6537639952d4eea391d3c861-w1280.avif",
+      "ssim": 0.990783,
+      "psnr": 44.264368,
+      "pass": true
+    },
+    {
+      "assetId": "6537639952d4eea391d3c861",
+      "path": "assets/optimized/6537639952d4eea391d3c861/6537639952d4eea391d3c861-w1920.avif",
+      "ssim": 0.993249,
+      "psnr": 44.958386,
+      "pass": true
+    },
+    {
+      "assetId": "6537639952d4eea391d3c861",
+      "path": "assets/optimized/6537639952d4eea391d3c861/6537639952d4eea391d3c861-fallback-w640.jpg",
+      "ssim": 0.984689,
+      "psnr": 41.501761,
+      "pass": true
+    },
+    {
+      "assetId": "6537639952d4eea391d3c861",
+      "path": "assets/optimized/6537639952d4eea391d3c861/6537639952d4eea391d3c861-fallback-w1280.jpg",
+      "ssim": 0.987706,
+      "psnr": 41.588629,
+      "pass": true
+    },
+    {
+      "assetId": "6537639952d4eea391d3c861",
+      "path": "assets/optimized/6537639952d4eea391d3c861/6537639952d4eea391d3c861-fallback-w1920.jpg",
+      "ssim": 0.995475,
+      "psnr": 44.937923,
+      "pass": true
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w640.avif",
+      "ssim": 0.98908,
+      "psnr": 43.783498,
+      "pass": true
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1280.avif",
+      "ssim": 0.992553,
+      "psnr": 46.008378,
+      "pass": true
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1838.avif",
+      "ssim": 0.993669,
+      "psnr": 46.781975,
+      "pass": true
+    }
+  ],
+  "failures": [
+
+  ]
+}

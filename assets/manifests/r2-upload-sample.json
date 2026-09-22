@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T22:43:39Z",
+  "uploadAuthorized": false,
+  "items": [
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "r2Key": "media/content/650758aa0b7a501a1da902bf-18df994d1ec3.avif",
+      "localPath": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w640.avif",
+      "bytes": 106946,
+      "sha256": "18df994d1ec3cecd7592fdf23fbac387ce907a883f80ac1f3aee5c55431cf010"
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "r2Key": "media/content/650758aa0b7a501a1da902bf-0e9603648f22.avif",
+      "localPath": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1280.avif",
+      "bytes": 429283,
+      "sha256": "0e9603648f22703d69b04ca311403a7bd64704c8a99b2abfb120d580a41b0b50"
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "r2Key": "media/content/650758aa0b7a501a1da902bf-3c32daceab87.avif",
+      "localPath": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1920.avif",
+      "bytes": 961827,
+      "sha256": "3c32daceab87325a0f3b9b2c7b4ad401b994ac49232aa6ed8241ae38ff191653"
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "r2Key": "media/content/650758aa0b7a501a1da902bf-76f6b8d52f8f.jpg",
+      "localPath": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w640.jpg",
+      "bytes": 112593,
+      "sha256": "76f6b8d52f8f15c7ac9e4fe0582b05525a83b4db108dc6a5d578ee3c419c9176"
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "r2Key": "media/content/650758aa0b7a501a1da902bf-10d82b82df1b.jpg",
+      "localPath": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1280.jpg",
+      "bytes": 449381,
+      "sha256": "10d82b82df1b2820f945604717acdf9aed7e8aa717bbe90b58bdbc02db783afe"
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "r2Key": "media/content/650758aa0b7a501a1da902bf-3d33e4d3b3f1.jpg",
+      "localPath": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1920.jpg",
+      "bytes": 997665,
+      "sha256": "3d33e4d3b3f164ead24b447c04bc0df5a1f89d44be9e617805b0e929ea7b9903"
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "r2Key": "media/content/651eb3b38ed930fbe78fd97a-28acfcb3e0e3.jpg",
+      "localPath": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w640.jpg",
+      "bytes": 172319,
+      "sha256": "28acfcb3e0e3f8a95c866839135ad697489841230a8190276b2c89ff5249dd31"
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "r2Key": "media/content/651eb3b38ed930fbe78fd97a-18a85afbc345.jpg",
+      "localPath": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1280.jpg",
+      "bytes": 673317,
+      "sha256": "18a85afbc3455651ad224e8bd07499ee5bfd751cf72664ad15ab4dbac2e154f9"
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "r2Key": "media/content/651eb3b38ed930fbe78fd97a-0215ebbe898d.jpg",
+      "localPath": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1920.jpg",
+      "bytes": 1539799,
+      "sha256": "0215ebbe898dd36d1dcf39b80dab103046311f8d9430ee3a6cd9523164f88bfe"
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "r2Key": "media/content/651ec63ce1dde357d047f53a-9d7dc423a242.avif",
+      "localPath": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-w640.avif",
+      "bytes": 48914,
+      "sha256": "9d7dc423a242613c02671441c90989866b64ce0a962425e97326e0330b27e292"
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "r2Key": "media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg",
+      "localPath": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w640.jpg",
+      "bytes": 92243,
+      "sha256": "650332a9958f3f9098219914d38f9b7d2f17000a62046563669f5609898aa482"
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "r2Key": "media/content/651ec63ce1dde357d047f53a-544435fac7da.jpg",
+      "localPath": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1280.jpg",
+      "bytes": 326853,
+      "sha256": "544435fac7da8f02c8b55f4bab88fa6108ebf6c8ab04d3d6ddff608e83adc735"
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "r2Key": "media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+      "localPath": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1920.jpg",
+      "bytes": 735722,
+      "sha256": "4c55cc829e43efb99983971c515060c0e621a2f9da39ab019177c152bad6ffa5"
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-3a4f450d2f7b.png",
+      "localPath": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-lossless.png",
+      "bytes": 2487947,
+      "sha256": "3a4f450d2f7bf11da1b69ac942b424e2d0d66b3518cd27533ccc687608f9b73c"
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-def4cc56cdde.avif",
+      "localPath": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w640.avif",
+      "bytes": 59016,
+      "sha256": "def4cc56cdde5265b52f79220a0a980090c2d7bb9b14ade62179730d41d20f85"
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-78e8b5553995.avif",
+      "localPath": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1280.avif",
+      "bytes": 112726,
+      "sha256": "78e8b5553995d58e42593dce967bc76224d939e6c1f7b8f260defbbc23ba7552"
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "r2Key": "media/content/6973aa8ddda60d8a2e57b1b4-3605cec88385.avif",
+      "localPath": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1838.avif",
+      "bytes": 158658,
+      "sha256": "3605cec883854d82da09608e639850c0061c38024670f7a9b6a41da35c2a24a2"
+    },
+    {
+      "assetId": "65375daf30602c1e52f15e03",
+      "r2Key": "media/content/65375daf30602c1e52f15e03-b982e97b6fb3.webp",
+      "localPath": "imports/webflow/assets/images/65375daf30602c1e52f15e03.webp",
+      "bytes": 43424,
+      "sha256": "b982e97b6fb3bbf952dbdbc819e24a48b5f226ca871439f53cfc1451abf12f50"
+    },
+    {
+      "assetId": "65375daf30602c1e52f15e03",
+      "r2Key": "media/content/65375daf30602c1e52f15e03-1ed2fd70a880.avif",
+      "localPath": "assets/optimized/65375daf30602c1e52f15e03/65375daf30602c1e52f15e03-w640.avif",
+      "bytes": 26527,
+      "sha256": "1ed2fd70a88091f3ba484bafd8e028143e047f67643751b41ce89c139092444a"
+    }
+  ]
+}

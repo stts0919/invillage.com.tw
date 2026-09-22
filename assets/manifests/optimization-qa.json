@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T22:23:19Z",
+  "thresholds": {
+    "ssim": 0.98,
+    "psnrDb": 35.0
+  },
+  "summary": {
+    "selectedImages": 8,
+    "verifiedOutputs": 20,
+    "lossyMetrics": 17,
+    "qualityPasses": 17,
+    "failures": 0,
+    "manualVisualReviewRequired": true
+  },
+  "metrics": [
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w640.avif",
+      "ssim": 0.987128,
+      "psnr": 44.100408,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1280.avif",
+      "ssim": 0.988517,
+      "psnr": 44.370152,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-w1920.avif",
+      "ssim": 0.989321,
+      "psnr": 44.519823,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w640.jpg",
+      "ssim": 0.985571,
+      "psnr": 41.842511,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1280.jpg",
+      "ssim": 0.987612,
+      "psnr": 42.033923,
+      "pass": true
+    },
+    {
+      "assetId": "650758aa0b7a501a1da902bf",
+      "path": "assets/optimized/650758aa0b7a501a1da902bf/650758aa0b7a501a1da902bf-fallback-w1920.jpg",
+      "ssim": 0.988852,
+      "psnr": 42.233263,
+      "pass": true
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w640.jpg",
+      "ssim": 0.983967,
+      "psnr": 41.504233,
+      "pass": true
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1280.jpg",
+      "ssim": 0.984404,
+      "psnr": 41.714203,
+      "pass": true
+    },
+    {
+      "assetId": "651eb3b38ed930fbe78fd97a",
+      "path": "assets/optimized/651eb3b38ed930fbe78fd97a/651eb3b38ed930fbe78fd97a-fallback-w1920.jpg",
+      "ssim": 0.990117,
+      "psnr": 42.301648,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-w640.avif",
+      "ssim": 0.983737,
+      "psnr": 43.67616,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w640.jpg",
+      "ssim": 0.988511,
+      "psnr": 45.772999,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1280.jpg",
+      "ssim": 0.986897,
+      "psnr": 45.687125,
+      "pass": true
+    },
+    {
+      "assetId": "651ec63ce1dde357d047f53a",
+      "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1920.jpg",
+      "ssim": 0.983576,
+      "psnr": 44.99876,
+      "pass": true
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w640.avif",
+      "ssim": 0.98908,
+      "psnr": 43.783498,
+      "pass": true
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1280.avif",
+      "ssim": 0.992553,
+      "psnr": 46.008378,
+      "pass": true
+    },
+    {
+      "assetId": "6973aa8ddda60d8a2e57b1b4",
+      "path": "assets/optimized/6973aa8ddda60d8a2e57b1b4/6973aa8ddda60d8a2e57b1b4-w1838.avif",
+      "ssim": 0.993669,
+      "psnr": 46.781975,
+      "pass": true
+    },
+    {
+      "assetId": "65375daf30602c1e52f15e03",
+      "path": "assets/optimized/65375daf30602c1e52f15e03/65375daf30602c1e52f15e03-w640.avif",
+      "ssim": 0.989185,
+      "psnr": 45.209678,
+      "pass": true
+    }
+  ],
+  "failures": [
+
+  ]
+}

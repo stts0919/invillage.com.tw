@@ -1,0 +1,842 @@
+{
+  "schemaVersion": 1,
+  "batch": "live",
+  "purpose": "All assets used by the current live site",
+  "approvedForRemoteUpload": false,
+  "images": [
+    {
+      "id": "65053272246b11c3f5e02ede",
+      "sourcePath": "imports/webflow/assets/images/65053272246b11c3f5e02ede.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65074195be972cb5422550d7",
+      "sourcePath": "imports/webflow/assets/images/65074195be972cb5422550d7.png",
+      "placement": "pages",
+      "category": "brand"
+    },
+    {
+      "id": "650741963cc37e5fe08d25bf",
+      "sourcePath": "imports/webflow/assets/images/650741963cc37e5fe08d25bf.png",
+      "placement": "pages",
+      "category": "brand"
+    },
+    {
+      "id": "65075a2ad8f5700d0f111203",
+      "sourcePath": "imports/webflow/assets/images/65075a2ad8f5700d0f111203.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65075a2ad8f5700d0f111204",
+      "sourcePath": "imports/webflow/assets/images/65075a2ad8f5700d0f111204.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65075a2ad8f5700d0f111205",
+      "sourcePath": "imports/webflow/assets/images/65075a2ad8f5700d0f111205.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65075a2ad8f5700d0f111206",
+      "sourcePath": "imports/webflow/assets/images/65075a2ad8f5700d0f111206.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65075a2ad8f5700d0f111207",
+      "sourcePath": "imports/webflow/assets/images/65075a2ad8f5700d0f111207.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65075a2ad8f5700d0f111208",
+      "sourcePath": "imports/webflow/assets/images/65075a2ad8f5700d0f111208.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65077f78218531423204127d",
+      "sourcePath": "imports/webflow/assets/images/65077f78218531423204127d.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "6507a733352adcbf572e1eba",
+      "sourcePath": "imports/webflow/assets/images/6507a733352adcbf572e1eba.png",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "6507a7849d60b1182e050e99",
+      "sourcePath": "imports/webflow/assets/images/6507a7849d60b1182e050e99.png",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "6510a0e202d67e0ab8c779dd",
+      "sourcePath": "imports/webflow/assets/images/6510a0e202d67e0ab8c779dd.svg",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65133573edd089379a1540e0",
+      "sourcePath": "imports/webflow/assets/images/65133573edd089379a1540e0.png",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65171836d0b145049cbfba47",
+      "sourcePath": "imports/webflow/assets/images/65171836d0b145049cbfba47.png",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "65171de5de6d5f9f9d43d9eb",
+      "sourcePath": "imports/webflow/assets/images/65171de5de6d5f9f9d43d9eb.png",
+      "placement": "pages",
+      "category": "icons"
+    },
+    {
+      "id": "6507481a777554d0c90461fb",
+      "sourcePath": "imports/webflow/assets/images/6507481a777554d0c90461fb.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "65074840205fffe0425b9981",
+      "sourcePath": "imports/webflow/assets/images/65074840205fffe0425b9981.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "6507484e8898be5169a851c0",
+      "sourcePath": "imports/webflow/assets/images/6507484e8898be5169a851c0.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "6507485038e536d93698e54a",
+      "sourcePath": "imports/webflow/assets/images/6507485038e536d93698e54a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "6507486b777554d0c904a2b9",
+      "sourcePath": "imports/webflow/assets/images/6507486b777554d0c904a2b9.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "65074e8e61226bfdc7944fd6",
+      "sourcePath": "imports/webflow/assets/images/65074e8e61226bfdc7944fd6.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "65074e8ed5c29f4a9417e6c2",
+      "sourcePath": "imports/webflow/assets/images/65074e8ed5c29f4a9417e6c2.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "650758a90e467150165a2d0d",
+      "sourcePath": "imports/webflow/assets/images/650758a90e467150165a2d0d.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "650758a92a4b20c9d1f586d9",
+      "sourcePath": "imports/webflow/assets/images/650758a92a4b20c9d1f586d9.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "650758a99ef869fb79fe24fc",
+      "sourcePath": "imports/webflow/assets/images/650758a99ef869fb79fe24fc.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "650758aa0b7a501a1da902bf",
+      "sourcePath": "imports/webflow/assets/images/650758aa0b7a501a1da902bf.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d47da495f6472500b8787",
+      "sourcePath": "imports/webflow/assets/images/651d47da495f6472500b8787.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d47f406ef2b6efb8390da",
+      "sourcePath": "imports/webflow/assets/images/651d47f406ef2b6efb8390da.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4801e2f080d80ab13b64",
+      "sourcePath": "imports/webflow/assets/images/651d4801e2f080d80ab13b64.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4810e2f080d80ab1495c",
+      "sourcePath": "imports/webflow/assets/images/651d4810e2f080d80ab1495c.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d49672fcb0efaad3cb8e9",
+      "sourcePath": "imports/webflow/assets/images/651d49672fcb0efaad3cb8e9.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d497ac40a4303d51dfeca",
+      "sourcePath": "imports/webflow/assets/images/651d497ac40a4303d51dfeca.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d49872fcb0efaad3ccc0d",
+      "sourcePath": "imports/webflow/assets/images/651d49872fcb0efaad3ccc0d.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d49942f319ae10f76a6f5",
+      "sourcePath": "imports/webflow/assets/images/651d49942f319ae10f76a6f5.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d49a1e49f9e440a22f14d",
+      "sourcePath": "imports/webflow/assets/images/651d49a1e49f9e440a22f14d.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4bfa1bbdd80682ef39ef",
+      "sourcePath": "imports/webflow/assets/images/651d4bfa1bbdd80682ef39ef.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4c0c938885e8b359e910",
+      "sourcePath": "imports/webflow/assets/images/651d4c0c938885e8b359e910.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4c2248208e7cf908adc2",
+      "sourcePath": "imports/webflow/assets/images/651d4c2248208e7cf908adc2.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4c33b4e0a78d4b69a240",
+      "sourcePath": "imports/webflow/assets/images/651d4c33b4e0a78d4b69a240.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4c4386bb82ec0e522062",
+      "sourcePath": "imports/webflow/assets/images/651d4c4386bb82ec0e522062.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4ddd0ad649c56a7a62b6",
+      "sourcePath": "imports/webflow/assets/images/651d4ddd0ad649c56a7a62b6.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4deade46957985133167",
+      "sourcePath": "imports/webflow/assets/images/651d4deade46957985133167.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4df62e28168dab0feb4b",
+      "sourcePath": "imports/webflow/assets/images/651d4df62e28168dab0feb4b.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4e01c0afd78dd9ea6d3f",
+      "sourcePath": "imports/webflow/assets/images/651d4e01c0afd78dd9ea6d3f.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4e1a35e1531b5b9b7c15",
+      "sourcePath": "imports/webflow/assets/images/651d4e1a35e1531b5b9b7c15.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4f2713381ed5919289a5",
+      "sourcePath": "imports/webflow/assets/images/651d4f2713381ed5919289a5.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4f381991cc55044b4bf4",
+      "sourcePath": "imports/webflow/assets/images/651d4f381991cc55044b4bf4.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4f432e28168dab10c2b0",
+      "sourcePath": "imports/webflow/assets/images/651d4f432e28168dab10c2b0.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4f57d6765e055db10144",
+      "sourcePath": "imports/webflow/assets/images/651d4f57d6765e055db10144.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d4f6f5a6041010d0df333",
+      "sourcePath": "imports/webflow/assets/images/651d4f6f5a6041010d0df333.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d511d620daecc5fb514d1",
+      "sourcePath": "imports/webflow/assets/images/651d511d620daecc5fb514d1.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d512ef7a43f9a9f1cfc6c",
+      "sourcePath": "imports/webflow/assets/images/651d512ef7a43f9a9f1cfc6c.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d51427afe77df4b4ce316",
+      "sourcePath": "imports/webflow/assets/images/651d51427afe77df4b4ce316.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d5155a76f1dd685ce971f",
+      "sourcePath": "imports/webflow/assets/images/651d5155a76f1dd685ce971f.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d51604045f4b77de956ba",
+      "sourcePath": "imports/webflow/assets/images/651d51604045f4b77de956ba.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d521e104f85d6bbbdd202",
+      "sourcePath": "imports/webflow/assets/images/651d521e104f85d6bbbdd202.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d542e12e6edc12a7f2d30",
+      "sourcePath": "imports/webflow/assets/images/651d542e12e6edc12a7f2d30.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d543995a34d429823a00d",
+      "sourcePath": "imports/webflow/assets/images/651d543995a34d429823a00d.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d543e73ab21181203a385",
+      "sourcePath": "imports/webflow/assets/images/651d543e73ab21181203a385.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d54426155251c480832e4",
+      "sourcePath": "imports/webflow/assets/images/651d54426155251c480832e4.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d5455fef3e7a8d069bb57",
+      "sourcePath": "imports/webflow/assets/images/651d5455fef3e7a8d069bb57.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8816b1f9f370048245ac",
+      "sourcePath": "imports/webflow/assets/images/651d8816b1f9f370048245ac.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8818085cc7f4d304fe5a",
+      "sourcePath": "imports/webflow/assets/images/651d8818085cc7f4d304fe5a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8820d28d65a9a558a825",
+      "sourcePath": "imports/webflow/assets/images/651d8820d28d65a9a558a825.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8824f302a7a656a41bb2",
+      "sourcePath": "imports/webflow/assets/images/651d8824f302a7a656a41bb2.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d88279bf5709de49a71d5",
+      "sourcePath": "imports/webflow/assets/images/651d88279bf5709de49a71d5.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8a6081773e12e4a4362f",
+      "sourcePath": "imports/webflow/assets/images/651d8a6081773e12e4a4362f.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8a6a75c2ceaf706556bf",
+      "sourcePath": "imports/webflow/assets/images/651d8a6a75c2ceaf706556bf.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8a6ebbbbe38b86d8b084",
+      "sourcePath": "imports/webflow/assets/images/651d8a6ebbbbe38b86d8b084.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8a722cb8e726ddbc6cfa",
+      "sourcePath": "imports/webflow/assets/images/651d8a722cb8e726ddbc6cfa.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d8a7691f69cac156895ee",
+      "sourcePath": "imports/webflow/assets/images/651d8a7691f69cac156895ee.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d9cc6ac4a0c60587b7b6f",
+      "sourcePath": "imports/webflow/assets/images/651d9cc6ac4a0c60587b7b6f.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d9cda76fd2422edafd01d",
+      "sourcePath": "imports/webflow/assets/images/651d9cda76fd2422edafd01d.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d9cee397716049ba3813c",
+      "sourcePath": "imports/webflow/assets/images/651d9cee397716049ba3813c.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d9cf80d567ad3fa668dd8",
+      "sourcePath": "imports/webflow/assets/images/651d9cf80d567ad3fa668dd8.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651d9d0488f32bb8cbb67201",
+      "sourcePath": "imports/webflow/assets/images/651d9d0488f32bb8cbb67201.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eab7a97b9dc0dae85e6ca",
+      "sourcePath": "imports/webflow/assets/images/651eab7a97b9dc0dae85e6ca.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eabf40e57607bd070c328",
+      "sourcePath": "imports/webflow/assets/images/651eabf40e57607bd070c328.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eac12a6ed68925201e0e6",
+      "sourcePath": "imports/webflow/assets/images/651eac12a6ed68925201e0e6.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb06f8ac6ceb11fc8baec",
+      "sourcePath": "imports/webflow/assets/images/651eb06f8ac6ceb11fc8baec.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb3b38ed930fbe78fd97a",
+      "sourcePath": "imports/webflow/assets/images/651eb3b38ed930fbe78fd97a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb5fab873a24649ff0253",
+      "sourcePath": "imports/webflow/assets/images/651eb5fab873a24649ff0253.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb613cd1415931deb6a3e",
+      "sourcePath": "imports/webflow/assets/images/651eb613cd1415931deb6a3e.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb61f50a775761feb8864",
+      "sourcePath": "imports/webflow/assets/images/651eb61f50a775761feb8864.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb62333dfb99f49f8cb6a",
+      "sourcePath": "imports/webflow/assets/images/651eb62333dfb99f49f8cb6a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb6cd024dac289bcccd90",
+      "sourcePath": "imports/webflow/assets/images/651eb6cd024dac289bcccd90.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb6d20896bea08df98026",
+      "sourcePath": "imports/webflow/assets/images/651eb6d20896bea08df98026.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb6d8de2d662afa90f366",
+      "sourcePath": "imports/webflow/assets/images/651eb6d8de2d662afa90f366.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb6dc17eee978a2ef4183",
+      "sourcePath": "imports/webflow/assets/images/651eb6dc17eee978a2ef4183.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb6e19c8ab181fb83ca49",
+      "sourcePath": "imports/webflow/assets/images/651eb6e19c8ab181fb83ca49.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb79bf3d12126fda8543b",
+      "sourcePath": "imports/webflow/assets/images/651eb79bf3d12126fda8543b.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb7a2bbad4c45d5d5a339",
+      "sourcePath": "imports/webflow/assets/images/651eb7a2bbad4c45d5d5a339.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb7a70896bea08dfa0716",
+      "sourcePath": "imports/webflow/assets/images/651eb7a70896bea08dfa0716.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb7abd81d6b1ac11d3265",
+      "sourcePath": "imports/webflow/assets/images/651eb7abd81d6b1ac11d3265.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb7af711697d2088893f3",
+      "sourcePath": "imports/webflow/assets/images/651eb7af711697d2088893f3.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb9512b96cb620230dada",
+      "sourcePath": "imports/webflow/assets/images/651eb9512b96cb620230dada.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb9543eeec11ce3f9850e",
+      "sourcePath": "imports/webflow/assets/images/651eb9543eeec11ce3f9850e.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb957db084aaab5b9a80e",
+      "sourcePath": "imports/webflow/assets/images/651eb957db084aaab5b9a80e.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb95c0a9a2f9728e7915c",
+      "sourcePath": "imports/webflow/assets/images/651eb95c0a9a2f9728e7915c.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651eb9614361f2827d58894a",
+      "sourcePath": "imports/webflow/assets/images/651eb9614361f2827d58894a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec3b095697eb61f64e724",
+      "sourcePath": "imports/webflow/assets/images/651ec3b095697eb61f64e724.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec3c2e0ed1a372a5a6d46",
+      "sourcePath": "imports/webflow/assets/images/651ec3c2e0ed1a372a5a6d46.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec3c6f94d11e323377f70",
+      "sourcePath": "imports/webflow/assets/images/651ec3c6f94d11e323377f70.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec3cafae331ea16eccbda",
+      "sourcePath": "imports/webflow/assets/images/651ec3cafae331ea16eccbda.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec6150a7e5b8cda74133c",
+      "sourcePath": "imports/webflow/assets/images/651ec6150a7e5b8cda74133c.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec63ce1dde357d047f53a",
+      "sourcePath": "imports/webflow/assets/images/651ec63ce1dde357d047f53a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec64617eee978a2f99d2f",
+      "sourcePath": "imports/webflow/assets/images/651ec64617eee978a2f99d2f.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec64a3c080d14e35fa1af",
+      "sourcePath": "imports/webflow/assets/images/651ec64a3c080d14e35fa1af.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651ec6d7132a2cfb80d4309e",
+      "sourcePath": "imports/webflow/assets/images/651ec6d7132a2cfb80d4309e.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fd2d18907825f87e7fcfa",
+      "sourcePath": "imports/webflow/assets/images/651fd2d18907825f87e7fcfa.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe39e74d682efa73fd91a",
+      "sourcePath": "imports/webflow/assets/images/651fe39e74d682efa73fd91a.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe3a44e048bc45a76fa16",
+      "sourcePath": "imports/webflow/assets/images/651fe3a44e048bc45a76fa16.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe3aa82ce85e88dee5d68",
+      "sourcePath": "imports/webflow/assets/images/651fe3aa82ce85e88dee5d68.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe3cee1dde357d0f21005",
+      "sourcePath": "imports/webflow/assets/images/651fe3cee1dde357d0f21005.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe3d24b8245afa0fa8fa8",
+      "sourcePath": "imports/webflow/assets/images/651fe3d24b8245afa0fa8fa8.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe40b9ea9c76030ae1402",
+      "sourcePath": "imports/webflow/assets/images/651fe40b9ea9c76030ae1402.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe414c66fcc839d04d88e",
+      "sourcePath": "imports/webflow/assets/images/651fe414c66fcc839d04d88e.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe41dc92d088af83782f3",
+      "sourcePath": "imports/webflow/assets/images/651fe41dc92d088af83782f3.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe47c16271ffdc9e16f73",
+      "sourcePath": "imports/webflow/assets/images/651fe47c16271ffdc9e16f73.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe4b9cd1415931d9750c3",
+      "sourcePath": "imports/webflow/assets/images/651fe4b9cd1415931d9750c3.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe4be16271ffdc9e1a0f4",
+      "sourcePath": "imports/webflow/assets/images/651fe4be16271ffdc9e1a0f4.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe4c81025aaa2e6c5afb4",
+      "sourcePath": "imports/webflow/assets/images/651fe4c81025aaa2e6c5afb4.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe8fdba8ba80ec49456f2",
+      "sourcePath": "imports/webflow/assets/images/651fe8fdba8ba80ec49456f2.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651fe93cd6471c021a1a4011",
+      "sourcePath": "imports/webflow/assets/images/651fe93cd6471c021a1a4011.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651feae43c080d14e30a7a51",
+      "sourcePath": "imports/webflow/assets/images/651feae43c080d14e30a7a51.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651feae8bbad4c45d58d42f5",
+      "sourcePath": "imports/webflow/assets/images/651feae8bbad4c45d58d42f5.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651feaebc66fcc839d0a6fba",
+      "sourcePath": "imports/webflow/assets/images/651feaebc66fcc839d0a6fba.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651feaf3b873a24649b086ba",
+      "sourcePath": "imports/webflow/assets/images/651feaf3b873a24649b086ba.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651feaf7c66fcc839d0a7850",
+      "sourcePath": "imports/webflow/assets/images/651feaf7c66fcc839d0a7850.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "651feb5ef72da9db59d44bde",
+      "sourcePath": "imports/webflow/assets/images/651feb5ef72da9db59d44bde.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "652d84aba5255cda52c1c900",
+      "sourcePath": "imports/webflow/assets/images/652d84aba5255cda52c1c900.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "653158f7c448a9f9e553e8ac",
+      "sourcePath": "imports/webflow/assets/images/653158f7c448a9f9e553e8ac.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "65375b289d7c90fe91f0fcdc",
+      "sourcePath": "imports/webflow/assets/images/65375b289d7c90fe91f0fcdc.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "65375daf30602c1e52f15e03",
+      "sourcePath": "imports/webflow/assets/images/65375daf30602c1e52f15e03.webp",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "653760ae3ebdaf05410615d5",
+      "sourcePath": "imports/webflow/assets/images/653760ae3ebdaf05410615d5.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "6537621f8d0309a7bc831c22",
+      "sourcePath": "imports/webflow/assets/images/6537621f8d0309a7bc831c22.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "6537639952d4eea391d3c861",
+      "sourcePath": "imports/webflow/assets/images/6537639952d4eea391d3c861.jpg",
+      "placement": "r2",
+      "category": "content"
+    },
+    {
+      "id": "6973aa8ddda60d8a2e57b1b4",
+      "sourcePath": "imports/webflow/assets/images/6973aa8ddda60d8a2e57b1b4.png",
+      "placement": "r2",
+      "category": "content"
+    }
+  ]
+}
