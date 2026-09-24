@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T23:58:00+08:00",
+  "generatedBy": "MiniMax Code (round 7) — owner-selected integration into local V1 /plan, /about",
+  "scope": "assets/optimized/secondary-candidates/ 候選圖片來源對照",
+  "candidateRoot": "assets/optimized/secondary-candidates/",
+  "notes": [
+    "Round 7 變更：owner 已選定 4 張圖整合進本機 V1 — /plan hero 改用 public-lounge-001.jpg、導言與方案列表之間加 outdoor-patio-001.jpg 輔圖；/about hero 改用 mansion-night-001.jpg、夢想與分享後加 forest-night-walk-001.jpg 輔圖；4 張以 cp 自 assets/optimized/secondary-candidates/ 複製至 apps/web/phase-b-spike/public/assets/secondary/，bytes 與 SHA-256 完全未變；本切片僅為本機 V1 整合，尚未發布、無遠端異動。",
+    "本切片紀錄 owner 已選定之 4 張圖，接入本機 V1 的 /plan 與 /about（apps/web/phase-b-spike/public/assets/secondary/）；2026-09-25 owner 已確認可公開商用及用於 Preview，正式網域仍未切換；本紀錄不得冒充正式站上線證據。",
+    "Round 4 變更：將 round 3 的 5 張候選自 apps/web/phase-b-spike/public/assets/secondary/ 搬移至 assets/optimized/secondary-candidates/；每張以 mv 搬移，bytes、SHA-256、權限皆未變更。新增 3 張候選從 assets/optimized/<id>/<id>-fallback-w1280.jpg 以 cp 複製，未重新壓縮、未覆寫任何來源檔。",
+    "搬移原因：Astro 會將 apps/web/phase-b-spike/public/ 內未引用檔案一併複製到 dist/，候選目錄遷出 public/ 後可避免未用檔案洩漏到正式建置。新候選目錄同時受根目錄 .gitignore 的 assets/optimized/ 規則排除，Git 不會追蹤；正式媒體交付仍待 Codex / 使用者決策。",
+    "5 張原候選中已有 4 張被 V1 provenance 引用於原首頁／空間頁（apps/web/phase-b-spike/reference/v1-preview-media-provenance.json）：mansion-exterior=space-9 /、/spaces；public-lounge=space-7 /spaces；iot-meeting=space-3 /、/spaces；bar-mountain=space-2 /spaces。outdoor-patio-001.jpg 不在原 V1。JSON 內以 usedByV1、v1ContentId、v1Routes、v1Purpose 標示此狀態。Round 7 owner 從此 5 張＋round 4 新增 3 張（共 8 張候選）中選出 4 張整合至本機 V1 /plan、/about，與「未用於原首頁／空間頁」為兩條不同條件：public-lounge 同時被 V1 引用並被選入 /plan hero；outdoor-patio、mansion-night、forest-night-walk 為未用於原 V1 的新選入；mansion-exterior、iot-meeting、bar-mountain 此次未進入本機 V1 整合；aerial-garden 既未用於原 V1 也未選入。四張已選圖的 Preview 授權見 previewReleaseDecision；其他候選權利未由本輪確認。",
+    "iot-meeting-001.jpg 用途已收斂為「智慧環控／多功能會議室」：圖中牆面為智慧家庭感測器介面投影，未拍攝長照設備，不得於長照或長者照護相關段落作為設備實照使用；JSON 已加 usageRestriction 與 round3→round4 的差異註記。",
+    "新候選 3 張（mansion-night-001、aerial-garden-001、forest-night-walk-001）皆為本機 corpus 中視覺主題不同於 V1 已用 16 個 asset ID 的真實莊園照片，採用半空拍視角、夜間林木燈光步道、夜間莊園建築外觀三種與既有空間頁不重疊的主題。",
+    "所有候選均非 AI 生成、非網路抓圖、非房間 401/402、未使用 stock 圖；內容圖片使用有意義 alt；純裝飾圖片使用空 alt（依 AGENTS.md 第 30 行既定規則；round 5 已更正原誤植的「純裝飾意圖者仍以有意義 alt 描述實景」通則）。",
+    "原始圖來源：imports/webflow/assets/images/<id>.jpg，原圖 SHA-256 已與 assets/manifests/optimization-live.json 比對一致，未被本任務覆寫。",
+    "選圖已於 round 7 結束（/plan hero = public-lounge-001、輔圖 = outdoor-patio-001；/about hero = mansion-night-001、輔圖 = forest-night-walk-001），4 圖**已接入本機 V1 /plan、/about**（apps/web/phase-b-spike/public/assets/secondary/）；本切片原先不宣告正式發布或商用授權，後續 owner 的 Preview 使用授權另見 previewReleaseDecision。Round 8 補：移除 /plan 與 /about 兩條未經 owner 核准的 figcaption，保留 figure 與既有 alt。"
+  ],
+  "licensingNotes": "本切片候選來自本機 Webflow 匯入資產；來源 manifest 未記錄拍攝者、授權文件與拍攝日期。2026-09-25 owner 已確認選入 /plan、/about 的四張照片可用於公開 Preview 及商業網站；這是使用者的使用授權確認，不推定其他四張候選的權利，也不宣稱拍攝者或授權文件已存檔。正式網域切換不在本輪範圍。",
+  "previewReleaseDecision": {
+    "decidedBy": "owner",
+    "decidedAt": "2026-09-25",
+    "scope": "public Cloudflare Preview only; Webflow and production domain unchanged",
+    "selectedFilesAuthorized": ["public-lounge-001.jpg", "outdoor-patio-001.jpg", "mansion-night-001.jpg", "forest-night-walk-001.jpg"],
+    "commercialUseConfirmed": true,
+    "photographerAndLicenseDocumentsRecorded": false
+  },
+  "candidates": [
+    {
+      "file": "mansion-exterior-001.jpg",
+      "assetId": "651d8a6081773e12e4a4362f",
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 498037,
+      "candidateSha256": "d8b01f043e0c1b91bbac91fdf8d0962e93f586bc5bc591f448f82b65f4d3b303",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d8a6081773e12e4a4362f.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 2170544,
+        "originalSha256": "bb08b2facfad51ca542e2de83d71d28948a87b23c52eacb5999aad7f6e795849",
+        "optimizedPath": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "relocatedFrom": "apps/web/phase-b-spike/public/assets/secondary/mansion-exterior-001.jpg",
+      "usedByV1": true,
+      "v1ContentId": "space-9",
+      "v1ContentLabel": "戶外庭園",
+      "v1Routes": [
+        "/",
+        "/spaces"
+      ],
+      "v1Purpose": "homepage-space-preview + shared-space-article",
+      "suggestedPages": [
+        "/about"
+      ],
+      "suggestedRole": "/about 莊園外觀備選（已有 V1 引用於 space-9 /、/spaces；owner 於 round 7 選定 mansion-night-001 為 /about hero，本張未進入本機 V1 /plan、/about 整合）",
+      "visualSummary": "莊園建築正面與庭園：大面積混凝土建築外觀、入口階梯、停車透水磚、樹蔭。綠意環繞的山坡地形。",
+      "suggestedAlt": "紅河隱園莊園建築正面與庭園，入口階梯與停車場，背景綠意山坡。"
+    },
+    {
+      "file": "outdoor-patio-001.jpg",
+      "assetId": "651d8a6a75c2ceaf706556bf",
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 473208,
+      "candidateSha256": "c1409bb05836487a7604590866244d1da0e9464c0f2c3e5317ef6c64ed6c2a30",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d8a6a75c2ceaf706556bf.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 2056093,
+        "originalSha256": "4e393bf372ba63c2a4d70b887bfd236c762ef048f787733cba54f501e3fc0334",
+        "optimizedPath": "assets/optimized/651d8a6a75c2ceaf706556bf/651d8a6a75c2ceaf706556bf-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "relocatedFrom": "apps/web/phase-b-spike/public/assets/secondary/outdoor-patio-001.jpg",
+      "usedByV1": false,
+      "suggestedPages": [
+        "/about",
+        "/plan"
+      ],
+      "suggestedRole": "/about 副 hero 或 /plan 包棟戶外公共空間輔圖（未與 V1 重疊，可作為新候選）",
+      "visualSummary": "戶外露台：藤椅、小圓桌、雙層下午茶點心組、懸掛植栽；窗外烏來峽谷綠山景。",
+      "suggestedAlt": "紅河隱園戶外露台下午茶：藤椅與雙層點心架，背景為烏來峽谷綠山景。",
+      "ownerSelected": true,
+      "selectionRound": 7,
+      "selectedFor": {
+        "route": "/plan",
+        "role": "auxiliary",
+        "section": "導言（plan-intro-heading）與訂房方案總覽（plan-list-heading）之間",
+        "deployment": "apps/web/phase-b-spike/public/assets/secondary/ (本機 V1；尚未發布)",
+        "note": "章節輔圖"
+      }
+    },
+    {
+      "file": "public-lounge-001.jpg",
+      "assetId": "651d542e12e6edc12a7f2d30",
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 205203,
+      "candidateSha256": "ca0e98be6d87ec0336d4362967bea06091754587be7ca2517fc9d0ff8b0a9e30",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d542e12e6edc12a7f2d30.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 1446655,
+        "originalSha256": "232ebcfebd99bef72607bc86ba765fb498b64a27cac9697c59987eaa4dad7d8d",
+        "optimizedPath": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "relocatedFrom": "apps/web/phase-b-spike/public/assets/secondary/public-lounge-001.jpg",
+      "usedByV1": true,
+      "v1ContentId": "space-7",
+      "v1ContentLabel": "3F&4F交誼廳",
+      "v1Routes": [
+        "/spaces"
+      ],
+      "v1Purpose": "shared-space-article",
+      "suggestedPages": [
+        "/plan"
+      ],
+      "suggestedRole": "/plan 包棟公共空間 hero（已由 owner 於 round 7 選定；同時仍為 V1 space-7 引用，/plan 整合時沿用同張）",
+      "visualSummary": "室內公共空間：彩色沙發椅群、白色大理石圓桌、現代抽象畫作、金色吊燈；天花板為白色幾何桁架；玻璃隔間可見後方用餐區。",
+      "suggestedAlt": "紅河隱園室內公共空間：彩色沙發椅與大理石圓桌，牆上抽象畫作，玻璃隔間後方為用餐區。",
+      "ownerSelected": true,
+      "selectionRound": 7,
+      "selectedFor": {
+        "route": "/plan",
+        "role": "hero",
+        "section": "頁面頂部 secondary-page-hero",
+        "deployment": "apps/web/phase-b-spike/public/assets/secondary/ (本機 V1；尚未發布)",
+        "note": "取代原 room-401.jpg"
+      }
+    },
+    {
+      "file": "iot-meeting-001.jpg",
+      "assetId": "651d4bfa1bbdd80682ef39ef",
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 106657,
+      "candidateSha256": "7f192e7571fc27ccff0379413b3b79c079eff5a3623a894357c13ec3946b4401",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d4bfa1bbdd80682ef39ef.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 1006045,
+        "originalSha256": "b5ef724452338824bad9a62c213ccb4bb4f99d6e660ba713e4d577dd71e1e004",
+        "optimizedPath": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "relocatedFrom": "apps/web/phase-b-spike/public/assets/secondary/iot-meeting-001.jpg",
+      "usedByV1": true,
+      "v1ContentId": "space-3",
+      "v1ContentLabel": "多功能會議室",
+      "v1Routes": [
+        "/",
+        "/spaces"
+      ],
+      "v1Purpose": "homepage-space-preview + shared-space-article",
+      "usageRestriction": "僅限作為「智慧環控／多功能會議室」章節輔圖；圖中牆面為智慧家庭感測器介面投影，未拍攝長照設備，不得於長照或長者照護相關段落作為設備實照使用。",
+      "suggestedPages": [
+        "/about",
+        "/plan"
+      ],
+      "suggestedRole": "/about 智慧環控／多功能會議室章節輔圖，或 /plan 商務會議包場 hero 候選（round 3 曾誤植為「IoT 長照設備展示中心」，round 4 已更正）",
+      "visualSummary": "智慧會議室：長桌與黑色會議椅，牆面投影智慧家庭控制介面（感測器、調濕器、攝影機、空氣品質、保全等圖示）。",
+      "suggestedAlt": "紅河隱園智慧會議室：牆面投影智慧家庭控制介面，長桌與會議椅。"
+    },
+    {
+      "file": "bar-mountain-001.jpg",
+      "assetId": "651d49672fcb0efaad3cb8e9",
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 226007,
+      "candidateSha256": "6e8947681212dbd696714a6f37aefa39009308a28b64e811649ac99325ee62ac",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d49672fcb0efaad3cb8e9.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 1531147,
+        "originalSha256": "46dd90c21459ffbe284ef5a90a4bcfb531f1a0a3bf44f9ed57cde4173fb2e807",
+        "optimizedPath": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "relocatedFrom": "apps/web/phase-b-spike/public/assets/secondary/bar-mountain-001.jpg",
+      "usedByV1": true,
+      "v1ContentId": "space-2",
+      "v1ContentLabel": "1F中島餐飲吧台",
+      "v1Routes": [
+        "/spaces"
+      ],
+      "v1Purpose": "shared-space-article",
+      "suggestedPages": [
+        "/plan",
+        "/about"
+      ],
+      "suggestedRole": "/plan 包棟公共空間輔圖（吧台 / 下午茶場景），或 /about 設施輔圖（已有 V1 引用於 space-2 /spaces；owner 於 round 7 選定 outdoor-patio-001 為 /plan 輔圖，本張未進入本機 V1 /plan、/about 整合）",
+      "visualSummary": "室內吧台：白色石材中島、金色高腳椅、玻璃飲料壺、甜點架；落地窗外是烏來峽谷綠山景。",
+      "suggestedAlt": "紅河隱園室內吧台區：白色中島、金色高腳椅、甜點架與玻璃飲料壺，落地窗外為綠山景。"
+    },
+    {
+      "file": "aerial-garden-001.jpg",
+      "assetId": "651d8a6ebbbbe38b86d8b084",
+      "addedInRound": 4,
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 566576,
+      "candidateSha256": "5d83f5bbf5e1229ef99465e222cc8829cf072386a1072f75415819fc1db82e34",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d8a6ebbbbe38b86d8b084.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 2197299,
+        "originalSha256": "046059d059fb5c52ba46a935640014aab58a0271910b9684fd5e74266a7b2273",
+        "optimizedPath": "assets/optimized/651d8a6ebbbbe38b86d8b084/651d8a6ebbbbe38b86d8b084-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "usedByV1": false,
+      "suggestedPages": [
+        "/about"
+      ],
+      "suggestedRole": "/about 入口／停車環境輔圖（莊園到達動線與庭園配置；非 Hero 候選，桌機保留約 45% 高度、手機保留約 90% 寬度）",
+      "visualSummary": "半空拍視角：莊園二樓往下看，照片實際可見停車坪（透水磚）、庭園步道與周圍林木；照片中未拍到完整莊園建築輪廓。",
+      "suggestedAlt": "紅河隱園半空拍視角：莊園二樓往下看，庭園步道、停車場與周圍林木。"
+    },
+    {
+      "file": "mansion-night-001.jpg",
+      "assetId": "651d5455fef3e7a8d069bb57",
+      "addedInRound": 4,
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 289133,
+      "candidateSha256": "c7e030069d7457d8b546713a93fdc9e19a178d224e4c6baa627af17616244786",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d5455fef3e7a8d069bb57.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 1779806,
+        "originalSha256": "8f7730042aa1f1a57d9e5ad67c0ff5078ace82a94dd636cd5e46832d1b3918ae",
+        "optimizedPath": "assets/optimized/651d5455fef3e7a8d069bb57/651d5455fef3e7a8d069bb57-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "usedByV1": false,
+      "suggestedPages": [
+        "/about"
+      ],
+      "suggestedRole": "/about 夜晚莊園建築外觀 hero（與 mansion-exterior-001.jpg 為日夜對照，補強 /about 主視覺層次）",
+      "visualSummary": "夜晚莊園建築：大面積玻璃落地窗可見室內彩色椅、藍調天空、暖色室內燈光打亮建築量體。",
+      "suggestedAlt": "紅河隱園夜晚建築外觀：大面積落地窗透出室內燈光，藍調天空與林木包圍。",
+      "ownerSelected": true,
+      "selectionRound": 7,
+      "selectedFor": {
+        "route": "/about",
+        "role": "hero",
+        "section": "頁面頂部 secondary-page-hero",
+        "deployment": "apps/web/phase-b-spike/public/assets/secondary/ (本機 V1；尚未發布)",
+        "note": "取代原 room-402.jpg"
+      }
+    },
+    {
+      "file": "forest-night-walk-001.jpg",
+      "assetId": "651d8a7691f69cac156895ee",
+      "addedInRound": 4,
+      "contentType": "image/jpeg",
+      "format": "jpeg-fallback (mjpeg, yuvj420p, q:v1)",
+      "dimensions": {
+        "width": 1280,
+        "height": 854
+      },
+      "bytes": 470730,
+      "candidateSha256": "ec946c959dd4884ee43e423b0b6a7662903fc7483b3d4cabdd5f506917ce99a9",
+      "source": {
+        "originalPath": "imports/webflow/assets/images/651d8a7691f69cac156895ee.jpg",
+        "originalDimensions": {
+          "width": 1920,
+          "height": 1280
+        },
+        "originalBytes": 2092220,
+        "originalSha256": "04f730f45d67ac10f5834e4ad0a309c178e9d3aebd3230b7ddec96f81a60b4b0",
+        "optimizedPath": "assets/optimized/651d8a7691f69cac156895ee/651d8a7691f69cac156895ee-fallback-w1280.jpg",
+        "classificationManifest": "assets/manifests/asset-classification.json",
+        "liveManifest": "assets/manifests/optimization-live.json"
+      },
+      "hasTransparency": false,
+      "usedByV1": false,
+      "suggestedPages": [
+        "/about"
+      ],
+      "suggestedRole": "/about 莊園周邊林木夜景輔圖（強化「與森林共處」主軸，補強 mansion-exterior 與 mansion-night 之外的環境主題）",
+      "visualSummary": "夜晚林木步道：步道兩側低燈光打亮樹幹，遠方可見莊園建築輪廓，整體偏藍綠色調。",
+      "suggestedAlt": "紅河隱園夜晚林木步道：低燈光沿步道打亮樹幹，遠方為莊園建築輪廓。",
+      "ownerSelected": true,
+      "selectionRound": 7,
+      "selectedFor": {
+        "route": "/about",
+        "role": "auxiliary",
+        "section": "夢想與分享（about-story-heading）後、淨零排放&智慧科技（about-sustainability-heading）前",
+        "deployment": "apps/web/phase-b-spike/public/assets/secondary/ (本機 V1；尚未發布)",
+        "note": "莊園故事後輔圖"
+      }
+    }
+  ],
+  "notUsedReasons": {
+    "651d4c33b4e0a78d4b69a240 (002.jpg hero-still)": "已用於 B1 試作的首頁 hero（hero-still.jpg），與 /plan、/about hero 角色重疊；本輪不重複。",
+    "651eb5fab873a24649ff0253 / 651eb6cd024dac289bcccd90 (room-401 / room-402)": "已用於 B1 試作的客房樣本；本輪不重複，使用者任務明令不要複製房間樣本充數。",
+    "650758aa0b7a501a1da902bf 等 6000×4000 高解析度原檔": "尺寸過大且檔案過重（>1MB），未進入 w1280 fallback 目錄；如需 4K 用圖應另走 R2 / Cloudflare 流程，不在本切片範圍。",
+    "65052bcb8da9ae0eec18c24c / a4 / a5 / unsplash 圖檔": "Webflow 模板 stock 圖，非莊園實景，已被 asset-classification 標記 placement=archive，未採用。",
+    "651d4810e2f080d80ab1495c、651d543995a34d429823a00d、651d8816b1f9f370048245ac、651d8801e2f080d80ab13b64、651d8a722cb8e726ddbc6cfa、651ec64a3c080d14e35fa1af": "視覺內容（客廳、會議室、吧台、餐廳）與已選 5 張主題重疊；本輪不重複，避免「無意義重複圖」。",
+    "651d4c0c938885e8b359e910 (夜間雙投影長桌會議室)": "視覺內容與 iot-meeting-001.jpg（V1 space-3）高度重疊；本輪不重複。",
+    "651d4df62e28168dab0feb4b (LG 智慧電視牆 + 音響)": "視覺內容與 V1 space-6 影音娛樂廳候選重疊；本輪不重複。",
+    "651d8820d28d65a9a558a825、651d8824f302a7a656a41bb2、651d88279bf5709de49a71d5 (系列戶外露台桌椅 + 遮陽傘 + 山谷景)": "與 V1 space-8 景觀露台候選同系列主題，差異不足以構成新增候選；本輪不重複。",
+    "651d4c4386bb82ec0e522062 (夜晚窗景室內望向會議室)": "視覺內容與 iot-meeting-001.jpg（V1 space-3）相同場景，僅拍攝角度不同；本輪不重複。",
+    "651d4deade46957985133167 (室內客廳沙發區北歐風)": "視覺內容與 V1 space-1 接待大廳候選相似；本輪不重複。",
+    "651d512ef7a43f9a9f1cfc6c、651d51427afe77df4b4ce316 (廚房中島 / 冰箱 + 烤箱 + 廚櫃牆)": "視覺內容與 V1 space-5 廚房候選重疊；本輪不重複。",
+    "651d4e1a35e1531b5b9b7c15 (米白色絨布椅 + 金邊桌 + 玻璃窗家具近景)": "主題偏室內家具近景，與本切片 hero / 輔圖定位不符；本輪不採用。"
+  },
+  "selection": {
+    "round": 7,
+    "decidedBy": "owner (在 round 5–6 預覽板中選定)",
+    "decidedAt": "2026-09-23",
+    "scope": "本機 V1 /plan、/about 整合（尚未發布、無遠端異動）",
+    "selectedForPlan": [
+      {
+        "file": "public-lounge-001.jpg",
+        "role": "hero",
+        "section": "secondary-page-hero（取代 room-401.jpg）",
+        "alt": "紅河隱園室內公共空間：彩色沙發椅與大理石圓桌，牆上抽象畫作，玻璃隔間後方為用餐區。",
+        "assetId": "651d542e12e6edc12a7f2d30"
+      },
+      {
+        "file": "outdoor-patio-001.jpg",
+        "role": "auxiliary",
+        "section": "導言與方案總覽之間（章節輔圖）",
+        "alt": "紅河隱園戶外露台下午茶：藤椅與雙層點心架，背景為烏來峽谷綠山景。",
+        "assetId": "651d8a6a75c2ceaf706556bf"
+      }
+    ],
+    "selectedForAbout": [
+      {
+        "file": "mansion-night-001.jpg",
+        "role": "hero",
+        "section": "secondary-page-hero（取代 room-402.jpg）",
+        "alt": "紅河隱園夜晚建築外觀：大面積落地窗透出室內燈光，藍調天空與林木包圍。",
+        "assetId": "651d5455fef3e7a8d069bb57"
+      },
+      {
+        "file": "forest-night-walk-001.jpg",
+        "role": "auxiliary",
+        "section": "夢想與分享章節之後（莊園故事輔圖）",
+        "alt": "紅河隱園夜晚林木步道：低燈光沿步道打亮樹幹，遠方為莊園建築輪廓。",
+        "assetId": "651d8a7691f69cac156895ee"
+      }
+    ],
+    "deploymentPath": "apps/web/phase-b-spike/public/assets/secondary/",
+    "sourceRoot": "assets/optimized/secondary-candidates/",
+    "verification": {
+      "copyMethod": "cp（未重新壓縮、未覆寫來源）",
+      "preCopyShaMatchesPostCopySha": true,
+      "allDimensions": "1280 x 854 jpeg",
+      "licensingStillPending": false,
+      "licensingMetadataStillPending": true,
+      "noPublicPublish": false,
+      "publicPreviewAuthorized": true,
+      "noRemoteMutation": true
+    }
+  }
+}

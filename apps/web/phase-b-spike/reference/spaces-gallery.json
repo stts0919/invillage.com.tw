@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "sourcePath": "imports/webflow/site/html/spaces.html",
+  "sourceSha256": "d4f62e3dab222d9a49b1a064391389619716286705a6311d589f7a236dd8228a",
+  "galleries": [
+    {
+      "contentId": "room-1",
+      "kind": "rooms",
+      "sourceTab": "Tab 1",
+      "photos": [
+        { "assetId": "651eb5fab873a24649ff0253", "scene": "雙人床、陽台與收納櫃" },
+        { "assetId": "651eb613cd1415931deb6a3e", "scene": "沙發、雙人床與落地窗" },
+        { "assetId": "651d9cc6ac4a0c60587b7b6f", "scene": "床邊的智慧環控平板與檯燈" },
+        { "assetId": "651eb61f50a775761feb8864", "scene": "浴室的淋浴間與窗景" },
+        { "assetId": "651eb62333dfb99f49f8cb6a", "scene": "浴室的浴缸、洗手台與窗景" }
+      ]
+    },
+    {
+      "contentId": "room-2",
+      "kind": "rooms",
+      "sourceTab": "Tab 2",
+      "photos": [
+        { "assetId": "651eb6cd024dac289bcccd90", "scene": "雙人床、扶手椅與窗外樹景" },
+        { "assetId": "651eb6d20896bea08df98026", "scene": "窗邊扶手椅、花瓶與茶几" },
+        { "assetId": "651eb6d8de2d662afa90f366", "scene": "床鋪、窗邊座椅與浴室入口" },
+        { "assetId": "651eb6dc17eee978a2ef4183", "scene": "床鋪、茶水櫃與房門" },
+        { "assetId": "651eb6e19c8ab181fb83ca49", "scene": "浴室的浴缸、淋浴間與窗景" }
+      ]
+    },
+    {
+      "contentId": "room-3",
+      "kind": "rooms",
+      "sourceTab": "Tab 5",
+      "photos": [
+        { "assetId": "651eb79bf3d12126fda8543b", "scene": "雙人床、茶水櫃與綠色床頭牆" },
+        { "assetId": "651eb7a2bbad4c45d5d5a339", "scene": "窗邊古董桌椅、沙發與綠樹" },
+        { "assetId": "651eb7a70896bea08dfa0716", "scene": "床鋪與窗邊古董桌椅的夜景" },
+        { "assetId": "651eb7abd81d6b1ac11d3265", "scene": "客房外側的陽台與建築立面" },
+        { "assetId": "651eb7af711697d2088893f3", "scene": "浴室的浴缸、淋浴間與洗手台" }
+      ]
+    },
+    {
+      "contentId": "room-4",
+      "kind": "rooms",
+      "sourceTab": "Tab 6",
+      "photos": [
+        { "assetId": "651eb9512b96cb620230dada", "scene": "雙人床、扶手椅與窗景" },
+        { "assetId": "651eb9543eeec11ce3f9850e", "scene": "床鋪、窗邊扶手椅與畫作" },
+        { "assetId": "651eb957db084aaab5b9a80e", "scene": "窗邊扶手椅、茶几與床鋪" },
+        { "assetId": "651eb95c0a9a2f9728e7915c", "scene": "床鋪、窗景與浴室入口" },
+        { "assetId": "651eb9614361f2827d58894a", "scene": "浴室的浴缸、淋浴間與洗手台" }
+      ]
+    },
+    {
+      "contentId": "room-5",
+      "kind": "rooms",
+      "sourceTab": "Tab 7",
+      "photos": [
+        { "assetId": "651ec6150a7e5b8cda74133c", "scene": "夜間玻璃屋內的沙發與戶外露台" },
+        { "assetId": "651ec3b095697eb61f64e724", "scene": "玻璃屋內的沙發、座椅與森林" },
+        { "assetId": "651ec3c2e0ed1a372a5a6d46", "scene": "玻璃屋、室外餐桌與森林" },
+        { "assetId": "651ec3c6f94d11e323377f70", "scene": "露台上的餐桌、座椅與陽傘" },
+        { "assetId": "651ec3cafae331ea16eccbda", "scene": "浴室的洗手台、淋浴間與山景" }
+      ]
+    },
+    {
+      "contentId": "room-6",
+      "kind": "rooms",
+      "sourceTab": "Tab 9",
+      "photos": [
+        { "assetId": "651ec63ce1dde357d047f53a", "scene": "落地窗、地板空間與山景" },
+        { "assetId": "6507486b777554d0c904a2b9", "scene": "落地窗、沙發與山林" },
+        { "assetId": "651ec64617eee978a2f99d2f", "scene": "臨窗床墊與可收合沙發" },
+        { "assetId": "651ec64a3c080d14e35fa1af", "scene": "落地窗、木地板與沙發" },
+        { "assetId": "651ec6d7132a2cfb80d4309e", "scene": "夜間整棟莊園外觀", "status": "hold", "reason": "舊 tab 第五張是整棟莊園夜景，非 201 房內；待 owner 決定歸屬" }
+      ]
+    },
+    {
+      "contentId": "space-1",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 7",
+      "photos": [
+        { "assetId": "651d47da495f6472500b8787", "scene": "沙發、茶几與面向山景的落地窗" },
+        { "assetId": "651d47f406ef2b6efb8390da", "scene": "綠色沙發、吧台與山景落地窗" },
+        { "assetId": "651d4801e2f080d80ab13b64", "scene": "窗邊雙人茶座與戶外林木" },
+        { "assetId": "651d4810e2f080d80ab1495c", "scene": "大廳沙發、掛鐘與庭院窗景" },
+        { "assetId": "651d521e104f85d6bbbdd202", "scene": "綠色沙發、中島吧台與落地窗" }
+      ]
+    },
+    {
+      "contentId": "space-2",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 8",
+      "photos": [
+        { "assetId": "651d49672fcb0efaad3cb8e9", "scene": "中島吧台、甜點與高腳椅" },
+        { "assetId": "651d497ac40a4303d51dfeca", "scene": "中島水龍頭與飲品瓶" },
+        { "assetId": "651d49872fcb0efaad3ccc0d", "scene": "中島電磁爐與擺放的點心" },
+        { "assetId": "651d49942f319ae10f76a6f5", "scene": "吧台旁的咖啡機" },
+        { "assetId": "651d49a1e49f9e440a22f14d", "scene": "中島吧台上的飲料、甜點與窗景" }
+      ]
+    },
+    {
+      "contentId": "space-3",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 9",
+      "photos": [
+        { "assetId": "651d4bfa1bbdd80682ef39ef", "scene": "長桌與三面投影畫面" },
+        { "assetId": "651d4c0c938885e8b359e910", "scene": "長桌與播放影像的投影牆" },
+        { "assetId": "651d4c2248208e7cf908adc2", "scene": "六人座會議桌與白板" },
+        { "assetId": "651d4c33b4e0a78d4b69a240", "scene": "投影展示中的會議空間" },
+        { "assetId": "651d4c4386bb82ec0e522062", "scene": "夜間窗外可見的會議室投影" }
+      ]
+    },
+    {
+      "contentId": "space-4",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 1",
+      "photos": [
+        { "assetId": "651d4f2713381ed5919289a5", "scene": "洽談桌、椅子與展示櫃" },
+        { "assetId": "651d4f381991cc55044b4bf4", "scene": "洽談桌、四張座椅與壁畫" },
+        { "assetId": "651d4f432e28168dab10c2b0", "scene": "洽談室的桌椅與展示櫃" },
+        { "assetId": "651d4f57d6765e055db10144", "scene": "夜間洽談桌與展示櫃" },
+        { "assetId": "651d4f6f5a6041010d0df333", "scene": "建築入口走廊與大門", "status": "hold", "reason": "舊 tab 第五張為入口走廊，未能證明是 2F 會談室；待人工確認" }
+      ]
+    },
+    {
+      "contentId": "space-5",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 6",
+      "photos": [
+        { "assetId": "651d511d620daecc5fb514d1", "scene": "中島廚房與圓形餐桌" },
+        { "assetId": "651d512ef7a43f9a9f1cfc6c", "scene": "廚房中島、水槽與料理檯" },
+        { "assetId": "651d51427afe77df4b4ce316", "scene": "廚房的冰箱、烤箱與收納櫃" },
+        { "assetId": "651d5155a76f1dd685ce971f", "scene": "餐廳圓桌、橘色座椅與水晶吊燈" },
+        { "assetId": "651d51604045f4b77de956ba", "scene": "戶外烤肉架上的食物" }
+      ]
+    },
+    {
+      "contentId": "space-6",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 3",
+      "photos": [
+        { "assetId": "651d4ddd0ad649c56a7a62b6", "scene": "窗邊座椅、茶几與山林景色" },
+        { "assetId": "651d4deade46957985133167", "scene": "影音廳的沙發與扶手椅" },
+        { "assetId": "651d4df62e28168dab0feb4b", "scene": "電視、音響與窗外林木" },
+        { "assetId": "651d4e01c0afd78dd9ea6d3f", "scene": "沙發、扶手椅與山景窗戶" },
+        { "assetId": "651d4e1a35e1531b5b9b7c15", "scene": "窗邊座椅、茶几與夜間室內景色" }
+      ]
+    },
+    {
+      "contentId": "space-7",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 4",
+      "photos": [
+        { "assetId": "651d542e12e6edc12a7f2d30", "scene": "彩色座椅、圓桌與玻璃隔間" },
+        { "assetId": "651d543995a34d429823a00d", "scene": "彩色座椅與玻璃牆旁的圓桌" },
+        { "assetId": "651d543e73ab21181203a385", "scene": "玻璃屋中的藍色沙發與森林" },
+        { "assetId": "651d54426155251c480832e4", "scene": "藍色沙發與色彩鮮明的畫作" },
+        { "assetId": "651d5455fef3e7a8d069bb57", "scene": "夜間建築外觀與交誼廳燈光" }
+      ]
+    },
+    {
+      "contentId": "space-8",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 2",
+      "photos": [
+        { "assetId": "651d8816b1f9f370048245ac", "scene": "陽傘下的露台餐桌與山景" },
+        { "assetId": "651d8818085cc7f4d304fe5a", "scene": "露台餐桌、座椅與遠山" },
+        { "assetId": "651d8820d28d65a9a558a825", "scene": "陽傘下的白色露台餐桌" },
+        { "assetId": "651d8824f302a7a656a41bb2", "scene": "露台桌椅、陽傘與周圍林木" },
+        { "assetId": "651d88279bf5709de49a71d5", "scene": "露台下午茶餐桌與山谷景色" }
+      ]
+    },
+    {
+      "contentId": "space-9",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 10",
+      "photos": [
+        { "assetId": "651d8a6081773e12e4a4362f", "scene": "莊園建築入口與植草庭院" },
+        { "assetId": "651d8a6a75c2ceaf706556bf", "scene": "庭院旁的露台座椅與山景" },
+        { "assetId": "651d8a6ebbbbe38b86d8b084", "scene": "大門前的停車坪與草地" },
+        { "assetId": "651d8a722cb8e726ddbc6cfa", "scene": "大廳窗外的草地、停車位與山景" },
+        { "assetId": "651d8a7691f69cac156895ee", "scene": "夜間林木、庭院步道與莊園外觀" }
+      ]
+    },
+    {
+      "contentId": "space-10",
+      "kind": "shared-spaces",
+      "sourceTab": "Tab 5",
+      "photos": [
+        { "assetId": "651d9cc6ac4a0c60587b7b6f", "scene": "床邊平板顯示的智慧環控介面" },
+        { "assetId": "651d9cda76fd2422edafd01d", "scene": "會議室投影牆上的智慧環控介面" },
+        { "assetId": "651d9cee397716049ba3813c", "scene": "牆面上的智慧燈光控制開關" },
+        { "assetId": "651d9cf80d567ad3fa668dd8", "scene": "控制燈光與窗簾的牆面開關" },
+        { "assetId": "651d9d0488f32bb8cbb67201", "scene": "沙發旁平板顯示的環控首頁" }
+      ]
+    }
+  ]
+}

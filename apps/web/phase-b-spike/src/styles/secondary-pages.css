@@ -1,0 +1,848 @@
+/* =========================================================================
+   secondary-pages.css
+   範圍：apps/web/phase-b-spike/src/pages/plan.astro、about.astro、contact.astro
+   設計原則：
+   - 命名空間 .secondary-* 全部由各自頁面 import，與 site.css 共用 CSS 變數
+   - 不修改既有 site.css、SiteLayout、SiteHeader、SiteFooter、共用元件
+   - 不引入第三方動畫；details/summary 折疊沿用原生鍵盤操作
+   - 桌機維持沉浸式圖文節奏；手機優先可讀、可點、可鍵盤操作
+   ========================================================================= */
+
+/* ===== 共用版型 ===== */
+
+.secondary-page {
+  min-height: 100svh;
+  padding-top: var(--header-height);
+}
+
+.secondary-page-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(20rem, 48vh, 30rem);
+  align-items: end;
+  overflow: hidden;
+  color: var(--color-white);
+  background: var(--color-forest);
+  isolation: isolate;
+}
+
+.secondary-page-hero img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.secondary-page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(0deg, rgb(0 0 0 / 62%) 0%, rgb(0 0 0 / 22%) 56%, rgb(0 0 0 / 10%) 100%),
+    linear-gradient(90deg, rgb(0 0 0 / 38%) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.secondary-page-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(var(--content-width), calc(100% - var(--page-gutter) - var(--page-gutter)));
+  margin-inline: auto;
+  padding: 2.25rem 0 2.75rem;
+}
+
+.secondary-page-title {
+  max-width: 18ch;
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.25rem, 4.8vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  text-wrap: pretty;
+  text-shadow: 0 2px 1.25rem rgb(0 0 0 / 32%);
+}
+
+.secondary-page-deck {
+  max-width: 48rem;
+  margin: 1rem 0 0;
+  color: var(--color-white);
+  font-size: clamp(1rem, 1.3vw, 1.1875rem);
+  line-height: 1.85;
+  text-shadow: 0 1px 0.8rem rgb(0 0 0 / 48%);
+}
+
+.secondary-section {
+  padding: clamp(3.5rem, 7vw, 6rem) var(--page-gutter);
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+}
+
+.secondary-section:nth-of-type(even) {
+  background: var(--color-stone);
+}
+
+.secondary-section-inner {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+}
+
+.secondary-section-heading {
+  max-width: 22ch;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--color-forest);
+  font-size: clamp(1.75rem, 3.4vw, 2.625rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.secondary-section-sub {
+  margin: -0.5rem 0 2rem;
+  color: var(--color-forest);
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.85;
+}
+
+.secondary-lede {
+  max-width: 56rem;
+  margin: 0 0 1.25rem;
+  color: var(--color-forest);
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.85;
+}
+
+.secondary-prose > *:not(.secondary-section-heading) {
+  max-width: 56rem;
+  margin: 0 0 1rem;
+  color: var(--color-forest);
+  line-height: 1.85;
+}
+
+.secondary-prose > *:not(.secondary-section-heading):last-child {
+  margin-bottom: 0;
+}
+
+.secondary-prose > .secondary-section-heading {
+  /* 還原標題自身行高與字級，避免被 .secondary-prose > * 通用規則覆蓋 */
+  max-width: 22ch;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.75rem, 3.4vw, 2.625rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+/* ===== 內頁輔圖（章節之間的 1280×854 實景圖） ===== */
+
+.secondary-figure {
+  display: block;
+  width: min(100%, var(--content-width));
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
+  padding-inline: var(--page-gutter);
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+}
+
+.secondary-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 854;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  background: var(--color-stone);
+}
+
+.secondary-figure figcaption {
+  display: block;
+  width: 100%;
+  margin: 0.6rem 0 0;
+  color: var(--color-water);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* ===== /plan：原生 details 折疊 ===== */
+
+.secondary-plan-list {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary-plan-card {
+  position: relative;
+  border: 1px solid rgb(26 57 55 / 18%);
+  border-radius: 0.5rem;
+  background: var(--color-white);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.secondary-plan-card[open] {
+  border-color: rgb(26 57 55 / 45%);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 8%);
+}
+
+.secondary-plan-card > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 3.5rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-forest);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.secondary-plan-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.secondary-plan-card > summary::after {
+  content: "";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgb(26 57 55 / 22%);
+  border-radius: 50%;
+  background-image:
+    linear-gradient(45deg, transparent 45%, currentColor 45%, currentColor 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, currentColor 45%, currentColor 55%, transparent 55%);
+  background-size: 0.5rem 0.5rem;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  color: var(--color-forest);
+  transition: transform 160ms ease;
+}
+
+.secondary-plan-card[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.secondary-plan-card-title {
+  font-size: clamp(1.0625rem, 1.6vw, 1.3125rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-forest);
+}
+
+.secondary-plan-card-rate {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgb(26 57 55 / 8%);
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.secondary-plan-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid rgb(26 57 55 / 12%);
+}
+
+.secondary-plan-card-body > * {
+  margin: 1rem 0 0;
+}
+
+.secondary-plan-card-body > *:first-child {
+  margin-top: 0.5rem;
+}
+
+.secondary-plan-summary {
+  margin: 0;
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.85;
+}
+
+.secondary-plan-subgrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.secondary-plan-sub {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgb(26 57 55 / 12%);
+  border-radius: 0.4rem;
+  background: rgb(255 255 255 / 75%);
+}
+
+.secondary-plan-sub h4 {
+  margin: 0 0 0.4rem;
+  color: var(--color-forest);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.secondary-plan-sub p {
+  margin: 0.35rem 0 0;
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.secondary-plan-sub-rate {
+  font-variant-numeric: tabular-nums;
+}
+
+.secondary-plan-detail-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  color: var(--color-forest);
+}
+
+.secondary-plan-detail-list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.secondary-plan-detail-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0.45rem;
+  top: -0.2rem;
+  color: var(--color-water);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.secondary-plan-callout {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--color-water);
+  background: rgb(119 143 145 / 10%);
+  color: var(--color-forest);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* ===== /about：莊園介紹 / 合作 / 周邊 / 交通 ===== */
+
+.secondary-card-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary-card {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1.5rem;
+  border: 1px solid rgb(26 57 55 / 14%);
+  border-radius: 0.5rem;
+  background: var(--color-white);
+}
+
+.secondary-card h3 {
+  margin: 0;
+  color: var(--color-forest);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.secondary-card-body {
+  margin: 0;
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.secondary-card-meta {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-forest);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.secondary-card-meta li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.75rem;
+}
+
+.secondary-card-meta-label {
+  color: var(--color-forest);
+  font-weight: 700;
+}
+
+.secondary-placeholder {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--color-water);
+  background: rgb(119 143 145 / 10%);
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.secondary-placeholder strong {
+  display: block;
+  color: var(--color-forest);
+  font-weight: 700;
+}
+
+.secondary-prose-list {
+  max-width: 56rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.85;
+}
+
+.secondary-prose-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.secondary-prose-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0.45rem;
+  top: -0.2rem;
+  color: var(--color-water);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.secondary-prose-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== /contact：聯絡資訊 / 交通位置 / FAQ ===== */
+
+.secondary-contact-card {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid rgb(26 57 55 / 14%);
+  border-radius: 0.5rem;
+  background: var(--color-white);
+}
+
+.secondary-contact-info {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.secondary-contact-info li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.75rem;
+}
+
+.secondary-contact-info-label {
+  color: var(--color-forest);
+  font-weight: 700;
+}
+
+.secondary-transport-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.secondary-transport-list li {
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.secondary-transport-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0.45rem;
+  top: -0.2rem;
+  color: var(--color-water);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.secondary-faq-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.secondary-faq {
+  border: 1px solid rgb(26 57 55 / 14%);
+  border-radius: 0.5rem;
+  background: var(--color-white);
+  overflow: hidden;
+  transition: border-color 160ms ease;
+}
+
+.secondary-faq[open] {
+  border-color: rgb(26 57 55 / 45%);
+}
+
+.secondary-faq > summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-forest);
+  font-weight: 700;
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.secondary-faq > summary::-webkit-details-marker {
+  display: none;
+}
+
+.secondary-faq > summary::after {
+  content: "＋";
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid rgb(26 57 55 / 22%);
+  border-radius: 50%;
+  color: var(--color-water);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.secondary-faq[open] > summary::after {
+  content: "－";
+}
+
+.secondary-faq-body {
+  padding: 0.75rem 1.25rem 1.25rem;
+  border-top: 1px solid rgb(26 57 55 / 12%);
+  color: var(--color-forest);
+  font-size: 0.9375rem;
+  line-height: 1.85;
+}
+
+.secondary-faq-body > * {
+  margin: 0.75rem 0 0;
+}
+
+.secondary-faq-body > *:first-child {
+  margin-top: 0.85rem;
+}
+
+.secondary-faq-body ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.secondary-faq-body ol li {
+  margin-bottom: 0.5rem;
+}
+
+.secondary-faq-body ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== 頁尾洽詢 CTA ===== */
+
+.secondary-cta-section .primary-cta {
+  margin-top: 2rem;
+}
+
+/* ===== 響應式 ===== */
+
+@media (max-width: 60rem) {
+  .secondary-card-meta li {
+    grid-template-columns: 4rem 1fr;
+  }
+
+  .secondary-contact-info li {
+    grid-template-columns: 4.5rem 1fr;
+  }
+}
+
+@media (max-width: 48rem) {
+  .secondary-page-hero {
+    min-height: 18rem;
+  }
+
+  .secondary-page-hero-content {
+    padding: 1.75rem 0 2.25rem;
+  }
+
+  .secondary-page-title {
+    max-width: 16ch;
+  }
+
+  .secondary-page-deck {
+    margin-top: 0.85rem;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .secondary-section {
+    padding-block: 3rem;
+  }
+
+  .secondary-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .secondary-plan-card > summary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    padding: 1rem 3.25rem 1rem 1.1rem;
+  }
+
+  .secondary-plan-card > summary::after {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .secondary-plan-card-rate {
+    justify-self: start;
+    white-space: normal;
+    font-size: 0.875rem;
+  }
+
+  .secondary-plan-card-body {
+    padding-inline: 1.1rem;
+  }
+
+  .secondary-plan-subgrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .secondary-contact-card {
+    padding: 1.5rem;
+  }
+
+  .secondary-contact-info li {
+    grid-template-columns: 4rem 1fr;
+  }
+
+  .secondary-faq > summary {
+    padding: 0.9rem 1rem;
+  }
+
+  .secondary-faq-body {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  /* 320 / 390px 主要內容回歸約 16px；次要標籤與價格至少 15px；
+     方案 / FAQ 操作區維持 min-height: 3rem（48px）；擁擠以內距／grid 解決，不靠縮字。 */
+
+  .secondary-page-hero {
+    min-height: 16rem;
+  }
+
+  .secondary-page-hero-content {
+    padding: 1.5rem 0 1.75rem;
+  }
+
+  .secondary-page-title {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .secondary-page-deck {
+    margin-top: 0.85rem;
+    font-size: 1rem;            /* 16px：頁面導言 */
+    line-height: 1.75;
+  }
+
+  .secondary-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .secondary-section-heading {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .secondary-figure {
+    padding-inline: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .secondary-figure figcaption {
+    font-size: 0.875rem;        /* 14px：裝飾性質 */
+  }
+
+  .secondary-card {
+    padding: 1.25rem;            /* 放寬以容納 16px 內文 */
+  }
+
+  .secondary-card-body {
+    font-size: 1rem;             /* 16px：關於卡片正文 */
+    line-height: 1.65;
+  }
+
+  .secondary-card-meta {
+    font-size: 1rem;             /* 16px：與正文同級 */
+    line-height: 1.6;
+  }
+
+  .secondary-card-meta-label {
+    font-size: 0.9375rem;        /* 15px：次要標籤，至少清楚可讀 */
+  }
+
+  .secondary-card-meta li {
+    grid-template-columns: 4rem 1fr;
+    gap: 0.5rem;
+  }
+
+  .secondary-plan-card > summary {
+    min-height: 3rem;            /* 48px：方案操作區 */
+    padding: 0.9rem 2.75rem 0.9rem 1rem;
+  }
+
+  .secondary-plan-card > summary::after {
+    top: 0.85rem;
+    right: 0.85rem;
+  }
+
+  .secondary-plan-card-title {
+    font-size: 1rem;             /* 16px：方案名稱 */
+    line-height: 1.4;
+  }
+
+  .secondary-plan-card-rate {
+    font-size: 0.9375rem;        /* 15px：價格，至少清楚可讀 */
+    padding: 0.4rem 0.75rem;     /* 配合 15px 文字 */
+  }
+
+  .secondary-plan-card-body {
+    padding: 1.25rem 1.1rem 1.5rem;
+  }
+
+  .secondary-plan-summary {
+    font-size: 1rem;             /* 16px：方案說明 */
+    line-height: 1.75;
+  }
+
+  .secondary-plan-detail-list {
+    font-size: 1rem;             /* 16px：方案詳情與附贈清單 */
+    line-height: 1.75;
+  }
+
+  .secondary-plan-sub h4 {
+    font-size: 1rem;             /* 16px：子方案標題 */
+    line-height: 1.4;
+  }
+
+  .secondary-plan-sub p {
+    font-size: 1rem;             /* 16px：子方案內文 */
+    line-height: 1.7;
+  }
+
+  .secondary-contact-card {
+    padding: 1.25rem;
+  }
+
+  .secondary-contact-info {
+    font-size: 1rem;             /* 16px：聯絡資訊 */
+    line-height: 1.7;
+  }
+
+  .secondary-contact-info-label {
+    font-size: 0.9375rem;        /* 15px：聯絡標籤 */
+  }
+
+  .secondary-contact-info li {
+    grid-template-columns: 3.75rem 1fr;  /* 配合 15px 標籤 */
+    gap: 0.5rem;
+  }
+
+  .secondary-transport-list {
+    font-size: 1rem;             /* 16px：交通資訊 */
+    line-height: 1.75;
+  }
+
+  .secondary-faq > summary {
+    min-height: 3rem;            /* 48px：FAQ 操作區 */
+    padding: 0.9rem 2.5rem 0.9rem 1rem;
+    font-size: 1rem;             /* 16px：FAQ 問題 */
+    line-height: 1.5;
+    gap: 0.5rem;
+  }
+
+  .secondary-faq > summary::after {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1rem;
+  }
+
+  .secondary-faq-body {
+    padding: 1rem 1rem 1.25rem;
+    font-size: 1rem;             /* 16px：FAQ 答案 */
+    line-height: 1.75;
+  }
+}
+
+/* ===== 鍵盤 / 無障礙 ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .secondary-plan-card,
+  .secondary-faq {
+    transition: none;
+  }
+
+  .secondary-plan-card > summary::after {
+    transition: none;
+  }
+}

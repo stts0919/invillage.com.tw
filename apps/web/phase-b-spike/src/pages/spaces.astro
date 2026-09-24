@@ -1,0 +1,172 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SpacesExplorer from '../components/SpacesExplorer.tsx';
+import legacy from '../../reference/legacy-slice.json';
+import spacesContent from '../../reference/spaces-content.json';
+import imageAlts from '../../reference/image-alts.json';
+import gallerySource from '../../reference/spaces-gallery.json';
+import provenance from '../../reference/v1-preview-media-provenance.json';
+import r2Preview from '../../../../../assets/manifests/r2-upload-preview.json';
+import optimizedManifest from '../../../../../assets/manifests/optimization-live.json';
+
+type GalleryPhotoSource = { assetId: string; scene: string; status?: 'hold'; reason?: string };
+type GallerySource = { contentId: string; kind: string; sourceTab: string; photos: GalleryPhotoSource[] };
+
+const imageAlt = (id: string) => {
+  const alt = (imageAlts as Record<string, string>)[id];
+  if (!alt) throw new Error(`Missing space image alt: ${id}`);
+  return alt;
+};
+
+const provenanceByContentId = new Map(provenance.images.map((image) => [image.content.id, image]));
+const galleryByContentId = new Map((gallerySource.galleries as GallerySource[]).map((gallery) => [gallery.contentId, gallery]));
+const optimizedByAssetId = new Map(optimizedManifest.images.map((image) => [image.id, image]));
+const previewByAssetId = new Map<string, typeof r2Preview.items>();
+for (const image of r2Preview.items) {
+  const variants = previewByAssetId.get(image.assetId) ?? [];
+  variants.push(image);
+  previewByAssetId.set(image.assetId, variants);
+}
+
+function mediaFor(id: string) {
+  const source = provenanceByContentId.get(id);
+  if (!source) throw new Error(`Missing space image provenance: ${id}`);
+  const variants = previewByAssetId.get(source.assetId) ?? [];
+  const jpeg = (width: number) => {
+    const matches = variants.filter((item) => item.localPath.endsWith(`-fallback-w${width}.jpg`));
+    if (matches.length !== 1 || matches[0].runtimeEnabled !== true) {
+      throw new Error(`Missing unique ${width}px JPEG for ${id}`);
+    }
+    return matches[0].remoteUrl;
+  };
+  const localSample = legacy.roomsSample.find((sample) => sample.imageAssetId === source.assetId);
+  const small = localSample ? `/assets/images/${localSample.id}.jpg` : jpeg(640);
+  return {
+    assetId: source.assetId,
+    small,
+    medium: jpeg(1280),
+    large: jpeg(1920),
+  };
+}
+
+function galleryFor(item: { id: string; label: string }) {
+  const source = galleryByContentId.get(item.id);
+  if (!source) throw new Error(`Missing space gallery: ${item.id}`);
+  const photos = source.photos.filter((photo) => photo.status !== 'hold').map((photo) => {
+    const optimized = optimizedByAssetId.get(photo.assetId);
+    if (!optimized || optimized.placement !== 'r2' || typeof optimized.dimensions.width !== 'number' || typeof optimized.dimensions.height !== 'number') {
+      throw new Error(`Missing gallery photo dimensions: ${photo.assetId}`);
+    }
+    const variants = (previewByAssetId.get(photo.assetId) ?? []).flatMap((upload) => {
+      const match = /-fallback-w(\d+)\.jpg$/.exec(upload.localPath);
+      if (!match || !upload.runtimeEnabled || upload.contentType !== 'image/jpeg') return [];
+      const output = optimized.outputs.find((candidate) => candidate.path === upload.localPath);
+      if (!output || output.sha256 !== upload.sha256 || output.bytes !== upload.bytes || output.dimensions.width !== Number(match[1])) {
+        throw new Error(`Gallery variant mismatch: ${photo.assetId}`);
+      }
+      return [{ width: output.dimensions.width, url: upload.remoteUrl }];
+    }).sort((a, b) => a.width - b.width);
+    if (variants.length < 2 || variants[0].width !== 640 || new Set(variants.map((variant) => variant.width)).size !== variants.length) {
+      throw new Error(`Gallery JPEG widths invalid: ${photo.assetId}`);
+    }
+    return {
+      assetId: photo.assetId,
+      alt: `${item.label}：${photo.scene}`,
+      width: optimized.dimensions.width,
+      height: optimized.dimensions.height,
+      variants,
+    };
+  });
+  if (!photos.length || photos[0].assetId !== provenanceByContentId.get(item.id)?.assetId) {
+    throw new Error(`Gallery first photo differs from stage: ${item.id}`);
+  }
+  return photos;
+}
+
+function gallerySrcSet(photo: ReturnType<typeof galleryFor>[number]) {
+  return photo.variants.map((variant) => `${variant.url} ${variant.width}w`).join(', ');
+}
+
+function gallerySizes(index: number, count: number) {
+  const mobile = index % 2 === 0
+    ? '(max-width: 48rem) calc(90vw - 2.25rem)'
+    : '(max-width: 48rem) calc(100vw - 2.5rem)';
+  if (count === 5 && index === 4) return `${mobile}, (max-width: 80rem) 67vw, 52rem`;
+  return index % 4 === 0 || index % 4 === 3
+    ? `${mobile}, (max-width: 80rem) 58vw, 44rem`
+    : `${mobile}, (max-width: 80rem) 42vw, 32rem`;
+}
+
+const rooms = spacesContent.groups[0].items.map((item) => ({
+  id: item.id,
+  label: item.label,
+  panelHeading: item.panelHeading,
+  description: item.description,
+  imageAlt: imageAlt(item.id),
+  media: mediaFor(item.id),
+  gallery: galleryFor(item),
+}));
+const sharedSpaces = spacesContent.groups[1].items.map((item) => ({
+  id: item.id,
+  label: item.label,
+  panelHeading: item.panelHeading,
+  description: item.description,
+  imageAlt: imageAlt(item.id),
+  media: mediaFor(item.id),
+  gallery: galleryFor(item),
+}));
+const messengerUrl = 'https://m.me/invillagewulai';
+---
+
+<SiteLayout title={legacy.titles.spaces}>
+  <main class="page-main spaces-page" id="main-content" tabindex="-1">
+    <SpacesExplorer client:load title={legacy.titles.spaces} rooms={rooms} sharedSpaces={sharedSpaces} />
+    <section class="spaces-original-intro" aria-label={legacy.titles.spaces}>
+      <p>{spacesContent.intro}</p>
+    </section>
+    <noscript>
+      <style>.spaces-immersive { display: none !important; }</style>
+      <section class="spaces-fallback" aria-label={legacy.titles.spaces}>
+        <h2>客房空間</h2>
+        {rooms.map((room) => (
+          <article>
+            <h3>{room.panelHeading}</h3>
+            {room.label !== room.panelHeading && <p class="spaces-fallback-label">{room.label}</p>}
+            <p>{room.description}</p>
+            <a href={room.media.large}>{room.imageAlt}</a>
+            <div class="spaces-fallback-gallery">
+              {room.gallery.map((photo, index) => (
+                <a href={photo.variants[photo.variants.length - 1].url} data-gallery-asset-id={photo.assetId}>
+                  <img src={photo.variants[0].url} srcset={gallerySrcSet(photo)} sizes={gallerySizes(index, room.gallery.length)} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+        <h2>公共空間</h2>
+        {sharedSpaces.map((place) => (
+          <article>
+            <h3>{place.panelHeading}</h3>
+            {place.label !== place.panelHeading && <p class="spaces-fallback-label">{place.label}</p>}
+            <p>{place.description}</p>
+            <a href={place.media.large}>{place.imageAlt}</a>
+            <div class="spaces-fallback-gallery">
+              {place.gallery.map((photo, index) => (
+                <a href={photo.variants[photo.variants.length - 1].url} data-gallery-asset-id={photo.assetId}>
+                  <img src={photo.variants[0].url} srcset={gallerySrcSet(photo)} sizes={gallerySizes(index, place.gallery.length)} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+      </section>
+    </noscript>
+    <section class="content-section" aria-labelledby="spaces-contact-heading">
+      <div class="content-inner spaces-contact">
+        <h2 class="section-heading" id="spaces-contact-heading">預訂紅河隱園 一日莊園主人</h2>
+        <p>{spacesContent.closing}</p>
+        <a class="primary-cta" href={messengerUrl} target="_blank" rel="noopener noreferrer">立刻洽詢</a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

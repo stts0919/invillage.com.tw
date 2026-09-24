@@ -1,0 +1,73 @@
+---
+import legacy from '../../reference/legacy-slice.json';
+
+interface Props {
+  onHero?: boolean;
+}
+
+const { onHero = false } = Astro.props;
+const localNavigation = legacy.navigation;
+const currentPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+---
+
+<header class="site-header" data-site-header data-scrolled={onHero ? 'false' : 'true'}>
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="紅河隱園首頁">
+      <img class="brand-logo" src="/assets/brand/logo.png" alt="紅河隱園" width="1135" height="301" />
+    </a>
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="開啟選單"
+      aria-expanded="false"
+      aria-controls="site-navigation"
+      data-nav-toggle
+    >
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="nav-menu" id="site-navigation" aria-label="主要導覽" data-open="false">
+      <ul class="nav-list">
+        {localNavigation.map((item) => (
+          <li><a class="nav-link" href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]');
+  const toggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+  const menu = document.querySelector<HTMLElement>('#site-navigation');
+
+  if (header && toggle && menu) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+      menu.dataset.open = String(open);
+    };
+
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    menu.addEventListener('click', (event) => {
+      if ((event.target as HTMLElement).closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener('click', (event) => {
+      if (!header.contains(event.target as Node)) setOpen(false);
+    });
+
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      const observer = new IntersectionObserver(([entry]) => {
+        header.dataset.scrolled = String(!entry.isIntersecting);
+      }, { rootMargin: '-80px 0px 0px 0px', threshold: 0 });
+      observer.observe(hero);
+      window.addEventListener('pagehide', () => observer.disconnect(), { once: true });
+    }
+  }
+</script>

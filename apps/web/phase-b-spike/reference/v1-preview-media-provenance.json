@@ -1,0 +1,1640 @@
+{
+  "schemaVersion": 2,
+  "status": "local-preview-provenance-v2-not-production-placement",
+  "sources": {
+    "dist": "apps/web/phase-b-spike/dist",
+    "homeContent": "apps/web/phase-b-spike/reference/home-content.json",
+    "spacesContent": "apps/web/phase-b-spike/reference/spaces-content.json",
+    "spacesGallery": "apps/web/phase-b-spike/reference/spaces-gallery.json",
+    "imageAlts": "apps/web/phase-b-spike/reference/image-alts.json",
+    "legacySlice": "apps/web/phase-b-spike/reference/legacy-slice.json",
+    "r2UploadPreview": "assets/manifests/r2-upload-preview.json",
+    "classification": "assets/manifests/asset-classification.json",
+    "optimization": "assets/manifests/optimization-live.json",
+    "previewBucket": "invillage-media-preview",
+    "previewBaseUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev"
+  },
+  "historicalBaseline": {
+    "referenceSha256": "deed602685892234a893cdf75b09f273b455af7b521d871a66896663e54b1a7c",
+    "note": "Pre-S2 local V1 static /spaces: historical only, not a current usage assertion",
+    "urlCount": 16,
+    "uniqueAssetCount": 16,
+    "usageCount": 21,
+    "spacesRenderedR2Usages": 14
+  },
+  "summary": {
+    "contentCount": 16,
+    "uniqueAssetCount": 16,
+    "verifiedJpegVariantCount": 48,
+    "observedRemoteUrlCount": 46,
+    "classifiedRemoteOccurrenceCount": 75,
+    "usageClassifications": {
+      "interactive-available-not-requested": 46,
+      "nojs-fallback-link-not-requested": 16,
+      "ssr-content-img": 7,
+      "ssr-initial-srcset-candidate": 2,
+      "ssr-thumbnail-img": 4
+    },
+    "spacesState": {
+      "initialContentId": "room-1",
+      "mainImageSizes": "(max-width: 48rem) max(54rem, 114svh), 100vw",
+      "thumbnailCount": 6,
+      "fallbackCount": 16,
+      "interactiveCount": 16
+    },
+    "optimizedTotalBytes": 11820838,
+    "originalTotalBytes": 24309964,
+    "routesWithPreviewR2": [
+      "/",
+      "/spaces"
+    ],
+    "homeContentDirectUrlCount": 0,
+    "unknownCount": 0,
+    "ambiguousCount": 0,
+    "missingLocalCount": 0,
+    "missingAltCount": 0,
+    "gallery": {
+      "sourcePositions": 80,
+      "visiblePositions": 78,
+      "uniqueVisibleAssetCount": 77,
+      "verifiedSourceVariants": 258,
+      "heldAssetIds": [
+        "651d4f6f5a6041010d0df333",
+        "651ec6d7132a2cfb80d4309e"
+      ],
+      "observedRemoteUrlCount": 230,
+      "classifiedRemoteOccurrenceCount": 642,
+      "usageClassifications": {
+        "interactive-gallery-available-not-requested": 233,
+        "nojs-gallery-img": 78,
+        "nojs-gallery-link-not-requested": 78,
+        "nojs-gallery-srcset-candidate": 233,
+        "ssr-gallery-img": 5,
+        "ssr-gallery-srcset-candidate": 15
+      },
+      "eventSha256": "56d53948f6b2195c552ad1d0f163a14ceacc8094dedc697e56dd29b524842753"
+    }
+  },
+  "images": [
+    {
+      "content": {
+        "id": "room-1",
+        "kind": "rooms",
+        "label": "VIP 景觀客房 401"
+      },
+      "assetId": "651eb5fab873a24649ff0253",
+      "original": {
+        "path": "imports/webflow/assets/images/651eb5fab873a24649ff0253.jpg",
+        "bytes": 1602747,
+        "sha256": "f88f83fb8e937ff25d8f273215b86f3bf2c2272842d5cbf799b4260d476eebe5"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d08a9d89620d.jpg",
+          "r2Key": "media/content/651eb5fab873a24649ff0253-d08a9d89620d.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w640.jpg",
+            "bytes": 62490,
+            "sha256": "d08a9d89620d881832dae205a1533b778625c2b0db091dddfbb9fc13fef5b63c",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-f09b3807634a.jpg",
+          "r2Key": "media/content/651eb5fab873a24649ff0253-f09b3807634a.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w1280.jpg",
+            "bytes": 197272,
+            "sha256": "f09b3807634a73462fef8a98372dd8b03b728474788e54de1891606ab3566e97",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "r2Key": "media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w1920.jpg",
+            "bytes": 415838,
+            "sha256": "d7767e392d2d5fd3219d080e216d0beaa97481d5dca645a8715473dfe0a6542b",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": "apps/web/phase-b-spike/public/assets/images/room-401.jpg",
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+          "contentId": "room-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-f09b3807634a.jpg",
+          "route": "/spaces",
+          "classification": "ssr-initial-srcset-candidate",
+          "sourceTag": "img-srcset",
+          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+          "contentId": "room-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "route": "/spaces",
+          "classification": "ssr-initial-srcset-candidate",
+          "sourceTag": "img-srcset",
+          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+          "contentId": "room-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+          "contentId": "room-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-f09b3807634a.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+          "contentId": "room-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+          "contentId": "room-1"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "room-2",
+        "kind": "rooms",
+        "label": "山景情境客房 402"
+      },
+      "assetId": "651eb6cd024dac289bcccd90",
+      "original": {
+        "path": "imports/webflow/assets/images/651eb6cd024dac289bcccd90.jpg",
+        "bytes": 1363510,
+        "sha256": "79bce54eacbbb1f29ead719d07e3344cdaf22bc88669013fee87fd1c264d88f3"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-ef304201d622.jpg",
+          "r2Key": "media/content/651eb6cd024dac289bcccd90-ef304201d622.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w640.jpg",
+            "bytes": 45316,
+            "sha256": "ef304201d6220a72e0a1e9721777378e8e0c86e273456ee0f2b06f2922d180f9",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-4171ced8078f.jpg",
+          "r2Key": "media/content/651eb6cd024dac289bcccd90-4171ced8078f.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w1280.jpg",
+            "bytes": 153050,
+            "sha256": "4171ced8078fa2d48b64791a3e78e8021d9c9f5d89b11bae3e3d2a96ac758507",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-be28af470039.jpg",
+          "r2Key": "media/content/651eb6cd024dac289bcccd90-be28af470039.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w1920.jpg",
+            "bytes": 329410,
+            "sha256": "be28af4700399586be3592592d83fa8b1a4f7c08a6ae7e77ef49de46acb7cb44",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": "apps/web/phase-b-spike/public/assets/images/room-402.jpg",
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-be28af470039.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "山景情境客房 402 的雙人床與窗外樹景",
+          "contentId": "room-2"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-be28af470039.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "山景情境客房 402 的雙人床與窗外樹景",
+          "contentId": "room-2"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-4171ced8078f.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "山景情境客房 402 的雙人床與窗外樹景",
+          "contentId": "room-2"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-be28af470039.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "山景情境客房 402 的雙人床與窗外樹景",
+          "contentId": "room-2"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "room-3",
+        "kind": "rooms",
+        "label": "VIP 景觀客房 301"
+      },
+      "assetId": "651eb79bf3d12126fda8543b",
+      "original": {
+        "path": "imports/webflow/assets/images/651eb79bf3d12126fda8543b.jpg",
+        "bytes": 1289583,
+        "sha256": "e02efcf069845c063f56a150f56f181144087ba10f6fd5462da4c773847f0ffc"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-d88af939e174.jpg",
+          "r2Key": "media/content/651eb79bf3d12126fda8543b-d88af939e174.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb79bf3d12126fda8543b/651eb79bf3d12126fda8543b-fallback-w640.jpg",
+            "bytes": 41490,
+            "sha256": "d88af939e174bacff79cea35c87c02bd60f7278c9929cae3337e210fa34ffd4b",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-8fba81b44b1e.jpg",
+          "r2Key": "media/content/651eb79bf3d12126fda8543b-8fba81b44b1e.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb79bf3d12126fda8543b/651eb79bf3d12126fda8543b-fallback-w1280.jpg",
+            "bytes": 131284,
+            "sha256": "8fba81b44b1eb0270a7dde1cee43269af5731938113561d85a4fe3a9721053cc",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-6bf95756c629.jpg",
+          "r2Key": "media/content/651eb79bf3d12126fda8543b-6bf95756c629.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb79bf3d12126fda8543b/651eb79bf3d12126fda8543b-fallback-w1920.jpg",
+            "bytes": 274147,
+            "sha256": "6bf95756c6292e434b6b24df25a5d949b25b4141801f38bc02e7af6c92c0d88a",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-d88af939e174.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "room-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-6bf95756c629.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "VIP 景觀客房 301 的雙人床、茶水櫃與綠色床頭牆",
+          "contentId": "room-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-d88af939e174.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "VIP 景觀客房 301 的雙人床、茶水櫃與綠色床頭牆",
+          "contentId": "room-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-8fba81b44b1e.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "VIP 景觀客房 301 的雙人床、茶水櫃與綠色床頭牆",
+          "contentId": "room-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-6bf95756c629.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "VIP 景觀客房 301 的雙人床、茶水櫃與綠色床頭牆",
+          "contentId": "room-3"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "room-4",
+        "kind": "rooms",
+        "label": "山景情境客房 302"
+      },
+      "assetId": "651eb9512b96cb620230dada",
+      "original": {
+        "path": "imports/webflow/assets/images/651eb9512b96cb620230dada.jpg",
+        "bytes": 1221315,
+        "sha256": "8cee6b2c7a713f91fad3ecd7fc5a7174e66d95d4ffaefb94fbfe4839e4fb524c"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-1f8bf8e37f63.jpg",
+          "r2Key": "media/content/651eb9512b96cb620230dada-1f8bf8e37f63.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb9512b96cb620230dada/651eb9512b96cb620230dada-fallback-w640.jpg",
+            "bytes": 39999,
+            "sha256": "1f8bf8e37f63fccdb28bc1800a7d391a22785b9f7e0970a97a0330168822e986",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-c06dc6814150.jpg",
+          "r2Key": "media/content/651eb9512b96cb620230dada-c06dc6814150.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb9512b96cb620230dada/651eb9512b96cb620230dada-fallback-w1280.jpg",
+            "bytes": 114996,
+            "sha256": "c06dc6814150eae2c86047568f75187a148673e0b6cdc8cc6ae51114ff12ec15",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-cb5cdd2a7ac5.jpg",
+          "r2Key": "media/content/651eb9512b96cb620230dada-cb5cdd2a7ac5.jpg",
+          "optimized": {
+            "path": "assets/optimized/651eb9512b96cb620230dada/651eb9512b96cb620230dada-fallback-w1920.jpg",
+            "bytes": 226514,
+            "sha256": "cb5cdd2a7ac5ce387fc0e17adbe04a364da48b6bd5262b0674c8fe25e656a13b",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-1f8bf8e37f63.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "room-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-cb5cdd2a7ac5.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "山景情境客房 302 的雙人床、座椅與落地窗",
+          "contentId": "room-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-1f8bf8e37f63.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "山景情境客房 302 的雙人床、座椅與落地窗",
+          "contentId": "room-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-c06dc6814150.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "山景情境客房 302 的雙人床、座椅與落地窗",
+          "contentId": "room-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-cb5cdd2a7ac5.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "山景情境客房 302 的雙人床、座椅與落地窗",
+          "contentId": "room-4"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "room-5",
+        "kind": "rooms",
+        "label": "景觀陽光房 303"
+      },
+      "assetId": "651ec6150a7e5b8cda74133c",
+      "original": {
+        "path": "imports/webflow/assets/images/651ec6150a7e5b8cda74133c.jpg",
+        "bytes": 1578369,
+        "sha256": "b801405e63bd3de92c6b0e0ae5be7a0a2b2d941f2bc01c3ae02a34ecb9bcb05a"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-ee717e3eae7a.jpg",
+          "r2Key": "media/content/651ec6150a7e5b8cda74133c-ee717e3eae7a.jpg",
+          "optimized": {
+            "path": "assets/optimized/651ec6150a7e5b8cda74133c/651ec6150a7e5b8cda74133c-fallback-w640.jpg",
+            "bytes": 81483,
+            "sha256": "ee717e3eae7a33fc35b586a235011f35d71aac5385d992fe66ee94f4c53dce1d",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-9fb1b5afa5d3.jpg",
+          "r2Key": "media/content/651ec6150a7e5b8cda74133c-9fb1b5afa5d3.jpg",
+          "optimized": {
+            "path": "assets/optimized/651ec6150a7e5b8cda74133c/651ec6150a7e5b8cda74133c-fallback-w1280.jpg",
+            "bytes": 245150,
+            "sha256": "9fb1b5afa5d3de618f5126b4d6ad51c0d50328f0eb66ffe78b17c637033af40a",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-750dedd70606.jpg",
+          "r2Key": "media/content/651ec6150a7e5b8cda74133c-750dedd70606.jpg",
+          "optimized": {
+            "path": "assets/optimized/651ec6150a7e5b8cda74133c/651ec6150a7e5b8cda74133c-fallback-w1920.jpg",
+            "bytes": 483777,
+            "sha256": "750dedd706066289ed9801e01336fcddf1695beb1f39761cf7fc5fa3cc8df427",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-750dedd70606.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "景觀陽光房 303 的玻璃屋、沙發與戶外露台",
+          "contentId": "room-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-ee717e3eae7a.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "room-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-750dedd70606.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "景觀陽光房 303 的玻璃屋、沙發與戶外露台",
+          "contentId": "room-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-ee717e3eae7a.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "景觀陽光房 303 的玻璃屋、沙發與戶外露台",
+          "contentId": "room-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-9fb1b5afa5d3.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "景觀陽光房 303 的玻璃屋、沙發與戶外露台",
+          "contentId": "room-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-750dedd70606.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "景觀陽光房 303 的玻璃屋、沙發與戶外露台",
+          "contentId": "room-5"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "room-6",
+        "kind": "rooms",
+        "label": "201 景觀通鋪房"
+      },
+      "assetId": "651ec63ce1dde357d047f53a",
+      "original": {
+        "path": "imports/webflow/assets/images/651ec63ce1dde357d047f53a.jpg",
+        "bytes": 2080838,
+        "sha256": "5b9ce1de13a4d8fdebb84152fd0d5592154c3094702797de2f004da25008c3e1"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg",
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg",
+          "optimized": {
+            "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w640.jpg",
+            "bytes": 92243,
+            "sha256": "650332a9958f3f9098219914d38f9b7d2f17000a62046563669f5609898aa482",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-544435fac7da.jpg",
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-544435fac7da.jpg",
+          "optimized": {
+            "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1280.jpg",
+            "bytes": 326853,
+            "sha256": "544435fac7da8f02c8b55f4bab88fa6108ebf6c8ab04d3d6ddff608e83adc735",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+          "r2Key": "media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+          "optimized": {
+            "path": "assets/optimized/651ec63ce1dde357d047f53a/651ec63ce1dde357d047f53a-fallback-w1920.jpg",
+            "bytes": 735722,
+            "sha256": "4c55cc829e43efb99983971c515060c0e621a2f9da39ab019177c152bad6ffa5",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "景觀通鋪房的地板空間、落地窗與窗外山景",
+          "contentId": "room-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "room-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "景觀通鋪房的地板空間、落地窗與窗外山景",
+          "contentId": "room-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "景觀通鋪房的地板空間、落地窗與窗外山景",
+          "contentId": "room-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-544435fac7da.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "景觀通鋪房的地板空間、落地窗與窗外山景",
+          "contentId": "room-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "景觀通鋪房的地板空間、落地窗與窗外山景",
+          "contentId": "room-6"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-1",
+        "kind": "shared-spaces",
+        "label": "1F 接待大廳"
+      },
+      "assetId": "651d47da495f6472500b8787",
+      "original": {
+        "path": "imports/webflow/assets/images/651d47da495f6472500b8787.jpg",
+        "bytes": 1805583,
+        "sha256": "5f8613c39fd912dbae07ec43c38eca89af014a19cb9394aceb275d3362cee74c"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-28d335f454dd.jpg",
+          "r2Key": "media/content/651d47da495f6472500b8787-28d335f454dd.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-fallback-w640.jpg",
+            "bytes": 89590,
+            "sha256": "28d335f454dde6401ab2f42bbaf134a47ccc4f6c6c6c1877b7a84cd98652b28a",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-3f8bc16a304b.jpg",
+          "r2Key": "media/content/651d47da495f6472500b8787-3f8bc16a304b.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-fallback-w1280.jpg",
+            "bytes": 288997,
+            "sha256": "3f8bc16a304bef529628ebbb9b082693a0b5ae029ac969e8846840c8eba4c116",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "r2Key": "media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d47da495f6472500b8787/651d47da495f6472500b8787-fallback-w1920.jpg",
+            "bytes": 563358,
+            "sha256": "c0ec27215bf97d462db6f5c7a64084943f5a0575fddd7e87e0cc87c7c33bf2d2",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-28d335f454dd.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-3f8bc16a304b.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-2",
+        "kind": "shared-spaces",
+        "label": "1F 中島餐飲吧台"
+      },
+      "assetId": "651d49672fcb0efaad3cb8e9",
+      "original": {
+        "path": "imports/webflow/assets/images/651d49672fcb0efaad3cb8e9.jpg",
+        "bytes": 1531147,
+        "sha256": "46dd90c21459ffbe284ef5a90a4bcfb531f1a0a3bf44f9ed57cde4173fb2e807"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-71deefcfbc8a.jpg",
+          "r2Key": "media/content/651d49672fcb0efaad3cb8e9-71deefcfbc8a.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w640.jpg",
+            "bytes": 79963,
+            "sha256": "71deefcfbc8afd666c6e62742b0a93fb4dcc6ab7f3595e5b9d8b9a19a6fd398d",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-6e8947681212.jpg",
+          "r2Key": "media/content/651d49672fcb0efaad3cb8e9-6e8947681212.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w1280.jpg",
+            "bytes": 226007,
+            "sha256": "6e8947681212dbd696714a6f37aefa39009308a28b64e811649ac99325ee62ac",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-2ad30da9392f.jpg",
+          "r2Key": "media/content/651d49672fcb0efaad3cb8e9-2ad30da9392f.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d49672fcb0efaad3cb8e9/651d49672fcb0efaad3cb8e9-fallback-w1920.jpg",
+            "bytes": 427879,
+            "sha256": "2ad30da9392fd47ad0a727bf42c4968b030f53ee7c1fae722ed5d2602c7bc006",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-2ad30da9392f.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "中島餐飲吧台的高腳椅、餐點與庭院落地窗",
+          "contentId": "space-2"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-71deefcfbc8a.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "中島餐飲吧台的高腳椅、餐點與庭院落地窗",
+          "contentId": "space-2"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-6e8947681212.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "中島餐飲吧台的高腳椅、餐點與庭院落地窗",
+          "contentId": "space-2"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-2ad30da9392f.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "中島餐飲吧台的高腳椅、餐點與庭院落地窗",
+          "contentId": "space-2"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-3",
+        "kind": "shared-spaces",
+        "label": "多功能會議室"
+      },
+      "assetId": "651d4bfa1bbdd80682ef39ef",
+      "original": {
+        "path": "imports/webflow/assets/images/651d4bfa1bbdd80682ef39ef.jpg",
+        "bytes": 1006045,
+        "sha256": "b5ef724452338824bad9a62c213ccb4bb4f99d6e660ba713e4d577dd71e1e004"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-8a18f0ee0231.jpg",
+          "r2Key": "media/content/651d4bfa1bbdd80682ef39ef-8a18f0ee0231.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w640.jpg",
+            "bytes": 35726,
+            "sha256": "8a18f0ee0231b5748e4437c8b6ff323db3f2901682ad22d947627eb143f6cf2c",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-7f192e7571fc.jpg",
+          "r2Key": "media/content/651d4bfa1bbdd80682ef39ef-7f192e7571fc.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w1280.jpg",
+            "bytes": 106657,
+            "sha256": "7f192e7571fc27ccff0379413b3b79c079eff5a3623a894357c13ec3946b4401",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
+          "r2Key": "media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4bfa1bbdd80682ef39ef/651d4bfa1bbdd80682ef39ef-fallback-w1920.jpg",
+            "bytes": 209117,
+            "sha256": "a8e0a86249ee1d5a6a21335fe77a4d7a8fe3fc8e11c1d4d5d69fc603a01fc941",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "會議室的長桌與多面投影畫面",
+          "contentId": "space-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "會議室的長桌與多面投影畫面",
+          "contentId": "space-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-8a18f0ee0231.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "會議室的長桌與多面投影畫面",
+          "contentId": "space-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-7f192e7571fc.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "會議室的長桌與多面投影畫面",
+          "contentId": "space-3"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "會議室的長桌與多面投影畫面",
+          "contentId": "space-3"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-4",
+        "kind": "shared-spaces",
+        "label": "2F 會談室"
+      },
+      "assetId": "651d4f2713381ed5919289a5",
+      "original": {
+        "path": "imports/webflow/assets/images/651d4f2713381ed5919289a5.jpg",
+        "bytes": 1166096,
+        "sha256": "d11b8a8478b84b8381933f21defbd48fb2565a8dddc130307cd9e7312ee1b1ba"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-2cbbd90e9b69.jpg",
+          "r2Key": "media/content/651d4f2713381ed5919289a5-2cbbd90e9b69.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4f2713381ed5919289a5/651d4f2713381ed5919289a5-fallback-w640.jpg",
+            "bytes": 39875,
+            "sha256": "2cbbd90e9b69cbc5abff4b95d89fb8d4803601c3afcc11ed1f3ecdd7e7a824c8",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-7dc7db06e940.jpg",
+          "r2Key": "media/content/651d4f2713381ed5919289a5-7dc7db06e940.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4f2713381ed5919289a5/651d4f2713381ed5919289a5-fallback-w1280.jpg",
+            "bytes": 114937,
+            "sha256": "7dc7db06e940208fabc357ba2668c7daf963ec13fb6c5d7ca4b1ea8c23893a90",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-539f13662244.jpg",
+          "r2Key": "media/content/651d4f2713381ed5919289a5-539f13662244.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4f2713381ed5919289a5/651d4f2713381ed5919289a5-fallback-w1920.jpg",
+            "bytes": 224643,
+            "sha256": "539f136622447c5a161297b98ed222fa5a3a59188af02f8450ad69a6058c189a",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-539f13662244.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "二樓會談室的白色會議桌與展示櫃",
+          "contentId": "space-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-2cbbd90e9b69.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "二樓會談室的白色會議桌與展示櫃",
+          "contentId": "space-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-7dc7db06e940.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "二樓會談室的白色會議桌與展示櫃",
+          "contentId": "space-4"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-539f13662244.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "二樓會談室的白色會議桌與展示櫃",
+          "contentId": "space-4"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-5",
+        "kind": "shared-spaces",
+        "label": "廚房&中島輕食區＆餐廳"
+      },
+      "assetId": "651d511d620daecc5fb514d1",
+      "original": {
+        "path": "imports/webflow/assets/images/651d511d620daecc5fb514d1.jpg",
+        "bytes": 1240361,
+        "sha256": "7ab18fcf8a942a114c8463e27ec9d576f5a3e7812d4a50e13f58e889be128211"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-ece605f8c782.jpg",
+          "r2Key": "media/content/651d511d620daecc5fb514d1-ece605f8c782.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d511d620daecc5fb514d1/651d511d620daecc5fb514d1-fallback-w640.jpg",
+            "bytes": 44688,
+            "sha256": "ece605f8c782805a78176093ce207be73cf86b620fa7b69b6067f79f1106946d",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-834f304e0e77.jpg",
+          "r2Key": "media/content/651d511d620daecc5fb514d1-834f304e0e77.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d511d620daecc5fb514d1/651d511d620daecc5fb514d1-fallback-w1280.jpg",
+            "bytes": 128631,
+            "sha256": "834f304e0e772f47858a3fe915db964a8b8cbc44fab119970f60d6bdfcc68110",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-c32bfb697778.jpg",
+          "r2Key": "media/content/651d511d620daecc5fb514d1-c32bfb697778.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d511d620daecc5fb514d1/651d511d620daecc5fb514d1-fallback-w1920.jpg",
+            "bytes": 255633,
+            "sha256": "c32bfb697778faebb565ea824c57bc46a41b6769bb04a71bcc8da1ffd6ce4431",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-c32bfb697778.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "二樓廚房中島、吧台椅與後方餐桌",
+          "contentId": "space-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-ece605f8c782.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "二樓廚房中島、吧台椅與後方餐桌",
+          "contentId": "space-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-834f304e0e77.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "二樓廚房中島、吧台椅與後方餐桌",
+          "contentId": "space-5"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-c32bfb697778.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "二樓廚房中島、吧台椅與後方餐桌",
+          "contentId": "space-5"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-6",
+        "kind": "shared-spaces",
+        "label": "2F 影音娛樂廳"
+      },
+      "assetId": "651d4ddd0ad649c56a7a62b6",
+      "original": {
+        "path": "imports/webflow/assets/images/651d4ddd0ad649c56a7a62b6.jpg",
+        "bytes": 1705569,
+        "sha256": "8690793e3318c816c9f455fd02de490e39615b8d835a90793dc43b22d82607ac"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-85eb240bd612.jpg",
+          "r2Key": "media/content/651d4ddd0ad649c56a7a62b6-85eb240bd612.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4ddd0ad649c56a7a62b6/651d4ddd0ad649c56a7a62b6-fallback-w640.jpg",
+            "bytes": 80791,
+            "sha256": "85eb240bd612cc3328d1cb2934e445da55922d47bddded496a080cfbefd58308",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-3be912a3900c.jpg",
+          "r2Key": "media/content/651d4ddd0ad649c56a7a62b6-3be912a3900c.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4ddd0ad649c56a7a62b6/651d4ddd0ad649c56a7a62b6-fallback-w1280.jpg",
+            "bytes": 277873,
+            "sha256": "3be912a3900c6ba1d297f69b2cf3c2a11c4ed733b880f84f2e62611e5509a823",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-7c36f6f6f7fa.jpg",
+          "r2Key": "media/content/651d4ddd0ad649c56a7a62b6-7c36f6f6f7fa.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d4ddd0ad649c56a7a62b6/651d4ddd0ad649c56a7a62b6-fallback-w1920.jpg",
+            "bytes": 570250,
+            "sha256": "7c36f6f6f7fae9981594ce31c194b4ef7d3d90e1c7424111c9adc6b45e3e82f1",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-7c36f6f6f7fa.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "影音娛樂廳靠窗的休閒座椅與山景",
+          "contentId": "space-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-85eb240bd612.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "影音娛樂廳靠窗的休閒座椅與山景",
+          "contentId": "space-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-3be912a3900c.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "影音娛樂廳靠窗的休閒座椅與山景",
+          "contentId": "space-6"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-7c36f6f6f7fa.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "影音娛樂廳靠窗的休閒座椅與山景",
+          "contentId": "space-6"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-7",
+        "kind": "shared-spaces",
+        "label": "3F&4F 交誼廳"
+      },
+      "assetId": "651d542e12e6edc12a7f2d30",
+      "original": {
+        "path": "imports/webflow/assets/images/651d542e12e6edc12a7f2d30.jpg",
+        "bytes": 1446655,
+        "sha256": "232ebcfebd99bef72607bc86ba765fb498b64a27cac9697c59987eaa4dad7d8d"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-6a148ce402bb.jpg",
+          "r2Key": "media/content/651d542e12e6edc12a7f2d30-6a148ce402bb.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w640.jpg",
+            "bytes": 70716,
+            "sha256": "6a148ce402bbbc8b4eab29e9ca9ad8639e55ae981ff8aec180d591de1a05e0a1",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-ca0e98be6d87.jpg",
+          "r2Key": "media/content/651d542e12e6edc12a7f2d30-ca0e98be6d87.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w1280.jpg",
+            "bytes": 205203,
+            "sha256": "ca0e98be6d87ec0336d4362967bea06091754587be7ca2517fc9d0ff8b0a9e30",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-82568ed4f3af.jpg",
+          "r2Key": "media/content/651d542e12e6edc12a7f2d30-82568ed4f3af.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d542e12e6edc12a7f2d30/651d542e12e6edc12a7f2d30-fallback-w1920.jpg",
+            "bytes": 393221,
+            "sha256": "82568ed4f3af7ab014a2d06f98441934189ca16eefa5f70efe53bc9ba54a719b",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-82568ed4f3af.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "交誼廳的圓桌、彩色椅子與牆上畫作",
+          "contentId": "space-7"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-6a148ce402bb.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "交誼廳的圓桌、彩色椅子與牆上畫作",
+          "contentId": "space-7"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-ca0e98be6d87.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "交誼廳的圓桌、彩色椅子與牆上畫作",
+          "contentId": "space-7"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-82568ed4f3af.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "交誼廳的圓桌、彩色椅子與牆上畫作",
+          "contentId": "space-7"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-8",
+        "kind": "shared-spaces",
+        "label": "3F&4F 景觀露台"
+      },
+      "assetId": "651d8816b1f9f370048245ac",
+      "original": {
+        "path": "imports/webflow/assets/images/651d8816b1f9f370048245ac.jpg",
+        "bytes": 2024173,
+        "sha256": "b02fe159f8a1879a7479785e378dcb1e73943b6866eda0b75ba1d8753fd0d287"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-6a5020c64669.jpg",
+          "r2Key": "media/content/651d8816b1f9f370048245ac-6a5020c64669.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d8816b1f9f370048245ac/651d8816b1f9f370048245ac-fallback-w640.jpg",
+            "bytes": 102470,
+            "sha256": "6a5020c64669c5612a9e2a37901a6fb16a984e554d0803f01ecc8e9e86406998",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-8bf5096c3e8c.jpg",
+          "r2Key": "media/content/651d8816b1f9f370048245ac-8bf5096c3e8c.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d8816b1f9f370048245ac/651d8816b1f9f370048245ac-fallback-w1280.jpg",
+            "bytes": 361637,
+            "sha256": "8bf5096c3e8c060557bcd3361c90badcc6e31a7129de1546a8ee8a8990034c92",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-1ca1e31d1c21.jpg",
+          "r2Key": "media/content/651d8816b1f9f370048245ac-1ca1e31d1c21.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d8816b1f9f370048245ac/651d8816b1f9f370048245ac-fallback-w1920.jpg",
+            "bytes": 755764,
+            "sha256": "1ca1e31d1c2119b786961f228297829849b2697b04bfa10161e86253414054db",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-1ca1e31d1c21.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "景觀露台的遮陽傘、戶外桌椅與山景",
+          "contentId": "space-8"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-6a5020c64669.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "景觀露台的遮陽傘、戶外桌椅與山景",
+          "contentId": "space-8"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-8bf5096c3e8c.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "景觀露台的遮陽傘、戶外桌椅與山景",
+          "contentId": "space-8"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-1ca1e31d1c21.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "景觀露台的遮陽傘、戶外桌椅與山景",
+          "contentId": "space-8"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-9",
+        "kind": "shared-spaces",
+        "label": "戶外庭園"
+      },
+      "assetId": "651d8a6081773e12e4a4362f",
+      "original": {
+        "path": "imports/webflow/assets/images/651d8a6081773e12e4a4362f.jpg",
+        "bytes": 2170544,
+        "sha256": "bb08b2facfad51ca542e2de83d71d28948a87b23c52eacb5999aad7f6e795849"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-03e1e079fd35.jpg",
+          "r2Key": "media/content/651d8a6081773e12e4a4362f-03e1e079fd35.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w640.jpg",
+            "bytes": 127509,
+            "sha256": "03e1e079fd35dab6d0e5420e1723f0810aeb61e10e3a51b3b7f44d694bd20a5f",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-d8b01f043e0c.jpg",
+          "r2Key": "media/content/651d8a6081773e12e4a4362f-d8b01f043e0c.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w1280.jpg",
+            "bytes": 498037,
+            "sha256": "d8b01f043e0c1b91bbac91fdf8d0962e93f586bc5bc591f448f82b65f4d3b303",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
+          "r2Key": "media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d8a6081773e12e4a4362f/651d8a6081773e12e4a4362f-fallback-w1920.jpg",
+            "bytes": 1122494,
+            "sha256": "2dd27543677e5333643f2a45d5d359bddd739de736d03e10b6ff8e07e58a1402",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
+          "route": "/",
+          "classification": "ssr-content-img",
+          "sourceTag": "img-src",
+          "alt": "戶外庭園、莊園建築與綠地停車區",
+          "contentId": "space-9"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "戶外庭園、莊園建築與綠地停車區",
+          "contentId": "space-9"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-03e1e079fd35.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "戶外庭園、莊園建築與綠地停車區",
+          "contentId": "space-9"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-d8b01f043e0c.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "戶外庭園、莊園建築與綠地停車區",
+          "contentId": "space-9"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "戶外庭園、莊園建築與綠地停車區",
+          "contentId": "space-9"
+        }
+      ]
+    },
+    {
+      "content": {
+        "id": "space-10",
+        "kind": "shared-spaces",
+        "label": "智慧環控系統"
+      },
+      "assetId": "651d9cc6ac4a0c60587b7b6f",
+      "original": {
+        "path": "imports/webflow/assets/images/651d9cc6ac4a0c60587b7b6f.jpg",
+        "bytes": 1077429,
+        "sha256": "76be675c1d58ea3f2d3fea9025d17e2058e8b2e91f8471d26a91b76850ba19b3"
+      },
+      "variants": [
+        {
+          "width": 640,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-ef734ec5eb0b.jpg",
+          "r2Key": "media/content/651d9cc6ac4a0c60587b7b6f-ef734ec5eb0b.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d9cc6ac4a0c60587b7b6f/651d9cc6ac4a0c60587b7b6f-fallback-w640.jpg",
+            "bytes": 48410,
+            "sha256": "ef734ec5eb0b4e539be67f754208fe36ecf1fd395af45f3750e1a4b39815bb66",
+            "dimensions": {
+              "width": 640,
+              "height": 426
+            }
+          }
+        },
+        {
+          "width": 1280,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-cf2cb89cb3ba.jpg",
+          "r2Key": "media/content/651d9cc6ac4a0c60587b7b6f-cf2cb89cb3ba.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d9cc6ac4a0c60587b7b6f/651d9cc6ac4a0c60587b7b6f-fallback-w1280.jpg",
+            "bytes": 131496,
+            "sha256": "cf2cb89cb3ba0f6927cb02dd216e5811ecdb02acb953b900c663254f7a59abe6",
+            "dimensions": {
+              "width": 1280,
+              "height": 854
+            }
+          }
+        },
+        {
+          "width": 1920,
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-81442f6e0ec4.jpg",
+          "r2Key": "media/content/651d9cc6ac4a0c60587b7b6f-81442f6e0ec4.jpg",
+          "optimized": {
+            "path": "assets/optimized/651d9cc6ac4a0c60587b7b6f/651d9cc6ac4a0c60587b7b6f-fallback-w1920.jpg",
+            "bytes": 242232,
+            "sha256": "81442f6e0ec47f27fcbc8e68c2261305af91c3bf1100847ffec3f420051d6977",
+            "dimensions": {
+              "width": 1920,
+              "height": 1280
+            }
+          }
+        }
+      ],
+      "localSmall": null,
+      "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-81442f6e0ec4.jpg",
+          "route": "/spaces",
+          "classification": "nojs-fallback-link-not-requested",
+          "sourceTag": "a-href",
+          "alt": "床邊平板顯示智慧環控介面",
+          "contentId": "space-10"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-ef734ec5eb0b.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-640",
+          "alt": "床邊平板顯示智慧環控介面",
+          "contentId": "space-10"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-cf2cb89cb3ba.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1280",
+          "alt": "床邊平板顯示智慧環控介面",
+          "contentId": "space-10"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-81442f6e0ec4.jpg",
+          "route": "/spaces",
+          "classification": "interactive-available-not-requested",
+          "sourceTag": "props-1920",
+          "alt": "床邊平板顯示智慧環控介面",
+          "contentId": "space-10"
+        }
+      ]
+    }
+  ]
+}

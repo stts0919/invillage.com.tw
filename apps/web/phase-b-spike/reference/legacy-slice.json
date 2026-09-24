@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "revision": "746498b7a2d5e8a8600b0531033ddd5685cd14b5",
+    "homeHtml": {
+      "path": "apps/web/public/index.html",
+      "sha256": "b51271ab39ee638c4a5fc553a91b6c13e34720416465d4ddaba45dbb2fdadb56"
+    },
+    "spacesHtml": {
+      "path": "apps/web/public/spaces.html",
+      "sha256": "ae7a932b4a6ddb26f3d1902360ff18662e2a731ed4c441e22ded5c59f4387dee"
+    },
+    "notFoundHtml": {
+      "path": "apps/web/public/404.html",
+      "sha256": "93ee294319d5531ec53068599f93d77224bd737e2771d81ee2cea4199e46a891"
+    }
+  },
+  "titles": {
+    "home": "紅河隱園 Invillage｜新北烏來｜團體住宿包棟/企業團建活動/商業攝影場地之首選",
+    "spaces": "空間介紹",
+    "notFound": "Not Found"
+  },
+  "notFound": {
+    "heading": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been moved"
+  },
+  "navigation": [
+    { "label": "空間介紹", "href": "/spaces" },
+    { "label": "訂房方案", "href": "/plan" },
+    { "label": "關於莊園", "href": "/about" },
+    { "label": "聯絡我們", "href": "/contact" }
+  ],
+  "footer": {
+    "introduction": "本莊園是由科技城公司營運管理，這裡的空間租借、參觀體驗、分享發表、教育訓練、會議住宿等各項活動都歡迎各界預約洽詢合作。",
+    "contactLines": [
+      "科技城股份有限公司",
+      "新北市新店區中正路四維巷一弄四號四樓(遠東工業區)",
+      "電話：（02）22194201 分機 31",
+      "手機：0937017250",
+      "承辦人：曾先生"
+    ],
+    "copyright": "Copyright © 2026. 科技城股份有限公司"
+  },
+  "home": {
+    "heading": "發現自然之美，感受科技之悅，就在紅河隱園。",
+    "introLines": [
+      "InVillage 紅河隱園是一處離都市最近的峽谷莊園，這裡的森林芬多精無所不在，獨具 IoT 科技融入舒適的建築環境管理。",
+      "為了讓貴賓擁有最完整的「莊園主人」體驗，我們一次只接待一組顧客，維護貴賓的隱私是我們的堅持。"
+    ],
+    "heroFallbackImage": {
+      "sourceAssetId": "651d47f406ef2b6efb8390da",
+      "localPath": "assets/optimized/651d47f406ef2b6efb8390da/651d47f406ef2b6efb8390da-fallback-w1280.jpg",
+      "sha256": "52b0b32056fcfb77946efd494fad4e8b0d339cb276fbd1d3c95a2bbfe3d13cae"
+    }
+  },
+  "brand": {
+    "logoPath": "apps/web/public/assets/brand/650741963cc37e5fe08d25bf.png",
+    "logoSha256": "35289ea8c8a054903a3a02e6c36e46793a72b7a71bf32cbb9691d271c4ad27db",
+    "faviconPath": "apps/web/public/assets/icons/6507a733352adcbf572e1eba.png",
+    "faviconSha256": "6f31cb00a4d14890918e86973492a8cc41b6b50073212ce51b98654eef5a00c5",
+    "regularFontPath": "apps/web/public/assets/fonts/650743525c7e04100a5379c4.ttf",
+    "regularFontSha256": "b63084477c1b5cd0db3b88fdba581ae0f05c947445f47d03810f1189544cd5a0",
+    "boldFontPath": "apps/web/public/assets/fonts/650743518f4a66cd457f63c9.ttf",
+    "boldFontSha256": "6382485ee421f54d87d0cdbd63e7028b5b1a2988fbdc7a6a6d233158c511994e"
+  },
+  "roomsSample": [
+    {
+      "id": "room-401",
+      "label": "VIP 景觀客房 401",
+      "imageAlt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
+      "imageAssetId": "651eb5fab873a24649ff0253",
+      "imageLocalPath": "assets/optimized/651eb5fab873a24649ff0253/651eb5fab873a24649ff0253-fallback-w640.jpg",
+      "imageSha256": "d08a9d89620d881832dae205a1533b778625c2b0db091dddfbb9fc13fef5b63c"
+    },
+    {
+      "id": "room-402",
+      "label": "山景情境客房 402",
+      "imageAlt": "山景情境客房 402 的雙人床與窗外樹景",
+      "imageAssetId": "651eb6cd024dac289bcccd90",
+      "imageLocalPath": "assets/optimized/651eb6cd024dac289bcccd90/651eb6cd024dac289bcccd90-fallback-w640.jpg",
+      "imageSha256": "ef304201d6220a72e0a1e9721777378e8e0c86e273456ee0f2b06f2922d180f9"
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import '../styles/secondary-pages.css';
+
+/**
+ * /about（關於莊園）
+ *
+ * 內容來源：apps/web/public/about.html（frozen copy 文字）
+ *
+ * 文案原則：
+ * - 舊文案與既有事實照原文保留
+ * - 「科技城 IOT 長照設備展示中心」定位僅在本頁呈現；只使用使用者提供的原句，
+ *   不自行補寫設備功能或醫療效果
+ * - 頁尾洽詢 CTA 為該頁唯一 Messenger 入口
+ */
+
+const messengerUrl = 'https://m.me/invillagewulai';
+const pageTitle = '關於我們';
+const heroImage = '/assets/secondary/mansion-night-001.jpg';
+const heroImageAlt = '紅河隱園夜晚建築外觀：大面積落地窗透出室內燈光，藍調天空與林木包圍。';
+
+type PartnerCard = {
+  id: string;
+  name: string;
+  description?: string;
+  address?: string;
+  contact?: string;
+  linkLabel?: string;
+  linkUrl?: string;
+};
+
+const partners: PartnerCard[] = [
+  {
+    id: 'partner-fanggsi',
+    name: '[餐廳] 方格斯手作坊',
+    description: '披薩/石板料理/小米麻糬/飲品',
+    address: '新北市新烏路五段33.35號',
+    contact: '02-2661-7811',
+    linkLabel: 'FB粉絲專頁',
+    linkUrl: 'https://www.facebook.com/fanggus/?locale=zh_TW',
+  },
+  {
+    id: 'partner-yukoyu',
+    name: '于烤魚創意家常料理',
+    description: '【烏來美食推薦】于烤魚創意家常料理。每週五六日一營業，中午12點至晚上7點供餐。特色烤魚料理、溫泉區聚餐首選。',
+    address: '新烏路四段36號',
+    contact: '預約：02-2661-6263',
+  },
+  {
+    id: 'partner-niaolaibo',
+    name: '[餐廳] 鳥來伯擔仔麵',
+    description: '熱炒/合菜/外燴/白斬雞/海鮮/刺身/火鍋',
+    address: '新北市烏來區堰堤13號1樓',
+    contact: '02-2661-6060',
+  },
+  {
+    id: 'partner-sunmoon',
+    name: '[溫泉] 日月光溫泉山莊',
+    description: '溫泉/大眾湯/男湯/女湯/家庭風呂/按摩/餐廳',
+    address: '新北市烏來區新烏路四段18號',
+    contact: '02-2661-6677',
+  },
+  {
+    id: 'partner-yunding',
+    name: '[溫泉]雲頂溫泉行館',
+    description:
+      '巴厘島風格戶外大眾男/女湯，有面對烏來最佳山頭的景觀湯屋。本館旅客有優惠，可到本館接送。',
+    address: '新北市烏來區西羅岸路45號',
+    contact: '02-2661-7755',
+    linkLabel: '官方網站',
+    linkUrl: 'https://cloudspring.com.tw/yun-ding/',
+  },
+  {
+    id: 'partner-bbq-service',
+    name: '[餐飲]專人烤肉服務',
+    description: '',
+    address: '',
+    contact: '',
+  },
+];
+
+type AttractionCard = {
+  id: string;
+  title: string;
+  body: string;
+};
+
+const attractions: AttractionCard[] = [
+  {
+    id: 'attraction-red-river-valley',
+    title: '烏來紅河谷',
+    body:
+      '步行 3 分鐘即可到達，此地遊客不多，保留原始山林純粹的氣息，附近加九寮景觀大橋一帶，若天氣適宜，鼓勵貴賓趁著白天時間前往紅河谷步道走走，步道前段平緩，沿著加九寮溪畔平行前進可抵達加九寮天然滑水道，此地為極少數人知道的秘境。',
+  },
+  {
+    id: 'attraction-old-street',
+    title: '烏來老街、烏來台車、烏來瀑布、雲仙樂園',
+    body:
+      '開車大約五分鐘即達；公車 849 可到烏來老街一帶，老街主打原住民料理。可以體驗烏來台車搭至烏來瀑布，再搭纜車前往雲仙樂園遊玩。',
+  },
+  {
+    id: 'attraction-neidong',
+    title: '內洞遊樂區',
+    body:
+      '又稱為娃娃谷，從入口步行沿溪而行約 20 分鐘可以抵達三層瀑布。這裡是已知最多芬多精負離子含量最高的景點，須購票入場風景遊樂區。',
+  },
+  {
+    id: 'attraction-fushan-butterfly',
+    title: '福山/蝴蝶公園',
+    body:
+      '從紅河谷開車約 40 分鐘即可抵達。這條路線沿途都是大型峽谷，終點站是福山部落，從馬家堡餐廳旁步行到蝴蝶公園，這裡少為人知的台北秘境，也是北部的水源頭純淨清涼，走一圈大約 1 個小時返回停車處。',
+  },
+  {
+    id: 'attraction-tonghou',
+    title: '桶後溪/林物局復育地',
+    body:
+      '此地堪稱攝影師的後花園，全線沿溪的道路，終點站是林物局造林地，翻過一座山就是宜蘭縣。',
+  },
+];
+
+type Recommendation = {
+  id: string;
+  name: string;
+  body: string;
+};
+
+const nearbyRecommendations: Recommendation[] = [
+  {
+    id: 'rec-niaolaibo',
+    name: '鳥來伯餐廳',
+    body:
+      '單點小吃、辦桌菜便宜要事先預訂、菜色豐富又大碗。一桌5500元12個男人吃不完要打包。後方湖景優美宜拍照。路程約1.8公里。附近車位經常滿、用餐時間客人多，最好提早到店用餐。招牌菜土雞、炸鰻魚、炒飯等。',
+  },
+  {
+    id: 'rec-yukoyu',
+    name: '于烤魚',
+    body: '用餐環境、菜色不錯。是歌手于冠華所經營。',
+  },
+  {
+    id: 'rec-tai-chicken',
+    name: '台雞店',
+    body: '用餐空間大，在日月光溫泉附近，路邊停車方便，晚上比較早打烊需注意用餐時間。',
+  },
+  {
+    id: 'rec-sunmoon',
+    name: '日月光溫泉',
+    body: '具露天風呂大坪數戶外空間，少數提供親子一起泡湯的溫泉會館（須著泳裝），男、女湯、湯屋也是選項。',
+  },
+  {
+    id: 'rec-yunding',
+    name: '雲頂溫泉',
+    body: '半露天男女湯池環境不錯。',
+  },
+];
+---
+
+<SiteLayout title={pageTitle}>
+  <main class="page-main secondary-page" id="main-content" tabindex="-1">
+    <section class="secondary-page-hero" aria-labelledby="about-heading">
+      <img src={heroImage} alt={heroImageAlt} width="1280" height="854" loading="eager" decoding="async" />
+      <div class="secondary-page-hero-content">
+        <h1 class="secondary-page-title" id="about-heading">{pageTitle}</h1>
+        <p class="secondary-page-deck">
+          夢想與分享，打造一座城堡靠的不是一個人的實力，而是一群人的努力。
+        </p>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="about-story-heading">
+      <div class="secondary-section-inner secondary-prose">
+        <h2 class="secondary-section-heading" id="about-story-heading">夢想與分享</h2>
+        <p>
+          莊園 並非一方富賈獨有，而是平凡的你我至少片刻擁有。紅河隱園在七年半間點滴打造而成，累積20多年的技術成果在這裡呈現，這裡也是一個合作交流的平台，不同產業領域專長都可以巧妙的結合。
+        </p>
+        <p>歡迎帶著你的理想跟我們永續創造下去。</p>
+      </div>
+    </section>
+
+    <figure class="secondary-figure">
+      <img src="/assets/secondary/forest-night-walk-001.jpg" alt="紅河隱園夜晚林木步道：低燈光沿步道打亮樹幹，遠方為莊園建築輪廓。" width="1280" height="854" loading="lazy" decoding="async" />
+    </figure>
+
+    <section class="secondary-section" aria-labelledby="about-sustainability-heading">
+      <div class="secondary-section-inner secondary-prose">
+        <h2 class="secondary-section-heading" id="about-sustainability-heading">淨零排放&智慧科技</h2>
+        <p>
+          永續淨零排放在國內外企業機構佈局推行ESG永續發展路徑。身為小企業的我們也積極配合國家政策，共同為氣候變遷做些努力。小則從減少塑膠、降低耗能，大至改變生活習慣甚至帶動他人的觀念行為。我們先從節能減碳的運用做起，「紅河隱園 InVillage」將成為綠色生活科技的體驗場域。我們資源有限但是職志不變。一點一滴的不斷改善精進，為永續莊園而努力。
+        </p>
+        <p>
+          淨零排放&智慧科技，帶來安全、健康、舒適、享受。除了解決生活中的困擾，我們運用「環境管理系統」來維護生活品質，並有效率地降低管理成本，減少人與環境彼此的衝突破壞。來這裡舒服地坐著讓您從視覺、呼吸、體感、心情自然融入並體驗智慧生活情境。
+        </p>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="about-iot-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="about-iot-heading">科技城 IoT 長照設備展示中心</h2>
+        <p class="secondary-lede">
+          紅河隱園另一個定位是：科技城 IOT 長照設備展示中心，能夠親自體驗最全面的設備。
+        </p>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="about-partners-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="about-partners-heading">合作商家</h2>
+        <ul class="secondary-card-grid">
+          {partners.map((partner) => (
+            <li>
+              <article class="secondary-card">
+                <h3>{partner.name}</h3>
+                {partner.description && <p class="secondary-card-body">{partner.description}</p>}
+                <ul class="secondary-card-meta">
+                  {partner.address && (
+                    <li>
+                      <span class="secondary-card-meta-label">地址</span>
+                      <span>{partner.address}</span>
+                    </li>
+                  )}
+                  {partner.contact && (
+                    <li>
+                      <span class="secondary-card-meta-label">聯絡</span>
+                      <span>{partner.contact}</span>
+                    </li>
+                  )}
+                  {partner.linkUrl && partner.linkLabel && (
+                    <li>
+                      <span class="secondary-card-meta-label">連結</span>
+                      <a href={partner.linkUrl} target="_blank" rel="noopener noreferrer">{partner.linkLabel}</a>
+                    </li>
+                  )}
+                </ul>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="about-attractions-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="about-attractions-heading">周邊景點</h2>
+        <ul class="secondary-card-grid">
+          {attractions.map((place) => (
+            <li>
+              <article class="secondary-card" id={place.id}>
+                <h3>{place.title}</h3>
+                <p class="secondary-card-body">{place.body}</p>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="about-transport-heading">
+      <div class="secondary-section-inner secondary-prose">
+        <h2 class="secondary-section-heading" id="about-transport-heading">交通路線</h2>
+        <p>
+          紅河隱園位於新北烏來與新店的交界處，距離捷運新店站僅約 20 分鐘車程。地址是：新北市烏來區新烏路五段10-3號。
+        </p>
+        <ul class="secondary-prose-list">
+          <li>開車：搜尋Google地圖「紅河隱園」，一路為你導引至門口。</li>
+          <li>公車：849 路線公車大約15分鐘一班。從台北車站或是碧潭的新店總站都可以搭乘。我們建議搭捷運松山新店線，在新店總站下車，搭乘849路線公車，大約30~40分鐘車程在「成功站」下車，鄉園土雞城前右轉下坡步行大約5分鐘即可抵達。</li>
+        </ul>
+        <p>詳見「<a href="/contact">聯絡我們</a>」>「交通位置」。</p>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="about-nearby-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="about-nearby-heading">周邊商家推薦</h2>
+        <ul class="secondary-card-grid">
+          {nearbyRecommendations.map((rec) => (
+            <li>
+              <article class="secondary-card" id={rec.id}>
+                <h3>{rec.name}</h3>
+                <p class="secondary-card-body">{rec.body}</p>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="about-cta-heading">
+      <div class="content-inner secondary-cta-section">
+        <h2 class="section-heading" id="about-cta-heading">預訂紅河隱園 一日莊園主人</h2>
+        <p>
+          我們每次只接待一組貴賓，為了確保您的隱私與獨享莊園。白天可以盛裝打扮也適合休閒輕裝，夜裡三五好友、閨蜜私密自在，品嚐紅酒茗茶，您將不會受到打擾。
+        </p>
+        <p>
+          本莊園是由科技城公司營運管理，這裡的空間租借、參觀體驗、分享發表、教育訓練、會議住宿等各項活動都歡迎各界預約洽詢合作。
+        </p>
+        <a class="primary-cta" href={messengerUrl} target="_blank" rel="noopener noreferrer">立刻洽詢</a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

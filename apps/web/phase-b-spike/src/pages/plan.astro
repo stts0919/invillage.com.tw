@@ -1,0 +1,373 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import '../styles/secondary-pages.css';
+
+/**
+ * /plan（訂房方案）
+ *
+ * 內容來源：apps/web/public/plan.html（frozen copy 文字）
+ *
+ * 文案原則：
+ * - 舊文案與舊公開價格照原文保留
+ * - 使用原生 <details>/<summary> 折疊，鍵盤可操作（Enter/Space）
+ * - 頁尾洽詢 CTA 為該頁唯一 Messenger 入口
+ */
+
+const messengerUrl = 'https://m.me/invillagewulai';
+const pageTitle = '訂房方案';
+const heroImage = '/assets/secondary/public-lounge-001.jpg';
+const heroImageAlt = '紅河隱園室內公共空間：彩色沙發椅與大理石圓桌，牆上抽象畫作，玻璃隔間後方為用餐區。';
+
+type RateCard = {
+  id: string;
+  title: string;
+  rate: string;
+  scope: string;
+  details: string[];
+  extras: { label: string; text: string }[];
+};
+
+type Plan = {
+  id: string;
+  title: string;
+  rateLabel: string;
+  blurb: string;
+  notes: string[];
+  cards: RateCard[];
+};
+
+const plans: Plan[] = [
+  {
+    id: 'plan-easy',
+    title: '【一泊一食】輕鬆包棟專案',
+    rateLabel: '每人 NT$ 2,865 起',
+    blurb:
+      '當日15:00 ~ 翌日11:00，22人即成行；平日包棟贈下午茶＆提早入住or延後退房4小時。（此方案為淡季非連續假日限定專案）',
+    notes: [
+      '全館共6間客房，額外加人/加床/含餐：成人 NT$2,500；孩童（12歲以下）NT$1,800',
+      '提供3部投影機、高級落地式音響、麻將套組、金嗓KTV設備（觸控點歌、最新歌曲）',
+    ],
+    cards: [
+      {
+        id: 'plan-easy-a',
+        title: 'A 方案（假日方案）',
+        rate: '每人 NT$ 2,865 起',
+        scope: '當日 15:00 ~ 隔日 11:00',
+        details: [
+          '大人：22 位',
+          '入住：15:00',
+          '退房：11:00',
+        ],
+        extras: [
+          { label: '附贈', text: '（早餐）手作麵包、鮮乳、豆漿<若不需要則退款NT$3,000>' },
+          { label: '附贈', text: '館內零食、氣泡水、咖啡無限享用；打卡分享贈 特級紅酒or威士忌' },
+          { label: '選購', text: '優惠加購 - BBQ自助烤肉組 or 豐富臺菜套餐組合' },
+          { label: '選購', text: '優惠加購 - 烏來雲頂露天溫泉體驗（含接送）或 內洞遊樂區套票（含接送）' },
+        ],
+      },
+      {
+        id: 'plan-easy-b',
+        title: 'B 方案（平日方案 加贈 4 小時）',
+        rate: '每人 NT$ 2,865 起',
+        scope: '限定週二至週五 12:00 ~ 隔日 11:00；提前至 11:00 入住或延後至 15:00 退房',
+        details: ['大人：22 位', '入住：12:00', '退房：11:00'],
+        extras: [
+          { label: '附贈', text: '（早餐）手作麵包、鮮乳、豆漿<若不需要則退款NT$3,000>' },
+          { label: '附贈', text: '館內零食、氣泡水、咖啡無限享用；打卡分享贈 特級紅酒or威士忌' },
+          { label: '選購', text: '優惠加購 - BBQ自助烤肉組 or 豐富臺菜套餐組合' },
+          { label: '選購', text: '優惠加購 - 烏來雲頂露天溫泉體驗（含接送）或 內洞遊樂區套票（含接送）' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'plan-party',
+    title: '【一泊二食】包棟歡聚專案',
+    rateLabel: '每人 NT$ 3,750 起',
+    blurb: '當日15:00 ~ 翌日11:00，20人即成行；平日包棟贈下午茶＆提早入住or延後退房4小時。',
+    notes: [
+      '全館共6間客房，額外加人/加床/含餐：成人 NT$2,500；孩童（12歲以下）NT$1,800',
+      '提供3部投影機、高級落地式音響、麻將套組、金嗓KTV設備（觸控點歌、最新歌曲）',
+    ],
+    cards: [
+      {
+        id: 'plan-party-a',
+        title: 'A 方案（假日方案）',
+        rate: '每人 NT$ 3,750 起',
+        scope: '當日 15:00 ~ 隔日 11:00',
+        details: ['大人：20 位', '入住：15:00', '退房：11:00'],
+        extras: [
+          { label: '附贈', text: '（早餐）手作麵包、鮮乳、豆漿<若不需要則退款NT$3,000>' },
+          { label: '附贈', text: '（晚餐）豐富臺菜套餐組合' },
+          { label: '附贈', text: '館內零食、氣泡水、咖啡無限享用' },
+        ],
+      },
+      {
+        id: 'plan-party-b',
+        title: 'B 方案（平日方案 加贈 4 小時）',
+        rate: '每人 NT$ 3,750 起',
+        scope: '限定週二至週四 12:00 ~ 隔日 11:00；提前至 11:00 入住或延後至 15:00 退房',
+        details: ['大人：20 位', '入住：12:00', '退房：11:00'],
+        extras: [
+          { label: '附贈', text: '（早餐）手作麵包、鮮乳、豆漿<若不需要則退款NT$3,000>' },
+          { label: '附贈', text: '（晚餐）豐富臺菜套餐組合' },
+          { label: '附贈', text: '館內零食、氣泡水、咖啡無限享用' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'plan-feast',
+    title: '【一泊三食】豪華饗宴專案',
+    rateLabel: '每人 NT$ 6,490 起',
+    blurb: '當日12:00 ~ 翌日11:00，12人即成行，平日提早3小時入住，延後3小時退房。',
+    notes: [
+      '全館共6間客房，額外加人/加床/含餐：成人 NT$4,980；孩童（12歲以下）NT$3,000',
+      '提供3部投影機、高級落地式音響、麻將套組、金嗓KTV設備（觸控點歌、最新歌曲）',
+    ],
+    cards: [
+      {
+        id: 'plan-feast-a',
+        title: 'A 方案（假日方案）',
+        rate: '每人 NT$ 6,490 起',
+        scope: '當日 15:00 ~ 隔日 11:00',
+        details: ['大人：12 位', '入住：12:00', '退房：11:00'],
+        extras: [
+          { label: '附贈', text: '（下午茶）精緻點心吧、（早餐）精緻中西早點<若不需要則退款NT$3,000>' },
+          { label: '附贈', text: '（晚餐）私廚無菜單料理（需提前預約）' },
+          { label: '附贈', text: '館內零食、氣泡水、咖啡無限享用；入住即贈 特級紅酒or威士忌' },
+          { label: '附贈', text: '烏來雲頂露天溫泉體驗（含接送）或 內洞遊樂區套票（含接送）' },
+        ],
+      },
+      {
+        id: 'plan-feast-b',
+        title: 'B 方案（平日方案）',
+        rate: '每人 NT$ 6,490 起',
+        scope: '限定週二至週四 12:00 ~ 隔日 14:00',
+        details: ['大人：12 位', '入住：12:00', '退房：14:00'],
+        extras: [
+          { label: '附贈', text: '（下午茶）精緻點心吧、（早餐）精緻中西早點<若不需要則退款NT$3,000>' },
+          { label: '附贈', text: '（晚餐）私廚無菜單料理（需提前預約）' },
+          { label: '附贈', text: '館內零食、氣泡水、咖啡無限享用；入住即贈 特級紅酒or威士忌' },
+          { label: '附贈', text: '烏來雲頂露天溫泉體驗（含接送）或 內洞遊樂區套票（含接送）' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'plan-meeting-a',
+    title: '商務會議包場 A',
+    rateLabel: 'NT$ 25,000 / 8 小時',
+    blurb:
+      '專案使用空間包含一樓大廳、會議室、中島餐飲吧台、公共浴廁、戶外庭院（可停8-12輛轎車）。',
+    notes: [
+      '館內提供冰箱（含製冰機）、氣泡水機、冷熱水機、咖啡機、IH 爐、鬆餅機、杯盤餐具。若有使用烹飪料理請自行回復原狀，或付費1500元由本館代為清理',
+      '館內零食、氣泡水、咖啡無限享用；水果糕點組合',
+      '提供3部投影機、高級落地式音響、金嗓KTV設備（觸控點歌、最新歌曲）、Apple TV、智慧電視盒、白板',
+      '為維護會館顧客的權益，全館（包含陽臺）禁止吸煙，違者加收 NT$3,000 客房清潔費用',
+    ],
+    cards: [
+      {
+        id: 'plan-meeting-a-detail',
+        title: '包場細節',
+        rate: 'NT$ 25,000 / 8 小時',
+        scope: '週二～週五 09:00 ~ 17:00',
+        details: [
+          '一樓大廳、會議室、中島餐飲吧台、公共浴廁、戶外庭院（可停8-12輛轎車）',
+          '大人：20 ~ 40 位',
+          '入場：09:00',
+          '退場：17:00',
+        ],
+        extras: [
+          { label: '選購', text: '室內團體活動：手作擴香體驗、心靈探索工作坊、手沖咖啡入門課程' },
+          { label: '選購', text: '專車往返接送、周邊景點優惠加購（烏來溫泉、內洞遊樂區）' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'plan-meeting-b',
+    title: '商務會議包場 B',
+    rateLabel: '每人 NT$ 1,490 起',
+    blurb:
+      '專案使用空間包含一樓大廳、會議室、中島餐飲吧台、二樓廚房、餐廳、視聽室、會談室、戶外庭院（可停8-12輛轎車）。',
+    notes: [
+      '館內提供冰箱（含製冰機）、氣泡水機、冷熱水機、咖啡機、IH 爐、鬆餅機、瓦斯爐、烤箱、微波爐、BBQ烤肉爐、15人份大電鍋、杯盤餐具。若有使用烹飪料理請自行回復原狀，或付費1500元由本館代為清理',
+      '館內零食、氣泡水、咖啡無限享用；水果糕點組合',
+      '提供3部投影機、高級落地式音響、麻將組合、金嗓KTV設備（觸控點歌、最新歌曲）、Apple TV、智慧電視盒、白板',
+    ],
+    cards: [
+      {
+        id: 'plan-meeting-b-detail',
+        title: '包場細節',
+        rate: '每人 NT$ 1,490 起',
+        scope: '週二～週五 09:00 ~ 17:00',
+        details: [
+          '一樓大廳、會議室、中島餐飲吧台、公共浴廁、戶外庭院（可停8-12輛轎車）',
+          '二樓餐廳、廚房、視聽室、會談室',
+          '大人：20 ~ 40 位',
+          '入場：09:00',
+          '退場：17:00',
+        ],
+        extras: [
+          { label: '附贈', text: '自助烤肉趴（附食材、烤肉架；可協助安排「付費專人代烤」服務），不烤肉者，則依需求調整其他餐飲服務' },
+          { label: '選購', text: '室內團體活動：手作擴香體驗、心靈探索工作坊、手沖咖啡入門課程' },
+          { label: '選購', text: '專車往返接送、周邊景點優惠加購（烏來溫泉、內洞遊樂區）' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'plan-meeting-stay',
+    title: '會議住宿包場',
+    rateLabel: 'NT$ 78,200 / NT$ 86,900',
+    blurb:
+      '本專案可接受至多40人進駐使用空間，全棟客房+公共空間均可使用，但僅限22人住宿過夜。',
+    notes: [
+      '館內零食、氣泡水、咖啡無限享用；水果糕點組合',
+      '館內提供冰箱（含製冰機）、氣泡水機、冷熱水機、咖啡機、IH 爐、鬆餅機、瓦斯爐、烤箱、微波爐、BBQ烤肉爐、15人份大電鍋、杯盤餐具。若有使用烹飪料理請自行回復原狀，或付費1500元由本館代為清理',
+      '提供3部投影機、高級落地式音響、金嗓KTV設備（觸控點歌、最新歌曲）',
+      '客房內備有室內拖鞋、浴巾、毛巾、沐浴乳、洗髮精、吹風機、踏墊、電熱水壺、玻璃水壺、茶杯。因應環保政策，一次性牙刷、牙膏、浴帽、梳子不主動提供，若需要請事先告知。',
+    ],
+    cards: [
+      {
+        id: 'plan-meeting-stay-weekday',
+        title: '平日方案',
+        rate: 'NT$ 78,200',
+        scope: '限定週二至週五 09:00 ~ 隔日 11:00',
+        details: ['活動：40 位', '住宿：22 位', '入場：09:00', '退場：11:00'],
+        extras: [
+          { label: '附贈', text: '（下午茶）SkyPark輕食組、（早餐）精緻中西早點' },
+          { label: '附贈', text: '自助烤肉趴（附食材、烤肉架；可協助安排「付費專人代烤」服務），不烤肉者，則依需求調整其他餐飲服務，如：天空露台火鍋組合 or 方格斯手作披薩 (二擇一)' },
+          { label: '選購', text: '室內團體活動：手作擴香體驗、心靈探索工作坊、手沖咖啡入門課程' },
+        ],
+      },
+      {
+        id: 'plan-meeting-stay-holiday',
+        title: '假日方案',
+        rate: 'NT$ 86,900',
+        scope: '假日當日 09:00 ~ 隔日 11:00',
+        details: ['活動：40 位', '住宿：22 位', '入場：09:00', '退場：11:00'],
+        extras: [
+          { label: '附贈', text: '（下午茶）SkyPark輕食組、（早餐）精緻中西早點' },
+          { label: '附贈', text: '自助烤肉趴（附食材、烤肉架；可協助安排「付費專人代烤」服務），不烤肉者，則依需求調整其他餐飲服務，如：天空露台火鍋組合 or 方格斯手作披薩 (二擇一)' },
+          { label: '選購', text: '室內團體活動：手作擴香體驗、心靈探索工作坊、手沖咖啡入門課程' },
+        ],
+      },
+    ],
+  },
+];
+---
+
+<SiteLayout title={pageTitle}>
+  <main class="page-main secondary-page" id="main-content" tabindex="-1">
+    <section class="secondary-page-hero" aria-labelledby="plan-heading">
+      <img src={heroImage} alt={heroImageAlt} width="1280" height="854" loading="eager" decoding="async" />
+      <div class="secondary-page-hero-content">
+        <h1 class="secondary-page-title" id="plan-heading">{pageTitle}</h1>
+        <p class="secondary-page-deck">
+          在紅河隱園，窗戶看出去都是森林峽谷。雖然沒有五星飯店的奢華裝修，卻不見對街嫌惡景觀、也沒有鄰房干擾隱私。在這裡只有舒適放鬆，獨享整個大自然空間。
+        </p>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="plan-intro-heading">
+      <div class="secondary-section-inner secondary-prose">
+        <h2 class="secondary-section-heading" id="plan-intro-heading">
+          離市區最近的莊園，多樣化的房型與訂房方案
+        </h2>
+        <p>離市區最近的莊園，我們提供多樣化的房型與訂房方案，家族旅遊、親友度假、公司會議活動。</p>
+        <p>體驗當一次莊園的主人。</p>
+        <p>預約制包場，體驗「智慧莊園」，一次只接待一組貴賓。</p>
+      </div>
+    </section>
+
+    <figure class="secondary-figure">
+      <img src="/assets/secondary/outdoor-patio-001.jpg" alt="紅河隱園戶外露台下午茶：藤椅與雙層點心架，背景為烏來峽谷綠山景。" width="1280" height="854" loading="lazy" decoding="async" />
+    </figure>
+
+    <section class="secondary-section" aria-labelledby="plan-list-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="plan-list-heading">
+          訂房方案總覽
+        </h2>
+        <ul class="secondary-plan-list">
+          {plans.map((plan) => (
+            <li>
+              <details class="secondary-plan-card" name="plan-group">
+                <summary>
+                  <span class="secondary-plan-card-title">{plan.title}</span>
+                  <span class="secondary-plan-card-rate">{plan.rateLabel}</span>
+                </summary>
+                <div class="secondary-plan-card-body">
+                  <p class="secondary-plan-summary">{plan.blurb}</p>
+                  <ul class="secondary-plan-detail-list">
+                    {plan.notes.map((note) => <li>{note}</li>)}
+                  </ul>
+                  <div class="secondary-plan-subgrid">
+                    {plan.cards.map((card) => (
+                      <article class="secondary-plan-sub" id={card.id}>
+                        <h4>{card.title}</h4>
+                        <p class="secondary-plan-sub-rate"><strong>費用</strong>：{card.rate}</p>
+                        <p><strong>時段</strong>：{card.scope}</p>
+                        <ul class="secondary-plan-detail-list">
+                          {card.details.map((line) => <li>{line}</li>)}
+                        </ul>
+                        <ul class="secondary-plan-detail-list">
+                          {card.extras.map((extra) => (
+                            <li><strong>{extra.label}</strong>：{extra.text}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              </details>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="plan-contact-info-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="plan-contact-info-heading">服務洽詢資訊</h2>
+        <ul class="secondary-contact-info">
+          <li>
+            <span class="secondary-contact-info-label">公司</span>
+            <span>科技城股份有限公司</span>
+          </li>
+          <li>
+            <span class="secondary-contact-info-label">地址</span>
+            <span>新北市新店區中正路四維巷一弄四號四樓（遠東工業區）</span>
+          </li>
+          <li>
+            <span class="secondary-contact-info-label">電話</span>
+            <span>（02）22194201 分機 31</span>
+          </li>
+          <li>
+            <span class="secondary-contact-info-label">手機</span>
+            <span>0937017250</span>
+          </li>
+          <li>
+            <span class="secondary-contact-info-label">承辦人</span>
+            <span>曾先生</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="plan-cta-heading">
+      <div class="content-inner secondary-cta-section">
+        <h2 class="section-heading" id="plan-cta-heading">預訂紅河隱園 一日莊園主人</h2>
+        <p>
+          我們每次只接待一組貴賓，為了確保您的隱私與獨享莊園。白天可以盛裝打扮也適合休閒輕裝，夜裡三五好友、閨蜜私密自在，品嚐紅酒茗茶，您將不會受到打擾。
+        </p>
+        <p>
+          本莊園是由科技城公司營運管理，這裡的空間租借、參觀體驗、分享發表、教育訓練、會議住宿等各項活動都歡迎各界預約洽詢合作。
+        </p>
+        <a class="primary-cta" href={messengerUrl} target="_blank" rel="noopener noreferrer">立刻洽詢</a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>
