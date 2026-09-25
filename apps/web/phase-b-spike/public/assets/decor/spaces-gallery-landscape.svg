@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1800" preserveAspectRatio="none">
+  <!-- The contour lines echo the valley; the sparse right-angle routes echo quiet sensors. -->
+  <g fill="none" stroke="#eff2ef" stroke-width="1.5" stroke-opacity=".13">
+    <path d="M-160 102C72 28 256 56 353 166s58 258 169 322 272 17 365 130"/>
+    <path d="M-178 152C54 78 219 112 303 204s47 250 167 322 258 31 343 138"/>
+    <path d="M-198 205C34 127 189 162 263 248s36 244 163 320 249 42 323 143"/>
+    <path d="M-219 258C17 181 161 212 226 291s27 240 156 319 237 57 306 153"/>
+    <path d="M-230 315C2 236 135 261 187 332s20 234 147 314 230 68 292 166"/>
+    <path d="M1665 838c-223-56-381-14-477 76s-74 221-192 301-274 65-365 166"/>
+    <path d="M1690 896c-227-54-373-8-462 79s-68 216-183 298-265 77-350 181"/>
+    <path d="M1710 956c-229-49-365-2-448 83s-62 207-173 289-254 91-332 195"/>
+    <path d="M1730 1018c-231-42-358 6-434 88s-54 199-161 283-245 101-318 210"/>
+    <path d="M1748 1082c-229-40-346 17-414 96s-46 192-150 275-230 113-297 222"/>
+  </g>
+  <g fill="none" stroke="#778f91" stroke-width="1.5" stroke-opacity=".31" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1089 82h143v82h112v102h188"/>
+    <path d="M1398 0v122h-97v127h-63"/>
+    <path d="M1578 420h-119v78h-87v116"/>
+    <path d="M-20 1052h150v-89h126v-104h92"/>
+    <path d="M48 1514h123v-72h108v-116h135"/>
+    <path d="M315 1800v-146h97v-77h83"/>
+    <path d="M1585 1620h-137v-87h-116v-103h-70"/>
+  </g>
+  <g fill="#eff2ef" fill-opacity=".28">
+    <circle cx="1089" cy="82" r="3"/>
+    <circle cx="1344" cy="266" r="3"/>
+    <circle cx="1372" cy="614" r="3"/>
+    <circle cx="348" cy="859" r="3"/>
+    <circle cx="414" cy="1326" r="3"/>
+    <circle cx="495" cy="1577" r="3"/>
+    <circle cx="1262" cy="1430" r="3"/>
+  </g>
+</svg>

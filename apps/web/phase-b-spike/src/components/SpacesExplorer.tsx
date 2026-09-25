@@ -88,6 +88,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const openDialogRef = useRef<HTMLButtonElement | null>(null);
   const lastDialogTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const gallerySceneRef = useRef<HTMLDivElement | null>(null);
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const previousOverflowRef = useRef<{ html: string; body: string } | null>(null);
   const thumbnailRefs = useRef<Array<HTMLButtonElement | null>>([]);
@@ -108,6 +109,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
 
   useEffect(() => {
     const root = galleryRef.current;
+    const scene = gallerySceneRef.current;
     if (!root) return;
     let active = true;
     let media: ReturnType<typeof import("gsap").gsap.matchMedia> | undefined;
@@ -152,6 +154,22 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
         });
         return () => cleanups.forEach((cleanup) => cleanup());
       }, root);
+      if (scene) {
+        media.add("(min-width: 48.0625rem) and (prefers-reduced-motion: no-preference)", () => {
+          const ambient = scene.querySelector<HTMLElement>(".spaces-gallery-ambient");
+          if (!ambient) return;
+          gsap.fromTo(ambient, { y: -12 }, {
+            y: 12,
+            ease: "none",
+            scrollTrigger: {
+              trigger: scene,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.8,
+            },
+          });
+        }, scene);
+      }
       ScrollTrigger.refresh();
     }).catch(() => { media?.revert(); });
     return () => {
@@ -464,30 +482,33 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
         {loading ? <p className="spaces-status" role="status">照片載入中…</p> : null}
       </div>
 
-      <div ref={galleryRef} key={selected.id} className="spaces-gallery" role="group" aria-labelledby={headingId} data-space-id={selected.id} data-gallery-count={selected.gallery.length}>
-        {selected.gallery.map((photo, index) => (
-          <button
-            key={photo.assetId}
-            className="spaces-gallery-item"
-            type="button"
-            data-gallery-asset-id={photo.assetId}
-            aria-label={`查看完整照片：${photo.alt}`}
-            onClick={(event) => openFullPhoto(index, event.currentTarget)}
-          >
-            <span className="spaces-gallery-frame">
-              <img
-                src={photo.variants[0].url}
-                srcSet={gallerySrcSet(photo)}
-                sizes={gallerySizes(index, selected.gallery.length)}
-                alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
-                loading="lazy"
-                decoding="async"
-              />
-            </span>
-          </button>
-        ))}
+      <div ref={gallerySceneRef} className="spaces-gallery-scene">
+        <div className="spaces-gallery-ambient" aria-hidden="true" />
+        <div ref={galleryRef} key={selected.id} className="spaces-gallery" role="group" aria-labelledby={headingId} data-space-id={selected.id} data-gallery-count={selected.gallery.length}>
+          {selected.gallery.map((photo, index) => (
+            <button
+              key={photo.assetId}
+              className="spaces-gallery-item"
+              type="button"
+              data-gallery-asset-id={photo.assetId}
+              aria-label={`查看完整照片：${photo.alt}`}
+              onClick={(event) => openFullPhoto(index, event.currentTarget)}
+            >
+              <span className="spaces-gallery-frame">
+                <img
+                  src={photo.variants[0].url}
+                  srcSet={gallerySrcSet(photo)}
+                  sizes={gallerySizes(index, selected.gallery.length)}
+                  alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

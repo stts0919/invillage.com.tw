@@ -25,7 +25,12 @@ const { title, description, headerOnHero = false } = Astro.props;
   <body>
     <a class="skip-link" href="#main-content">跳到主要內容</a>
     <SiteHeader onHero={headerOnHero} />
-    <slot />
-    <SiteFooter />
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <slot />
+        <SiteFooter />
+      </div>
+    </div>
+    <script>import '../scripts/editorial-motion.ts';</script>
   </body>
 </html>

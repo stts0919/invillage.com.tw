@@ -30,6 +30,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Invillage Editorial";
+  src: url("/assets/fonts/invillage-editorial-site-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Invillage Editorial";
+  src: url("/assets/fonts/invillage-editorial-site-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --color-forest: #1a3937;
@@ -38,6 +54,7 @@
   --color-white: #fff;
   --color-black: #000;
   --font-body: "HarmonyOS Sans TC", "Noto Sans TC", "PingFang TC", sans-serif;
+  --font-editorial: "Invillage Editorial", "Noto Serif TC", "Songti TC", serif;
   --content-width: 76rem;
   --header-height: 5.25rem;
   --page-gutter: clamp(1.25rem, 5vw, 5rem);
@@ -56,6 +73,10 @@ html {
   scroll-padding-top: calc(var(--header-height) + 1rem);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+html.smoother-active {
+  scroll-behavior: auto;
 }
 
 body {
@@ -326,10 +347,12 @@ a {
 .hero-title {
   max-width: 13ch;
   margin: 0;
+  font-family: var(--font-editorial);
   font-size: clamp(2.5rem, 5.2vw, 5rem);
   font-weight: 700;
-  letter-spacing: 0.015em;
-  line-height: 1.22;
+  font-synthesis: none;
+  letter-spacing: -0.012em;
+  line-height: 1.18;
   text-wrap: pretty;
   text-shadow: 0 2px 1.25rem rgb(0 0 0 / 28%);
 }
@@ -455,10 +478,12 @@ a {
   max-width: 18ch;
   margin: 0 0 clamp(1.75rem, 4vw, 3rem);
   color: var(--color-forest);
+  font-family: var(--font-editorial);
   font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  line-height: 1.3;
+  font-weight: 600;
+  font-synthesis: none;
+  letter-spacing: 0;
+  line-height: 1.28;
   text-wrap: pretty;
 }
 
@@ -557,8 +582,10 @@ a {
 .room-panel h3 {
   margin: 0;
   color: var(--color-forest);
+  font-family: var(--font-editorial);
   font-size: clamp(1.5rem, 2.6vw, 2.25rem);
-  font-weight: 700;
+  font-weight: 600;
+  font-synthesis: none;
   line-height: 1.35;
 }
 
@@ -602,8 +629,11 @@ a {
 
 .shared-space-copy h2 {
   margin: 0 0 1rem;
+  font-family: var(--font-editorial);
   font-size: clamp(1.6rem, 2.6vw, 2.5rem);
-  line-height: 1.3;
+  font-weight: 600;
+  font-synthesis: none;
+  line-height: 1.28;
 }
 
 .shared-space-copy p,
@@ -622,20 +652,38 @@ a {
 }
 
 .spaces-page > .content-section {
-  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(3.5rem, 6vw, 5rem);
+  padding-block: 0 clamp(3rem, 5vw, 4rem);
   background: var(--color-stone);
 }
 
 .spaces-contact {
-  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  padding-top: clamp(1.5rem, 2.5vw, 2.25rem);
   border-top: 1px solid rgb(26 57 55 / 22%);
 }
 
 .spaces-contact .section-heading {
-  font-family: "Invillage Editorial Pilot", "Noto Serif TC", "PingFang TC", serif;
+  grid-column: 1 / -1;
+  max-width: none;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
   font-size: clamp(2rem, 3.7vw, 3.25rem);
-  font-synthesis: none;
+  font-family: var(--font-editorial);
+  font-weight: 700;
   text-wrap: balance;
+}
+
+.spaces-contact p {
+  grid-column: 1;
+}
+
+.spaces-contact .primary-cta {
+  grid-column: 2;
+  align-self: start;
+  margin-top: 0;
+  white-space: nowrap;
 }
 
 @media (min-width: 60.0625rem) {
@@ -645,13 +693,86 @@ a {
   }
 }
 
+/* Keep the long-form pages' closing invitation in the same editorial register. */
+.secondary-page > .secondary-page-hero + .secondary-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.secondary-page > .secondary-page-hero + .secondary-section::before {
+  position: absolute;
+  top: 50%;
+  right: var(--page-gutter);
+  width: clamp(9rem, 35vw, 19rem);
+  aspect-ratio: 400 / 301;
+  background: url("/assets/brand/logo.png") left center / auto 100% no-repeat;
+  opacity: 0.045;
+  transform: translateY(-50%);
+  content: "";
+  pointer-events: none;
+}
+
+.secondary-page > .secondary-page-hero + .secondary-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.secondary-page > .content-section {
+  padding-block: 0 clamp(3rem, 5vw, 4rem);
+  background: var(--color-stone);
+}
+
+.secondary-page .secondary-cta-section {
+  padding-top: clamp(1.5rem, 2.5vw, 2.25rem);
+  border-top: 1px solid rgb(26 57 55 / 22%);
+}
+
+.secondary-page .secondary-cta-section .section-heading {
+  max-width: none;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+  font-size: clamp(2rem, 3.7vw, 3.25rem);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.secondary-page .secondary-cta-section p {
+  max-width: 56rem;
+  margin: 0 0 1rem;
+  line-height: 1.85;
+}
+
+.secondary-page .secondary-cta-section .primary-cta {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 60.0625rem) {
+  .secondary-page .secondary-cta-section .section-heading {
+    white-space: nowrap;
+  }
+}
+
 .spaces-page {
   background: var(--color-forest);
 }
 
+#not-found-heading {
+  font-weight: 700;
+}
+
+#smooth-content:has(#not-found-heading) {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+}
+
+#smooth-content:has(#not-found-heading) .page-main {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
 .spaces-page .spaces-stage-top h1,
 .spaces-page .spaces-stage-copy h2 {
-  font-family: "Invillage Editorial Pilot", var(--font-body);
+  font-family: var(--font-editorial);
   font-synthesis: none;
 }
 
@@ -724,7 +845,7 @@ a {
   color: var(--color-white);
   font-size: clamp(2rem, 3.6vw, 3.5rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   line-height: 1.25;
 }
 
@@ -785,7 +906,7 @@ a {
   color: var(--color-white);
   font-size: clamp(2.25rem, 4.3vw, 4.5rem);
   font-weight: 700;
-  line-height: 1.22;
+  line-height: 1.2;
   text-wrap: pretty;
 }
 
@@ -1024,7 +1145,7 @@ a {
   height: auto;
   aspect-ratio: 1;
   border: 2px solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.125rem;
   object-fit: cover;
 }
 
@@ -1075,7 +1196,7 @@ a {
   height: 1.25rem;
   place-items: center;
   border: 1px solid currentColor;
-  border-radius: 0.125rem;
+  border-radius: 0;
   content: "+";
   font-size: 1rem;
   font-weight: 400;
@@ -1109,15 +1230,35 @@ a {
   color: var(--color-white);
 }
 
+.spaces-gallery-scene {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-top: clamp(1.25rem, 2.5vw, 2rem);
+  background:
+    radial-gradient(ellipse 58% 32% at 94% 12%, rgb(119 143 145 / 17%), transparent 80%),
+    radial-gradient(ellipse 48% 30% at 6% 77%, rgb(239 242 239 / 6%), transparent 82%),
+    var(--color-forest);
+}
+
+.spaces-gallery-ambient {
+  position: absolute;
+  inset: -1.25rem 0;
+  background: url("/assets/decor/spaces-gallery-landscape.svg") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
 .spaces-gallery {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: clamp(1.5rem, 3vw, 2.5rem);
   row-gap: clamp(2.5rem, 4vw, 3.5rem);
   width: min(76rem, calc(100% - var(--page-gutter) - var(--page-gutter)));
-  margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
-  padding-top: clamp(2.5rem, 5vw, 4rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
+  margin: 0 auto;
+  padding-top: clamp(2rem, 3.5vw, 3rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
   border-top: 1px solid rgb(255 255 255 / 24%);
 }
 
@@ -1149,21 +1290,14 @@ a {
   grid-column: 3 / span 8;
 }
 
-.spaces-gallery-item::before {
-  position: absolute;
-  inset: 0;
-  border-radius: 0.125rem;
-  background: var(--color-water);
-  content: "";
-  transform: translate(0.375rem, 0.375rem);
-}
-
 .spaces-gallery-frame {
   position: relative;
   display: block;
-  padding: 0.25rem;
-  border-radius: 0.125rem;
+  padding: 0.125rem;
+  border: 1px solid rgb(239 242 239 / 70%);
+  border-radius: 0;
   background: var(--color-stone);
+  box-shadow: 0 0.875rem 2.25rem rgb(0 0 0 / 19%);
   transform-style: preserve-3d;
 }
 
@@ -1195,7 +1329,7 @@ a {
 }
 
 .spaces-original-intro {
-  padding-block: clamp(2.25rem, 4vw, 3.25rem) 0;
+  padding-block: clamp(1.5rem, 2.5vw, 2.25rem) clamp(0.75rem, 1.75vw, 1.5rem);
 }
 
 .spaces-original-intro p,
@@ -1212,6 +1346,20 @@ a {
 
 .spaces-original-intro p {
   margin-block: 0;
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+  border-left: 2px solid var(--color-water);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.0625rem, 1.5vw, 1.375rem);
+  font-weight: 600;
+  font-synthesis: none;
+  line-height: 1.7;
+}
+
+.spaces-fallback h2,
+.spaces-fallback h3 {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  font-synthesis: none;
 }
 
 .spaces-fallback article {
@@ -1338,20 +1486,23 @@ a {
     justify-content: safe center;
   }
 
-  .spaces-description {
-    display: block;
-    margin-top: 1.5rem;
-  }
-
-  .spaces-description-copy {
-    display: none;
-  }
-
   .spaces-gallery {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 2rem;
     width: calc(100% - 2.5rem);
-    padding-top: 2rem;
+    padding-top: 1.75rem;
+  }
+
+  .spaces-contact {
+    display: block;
+  }
+
+  .spaces-contact .section-heading {
+    white-space: normal;
+  }
+
+  .spaces-contact .primary-cta {
+    margin-top: 1.5rem;
   }
 
   .spaces-gallery-item,
@@ -1378,6 +1529,17 @@ a {
 
   .spaces-fallback-gallery a:first-child {
     grid-column: 1;
+  }
+}
+
+@media (max-width: 40rem) {
+  .spaces-description {
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  .spaces-description-copy {
+    display: none;
   }
 }
 
@@ -1453,8 +1615,11 @@ a {
 
 .shared-space-copy h3 {
   margin: 0 0 1rem;
+  font-family: var(--font-editorial);
   font-size: clamp(1.6rem, 2.6vw, 2.5rem);
-  line-height: 1.3;
+  font-weight: 600;
+  font-synthesis: none;
+  line-height: 1.28;
 }
 
 .text-link {
@@ -1489,7 +1654,9 @@ a {
 }
 
 .site-footer {
-  padding: 3.5rem var(--page-gutter) 2rem;
+  position: relative;
+  padding: 4rem var(--page-gutter) 2rem;
+  border-top: 1px solid rgb(239 242 239 / 24%);
   color: var(--color-white);
   background: var(--color-forest);
 }

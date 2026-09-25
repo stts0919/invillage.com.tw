@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "status": "preview-release-candidate",
+  "scope": "V1 editorial headings and the short /spaces closing lead across six routes",
+  "family": "Invillage Editorial",
+  "sourceUrl": "https://github.com/adobe-fonts/source-han-serif/blob/release/Variable/WOFF2/OTF/Subset/SourceHanSerifTW-VF.otf.woff2",
+  "sourcePath": "assets/optimized/font-pilot/SourceHanSerifTW-VF.otf.woff2",
+  "sourceBytes": 7234064,
+  "sourceSha256": "698be31faf89a9848887c382181ffc484c403ce5a789fc56504e84d97aa9d3a4",
+  "licenseUrl": "https://github.com/adobe-fonts/source-han-serif/blob/release/LICENSE.txt",
+  "licensePath": "apps/web/phase-b-spike/public/assets/fonts/invillage-editorial-site-OFL.txt",
+  "licenseSha256": "9ff5bb567e1b92c801fc1069e5fbf992ff8efccacb9db94e5959a5b3ba9bb903",
+  "buildScript": "apps/web/phase-b-spike/scripts/build-font-pilot.py --site-editorial",
+  "toolVersions": {
+    "fonttools": "4.66.0",
+    "Brotli": "1.2.0"
+  },
+  "characterCount": 296,
+  "charactersSha256": "3de2138071c76c9643cba233bd38c43f1ea5b26f0e52c38c256769097e1fc1ac",
+  "fonts": [
+    {
+      "weight": 600,
+      "publicPath": "apps/web/phase-b-spike/public/assets/fonts/invillage-editorial-site-600.woff2",
+      "optimizedPath": "assets/optimized/font-pilot/invillage-editorial-site-600.woff2",
+      "bytes": 59364,
+      "sha256": "9d91f86751258ff84988c0fa267ab4034f033239714534243daefcca9ec1ebc0"
+    },
+    {
+      "weight": 700,
+      "publicPath": "apps/web/phase-b-spike/public/assets/fonts/invillage-editorial-site-700.woff2",
+      "optimizedPath": "assets/optimized/font-pilot/invillage-editorial-site-700.woff2",
+      "bytes": 60004,
+      "sha256": "cdf53b6c90848b13ca5affa742e04c88111bca033d0843f127c1a70095ccccad"
+    }
+  ],
+  "roleRule": "700 for primary page/photo-stage titles; 600 for section and feature headings and the short /spaces closing lead. Body, navigation, controls, prices, FAQ and long descriptions remain sans-serif.",
+  "releaseGate": "The release branch must explicitly track the reviewed WOFF2 subsets and OFL sidecar despite the local asset ignore rule, then prove their bytes and SHA-256 in a clean checkout. The original 7 MB Adobe source remains outside the runtime tree; never substitute the desktop-licensed justfont OTF."
+}
