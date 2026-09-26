@@ -2,7 +2,7 @@
 
 > 本檔只保存目前狀態、下一個工作包與硬門檻。架構、流程與歷史證據由下方索引分流。
 >
-> 最後更新：2026-09-22
+> 最後更新：2026-09-26
 
 ## 目前階段
 
@@ -107,3 +107,9 @@ MiniMax 不受 `AGENTS.sub.md` 規範，也不得把自己的回報視為主管�
 - 未授權：Production R2／Pages／Worker／D1、DNS、custom domain、Webflow publish／unpublish。
 - 若 account readback 顯示可能產生任何新費用，停止並逐次詢問；不得購買或升級方案。
 - 不更動 frozen copy，不覆寫或刪除原始圖片，不擴大 token 權限。
+
+## 最近維護
+
+- 2026-09-26：依 owner 明確指示，永久刪除整個 `open-design/` 原始碼目錄（約 3.6 GB，不留備份）；另清理 15 個過時獨立建置／裁字工具／測試／日誌暫存目錄與 21 個一次性檔案，共 2,075 個檔案／347,000,581 bytes。舊 4346–4350 暫存 Preview 不再保留；目前仍在使用的 Astro Preview、`dist/` 與其快取未動。
+- 已確認 `codex/phase-5-preview` 為 `main` 祖先且 GitHub SHA 未變，刪除本機及遠端分支；內容仍可由 `main` 還原。其餘三條分支尚未合併，含新版 Preview／rollback 來源，保留；原圖、manifest、影片候選、核准設計證據與 release worktree 未動。
+- 封存 Codex 清單讀回 0 筆。現有工具不提供永久刪除對話／子代理，Codex app 的 Computer Use 亦被安全限制拒絕；沒有刪 session 檔、資料庫或其他專案對話。此部分未執行，需使用者在產品支援的介面處理。
