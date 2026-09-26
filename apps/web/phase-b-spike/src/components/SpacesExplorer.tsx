@@ -35,8 +35,12 @@ type Props = {
 // up to 1.5x that height in source width to cover the portrait slot.
 const mainImageSizes = "(max-width: 48rem) max(54rem, 114svh), 100vw";
 
-function imageSrcSet(item: SpaceItem) {
-  return `${item.media.small} 640w, ${item.media.medium} 1280w, ${item.media.large} 1920w`;
+function stageImageUrl(url: string, retry: number) {
+  return retry > 0 ? url + (url.includes("?") ? "&" : "?") + "iv-retry=" + retry : url;
+}
+
+function imageSrcSet(item: SpaceItem, retry = 0) {
+  return `${stageImageUrl(item.media.small, retry)} 640w, ${stageImageUrl(item.media.medium, retry)} 1280w, ${stageImageUrl(item.media.large, retry)} 1920w`;
 }
 
 function gallerySrcSet(photo: GalleryPhoto) {
@@ -76,8 +80,9 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   const [loading, setLoading] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [selectionError, setSelectionError] = useState(false);
-  const [imageVersion, setImageVersion] = useState(0);
+  const [imageRetries, setImageRetries] = useState<Record<string, number>>({});
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogInitialLoading, setDialogInitialLoading] = useState(false);
   const [dialogImageError, setDialogImageError] = useState(false);
   const [dialogPhotoIndex, setDialogPhotoIndex] = useState(0);
   const [dialogLoading, setDialogLoading] = useState(false);
@@ -93,12 +98,14 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   const previousOverflowRef = useRef<{ html: string; body: string } | null>(null);
   const thumbnailRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const selectedId = category === "rooms" ? (rooms[roomIndex] ?? rooms[0])?.id : (sharedSpaces[sharedIndex] ?? sharedSpaces[0])?.id;
+  const currentItem = category === "rooms" ? (rooms[roomIndex] ?? rooms[0]) : (sharedSpaces[sharedIndex] ?? sharedSpaces[0]);
+  const selectedId = currentItem?.id;
+  const imageRetry = currentItem ? (imageRetries[currentItem.media.assetId] ?? 0) : 0;
 
   useEffect(() => {
     const image = mainImageRef.current;
     if (image?.complete && image.naturalWidth === 0) setImageError(true);
-  }, [selectedId, imageVersion]);
+  }, [selectedId, imageRetry]);
 
   useEffect(() => () => {
     const previous = previousOverflowRef.current;
@@ -206,8 +213,9 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
 
     const image = new Image();
     image.sizes = mainImageSizes;
-    image.srcset = imageSrcSet(next);
-    image.src = next.media.small;
+    const retry = imageRetries[next.media.assetId] ?? 0;
+    image.srcset = imageSrcSet(next, retry);
+    image.src = stageImageUrl(next.media.small, retry);
 
     try {
       await image.decode();
@@ -249,6 +257,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
     lastDialogTriggerRef.current = trigger;
     dialogRequestId.current += 1;
     setDialogPhotoIndex(index);
+    setDialogInitialLoading(true);
     setDialogLoading(false);
     setDialogSelectionError(false);
     setDialogImageError(false);
@@ -268,7 +277,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   }
 
   function onFullPhotoClosed() {
-    dialogRequestId.current += 1;
+    const closeRequest = ++dialogRequestId.current;
     const previous = previousOverflowRef.current;
     if (previous) {
       document.documentElement.style.overflow = previous.html;
@@ -276,12 +285,39 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
       previousOverflowRef.current = null;
     }
     setDialogOpen(false);
+    setDialogInitialLoading(false);
     setDialogPhotoIndex(0);
     setDialogLoading(false);
     setDialogSelectionError(false);
     setDialogImageError(false);
-    const trigger = lastDialogTriggerRef.current?.isConnected ? lastDialogTriggerRef.current : openDialogRef.current;
-    trigger?.focus({ preventScroll: true });
+    const isVisibleButton = (button: HTMLButtonElement | null | undefined): button is HTMLButtonElement => {
+      if (!button?.isConnected || button.disabled || button.closest("[hidden], [inert]")) return false;
+      const style = getComputedStyle(button);
+      return style.display !== "none" && style.visibility === "visible"
+        && Number(style.opacity) > 0 && button.getClientRects().length > 0;
+    };
+    requestAnimationFrame(() => {
+      const dialog = dialogRef.current;
+      if (!dialog?.isConnected || dialog.open || closeRequest !== dialogRequestId.current) return;
+      // Read geometry after native dialog and responsive scroll cleanup settle.
+      const headerBottom = Math.max(0, document.querySelector<HTMLElement>("[data-site-header]")?.getBoundingClientRect().bottom ?? 0);
+      const isInViewport = (button: HTMLButtonElement | null | undefined): button is HTMLButtonElement => {
+        if (!isVisibleButton(button)) return false;
+        const rect = button.getBoundingClientRect();
+        return Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, headerBottom) >= Math.min(44, rect.height)
+          && Math.min(rect.right, window.innerWidth) - Math.max(rect.left, 0) >= Math.min(44, rect.width);
+      };
+      const candidates = [
+        lastDialogTriggerRef.current,
+        thumbnailRefs.current[selectedIndex],
+        ...Array.from(galleryRef.current?.querySelectorAll<HTMLButtonElement>(".spaces-gallery-item") ?? []),
+        openDialogRef.current,
+      ];
+      const trigger = candidates.find(isInViewport) ?? candidates.find(isVisibleButton);
+      // Preserve a visible landing point. Only off-screen controls may scroll
+      // naturally, including through the existing ScrollSmoother focus handler.
+      trigger?.focus({ preventScroll: isInViewport(trigger) });
+    });
   }
 
   async function selectDialogPhoto(next: number) {
@@ -350,14 +386,14 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
           onTouchEnd={onTouchEnd}
         >
           <img
-            key={`${selected.id}-${imageVersion}`}
+            key={`${selected.id}-${imageRetry}`}
             ref={mainImageRef}
-            src={selected.media.small}
-            srcSet={imageSrcSet(selected)}
+            src={stageImageUrl(selected.media.small, imageRetry)}
+            srcSet={imageSrcSet(selected, imageRetry)}
             sizes={mainImageSizes}
             alt={selected.imageAlt}
-            onError={() => setImageError(true)}
-            onLoad={() => setImageError(false)}
+            onError={(event) => { if (event.currentTarget === mainImageRef.current) setImageError(true); }}
+            onLoad={(event) => { if (event.currentTarget === mainImageRef.current) setImageError(false); }}
             loading="eager"
             decoding="async"
             width="1920"
@@ -381,7 +417,16 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
             {imageError ? (
               <p className="spaces-image-error" role="alert">
                 目前照片無法載入。
-                <button type="button" onClick={() => { setImageError(false); setImageVersion((version) => version + 1); }}>重新載入照片</button>
+                <button type="button" onClick={() => {
+                  requestId.current += 1;
+                  setLoading(false);
+                  setSelectionError(false);
+                  setImageError(false);
+                  setImageRetries((previous) => ({
+                    ...previous,
+                    [selected.media.assetId]: (previous[selected.media.assetId] ?? 0) + 1,
+                  }));
+                }}>重新載入照片</button>
               </p>
             ) : null}
             {selectionError ? <p className="spaces-image-error" role="alert">此照片載入失敗，請再選一次。</p> : null}
@@ -431,10 +476,22 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
               width={currentDialogPhoto.width}
               height={currentDialogPhoto.height}
               decoding="async"
-              onError={() => setDialogImageError(true)}
+              onLoad={(event) => {
+                const dialog = dialogRef.current;
+                if (dialog?.open && event.currentTarget === dialog.querySelector("img")) {
+                  setDialogInitialLoading(false);
+                }
+              }}
+              onError={(event) => {
+                const dialog = dialogRef.current;
+                if (dialog?.open && event.currentTarget === dialog.querySelector("img")) {
+                  setDialogInitialLoading(false);
+                  setDialogImageError(true);
+                }
+              }}
             />
           ) : null}
-          {dialogLoading ? (
+          {dialogInitialLoading || dialogLoading ? (
             <p className="spaces-photo-dialog-loading" role="status">照片載入中…</p>
           ) : dialogSelectionError ? (
             <p className="spaces-photo-dialog-status" role="alert">

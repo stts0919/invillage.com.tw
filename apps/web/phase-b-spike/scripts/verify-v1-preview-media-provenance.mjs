@@ -204,9 +204,24 @@ function inspectSpacesHtml(html, expected, events, galleryEvents) {
     for (const url of srcsetUrls(attribute(image, 'srcset'))) recordRemote(galleryEvents, url, '/spaces', 'ssr-gallery-srcset-candidate', 'img-srcset', photo.alt, first.id);
   });
 
-  const fallback = [...html.matchAll(/<noscript>([^]*?)<\/noscript>/gi)];
+  // The header has its own no-script navigation styles. Only the complete
+  // spaces fallback owns these content/media checks.
+  const fallback = [...html.matchAll(/<noscript>([^]*?)<\/noscript>/gi)].filter((match) =>
+    /<section\b[^>]*\bclass="spaces-fallback"/.test(match[1]));
   assert(fallback.length === 1, '/spaces：無 JS fallback 數量不符');
-  assert(/<style>\s*\.spaces-immersive\s*\{\s*display:\s*none\s*!important;?\s*\}\s*<\/style>/i.test(fallback[0][1]), '/spaces：無 JS fallback 未隱藏不可操作的互動展示');
+  const headings = [...html.matchAll(/<h1\b[^>]*>([^]*?)<\/h1>/gi)];
+  assert(headings.length === 1 && normalizedText(headings[0][1]) === normalizedText(expected.title), '/spaces：唯一 SSR 頁名缺失或不符');
+  const fallbackCss = [...fallback[0][1].matchAll(/<style\b[^>]*>([^]*?)<\/style>/gi)]
+    .map((match) => match[1].replace(/\/\*[^]*?\*\//g, '')).join('\n');
+  const hiddenSelectors = new Set([...fallbackCss.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+    .filter((match) => /\bdisplay\s*:\s*none\s*!important\s*(?:;|$)/i.test(match[2]))
+    .flatMap((match) => match[1].split(',').map((selector) => selector.trim())));
+  for (const selector of ['.spaces-stage-media', '.spaces-stage-shade', '.spaces-categories', '.spaces-stage-bottom', '.spaces-photo-dialog', '.spaces-bottom-panel', '.spaces-gallery-scene']) {
+    assert(hiddenSelectors.has(selector), `/spaces：無 JS fallback 未隱藏互動區 ${selector}`);
+  }
+  for (const selector of ['.spaces-immersive', '.spaces-stage', '.spaces-stage-top', '.spaces-stage-top h1']) {
+    assert(!hiddenSelectors.has(selector), `/spaces：無 JS fallback 不得隱藏頁名 ${selector}`);
+  }
   const articles = [...fallback[0][1].matchAll(/<article>([^]*?)<\/article>/gi)];
   const allItems = [...expected.rooms, ...expected.sharedSpaces];
   assert(articles.length === allItems.length, `/spaces：無 JS fallback 內容 ${articles.length} 筆，預期 16`);
