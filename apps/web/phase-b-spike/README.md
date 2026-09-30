@@ -115,6 +115,21 @@ P7-G1 的相簿來源集中於 `reference/spaces-gallery.json`：依原 Webflow 
 
 正式站仍有獨立缺口：`/spaces` 與首頁的內容圖片引用 Preview R2；共用 layout 固定 `noindex`，六頁尚無正式 meta description／canonical／OG；次頁的 frozen 文案與方案取捨尚待 owner 審核，Messenger 登入後桌機／手機 App 路徑尚待 owner 實測。公開 Preview 保留這些已標示的試版限制，不得把它當正式網域發布證據。
 
+## Webflow 正式站封裝（2026-10-01）
+
+Owner 已要求透過 Webflow 發布目前版本。`dist/` 仍是原本可重建的 Preview 輸出；`scripts/package-webflow-production.mjs` 另產生全新的發布目錄，不修改 source、原圖或輸入 dist，也不新增依賴。
+
+```sh
+node scripts/package-webflow-production.mjs --dist ./dist --corpus /path/to/canonical-repo --out /path/to/new-review-directory --origin https://www.invillage.com.tw --mode review
+node scripts/package-webflow-production.mjs --dist ./dist --corpus /path/to/canonical-repo --out /path/to/new-production-directory --origin https://www.invillage.com.tw --mode production
+```
+
+- `--corpus` 必須提供完整的既有 optimized 圖片與核准 manifest；每個實際引用的 JPEG 先核 SHA／bytes／runtimeEnabled／hold 狀態，再複製到 `/assets/media/`。目前 230 個尺寸版本、77 張圖片、55,291,865 bytes；兩張 hold 不進輸出。
+- `review` 為預設，保留 noindex 與 robots Disallow；`production` 的五個主要頁面改 index,follow、加入現行首選 `https://www.invillage.com.tw` canonical 與 sitemap。404.html 維持 noindex、無 canonical。本文舊 C6 表格是歷史快照。
+- 輸出目錄及旁邊的 `<out>.manifest.json` 都必須尚不存在；manifest 留在公開目錄外，記錄輸入、媒體對照與每個輸出 SHA。拒絕 symlink／control／secret 類檔案；整份輸出原始大小必須低於 100 MB。實際封裝約 80 MB／273 檔，原 35 個非 HTML 檔案保持原 bytes。
+- Webflow CLI 必須明確指定既有 `--site-id`、`--app-id`、`--environment main`、`--mount /`、`--framework static`，使用公開輸出目錄作為 cwd；**不要帶 `--workspace-id`**，該選項會先建立新的 standalone App。平台設定 manifest 放在公開目錄外。
+- Webflow no-framework static 尚無受支援的自訂 HTTP404 內容設定；未知路徑沿用平台 HTTP404，不能以 wildcard 200 rewrite 冒充404。是否已綁正式網域、付費方案與遠端驗收，以主工作區 HANDOFF／design-qa 最新記錄為準；封裝成功本身不是正式發布證據。
+
 ## 官方依據
 
 - [Astro TypeScript 與檢查](https://docs.astro.build/en/guides/typescript/)、[React integration](https://docs.astro.build/en/guides/integrations-guide/react/)
