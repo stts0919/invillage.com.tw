@@ -19,65 +19,13 @@ const pageTitle = '關於我們';
 const heroImage = '/assets/secondary/mansion-night-001.jpg';
 const heroImageAlt = '紅河隱園夜晚建築外觀：大面積落地窗透出室內燈光，藍調天空與林木包圍。';
 
-type PartnerCard = {
-  id: string;
-  name: string;
-  description?: string;
+type NearbyDetails = {
   address?: string;
-  contact?: string;
-  linkLabel?: string;
-  linkUrl?: string;
+  phone?: string;
+  access?: string;
+  infoUrl?: string;
+  infoLabel?: string;
 };
-
-const partners: PartnerCard[] = [
-  {
-    id: 'partner-fanggsi',
-    name: '[餐廳] 方格斯手作坊',
-    description: '披薩/石板料理/小米麻糬/飲品',
-    address: '新北市新烏路五段33.35號',
-    contact: '02-2661-7811',
-    linkLabel: 'FB粉絲專頁',
-    linkUrl: 'https://www.facebook.com/fanggus/?locale=zh_TW',
-  },
-  {
-    id: 'partner-yukoyu',
-    name: '于烤魚創意家常料理',
-    description: '【烏來美食推薦】于烤魚創意家常料理。每週五六日一營業，中午12點至晚上7點供餐。特色烤魚料理、溫泉區聚餐首選。',
-    address: '新烏路四段36號',
-    contact: '預約：02-2661-6263',
-  },
-  {
-    id: 'partner-niaolaibo',
-    name: '[餐廳] 鳥來伯擔仔麵',
-    description: '熱炒/合菜/外燴/白斬雞/海鮮/刺身/火鍋',
-    address: '新北市烏來區堰堤13號1樓',
-    contact: '02-2661-6060',
-  },
-  {
-    id: 'partner-sunmoon',
-    name: '[溫泉] 日月光溫泉山莊',
-    description: '溫泉/大眾湯/男湯/女湯/家庭風呂/按摩/餐廳',
-    address: '新北市烏來區新烏路四段18號',
-    contact: '02-2661-6677',
-  },
-  {
-    id: 'partner-yunding',
-    name: '[溫泉]雲頂溫泉行館',
-    description:
-      '巴厘島風格戶外大眾男/女湯，有面對烏來最佳山頭的景觀湯屋。本館旅客有優惠，可到本館接送。',
-    address: '新北市烏來區西羅岸路45號',
-    contact: '02-2661-7755',
-    linkLabel: '官方網站',
-    linkUrl: 'https://cloudspring.com.tw/yun-ding/',
-  },
-  {
-    id: 'partner-bbq-service',
-    name: '[餐飲]專人烤肉服務',
-    description: '',
-    address: '',
-    contact: '',
-  },
-];
 
 type AttractionCard = {
   id: string;
@@ -122,35 +70,110 @@ type Recommendation = {
   id: string;
   name: string;
   body: string;
+  category: '美食' | '溫泉';
 };
 
 const nearbyRecommendations: Recommendation[] = [
   {
     id: 'rec-niaolaibo',
+    category: '美食',
     name: '鳥來伯餐廳',
     body:
       '單點小吃、辦桌菜便宜要事先預訂、菜色豐富又大碗。一桌5500元12個男人吃不完要打包。後方湖景優美宜拍照。路程約1.8公里。附近車位經常滿、用餐時間客人多，最好提早到店用餐。招牌菜土雞、炸鰻魚、炒飯等。',
   },
   {
     id: 'rec-yukoyu',
+    category: '美食',
     name: '于烤魚',
     body: '用餐環境、菜色不錯。是歌手于冠華所經營。',
   },
   {
     id: 'rec-tai-chicken',
+    category: '美食',
     name: '台雞店',
     body: '用餐空間大，在日月光溫泉附近，路邊停車方便，晚上比較早打烊需注意用餐時間。',
   },
   {
     id: 'rec-sunmoon',
+    category: '溫泉',
     name: '日月光溫泉',
     body: '具露天風呂大坪數戶外空間，少數提供親子一起泡湯的溫泉會館（須著泳裝），男、女湯、湯屋也是選項。',
   },
   {
     id: 'rec-yunding',
+    category: '溫泉',
     name: '雲頂溫泉',
     body: '半露天男女湯池環境不錯。',
   },
+];
+
+// 新增的到訪資訊；原景點／商家介紹文字保持不變。
+const nearbyDetails: Record<string, NearbyDetails> = {
+  'attraction-red-river-valley': {
+    address: '新北市烏來區紅河谷',
+    infoUrl: 'https://newtaipei.travel/zh-tw/attractions/detail/109893',
+    infoLabel: '新北市觀光旅遊網',
+  },
+  'attraction-old-street': {
+    infoUrl: 'https://newtaipei.travel/zh-tw/attractions/detail/110660',
+    infoLabel: '烏來老街資訊',
+  },
+  'attraction-neidong': {
+    address: '新北市烏來區信賢里娃娃谷46號',
+    phone: '02-2661-7358',
+    infoUrl: 'https://www.forest.gov.tw/0000182',
+    infoLabel: '林業保育署',
+  },
+  'attraction-fushan-butterfly': {
+    infoUrl: 'https://newtaipei.travel/zh-tw/news/detail/1605',
+    infoLabel: '新北市觀光旅遊網',
+  },
+  'attraction-tonghou': {
+    access: '汽、機車於林道 1K 處管制；自行車與行人可通行。',
+    infoUrl: 'https://hsinchu.forest.gov.tw/ForestRoad/10003367',
+    infoLabel: '桶后林道資訊',
+  },
+  'rec-niaolaibo': {
+    address: '新北市烏來區堰堤13號1樓',
+    phone: '02-2661-6060',
+    infoUrl: 'https://blake.com.tw/blog/post/niaolaibo',
+    infoLabel: '餐廳資訊',
+  },
+  'rec-yukoyu': {
+    address: '新北市烏來區新烏路四段36號',
+    phone: '02-2661-6263',
+  },
+  'rec-tai-chicken': {
+    address: '新北市烏來區新烏路四段1號',
+    phone: '02-2661-7711',
+  },
+  'rec-sunmoon': {
+    address: '新北市烏來區新烏路四段18號',
+    phone: '02-2661-6677',
+  },
+  'rec-yunding': {
+    address: '新北市烏來區西羅岸路45號',
+    phone: '02-2661-7755',
+    infoUrl: 'https://cloudspring.com.tw/yun-ding/',
+    infoLabel: '官方網站',
+  },
+};
+
+const nearbyCards = [
+  ...attractions.map((place) => ({
+    id: place.id,
+    name: place.title,
+    body: place.body,
+    category: '景點' as const,
+    ...nearbyDetails[place.id],
+  })),
+  ...nearbyRecommendations.map((place) => ({
+    id: place.id,
+    name: place.name,
+    body: place.body,
+    category: place.category,
+    ...nearbyDetails[place.id],
+  })),
 ];
 ---
 
@@ -201,51 +224,70 @@ const nearbyRecommendations: Recommendation[] = [
       </div>
     </section>
 
-    <section class="secondary-section" aria-labelledby="about-partners-heading">
+    <section class="secondary-section secondary-nearby-section" aria-labelledby="about-nearby-heading">
       <div class="secondary-section-inner">
-        <h2 class="secondary-section-heading" id="about-partners-heading">合作商家</h2>
-        <ul class="secondary-card-grid">
-          {partners.map((partner) => (
+        <h2 class="secondary-section-heading" id="about-nearby-heading">附近景點美食推薦</h2>
+        <ul class="secondary-nearby-grid">
+          {nearbyCards.map((place) => (
             <li>
-              <article class="secondary-card">
-                <h3>{partner.name}</h3>
-                {partner.description && <p class="secondary-card-body">{partner.description}</p>}
-                <ul class="secondary-card-meta">
-                  {partner.address && (
-                    <li>
-                      <span class="secondary-card-meta-label">地址</span>
-                      <span>{partner.address}</span>
-                    </li>
-                  )}
-                  {partner.contact && (
-                    <li>
-                      <span class="secondary-card-meta-label">聯絡</span>
-                      <span>{partner.contact}</span>
-                    </li>
-                  )}
-                  {partner.linkUrl && partner.linkLabel && (
-                    <li>
-                      <span class="secondary-card-meta-label">連結</span>
-                      <a href={partner.linkUrl} target="_blank" rel="noopener noreferrer">{partner.linkLabel}</a>
-                    </li>
-                  )}
-                </ul>
-              </article>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-
-    <section class="secondary-section" aria-labelledby="about-attractions-heading">
-      <div class="secondary-section-inner">
-        <h2 class="secondary-section-heading" id="about-attractions-heading">周邊景點</h2>
-        <ul class="secondary-card-grid">
-          {attractions.map((place) => (
-            <li>
-              <article class="secondary-card" id={place.id}>
-                <h3>{place.title}</h3>
+              <article class="secondary-card secondary-nearby-card" id={place.id}>
+                <div class="secondary-nearby-card-header">
+                  <span class="secondary-nearby-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                      {place.category === '景點' && (
+                        <>
+                          <path d="M2 19h20M4 16.5l5-6 3 3 3.5-5 4.5 8" />
+                          <path d="M12 9V3m0 2.5L9.5 4m2.5 1.5L14.5 4" />
+                        </>
+                      )}
+                      {place.category === '美食' && (
+                        <>
+                          <path d="M3 19h18M5 16a7 7 0 0 1 14 0H5Zm7-7V7" />
+                          <path d="M9 5.5l1.5 1M15 5.5l-1.5 1" />
+                        </>
+                      )}
+                      {place.category === '溫泉' && (
+                        <>
+                          <path d="M6 3c-2 2 2 3 0 5m6-5c-2 2 2 3 0 5m6-5c-2 2 2 3 0 5" />
+                          <path d="M3 14c3-1.5 5-1.5 8 0s5 1.5 10 0M3 19c3-1.5 5-1.5 8 0s5 1.5 10 0" />
+                        </>
+                      )}
+                    </svg>
+                  </span>
+                  <div class="secondary-nearby-card-title">
+                    <span class="secondary-nearby-category">{place.category}</span>
+                    <h3>{place.name}</h3>
+                  </div>
+                </div>
                 <p class="secondary-card-body">{place.body}</p>
+                {(place.address || place.phone || place.access || place.infoUrl) && (
+                  <dl class="secondary-nearby-meta">
+                    {place.address && (
+                      <div>
+                        <dt>地址</dt>
+                        <dd>{place.address}</dd>
+                      </div>
+                    )}
+                    {place.phone && (
+                      <div>
+                        <dt>電話</dt>
+                        <dd><a href={`tel:${place.phone.replace(/[^0-9]/g, '')}`}>{place.phone}</a></dd>
+                      </div>
+                    )}
+                    {place.access && (
+                      <div>
+                        <dt>交通</dt>
+                        <dd>{place.access}</dd>
+                      </div>
+                    )}
+                    {place.infoUrl && place.infoLabel && (
+                      <div>
+                        <dt>資訊</dt>
+                        <dd><a href={place.infoUrl} target="_blank" rel="noopener noreferrer">{place.infoLabel}</a></dd>
+                      </div>
+                    )}
+                  </dl>
+                )}
               </article>
             </li>
           ))}
@@ -264,22 +306,6 @@ const nearbyRecommendations: Recommendation[] = [
           <li>公車：849 路線公車大約15分鐘一班。從台北車站或是碧潭的新店總站都可以搭乘。我們建議搭捷運松山新店線，在新店總站下車，搭乘849路線公車，大約30~40分鐘車程在「成功站」下車，鄉園土雞城前右轉下坡步行大約5分鐘即可抵達。</li>
         </ul>
         <p>詳見「<a href="/contact">聯絡我們</a>」>「交通位置」。</p>
-      </div>
-    </section>
-
-    <section class="secondary-section" aria-labelledby="about-nearby-heading">
-      <div class="secondary-section-inner">
-        <h2 class="secondary-section-heading" id="about-nearby-heading">周邊商家推薦</h2>
-        <ul class="secondary-card-grid">
-          {nearbyRecommendations.map((rec) => (
-            <li>
-              <article class="secondary-card" id={rec.id}>
-                <h3>{rec.name}</h3>
-                <p class="secondary-card-body">{rec.body}</p>
-              </article>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
 

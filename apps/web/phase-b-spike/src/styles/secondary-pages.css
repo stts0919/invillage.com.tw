@@ -105,6 +105,17 @@
   text-wrap: pretty;
 }
 
+/* 這段標題使用整個內容欄寬；窄螢幕仍允許自然折行。 */
+#about-iot-heading {
+  max-width: none;
+}
+
+@media (min-width: 64rem) {
+  #about-iot-heading {
+    white-space: nowrap;
+  }
+}
+
 .secondary-section-sub {
   margin: -0.5rem 0 2rem;
   color: var(--color-forest);
@@ -347,15 +358,19 @@
   line-height: 1.7;
 }
 
-/* ===== /about：莊園介紹 / 合作 / 周邊 / 交通 ===== */
+/* ===== /about：莊園介紹 / 附近景點美食 / 交通 ===== */
 
-.secondary-card-grid {
+.secondary-nearby-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.secondary-nearby-grid > li {
+  min-width: 0;
 }
 
 .secondary-card {
@@ -382,26 +397,96 @@
   line-height: 1.7;
 }
 
-.secondary-card-meta {
+.secondary-nearby-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  min-width: 0;
+  height: 100%;
+  padding: clamp(1.25rem, 2.2vw, 1.75rem);
+}
+
+.secondary-nearby-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.secondary-nearby-icon {
   display: grid;
-  gap: 0.35rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  flex: 0 0 2.75rem;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(26 57 55 / 18%);
+  border-radius: 50%;
   color: var(--color-forest);
-  font-size: 0.875rem;
+  background: var(--color-stone);
+}
+
+.secondary-nearby-icon svg {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.secondary-nearby-card-title {
+  min-width: 0;
+}
+
+.secondary-nearby-category {
+  color: var(--color-forest);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.secondary-nearby-card h3 {
+  margin-top: 0.3rem;
+  text-wrap: pretty;
+}
+
+.secondary-nearby-card .secondary-card-body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.secondary-nearby-meta {
+  display: grid;
+  gap: 0.45rem;
+  margin: auto 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(26 57 55 / 14%);
+  color: var(--color-forest);
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
-.secondary-card-meta li {
+.secondary-nearby-meta > div {
   display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 0.75rem;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 0.65rem;
 }
 
-.secondary-card-meta-label {
-  color: var(--color-forest);
+.secondary-nearby-meta dt {
   font-weight: 700;
+}
+
+.secondary-nearby-meta dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.secondary-nearby-meta a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+.secondary-nearby-meta a:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
 }
 
 .secondary-placeholder {
@@ -607,10 +692,6 @@
 /* ===== 響應式 ===== */
 
 @media (max-width: 60rem) {
-  .secondary-card-meta li {
-    grid-template-columns: 4rem 1fr;
-  }
-
   .secondary-contact-info li {
     grid-template-columns: 4.5rem 1fr;
   }
@@ -639,7 +720,7 @@
     padding-block: 3rem;
   }
 
-  .secondary-card-grid {
+  .secondary-nearby-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -736,18 +817,14 @@
     line-height: 1.65;
   }
 
-  .secondary-card-meta {
+  .secondary-nearby-meta {
     font-size: 1rem;             /* 16px：與正文同級 */
     line-height: 1.6;
   }
 
-  .secondary-card-meta-label {
-    font-size: 0.9375rem;        /* 15px：次要標籤，至少清楚可讀 */
-  }
-
-  .secondary-card-meta li {
-    grid-template-columns: 4rem 1fr;
-    gap: 0.5rem;
+  .secondary-nearby-meta > div {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.55rem;
   }
 
   .secondary-plan-card > summary {
