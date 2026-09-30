@@ -161,7 +161,14 @@ function filesWithSuffix(directory, suffix) {
 }
 
 function inspectSpacesHtml(html, expected, events, galleryEvents) {
-  const first = expected.rooms[0];
+  const initialItems = expected.sharedSpaces;
+  const first = initialItems[0];
+  const categories = html.match(/<div\b([^>]*\bclass="spaces-categories"[^>]*)>([\s\S]*?)<\/div>/i);
+  assert(categories && attribute(categories[1], 'data-selected-category') === 'shared-spaces', '/spaces：預設分類必須為公共空間');
+  const categoryButtons = [...categories[2].matchAll(/<button\b([^>]*)>([^]*?)<\/button>/gi)];
+  assert(categoryButtons.length === 2, '/spaces：分類按鈕數量不符');
+  assert(normalizedText(categoryButtons[0][2]) === '公共空間' && attribute(categoryButtons[0][1], 'aria-pressed') === 'true', '/spaces：公共空間必須置前並預設選中');
+  assert(normalizedText(categoryButtons[1][2]) === '客房空間' && attribute(categoryButtons[1][1], 'aria-pressed') === 'false', '/spaces：客房空間必須置後且未選中');
   const mainImages = [...html.matchAll(/<div\b([^>]*\bclass="spaces-stage-media"[^>]*)><img\b([^>]*)>/gi)];
   assert(mainImages.length === 1, `/spaces：初始主圖數量 ${mainImages.length}，預期 1`);
   assert(attribute(mainImages[0][1], 'data-space-id') === first.id, '/spaces：初始主圖內容 ID 不符');
@@ -174,9 +181,9 @@ function inspectSpacesHtml(html, expected, events, galleryEvents) {
   for (const url of srcsetUrls(attribute(main, 'srcset'))) recordRemote(events, url, '/spaces', 'ssr-initial-srcset-candidate', 'img-srcset', first.imageAlt, first.id);
 
   const thumbnails = [...html.matchAll(/<button\b([^>]*class="spaces-thumbnail"[^>]*)><img\b([^>]*)>/gi)];
-  assert(thumbnails.length === expected.rooms.length, `/spaces：初始縮圖 ${thumbnails.length}，預期 ${expected.rooms.length}`);
+  assert(thumbnails.length === initialItems.length, `/spaces：初始縮圖 ${thumbnails.length}，預期 ${initialItems.length}`);
   thumbnails.forEach((match, index) => {
-    const item = expected.rooms[index];
+    const item = initialItems[index];
     const button = match[1];
     const image = match[2];
     assert(attribute(button, 'aria-label') === item.label && attribute(button, 'aria-pressed') === String(index === 0), `/spaces：縮圖按鈕 ${item.id} 名稱／選取狀態不符`);
@@ -187,7 +194,7 @@ function inspectSpacesHtml(html, expected, events, galleryEvents) {
   });
 
   const galleryRoot = html.match(/<div\b([^>]*\bclass="spaces-gallery"[^>]*)>([\s\S]*?)<\/div>/i);
-  assert(galleryRoot && attribute(galleryRoot[1], 'data-space-id') === first.id, '/spaces：SSR 相簿不是目前選中客房');
+  assert(galleryRoot && attribute(galleryRoot[1], 'data-space-id') === first.id, '/spaces：SSR 相簿不是目前選中的公共空間');
   assert(attribute(galleryRoot[1], 'data-gallery-count') === String(first.gallery.length), '/spaces：SSR 相簿照片總數不符');
   const galleryButtons = [...galleryRoot[2].matchAll(/<button\b([^>]*\bclass="spaces-gallery-item"[^>]*)><span\b[^>]*\bclass="spaces-gallery-frame"[^>]*><img\b([^>]*)><\/span><\/button>/gi)];
   assert(galleryButtons.length === first.gallery.length, `/spaces：SSR 相簿 ${galleryButtons.length} 張，預期 ${first.gallery.length}`);
@@ -223,7 +230,9 @@ function inspectSpacesHtml(html, expected, events, galleryEvents) {
     assert(!hiddenSelectors.has(selector), `/spaces：無 JS fallback 不得隱藏頁名 ${selector}`);
   }
   const articles = [...fallback[0][1].matchAll(/<article>([^]*?)<\/article>/gi)];
-  const allItems = [...expected.rooms, ...expected.sharedSpaces];
+  const fallbackCategories = [...fallback[0][1].matchAll(/<h2\b[^>]*>([^]*?)<\/h2>/gi)].map((match) => normalizedText(match[1]));
+  assert(isDeepStrictEqual(fallbackCategories, ['公共空間', '客房空間']), '/spaces：無 JS 分類順序必須公共空間優先');
+  const allItems = [...expected.sharedSpaces, ...expected.rooms];
   assert(articles.length === allItems.length, `/spaces：無 JS fallback 內容 ${articles.length} 筆，預期 16`);
   articles.forEach((match, index) => {
     const item = allItems[index];

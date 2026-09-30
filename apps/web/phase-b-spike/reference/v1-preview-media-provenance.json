@@ -27,18 +27,19 @@
     "uniqueAssetCount": 16,
     "verifiedJpegVariantCount": 48,
     "observedRemoteUrlCount": 46,
-    "classifiedRemoteOccurrenceCount": 75,
+    "classifiedRemoteOccurrenceCount": 83,
     "usageClassifications": {
       "interactive-available-not-requested": 46,
       "nojs-fallback-link-not-requested": 16,
       "ssr-content-img": 7,
-      "ssr-initial-srcset-candidate": 2,
-      "ssr-thumbnail-img": 4
+      "ssr-initial-img": 1,
+      "ssr-initial-srcset-candidate": 3,
+      "ssr-thumbnail-img": 10
     },
     "spacesState": {
-      "initialContentId": "room-1",
+      "initialContentId": "space-1",
       "mainImageSizes": "(max-width: 48rem) max(54rem, 114svh), 100vw",
-      "thumbnailCount": 6,
+      "thumbnailCount": 10,
       "fallbackCount": 16,
       "interactiveCount": 16
     },
@@ -72,7 +73,7 @@
         "ssr-gallery-img": 5,
         "ssr-gallery-srcset-candidate": 15
       },
-      "eventSha256": "56d53948f6b2195c552ad1d0f163a14ceacc8094dedc697e56dd29b524842753"
+      "eventSha256": "2dd6eed8dcde15ee6f87d45ae492318ef7428cb5aaff4fb6ef4ab4379b92535e"
     }
   },
   "images": [
@@ -139,22 +140,6 @@
           "route": "/",
           "classification": "ssr-content-img",
           "sourceTag": "img-src",
-          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
-          "contentId": "room-1"
-        },
-        {
-          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-f09b3807634a.jpg",
-          "route": "/spaces",
-          "classification": "ssr-initial-srcset-candidate",
-          "sourceTag": "img-srcset",
-          "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
-          "contentId": "room-1"
-        },
-        {
-          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
-          "route": "/spaces",
-          "classification": "ssr-initial-srcset-candidate",
-          "sourceTag": "img-srcset",
           "alt": "VIP 景觀客房 401 的床鋪、陽台與收納櫃",
           "contentId": "room-1"
         },
@@ -335,14 +320,6 @@
       "localSmall": null,
       "observed": [
         {
-          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-d88af939e174.jpg",
-          "route": "/spaces",
-          "classification": "ssr-thumbnail-img",
-          "sourceTag": "img-src",
-          "alt": "",
-          "contentId": "room-3"
-        },
-        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-6bf95756c629.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -434,14 +411,6 @@
       ],
       "localSmall": null,
       "observed": [
-        {
-          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-1f8bf8e37f63.jpg",
-          "route": "/spaces",
-          "classification": "ssr-thumbnail-img",
-          "sourceTag": "img-src",
-          "alt": "",
-          "contentId": "room-4"
-        },
         {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-cb5cdd2a7ac5.jpg",
           "route": "/spaces",
@@ -540,14 +509,6 @@
           "classification": "ssr-content-img",
           "sourceTag": "img-src",
           "alt": "景觀陽光房 303 的玻璃屋、沙發與戶外露台",
-          "contentId": "room-5"
-        },
-        {
-          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-ee717e3eae7a.jpg",
-          "route": "/spaces",
-          "classification": "ssr-thumbnail-img",
-          "sourceTag": "img-src",
-          "alt": "",
           "contentId": "room-5"
         },
         {
@@ -651,14 +612,6 @@
           "contentId": "room-6"
         },
         {
-          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-650332a9958f.jpg",
-          "route": "/spaces",
-          "classification": "ssr-thumbnail-img",
-          "sourceTag": "img-src",
-          "alt": "",
-          "contentId": "room-6"
-        },
-        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -759,6 +712,46 @@
           "contentId": "space-1"
         },
         {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-28d335f454dd.jpg",
+          "route": "/spaces",
+          "classification": "ssr-initial-img",
+          "sourceTag": "img-src",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-28d335f454dd.jpg",
+          "route": "/spaces",
+          "classification": "ssr-initial-srcset-candidate",
+          "sourceTag": "img-srcset",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-3f8bc16a304b.jpg",
+          "route": "/spaces",
+          "classification": "ssr-initial-srcset-candidate",
+          "sourceTag": "img-srcset",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "route": "/spaces",
+          "classification": "ssr-initial-srcset-candidate",
+          "sourceTag": "img-srcset",
+          "alt": "接待大廳的沙發、茶几與面向山景的落地窗",
+          "contentId": "space-1"
+        },
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-28d335f454dd.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-1"
+        },
+        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -850,6 +843,14 @@
       ],
       "localSmall": null,
       "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-71deefcfbc8a.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-2"
+        },
         {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-2ad30da9392f.jpg",
           "route": "/spaces",
@@ -951,6 +952,14 @@
           "contentId": "space-3"
         },
         {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-8a18f0ee0231.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-3"
+        },
+        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -1042,6 +1051,14 @@
       ],
       "localSmall": null,
       "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-2cbbd90e9b69.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-4"
+        },
         {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-539f13662244.jpg",
           "route": "/spaces",
@@ -1135,6 +1152,14 @@
       "localSmall": null,
       "observed": [
         {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-ece605f8c782.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-5"
+        },
+        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-c32bfb697778.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -1226,6 +1251,14 @@
       ],
       "localSmall": null,
       "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-85eb240bd612.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-6"
+        },
         {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-7c36f6f6f7fa.jpg",
           "route": "/spaces",
@@ -1319,6 +1352,14 @@
       "localSmall": null,
       "observed": [
         {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-6a148ce402bb.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-7"
+        },
+        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-82568ed4f3af.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -1410,6 +1451,14 @@
       ],
       "localSmall": null,
       "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-6a5020c64669.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-8"
+        },
         {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-1ca1e31d1c21.jpg",
           "route": "/spaces",
@@ -1511,6 +1560,14 @@
           "contentId": "space-9"
         },
         {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-03e1e079fd35.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-9"
+        },
+        {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
           "route": "/spaces",
           "classification": "nojs-fallback-link-not-requested",
@@ -1602,6 +1659,14 @@
       ],
       "localSmall": null,
       "observed": [
+        {
+          "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-ef734ec5eb0b.jpg",
+          "route": "/spaces",
+          "classification": "ssr-thumbnail-img",
+          "sourceTag": "img-src",
+          "alt": "",
+          "contentId": "space-10"
+        },
         {
           "remoteUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-81442f6e0ec4.jpg",
           "route": "/spaces",

@@ -135,22 +135,6 @@ const messengerUrl = 'https://m.me/invillagewulai';
         .spaces-photo-dialog, .spaces-bottom-panel, .spaces-gallery-scene { display: none !important; }
       </style>
       <section class="spaces-fallback" aria-label={legacy.titles.spaces}>
-        <h2>客房空間</h2>
-        {rooms.map((room) => (
-          <article>
-            <h3>{room.panelHeading}</h3>
-            {room.label !== room.panelHeading && <p class="spaces-fallback-label">{room.label}</p>}
-            <p>{room.description}</p>
-            <a href={room.media.large}>{room.imageAlt}</a>
-            <div class="spaces-fallback-gallery">
-              {room.gallery.map((photo, index) => (
-                <a href={photo.variants[photo.variants.length - 1].url} data-gallery-asset-id={photo.assetId}>
-                  <img src={photo.variants[0].url} srcset={gallerySrcSet(photo)} sizes={gallerySizes(index, room.gallery.length)} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
-                </a>
-              ))}
-            </div>
-          </article>
-        ))}
         <h2>公共空間</h2>
         {sharedSpaces.map((place) => (
           <article>
@@ -162,6 +146,22 @@ const messengerUrl = 'https://m.me/invillagewulai';
               {place.gallery.map((photo, index) => (
                 <a href={photo.variants[photo.variants.length - 1].url} data-gallery-asset-id={photo.assetId}>
                   <img src={photo.variants[0].url} srcset={gallerySrcSet(photo)} sizes={gallerySizes(index, place.gallery.length)} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+        <h2>客房空間</h2>
+        {rooms.map((room) => (
+          <article>
+            <h3>{room.panelHeading}</h3>
+            {room.label !== room.panelHeading && <p class="spaces-fallback-label">{room.label}</p>}
+            <p>{room.description}</p>
+            <a href={room.media.large}>{room.imageAlt}</a>
+            <div class="spaces-fallback-gallery">
+              {room.gallery.map((photo, index) => (
+                <a href={photo.variants[photo.variants.length - 1].url} data-gallery-asset-id={photo.assetId}>
+                  <img src={photo.variants[0].url} srcset={gallerySrcSet(photo)} sizes={gallerySizes(index, room.gallery.length)} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
                 </a>
               ))}
             </div>

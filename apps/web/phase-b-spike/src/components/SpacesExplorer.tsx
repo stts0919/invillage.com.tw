@@ -74,7 +74,7 @@ function thumbnailLabel(item: SpaceItem, index: number, category: Category) {
 
 export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   const instanceId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
-  const [category, setCategory] = useState<Category>("rooms");
+  const [category, setCategory] = useState<Category>("shared-spaces");
   const [roomIndex, setRoomIndex] = useState(0);
   const [sharedIndex, setSharedIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -403,10 +403,10 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
         <div className="spaces-stage-shade" aria-hidden="true" />
         <div className="spaces-stage-top">
           <h1 id="spaces-heading">{title}</h1>
-          <div className="spaces-categories" role="group" aria-label="空間分類">
-            <button type="button" aria-pressed={category === "rooms"} onClick={() => void select("rooms", roomIndex)}>客房空間</button>
-            <span aria-hidden="true">│</span>
+          <div className="spaces-categories" data-selected-category={category} role="group" aria-label="空間分類">
             <button type="button" aria-pressed={category === "shared-spaces"} onClick={() => void select("shared-spaces", sharedIndex)}>公共空間</button>
+            <span className="spaces-category-divider" aria-hidden="true">│</span>
+            <button type="button" aria-pressed={category === "rooms"} onClick={() => void select("rooms", roomIndex)}>客房空間</button>
           </div>
         </div>
         <div className="spaces-stage-bottom">

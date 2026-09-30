@@ -850,10 +850,23 @@ a {
 }
 
 .spaces-categories {
-  display: flex;
+  --category-gap: 2.75rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  gap: 1rem;
+  gap: var(--category-gap);
+  width: max-content;
   white-space: nowrap;
+}
+
+.spaces-category-divider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.65;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 .spaces-categories button {
@@ -869,14 +882,40 @@ a {
   cursor: pointer;
 }
 
-.spaces-categories button[aria-pressed="true"]::after {
+.spaces-categories::after {
   position: absolute;
-  right: 0;
   bottom: 0;
   left: 0;
+  width: calc((100% - var(--category-gap)) / 2);
   height: 2px;
+  border-radius: 1px;
   background: var(--color-white);
+  pointer-events: none;
+  transform: translateX(0);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   content: "";
+}
+
+.spaces-categories[data-selected-category="rooms"]::after {
+  transform: translateX(calc(100% + var(--category-gap)));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spaces-categories::after {
+    animation: spaces-category-guide 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.45s 1 backwards;
+  }
+}
+
+@keyframes spaces-category-guide {
+  from { scale: 0.75 1; opacity: 0.45; }
+  to { scale: 1; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spaces-categories::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 .spaces-stage-bottom {
@@ -1409,7 +1448,7 @@ a {
   }
 
   .spaces-categories {
-    gap: 0.5rem;
+    --category-gap: 1.5rem;
   }
 
   .spaces-categories button {
