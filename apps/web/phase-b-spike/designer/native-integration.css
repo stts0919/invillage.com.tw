@@ -1,0 +1,13 @@
+[data-iv1-code-component-slot="SpacesExplorer"] {
+  display: block;
+}
+.iv1-spaces-immersive > .iv1-spaces-stage {
+  min-height: 0;
+  overflow: visible;
+}
+.iv1-spaces-immersive > .iv1-spaces-stage > .iv1-spaces-stage-top {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+  pointer-events: none;
+}

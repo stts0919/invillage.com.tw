@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "fallback": {
+    "assetId": "651d47f406ef2b6efb8390da",
+    "url": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/651d47f406ef2b6efb8390da_002-p-1600.jpg",
+    "contentType": "image/jpeg",
+    "width": 1280,
+    "height": 854
+  },
+  "desktop": {
+    "video": {
+      "assetId": "hero-desktop-video",
+      "url": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/6abe1703b7a51584cfeb551f_hero-desktop.BUNs-fRB.mp4",
+      "contentType": "video/mp4",
+      "width": 1600,
+      "height": 800
+    },
+    "poster": {
+      "assetId": "hero-desktop-poster",
+      "url": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/6abe17c64f23553f487d11fb_poster-desktop.DVuiboyE.jpg",
+      "contentType": "image/jpeg",
+      "width": 1600,
+      "height": 800
+    }
+  },
+  "mobileLandscape": {
+    "video": {
+      "assetId": "hero-mobile-landscape-video",
+      "url": "https://s3.amazonaws.com/webflow-prod-assets/65009115380adfba3ebe2328/6abe1abf981346a1765405da_hero-mobile.CtrTj_iZ.mp4",
+      "contentType": "video/mp4",
+      "width": 960,
+      "height": 480
+    },
+    "poster": {
+      "assetId": "hero-mobile-landscape-poster",
+      "url": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/6abe1843e4666e7e7b78243b_poster-mobile.BXQrY0jF.jpg",
+      "contentType": "image/jpeg",
+      "width": 960,
+      "height": 480
+    }
+  }
+}

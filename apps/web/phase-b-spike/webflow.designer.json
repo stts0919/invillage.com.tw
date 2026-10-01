@@ -1,0 +1,17 @@
+{
+  "siteId": "65009115380adfba3ebe2328",
+  "telemetry": false,
+  "library": {
+    "name": "Invillage V1 Designer",
+    "components": [
+      "./designer/InvillageSpaces.webflow.tsx",
+      "./designer/InvillageHero.webflow.tsx",
+      "./designer/InvillagePageRuntime.webflow.tsx"
+    ],
+    "functions": [
+      "**/*.webflow.function.@(js|cjs|mjs|ts)"
+    ],
+    "description": "紅河隱園 V1 相簿、影片與動效元件",
+    "id": "invillage-v1-designer"
+  }
+}

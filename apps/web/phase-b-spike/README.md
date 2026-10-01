@@ -115,7 +115,22 @@ P7-G1 的相簿來源集中於 `reference/spaces-gallery.json`：依原 Webflow 
 
 正式站仍有獨立缺口：`/spaces` 與首頁的內容圖片引用 Preview R2；共用 layout 固定 `noindex`，六頁尚無正式 meta description／canonical／OG；次頁的 frozen 文案與方案取捨尚待 owner 審核，Messenger 登入後桌機／手機 App 路徑尚待 owner 實測。公開 Preview 保留這些已標示的試版限制，不得把它當正式網域發布證據。
 
-## Webflow 正式站封裝（2026-10-01）
+## 原 Webflow Designer 移植（2026-10-01，六頁staging驗收）
+
+目前發布目標是原Designer site `65009115380adfba3ebe2328`，沿用原Site訂閱與網域；下面Cloud App封裝只保留作來源／歷史審閱，不是當前正式部署步驟。進度與發布授權以主工作區HANDOFF／design-qa為準。
+
+- Owner精確核准的兩個devDependency為 `@webflow/react`／`@webflow/data-types` 2.4.0；React19.3.0／GSAP3.15.0不變。沒有新增CMS、後端或方案。
+- `webflow.designer.json`的真實元件庫slug為 `invillage-v1-designer`；原站已安裝三個元件。`designer/`是SSR安全適配，`generated/`保存同原site的公開媒體映射及Shadow DOM用CSS，不依賴Preview R2／左側Cloud App。
+- `build-designer-data.mjs`核對本機原圖corpus與全部歸屬，再從已核mapping生成runtime資料；`create-designer-mapping.mjs`把原site既有assets與補供應素材合成native／runtime映射；`create-designer-css.mjs`產生明確Shadow-local stylesheet。這些只生成本機檔，不寫Webflow。
+- `package-designer-pages.mjs --dist DIR --map FILE --out NEW_DIR`產生六頁native片段、head與兩個完整無JS Embed。每個Embed低於50,000字元；一般文字／H1／CTA由原生節點承接，複雜相簿由Code Component承接。輸出既存時拒絕覆寫；fixture不能匯入。
+- 實測WHTML未附CSS會丟class，插入時必須提供所有 `iv1-` classes 的registry／適用原生CSS。WHTML把button轉成Link；需要以DOM節點＋button tag、原attrs／styles／children替換自己的誤轉節點。不能單靠local HTML verifier宣稱Designer已保留語意。
+- 相簿只放一個 `Invillage Spaces`，外層保留唯一原生H1；五主頁各放一次獨立 `Invillage Page Runtime`，負責Hero／motion與桌機Smoother（0.22），SplitText僅lines。Utility404實際不hydrate CodeIsland，保持純原生／零island。`native-navigation.js`完整以script接原site head，手機menu/Escape與未啟用Smoother的skip不依賴React；desktop Smoother的skip仍由Runtime處理。native-integration.css與native-nojs.css完整接spaces head，Shadow CSS另由component供應。
+- WHTML的Image primitive丟失width/height/srcset/sizes且列為reserved欄位；以原生DOM img保留完整來源attributes／class、現有managed來源URL和alt，不把文字／圖像做iframe。來源／原圖不變、圖片仍由原site管理；Designer內可編DOM attributes。native-mapping.json記錄完整精確URL／實際width映射，body-font-supply.json記錄兩份完整WOFF2的來源供應；原TTF與字形不動，合計8,184,164→4,305,100bytes。
+- 真實分享命令為既有官方CLI `webflow --skip-update-check --no-input --manifest webflow.designer.json devlink import`，已安裝後須在Designer Review changes接受更新。型別檢查用既有 `node_modules/typescript/bin/tsc -p designer/tsconfig.json`；不得使用force忽略錯誤。
+- W1兩個helper只作歷史試作，已draft／noindex／sitemap排除。現在新版六頁使用原page IDs，`invillage.webflow.io`全站候選已published-source核，真正Production／進階QA狀態見HANDOFF，不以候選發布代正式域證據。最新owner核准QA後同原site正式www/apex、不改DNS／Site訂閱，Git限隔離branch、不合main。
+- WHTML會漏target；native link setting用static_link.open_in_new_tab=true，讀回為openInNewTab，仍須核published target。Hero播放前恢復muted/loop/playsInline，只選當前matching source，capture source/video error避免手機失敗再下載desktop。`verify-designer-staging.mjs --url https://invillage.webflow.io/spaces --route /spaces --package-dir DIR --self-test`可驗六route及精確www origin（404用未知pathname），嚴格frozen text、img attrs、CodeIslands、兩literal noscript與native navigation來源。RAM fixture／local package／live static結果分開，不代Browser互動、Safari.app或真機；舊helper已draft/noindex/sitemap false，不作正式路由。
+
+## Webflow Cloud App封裝（歷史／來源對照）
 
 Owner 已要求透過 Webflow 發布目前版本。`dist/` 仍是原本可重建的 Preview 輸出；`scripts/package-webflow-production.mjs` 另產生全新的發布目錄，不修改 source、原圖或輸入 dist，也不新增依賴。
 

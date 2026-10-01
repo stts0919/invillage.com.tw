@@ -21,6 +21,7 @@ type SpaceItem = {
     small: string;
     medium: string;
     large: string;
+    widths?: { small: number; medium: number; large: number };
   };
   gallery: GalleryPhoto[];
 };
@@ -29,6 +30,8 @@ type Props = {
   title: string;
   rooms: SpaceItem[];
   sharedSpaces: SpaceItem[];
+  /** Designer pages keep their editable H1 outside the Shadow DOM. */
+  renderTitle?: boolean;
 };
 
 // Mobile stage is at least 36rem high or 76svh; the widest 3:2 photos need
@@ -40,7 +43,8 @@ function stageImageUrl(url: string, retry: number) {
 }
 
 function imageSrcSet(item: SpaceItem, retry = 0) {
-  return `${stageImageUrl(item.media.small, retry)} 640w, ${stageImageUrl(item.media.medium, retry)} 1280w, ${stageImageUrl(item.media.large, retry)} 1920w`;
+  const widths = item.media.widths ?? { small: 640, medium: 1280, large: 1920 };
+  return `${stageImageUrl(item.media.small, retry)} ${widths.small}w, ${stageImageUrl(item.media.medium, retry)} ${widths.medium}w, ${stageImageUrl(item.media.large, retry)} ${widths.large}w`;
 }
 
 function gallerySrcSet(photo: GalleryPhoto) {
@@ -72,8 +76,9 @@ function thumbnailLabel(item: SpaceItem, index: number, category: Category) {
     : String(index + 1).padStart(2, "0");
 }
 
-export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
+export default function SpacesExplorer({ title, rooms, sharedSpaces, renderTitle = true }: Props) {
   const instanceId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
+  const [interactive, setInteractive] = useState(false);
   const [category, setCategory] = useState<Category>("shared-spaces");
   const [roomIndex, setRoomIndex] = useState(0);
   const [sharedIndex, setSharedIndex] = useState(0);
@@ -101,6 +106,9 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   const currentItem = category === "rooms" ? (rooms[roomIndex] ?? rooms[0]) : (sharedSpaces[sharedIndex] ?? sharedSpaces[0]);
   const selectedId = currentItem?.id;
   const imageRetry = currentItem ? (imageRetries[currentItem.media.assetId] ?? 0) : 0;
+
+  // SSR remains readable, but never advertise controls before React owns them.
+  useEffect(() => { setInteractive(true); }, []);
 
   useEffect(() => {
     const image = mainImageRef.current;
@@ -377,7 +385,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
   }
 
   return (
-    <section className="spaces-immersive" aria-labelledby="spaces-heading" aria-busy={loading}>
+    <section className="spaces-immersive" aria-labelledby={renderTitle ? "spaces-heading" : undefined} aria-label={renderTitle ? undefined : title} aria-busy={loading || !interactive} data-interactive-ready={interactive}>
       <div className="spaces-stage">
         <div
           className="spaces-stage-media"
@@ -402,11 +410,11 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
         </div>
         <div className="spaces-stage-shade" aria-hidden="true" />
         <div className="spaces-stage-top">
-          <h1 id="spaces-heading">{title}</h1>
+          {renderTitle ? <h1 id="spaces-heading">{title}</h1> : <span aria-hidden="true" />}
           <div className="spaces-categories" data-selected-category={category} role="group" aria-label="空間分類">
-            <button type="button" aria-pressed={category === "shared-spaces"} onClick={() => void select("shared-spaces", sharedIndex)}>公共空間</button>
+            <button type="button" disabled={!interactive} aria-pressed={category === "shared-spaces"} onClick={() => void select("shared-spaces", sharedIndex)}>公共空間</button>
             <span className="spaces-category-divider" aria-hidden="true">│</span>
-            <button type="button" aria-pressed={category === "rooms"} onClick={() => void select("rooms", roomIndex)}>客房空間</button>
+            <button type="button" disabled={!interactive} aria-pressed={category === "rooms"} onClick={() => void select("rooms", roomIndex)}>客房空間</button>
           </div>
         </div>
         <div className="spaces-stage-bottom">
@@ -432,18 +440,18 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
             {selectionError ? <p className="spaces-image-error" role="alert">此照片載入失敗，請再選一次。</p> : null}
           </div>
           <div className="spaces-arrows" role="group" aria-label="切換空間">
-            <button type="button" aria-label={`上一個空間：${items[previousIndex].label}`} onClick={() => void select(category, previousIndex)}>
+            <button type="button" disabled={!interactive} aria-label={`上一個空間：${items[previousIndex].label}`} onClick={() => void select(category, previousIndex)}>
               <svg className="spaces-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-            <button type="button" aria-label={`下一個空間：${items[nextIndex].label}`} onClick={() => void select(category, nextIndex)}>
+            <button type="button" disabled={!interactive} aria-label={`下一個空間：${items[nextIndex].label}`} onClick={() => void select(category, nextIndex)}>
               <svg className="spaces-arrow-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>
-          <button ref={openDialogRef} className="spaces-expand-button" type="button" aria-label="查看完整照片" onClick={(event) => openFullPhoto(0, event.currentTarget)}>
+          <button ref={openDialogRef} className="spaces-expand-button" type="button" disabled={!interactive} aria-label="查看完整照片" onClick={(event) => openFullPhoto(0, event.currentTarget)}>
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -521,6 +529,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
               ref={(element) => { thumbnailRefs.current[index] = element; }}
               type="button"
               className="spaces-thumbnail"
+              disabled={!interactive}
               aria-label={item.label}
               aria-pressed={index === selectedIndex}
               onClick={() => void select(category, index)}
@@ -546,6 +555,7 @@ export default function SpacesExplorer({ title, rooms, sharedSpaces }: Props) {
             <button
               key={photo.assetId}
               className="spaces-gallery-item"
+              disabled={!interactive}
               type="button"
               data-gallery-asset-id={photo.assetId}
               aria-label={`查看完整照片：${photo.alt}`}
