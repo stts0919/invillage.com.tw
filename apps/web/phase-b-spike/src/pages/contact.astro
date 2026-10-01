@@ -1,0 +1,182 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import '../styles/secondary-pages.css';
+
+/**
+ * /contact（聯絡我們）
+ *
+ * 內容來源：apps/web/public/contact.html（frozen copy 文字）
+ *
+ * 文案原則：
+ * - 舊文案與聯絡資訊照原文保留
+ * - 不重現舊站 fail-closed 表單 UI；目前表單刻意 fail-closed，不能視為可送出的聯絡入口
+ * - 不額外建置表單後端；本頁主要洽詢路徑為頁尾 Messenger CTA
+ * - FAQ 文案照原文保留，其中「即將上線的官網」字句為原文照錄，待使用者決定是否更新
+ * - 頁尾洽詢 CTA 為該頁唯一 Messenger 入口
+ */
+
+const messengerUrl = 'https://m.me/invillagewulai';
+const pageTitle = '聯絡我們';
+
+type TransportItem = {
+  label: string;
+  text: string;
+};
+
+const transportItems: TransportItem[] = [
+  { label: '地址', text: '新北市烏來區新烏路5段10-3號。' },
+  { label: '公車', text: '捷運新店總站849路線公車往烏來，在「成功站」即達（紅河谷）。' },
+  { label: '開車', text: '在新烏路五段16號(商店)右轉下去約300公尺。台9甲線11.75K處。' },
+  { label: 'Google 導航', text: '搜尋「紅河隱園」直接抵達門口。' },
+];
+
+type Faq = {
+  id: string;
+  question: string;
+  answerParagraphs: string[];
+  orderedList?: string[];
+};
+
+const faqs: Faq[] = [
+  {
+    id: 'faq-pension',
+    question: '紅河隱園是民宿嗎？一間房間多少錢？',
+    answerParagraphs: [
+      '我們這裡是獨立式的會館，一次只接待一組客人，我們提供獨有、隱密還有豐富的設備，讓企業或是大家族有處舒適的休閒莊園空間。',
+      '為了顧及個人隱私不受干擾，因此不開放個別混居旅客訂房，但是我們也提供雙人包棟、雙雙對對、好友相聚、全棟包場等訂房方案，請隨時關注我們不定期促銷方案。',
+    ],
+  },
+  {
+    id: 'faq-day-use',
+    question: '除了住宿過夜，有沒有提供單日不過夜的包場？價格有優惠嗎？',
+    answerParagraphs: [
+      '我們在平日週一至週五的白天，也提供會議、活動的包場，包含最多 40 人會議室、接待大廳，停車場最多 12 部，另外也可以預訂餐廳、廚房、休閒客廳、洽談室的二樓場域。歡迎自備午餐、下午茶飲食。我們提供免費的氣泡水讓賓客喝到飽。',
+    ],
+  },
+  {
+    id: 'faq-room-count',
+    question: '你們有幾間房？能睡多少人？',
+    answerParagraphs: [
+      'InVillage 紅河隱園一共有 6 間房，針對不同房型，每個空間都可以彈性加床，全棟最大容納人數可以提供 20 至 22 位貴賓入住。',
+    ],
+  },
+  {
+    id: 'faq-feature',
+    question: '你們的會館房間數只有 6 間，與其他民宿相比少很多，這樣有什麼特色？',
+    answerParagraphs: [
+      '紅河隱園佔地約 1000 坪的山坡庭院，室內空間約 200 坪。我們主打獨立隱私的大公共空間，鼓勵貴賓走出房間，白天與親友一起體驗依山傍水的秘境，夜晚則是多加利用公共空間與設施，享受山林隱居的寧靜。在這裡不怕吵到鄰居，也不會有閒雜人出現，使專屬於貴賓的獨立空間。',
+    ],
+  },
+  {
+    id: 'faq-nearby',
+    question: '附近有什麼值得去的景點嗎？',
+    answerParagraphs: [],
+    orderedList: [
+      '從紅河隱園走路 300 公尺到加九寮景觀大橋，一旁有小徑能下溪水，過橋走約 5 分鐘可抵達「紅河熊空越嶺古道」，加九寮溪小攔砂壩與天然划水道是鮮少人知的秘境。',
+      '「烏來老街」主推各式原住民料理，有許多店家能依照人數點合菜，點心方面，烤山豬肉香腸與小米麻糬也很推薦。',
+      '老街附近可以體驗「觀光台車」，或是搭乘纜車前往「雲仙樂園」遊玩。返程建議沿溪谷走情人步道。',
+      '若有交通工具可前往「內洞遊樂區」，早期稱為「娃娃谷」，這裡號稱是全台已開發的瀑布中，芬多精負離子最多的景點。',
+      '從紅河開車 40 分鐘可抵達「福山蝴蝶公園」，這是北部最被忽略的自然公園，也是大台北的主要水源地之一。',
+      '「桶後溪」從紅河開車 60 分鐘可抵達，號稱攝影師的後花園。公路沿線親水性很高，走到盡頭是林物局的林地復育區，爬過一座山就是宜蘭。',
+    ],
+  },
+  {
+    id: 'faq-tech',
+    question: '為什麼紅河隱園 InVillage 是一棟科技建築，請問是哪些科技元素嗎？',
+    answerParagraphs: [
+      '我們的本業是智慧環境控制的廠商，本建築的原始初衷是展示體驗會館，提供場地給特定的客戶群來參觀與推廣。請參閱我們即將上線的官網說明。',
+    ],
+  },
+];
+---
+
+<SiteLayout title={pageTitle}>
+  <main class="page-main secondary-page" id="main-content" tabindex="-1">
+    <section class="secondary-page-hero" aria-labelledby="contact-heading">
+      <div class="secondary-page-hero-content">
+        <h1 class="secondary-page-title" id="contact-heading">{pageTitle}</h1>
+        <p class="secondary-page-deck">
+          本莊園是由科技城公司營運管理，這裡的空間租借、參觀體驗、教育訓練、會議住宿等各項活動等，都歡迎各界洽詢合作。
+        </p>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="contact-info-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="contact-info-heading">服務洽詢</h2>
+        <div class="secondary-contact-card">
+          <ul class="secondary-contact-info">
+            <li>
+              <span class="secondary-contact-info-label">公司</span>
+              <span>科技城股份有限公司</span>
+            </li>
+            <li>
+              <span class="secondary-contact-info-label">地址</span>
+              <span>新北市新店區中正路四維巷一弄四號四樓(遠東工業區)</span>
+            </li>
+            <li>
+              <span class="secondary-contact-info-label">電話</span>
+              <span>(02) 22194201 分機 31</span>
+            </li>
+            <li>
+              <span class="secondary-contact-info-label">手機</span>
+              <span>0937017250</span>
+            </li>
+            <li>
+              <span class="secondary-contact-info-label">承辦人</span>
+              <span>曾先生</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="contact-transport-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="contact-transport-heading">交通位置</h2>
+        <ul class="secondary-transport-list">
+          {transportItems.map((item) => (
+            <li>
+              <strong>{item.label}</strong>：{item.text}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="secondary-section" aria-labelledby="contact-faq-heading">
+      <div class="secondary-section-inner">
+        <h2 class="secondary-section-heading" id="contact-faq-heading">常見問題</h2>
+        <ul class="secondary-faq-list">
+          {faqs.map((faq) => (
+            <li>
+              <details class="secondary-faq">
+                <summary>
+                  <span>{faq.question}</span>
+                </summary>
+                <div class="secondary-faq-body">
+                  {faq.answerParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+                  {faq.orderedList && (
+                    <ol>
+                      {faq.orderedList.map((line) => <li>{line}</li>)}
+                    </ol>
+                  )}
+                </div>
+              </details>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="contact-cta-heading">
+      <div class="content-inner secondary-cta-section">
+        <h2 class="section-heading" id="contact-cta-heading">預訂紅河隱園 一日莊園主人</h2>
+        <p>
+          我們每次只接待一組貴賓，為了確保您的隱私與獨享莊園。白天可以盛裝打扮也適合休閒輕裝，夜裡三五好友、閨蜜私密自在，品嚐紅酒茗茶，您將不會受到打擾。
+        </p>
+        <a class="primary-cta" href={messengerUrl} target="_blank" rel="noopener noreferrer">立刻洽詢</a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

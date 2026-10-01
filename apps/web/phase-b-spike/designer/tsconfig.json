@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["./**/*.tsx", "./**/*.json", "./**/*.d.ts", "../src/components/SpacesExplorer.tsx"],
+  "exclude": ["./.bundle-local", "../node_modules"],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "noEmit": true
+  }
+}

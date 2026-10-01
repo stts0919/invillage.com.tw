@@ -1,0 +1,102 @@
+---
+interface Props {
+  fallbackImageUrl: string;
+  desktopVideoUrl?: string;
+  mobileVideoUrl?: string;
+  desktopPosterUrl?: string;
+  mobilePosterUrl?: string;
+}
+
+const { fallbackImageUrl, desktopVideoUrl, mobileVideoUrl, desktopPosterUrl, mobilePosterUrl } = Astro.props;
+const hasVideo = Boolean(desktopVideoUrl);
+const posterUrl = desktopPosterUrl ?? fallbackImageUrl;
+---
+
+<div class="hero-media" data-hero-media data-state={hasVideo ? 'loading' : 'static'}>
+  <picture>
+    {mobilePosterUrl && <source srcset={mobilePosterUrl} media="(max-width: 767px)" />}
+    <img class="hero-poster" src={posterUrl} alt="" width={hasVideo ? 1600 : 1280} height={hasVideo ? 800 : 854} fetchpriority="high" />
+  </picture>
+  {hasVideo && (
+    <video class="hero-video" muted loop playsinline preload="none" poster={posterUrl} aria-hidden="true">
+      {mobileVideoUrl && <source src={mobileVideoUrl} type="video/mp4" media="(max-width: 767px)" />}
+      <source src={desktopVideoUrl} type="video/mp4" />
+    </video>
+  )}
+</div>
+{hasVideo && (
+  <button class="video-control" type="button" aria-label="播放影片" data-playing="false" data-video-toggle>
+    <span class="video-control-icon" aria-hidden="true"></span>
+  </button>
+)}
+
+<script>
+  const media = document.querySelector<HTMLElement>('[data-hero-media]');
+  const video = media?.querySelector<HTMLVideoElement>('video');
+  const toggle = document.querySelector<HTMLButtonElement>('[data-video-toggle]');
+
+  if (media && video && toggle) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string; addEventListener?: (event: 'change', listener: () => void) => void };
+    }).connection;
+    const isConstrainedNetwork = () => Boolean(
+      connection?.saveData || ['slow-2g', '2g'].includes(connection?.effectiveType ?? '')
+    );
+    let userPaused = false;
+    const setPlaying = (playing: boolean) => {
+      media.dataset.state = playing ? 'playing' : 'static';
+      toggle.dataset.playing = String(playing);
+      toggle.setAttribute('aria-label', playing ? '暫停影片' : '播放影片');
+    };
+    const tryPlay = async () => {
+      if (reducedMotion.matches) {
+        video.pause();
+        setPlaying(false);
+        return;
+      }
+      try {
+        await video.play();
+        setPlaying(true);
+      } catch {
+        userPaused = true;
+        setPlaying(false);
+      }
+    };
+
+    toggle.addEventListener('click', () => {
+      if (video.paused) {
+        userPaused = false;
+        void tryPlay();
+      }
+      else {
+        userPaused = true;
+        video.pause();
+        setPlaying(false);
+      }
+    });
+    video.addEventListener('error', () => {
+      userPaused = true;
+      video.pause();
+      setPlaying(false);
+    });
+    video.addEventListener('pause', () => setPlaying(false));
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) {
+        video.pause();
+        setPlaying(false);
+      } else if (!isConstrainedNetwork() && !userPaused) {
+        void tryPlay();
+      }
+    });
+    connection?.addEventListener?.('change', () => {
+      if (isConstrainedNetwork()) {
+        userPaused = true;
+        video.pause();
+        setPlaying(false);
+      }
+    });
+    if (isConstrainedNetwork()) setPlaying(false);
+    else void tryPlay();
+  }
+</script>

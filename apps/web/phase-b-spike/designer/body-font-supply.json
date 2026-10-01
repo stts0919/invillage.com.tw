@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "sourceFontsUnchanged": true,
+  "format": "woff2",
+  "subset": false,
+  "toolchain": {
+    "fontTools": "4.66.0",
+    "Brotli": "1.2.0"
+  },
+  "fonts": [
+    {
+      "fileName": "harmonyos-regular.woff2",
+      "bytes": 2118644,
+      "weight": 400,
+      "sha256": "8e3a8629c117dcb6cb572df379f8f3bce43aba6fb1a396306288f04cec616b06",
+      "md5": "5f526bb45b2fad9ec71342262fc5267b",
+      "id": "6abe5433b55ea6d467bbe4af",
+      "url": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/fonts/6abe5433b55ea6d467bbe4aa-harmonyos-regular.woff2"
+    },
+    {
+      "fileName": "harmonyos-bold.woff2",
+      "bytes": 2186456,
+      "weight": 700,
+      "sha256": "099d1cda2433ece98a61fdc2ab7d8ab89da9cda58efaf19b45e1603ce6982340",
+      "md5": "4c15326d67d2c344e81ea48be0a7a6e5",
+      "id": "6abe5433ee0ad8c71b94005c",
+      "url": "https://cdn.prod.website-files.com/65009115380adfba3ebe2328/fonts/6abe5433ee0ad8c71b940059-harmonyos-bold.woff2"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "sourcePath": "apps/web/public/spaces.html",
+  "sourceSha256": "ae7a932b4a6ddb26f3d1902360ff18662e2a731ed4c441e22ded5c59f4387dee",
+  "intro": "獨享莊園不見得要耗費鉅資心力打來造。我們提供一日莊園主人的包棟服務。享受一次只接待一組貴賓的獨佔。",
+  "closing": "我們每次只接待一組貴賓，為了確保您的隱私與獨享莊園。白天可以盛裝打扮也適合休閒輕裝，夜裡三五好友、閨蜜私密自在，品嚐紅酒茗茶，您將不會受到打擾。",
+  "groups": [
+    {
+      "kind": "rooms",
+      "items": [
+        {
+          "id": "room-1",
+          "label": "VIP 景觀客房 401",
+          "panelHeading": "VIP 景觀客房 401",
+          "description": "三面落地窗、一臥一廳大坪數、雙面開窗免治馬桶與乾濕分離浴缸經典風浴室的客房。有四套電動窗簾、智慧燈光情境控制系統。特大雙人床＋超大沙發，可以加床2~3人。情侶夫妻或一家人、閨蜜好友也不嫌擁擠。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb5fab873a24649ff0253-d7767e392d2d.jpg",
+          "sourceTab": "Tab 1"
+        },
+        {
+          "id": "room-2",
+          "label": "山景情境客房 402",
+          "panelHeading": "山景情境客房 402",
+          "description": "溫馨簡約的設計風格，也不乏諾大的落地窗，坐在舒適的沙發望著窗外的山坡花園步道。乾濕分離浴缸型浴室、免治馬桶、雙電動窗簾、智慧燈光情境控制系統，特大雙人床適合情侶夫妻相擁入眠。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb6cd024dac289bcccd90-be28af470039.jpg",
+          "sourceTab": "Tab 2"
+        },
+        {
+          "id": "room-3",
+          "label": "VIP 景觀客房 301",
+          "panelHeading": "VIP 景觀客房 301",
+          "description": "三面落地窗、一臥一廳大坪數、雙面開窗免治馬桶與乾濕分離浴缸經典風浴室的客房。有四套電動窗簾、智慧燈光情境控制系統。特大雙人床＋超大沙發，可以加床2~3人。情侶夫妻或一家人、閨蜜好友也不嫌擁擠。本房型採古典鄉村風格設計，法式古董桌椅座落在八角窗邊，在此享用下午茶應該是前所未見。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb79bf3d12126fda8543b-6bf95756c629.jpg",
+          "sourceTab": "Tab 5"
+        },
+        {
+          "id": "room-4",
+          "label": "山景情境客房 302",
+          "panelHeading": "山景情境客房 302",
+          "description": "溫馨簡約的設計風格，也不乏諾大的落地窗，坐在舒適的沙發望著窗外的山坡花園步道。乾濕分離浴缸型浴室、免治馬桶、雙電動窗簾、智慧燈光情境控制系統，特大雙人床適合情侶夫妻相擁入眠。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651eb9512b96cb620230dada-cb5cdd2a7ac5.jpg",
+          "sourceTab": "Tab 6"
+        },
+        {
+          "id": "room-5",
+          "label": "景觀陽光房 303",
+          "panelHeading": "景觀陽光房 303",
+          "description": "具備娛樂休閒廳與夜間臥室的雙重空間，三面大片落地窗環繞加上天幕玻璃，讓您體驗被溫暖陽光喚醒的獨特滋味。另外，專屬室外超大露台擁有十人座的休閒桌椅。乾濕分離、免治馬桶、七套電動窗簾，可通透森林景觀也可隱密睡眠。本房型具備二套沙發床可提供二人住宿，最多加床二人。也是有別於其他客房的特色空間。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec6150a7e5b8cda74133c-750dedd70606.jpg",
+          "sourceTab": "Tab 7"
+        },
+        {
+          "id": "room-6",
+          "label": "201 景觀通鋪房",
+          "panelHeading": "201 景觀通鋪房",
+          "description": "若貴賓人數眾多，景觀通鋪房是您的好選擇，我們提供多達6人位的加厚床墊，來滿足眾多人數的住宿需求。這間獨特的超大落地窗面對紅河谷，可作為瑜伽教室、冥想空間。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651ec63ce1dde357d047f53a-4c55cc829e43.jpg",
+          "sourceTab": "Tab 9"
+        }
+      ]
+    },
+    {
+      "kind": "shared-spaces",
+      "items": [
+        {
+          "id": "space-1",
+          "label": "1F 接待大廳",
+          "panelHeading": "1F 接待大廳",
+          "description": "想做日光浴曬太陽卻不想滿身大汗，就待在最凝聚人氣的大廳，坐在舒適的沙發、地毯上，跟好友分享你的音樂，望著窗外天然的畫作，讓落地窗灑入溫暖的陽光，彷彿就是你的家園",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d47da495f6472500b8787-c0ec27215bf9.jpg",
+          "sourceTab": "Tab 7"
+        },
+        {
+          "id": "space-2",
+          "label": "1F 中島餐飲吧台",
+          "panelHeading": "1F 中島餐飲吧台",
+          "description": "24小時 party 不間斷。吧台上自製汽水喝到飽的氣泡機，口感細膩大人小孩都愛。我們提供咖啡機、DIY鬆餅機、IH爐、敲敲門冰箱製冰球以及多樣零食，帶著你的下午茶甜點、水果來這裡辦派對吧。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d49672fcb0efaad3cb8e9-2ad30da9392f.jpg",
+          "sourceTab": "Tab 8"
+        },
+        {
+          "id": "space-3",
+          "label": "多功能會議室",
+          "panelHeading": "多功能會議室",
+          "description": "可容納多達40人的會議空間，3部投影機智能矩陣切換、串接藍芽音響以及智慧場景控制系統，讓您的夥伴團隊進行Team Building活動、共識營會議、教育訓練能夠事半功倍。若有用餐需求，此空間搖身一變也能夠成為影音自助餐廳。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4bfa1bbdd80682ef39ef-a8e0a86249ee.jpg",
+          "sourceTab": "Tab 9"
+        },
+        {
+          "id": "space-4",
+          "label": "2F 會談室",
+          "panelHeading": "2F 會談室",
+          "description": "小型洽談室提供投影簡報設備，商務會議、親子桌遊、switch遊戲...，或是安靜的獨處創作空間。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4f2713381ed5919289a5-539f13662244.jpg",
+          "sourceTab": "Tab 1"
+        },
+        {
+          "id": "space-5",
+          "label": "2F 廚房&餐廳",
+          "panelHeading": "廚房&中島輕食區＆餐廳",
+          "description": "我們提供全套廚房設備、餐具、專業烤肉架、冰箱、飲水機、各式料理電器，鄰近後院花園森林。您可以聘請私廚或是自己發揮料理廚藝的優質場地。\n與中島輕食、廚房相鄰的中式餐廳，提供十人高級質感的餐桌椅與水晶吊燈。在多面景觀落地窗用餐，讓時光凍結人際情感無限延續到深夜。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d511d620daecc5fb514d1-c32bfb697778.jpg",
+          "sourceTab": "Tab 6"
+        },
+        {
+          "id": "space-6",
+          "label": "2F 影音娛樂廳",
+          "panelHeading": "2F 影音娛樂廳",
+          "description": "智慧語音情境控制＋高級音響盡在2樓的歡聚客廳，高級沙發、情人座椅，不亞於KTV視聽包廂。是大人小孩的玩樂天堂。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d4ddd0ad649c56a7a62b6-7c36f6f6f7fa.jpg",
+          "sourceTab": "Tab 3"
+        },
+        {
+          "id": "space-7",
+          "label": "3F&4F 交誼廳",
+          "panelHeading": "3F&4F 交誼廳",
+          "description": "3F\n三倆閨蜜屈膝閒話家談，兼顧陪伴孩子們桌遊娛樂，近在咫尺的綠色森林讓視力獲得舒緩、心情獲得解放。北部秋冬多雨時節，與其閉關在家不如到此躲雨親近自然。\n4F\n貼近挑高五米的超大景觀玻璃，即便酷寒嚴冬來襲，在爐火陪伴雲霧與終年翠綠暖意上心頭。陽光照映在Tiffany藍色的沙發，總會忍不住在此多待片刻。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d542e12e6edc12a7f2d30-82568ed4f3af.jpg",
+          "sourceTab": "Tab 4"
+        },
+        {
+          "id": "space-8",
+          "label": "3F&4F 景觀露台",
+          "panelHeading": "3F&4F 景觀露台",
+          "description": "3F SunnyTeaTime 陽光露台\n高級大理石戶外桌，無論是用餐、下午茶、露天火鍋烤肉，甚至開會，都別有一番風情。這是陽光房專屬露台，歡迎前來體驗我們最獨特的住房空間。\n4F SkyDrinking 天空露台\n4樓景觀露台得天獨厚與巨木樹冠相鄰。白天望著紅河深山峽谷，夜幕籠罩在星空之下。不下雨的時候，在這裏放空閱讀、品茶小酌、三五好友聊天俯瞰紅河峽谷。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8816b1f9f370048245ac-1ca1e31d1c21.jpg",
+          "sourceTab": "Tab 2"
+        },
+        {
+          "id": "space-9",
+          "label": "戶外庭園",
+          "panelHeading": "戶外庭園",
+          "description": "12個專屬車位與近千坪庭院的花園步道，在居高臨下山坡上仰望著數不清的高聳大樹。無論晴雨冬夏，踏青、聚會、餐宴、住宿、展演活動...遠離塵囂拉近每個人的距離。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d8a6081773e12e4a4362f-2dd27543677e.jpg",
+          "sourceTab": "Tab 10"
+        },
+        {
+          "id": "space-10",
+          "label": "智慧環控系統",
+          "panelHeading": "智慧環控系統",
+          "description": "在偏僻的山區即便無人居住，也能遠端即時管理，這裡的任一處門窗、照明、空調、熱水、澆灌、防災、安全門禁與節能耗電，由純本地 Made in Taiwan 的科技城公司架設。我們將發展20多年的系統在此展示，讓來賓兼具休閒與參觀的體驗中認識科技在生活中的必要性。",
+          "imageUrl": "https://pub-a73a77b87d504498bad6ae568754e572.r2.dev/media/content/651d9cc6ac4a0c60587b7b6f-81442f6e0ec4.jpg",
+          "sourceTab": "Tab 5"
+        }
+      ]
+    }
+  ]
+}

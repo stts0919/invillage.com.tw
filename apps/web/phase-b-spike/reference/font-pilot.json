@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "local-/spaces-pilot-not-production-supply",
+  "scope": "Only /spaces page, room, and closing CTA headings, category buttons, and the selected thumbnail short label use the pilot fonts; all body copy and other routes keep HarmonyOS Sans TC.",
+  "build": {
+    "script": "apps/web/phase-b-spike/scripts/build-font-pilot.py",
+    "python": "Bundled Python 3.12.14 in an isolated temporary venv",
+    "fonttools": "4.66.0",
+    "Brotli": "1.2.0",
+    "install": "Pinned PyPI wheels, SHA-256 checked against official PyPI JSON, then pip --isolated --no-index --no-deps inside the temporary venv. The official index was inaccessible to pip in isolated mode; no alternate registry was used.",
+    "toolWheels": [
+      {
+        "metadataUrl": "https://pypi.org/pypi/fonttools/4.66.0/json",
+        "filename": "fonttools-4.66.0-py3-none-any.whl",
+        "sha256": "bc7b7ddc1a1f46c363354304e9a8dd93722e4a6a24f785015650898dacf40df9"
+      },
+      {
+        "metadataUrl": "https://pypi.org/pypi/Brotli/1.2.0/json",
+        "filename": "brotli-1.2.0-cp312-cp312-macosx_10_13_universal2.whl",
+        "sha256": "35d382625778834a7f3061b15423919aa03e4f5da34ac8e02c074e4b75ab4f84"
+      }
+    ],
+    "subsetCommand": "<venv>/bin/python apps/web/phase-b-spike/scripts/build-font-pilot.py --only editorial --adobe-source <official-TW-WOFF2> --adobe-license <Adobe-OFL> --stone-source <owner-TC-OTF> --stone-license <ButTaiwan-OFL>",
+    "characterRule": "Unique characters from the actual /spaces H1, all 16 panelHeading values, and the literal closing CTA H2 for editorial; category labels and actually displayed selected-thumbnail labels for stone; plus printable ASCII U+0020-U+007E for both.",
+    "sourceTextFiles": [
+      "apps/web/phase-b-spike/reference/legacy-slice.json",
+      "apps/web/phase-b-spike/reference/spaces-content.json",
+      "apps/web/phase-b-spike/src/pages/spaces.astro"
+    ]
+  },
+  "fonts": [
+    {
+      "role": "editorial",
+      "family": "Invillage Editorial Pilot",
+      "sourceUrl": "https://github.com/adobe-fonts/source-han-serif/blob/release/Variable/WOFF2/OTF/Subset/SourceHanSerifTW-VF.otf.woff2",
+      "sourceVersion": "Source Han Serif TW VF 2.003",
+      "sourcePath": "assets/optimized/font-pilot/SourceHanSerifTW-VF.otf.woff2",
+      "sourceBytes": 7234064,
+      "sourceSha256": "698be31faf89a9848887c382181ffc484c403ce5a789fc56504e84d97aa9d3a4",
+      "subsetWeight": 700,
+      "characterCount": 159,
+      "nonAsciiCharacters": "一中主交人介光功區台吧園境外多大娛客室山島庭廚廳影待情慧戶房接控日景智會樂河環空系紅紹統能莊觀訂誼談議輕通鋪間陽隱露音預食飲餐＆",
+      "charactersSha256": "d77cfcb4ac53b4e2c04a71bb1eb70e50915c5c2bca6e6c259b7d5a9f22147f30",
+      "optimizedPath": "assets/optimized/font-pilot/invillage-editorial-pilot-700.woff2",
+      "publicPath": "apps/web/phase-b-spike/public/assets/fonts/invillage-editorial-pilot-700.woff2",
+      "outputBytes": 29900,
+      "outputSha256": "4efb33c3045bf2beda72e13a83a58ae4c4865a307ce34f9bafb1f2837b9dc397",
+      "licenseUrl": "https://github.com/adobe-fonts/source-han-serif/blob/release/LICENSE.txt",
+      "licensePublicPath": "apps/web/phase-b-spike/public/assets/fonts/invillage-editorial-pilot-OFL.txt",
+      "licenseSha256": "9ff5bb567e1b92c801fc1069e5fbf992ff8efccacb9db94e5959a5b3ba9bb903"
+    },
+    {
+      "role": "short-label",
+      "family": "Invillage Stone Pilot",
+      "sourceUrl": "owner-supplied-local-GenSekiGothic2-TC-B-v2.100",
+      "sourceVersion": "GenSekiGothic2 TC B 2.100",
+      "sourceBytes": 15023344,
+      "sourceSha256": "6deca2cbf28660f2fe77927c33173bd4e4d01bfdb85c8fbe42a6ebe1828b4e12",
+      "subsetWeight": 700,
+      "characterCount": 105,
+      "nonAsciiCharacters": "公共客房景空舖觀通間",
+      "charactersSha256": "11c0b6df5b530be3a33e5c2d56fc7d156bccd9259a61d59b000fd541a2a41669",
+      "optimizedPath": "assets/optimized/font-pilot/invillage-stone-pilot-700.woff2",
+      "publicPath": "apps/web/phase-b-spike/public/assets/fonts/invillage-stone-pilot-700.woff2",
+      "outputBytes": 13372,
+      "outputSha256": "a1dc605577c919b449ddb2bf313cf107fb48b8c351e96ea1e5502c57312ae88d",
+      "licenseUrl": "https://github.com/ButTaiwan/genseki-font/blob/master/SIL_Open_Font_License_1.1.txt",
+      "licensePublicPath": "apps/web/phase-b-spike/public/assets/fonts/invillage-stone-pilot-OFL.txt",
+      "licenseSha256": "d84b652ca46586043946969a33c1dbf5a43028440825ae744a325965bec4c8fb"
+    }
+  ],
+  "releaseGates": [
+    "Original and derived font binaries and OFL sidecars are locally present but ignored by Git; a clean checkout cannot reproduce or deploy them without an approved binary supply step.",
+    "The owner-supplied TC OTF is not copied into the repository; the build script requires it by explicit path at runtime.",
+    "This is a /spaces-only local trial, not an authorization to update the rest of the site or deploy Production.",
+    "fontTools reports that VORG is not updated for VVAR during static instancing; horizontal /spaces text is visually tested, vertical writing is not part of this pilot."
+  ]
+}

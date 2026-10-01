@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "status": "owner-approved-public-preview-candidate-not-deployed",
+  "createdAt": "2026-09-23",
+  "supersedes": "assets/manifests/hero-video-candidate-001.json",
+  "source": {
+    "path": "assets/Hero_InVillage.mov",
+    "gitIgnored": true,
+    "bytes": 62752153,
+    "sha256": "20ae9660681426aaf21583da1368045e6c422bbbb84ccbb7f5789730e53da830",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1920,
+    "height": 960,
+    "durationSeconds": 49.587104
+  },
+  "selection": {
+    "useFullSource": true,
+    "audioPolicy": "remove-entire-audio-track-including-voiceover-and-any-background-audio",
+    "posterAtSeconds": 0.5,
+    "ownerDirection": "Use the newly supplied video instead of the previous 15-second Hero clip; remove voiceover and keep the web derivative below 25 MB."
+  },
+  "previewReleaseDecision": {
+    "decidedBy": "owner",
+    "decidedAt": "2026-09-25",
+    "scope": "public Cloudflare Preview only; Webflow and production domain unchanged",
+    "publicCommercialUseConfirmed": true,
+    "originalMovExcludedFromGit": true
+  },
+  "outputs": [
+    {
+      "role": "desktop-video",
+      "path": "assets/optimized/hero-video/candidate-002/hero-desktop.mp4",
+      "width": 1600,
+      "height": 800,
+      "durationSeconds": 49.582867,
+      "videoCodec": "h264",
+      "audioIncluded": false,
+      "encoding": "libx264 preset=slow crf=23 pix_fmt=yuv420p profile=high level=4.1 movflags=faststart map_metadata=-1 write_tmcd=0",
+      "bytes": 10332066,
+      "sha256": "806479d22570e70f75c5457ab6a9b7099360ce325706cc016c24a7a9380d3ec7"
+    },
+    {
+      "role": "mobile-landscape-video",
+      "path": "assets/optimized/hero-video/candidate-002/hero-mobile.mp4",
+      "width": 960,
+      "height": 480,
+      "durationSeconds": 49.582867,
+      "videoCodec": "h264",
+      "audioIncluded": false,
+      "encoding": "libx264 preset=slow crf=25 pix_fmt=yuv420p profile=high level=4.0 movflags=faststart map_metadata=-1 write_tmcd=0",
+      "bytes": 3311651,
+      "sha256": "82e2a7227fde37896805b9633652b381bb3026e8565c4bf291edbd95692f6a34"
+    },
+    {
+      "role": "desktop-poster",
+      "path": "assets/optimized/hero-video/candidate-002/poster-desktop.jpg",
+      "width": 1600,
+      "height": 800,
+      "bytes": 152304,
+      "sha256": "859d6ad907c40e1c83006a147dfdc6f4699b9bbfcf320d56b958825d2b3b1253"
+    },
+    {
+      "role": "mobile-landscape-poster",
+      "path": "assets/optimized/hero-video/candidate-002/poster-mobile.jpg",
+      "width": 960,
+      "height": 480,
+      "bytes": 72144,
+      "sha256": "8eb9a3560aeb98dd959caeb5e4c37d5aaea09c30cc549229172f4e72df59f69d"
+    }
+  ],
+  "qa": {
+    "videoFrameCount": 1486,
+    "fullDecode": "both-videos-pass",
+    "audioStreams": 0,
+    "dataStreams": 0,
+    "browserDirectPlayback": "2026-09-23 Codex in-app browser: both local MP4 URLs reported duration 49.582867, expected dimensions, readyState 4, paused false, and no media error",
+    "fileSizeLimitBytes": 25000000,
+    "posterVisualReview": "pass-as-candidates",
+    "sampledSourceAndOutputSeconds": [0, 10, 20, 30, 40, 48],
+    "pending": [
+      "Hero page autoplay, loop transition, and reduced-motion fallback; direct media playback alone does not verify these",
+      "Hero overlay contrast across bright interior and dark night scenes",
+      "Mobile crop or poster-only decision in the actual layout",
+      "Loop transition and reduced-motion fallback",
+      "Owner confirmed public Preview use on 2026-09-25; production release remains a separate decision"
+    ]
+  }
+}

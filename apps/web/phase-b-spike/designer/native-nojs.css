@@ -1,0 +1,8 @@
+[data-iv1-code-component-slot="SpacesExplorer"],
+.iv1-video-control {
+  display: none !important;
+}
+.iv1-spaces-immersive > .iv1-spaces-stage > .iv1-spaces-stage-top {
+  position: static !important;
+  pointer-events: auto;
+}

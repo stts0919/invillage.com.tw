@@ -1,0 +1,28 @@
+---
+import legacy from '../../reference/legacy-slice.json';
+---
+
+<footer class="site-footer">
+  <div class="content-inner footer-inner">
+    <div class="footer-brand">
+      <a href="/" aria-label="紅河隱園首頁">
+        <img class="brand-logo" src="/assets/brand/logo.png" alt="" width="1135" height="301" loading="lazy" />
+      </a>
+      <p>{legacy.footer.introduction}</p>
+      <address>{legacy.footer.contactLines.map((line) => <span>{line}</span>)}</address>
+      <p class="footer-copyright">{legacy.footer.copyright}</p>
+    </div>
+    <nav class="footer-navigation" aria-label="頁尾導覽">
+      <div class="footer-group">
+        {legacy.navigation.slice(0, 2).map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+      <div class="footer-group">
+        {legacy.navigation.slice(2).map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+      <div class="footer-group">
+        <a href="https://www.facebook.com/invillagewulai/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/invillage_wulai" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </nav>
+  </div>
+</footer>

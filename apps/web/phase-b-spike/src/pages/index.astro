@@ -1,0 +1,135 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import HeroMedia from '../components/HeroMedia.astro';
+import legacy from '../../reference/legacy-slice.json';
+import homeContent from '../../reference/home-content.json';
+import spacesContent from '../../reference/spaces-content.json';
+import imageAlts from '../../reference/image-alts.json';
+import desktopVideoUrl from '../../../../../assets/optimized/hero-video/candidate-002/hero-desktop.mp4?url';
+import mobileVideoUrl from '../../../../../assets/optimized/hero-video/candidate-002/hero-mobile.mp4?url';
+import desktopPosterUrl from '../../../../../assets/optimized/hero-video/candidate-002/poster-desktop.jpg?url';
+import mobilePosterUrl from '../../../../../assets/optimized/hero-video/candidate-002/poster-mobile.jpg?url';
+
+const messengerUrl = 'https://m.me/invillagewulai';
+const [spaceGroup, roomGroup, technologyGroup, locationGroup] = homeContent.groups;
+
+function feature(groupIndex: number, heading: string) {
+  const item = homeContent.groups[groupIndex].items.find((candidate) => candidate.heading === heading);
+  if (!item) throw new Error(`Missing frozen home feature: ${heading}`);
+  return item;
+}
+
+function imageAlt(id: string) {
+  const alt = (imageAlts as Record<string, string>)[id];
+  if (!alt) throw new Error(`Missing space image alt: ${id}`);
+  return alt;
+}
+
+function sharedImage(label: string) {
+  const item = spacesContent.groups[1].items.find((candidate) => candidate.label === label);
+  if (!item) throw new Error(`Missing shared-space image: ${label}`);
+  return item;
+}
+
+const spaceFeatures = [
+  { copy: feature(0, '1F 接待大廳'), image: sharedImage('1F 接待大廳') },
+  { copy: feature(0, '戶外庭院'), image: sharedImage('戶外庭園') },
+  { copy: feature(0, '多功能會議室'), image: sharedImage('多功能會議室') },
+];
+const roomFeatures = [
+  { copy: feature(1, 'VIP 景觀客房'), image: spacesContent.groups[0].items[0] },
+  { copy: feature(1, '山景情境客房'), image: spacesContent.groups[0].items[1] },
+  { copy: feature(1, '景觀通鋪房'), image: spacesContent.groups[0].items[5] },
+  { copy: feature(1, '景觀陽光房'), image: spacesContent.groups[0].items[4] },
+];
+const technologyFeatures = technologyGroup.items.filter((item) => item.heading !== '居家照護 幫你顧');
+---
+
+<SiteLayout title={legacy.titles.home} headerOnHero>
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="home-heading">
+      <HeroMedia
+        fallbackImageUrl="/assets/images/hero-still.jpg"
+        desktopVideoUrl={desktopVideoUrl}
+        mobileVideoUrl={mobileVideoUrl}
+        desktopPosterUrl={desktopPosterUrl}
+        mobilePosterUrl={mobilePosterUrl}
+      />
+      <div class="hero-content">
+        <h1 class="hero-title" id="home-heading">{legacy.home.heading}</h1>
+        <div class="hero-intro">
+          {legacy.home.introLines.map((line) => <p>{line}</p>)}
+        </div>
+        <a class="primary-cta" href={messengerUrl} target="_blank" rel="noopener noreferrer">立刻洽詢</a>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="spaces-preview-heading">
+      <div class="content-inner">
+        <div class="reveal home-spaces-intro">
+          <h2 class="section-heading" id="spaces-preview-heading">{spaceGroup.heading}</h2>
+          {spaceGroup.intro.map((paragraph) => <p class="home-section-intro">{paragraph}</p>)}
+          <a class="text-link home-explore-link" href="/spaces">空間與客房介紹<span class="home-explore-icon" aria-hidden="true">→</span></a>
+        </div>
+        <div class="shared-spaces home-shared-spaces">
+          {spaceFeatures.map(({ copy, image }) => (
+            <article class="shared-space" data-reveal-pair>
+              <div class="shared-space-media"><img src={image.imageUrl} alt={imageAlt(image.id)} loading="lazy" decoding="async" /></div>
+              <div class="shared-space-copy">
+                <h3>{copy.heading}</h3>
+                {copy.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="home-rooms-heading">
+      <div class="content-inner">
+        <h2 class="section-heading" id="home-rooms-heading">{roomGroup.heading}</h2>
+        {roomGroup.intro.map((paragraph) => <p class="home-section-intro">{paragraph}</p>)}
+        <div class="shared-spaces home-shared-spaces">
+          {roomFeatures.map(({ copy, image }) => (
+            <article class="shared-space" data-reveal-pair>
+              <div class="shared-space-media"><img src={image.imageUrl} alt={imageAlt(image.id)} loading="lazy" decoding="async" /></div>
+              <div class="shared-space-copy">
+                <h3>{copy.heading}</h3>
+                {copy.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="home-tech-heading">
+      <div class="content-inner">
+        <h2 class="section-heading" id="home-tech-heading">{technologyGroup.heading}</h2>
+        {technologyGroup.intro.map((paragraph) => <p class="home-section-intro">{paragraph}</p>)}
+        <div class="home-details">
+          {technologyFeatures.map((item) => (
+            <details>
+              <summary>{item.heading}</summary>
+              {item.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="home-location-heading">
+      <div class="content-inner">
+        <h2 class="section-heading" id="home-location-heading">{locationGroup.heading}</h2>
+        {locationGroup.intro.map((paragraph) => <p class="home-section-intro">{paragraph}</p>)}
+        <div class="home-details">
+          {locationGroup.items.map((item) => (
+            <details>
+              <summary>{item.heading}</summary>
+              {item.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </details>
+          ))}
+        </div>
+        <a class="text-link" href="/contact">聯絡我們</a>
+      </div>
+    </section>
+  </main>
+</SiteLayout>
+
+<script>import '../scripts/reveal.ts';</script>
